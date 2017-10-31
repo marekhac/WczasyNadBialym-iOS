@@ -16,15 +16,15 @@ extension NetworkManager {
         
         // localhost
         
-        static let ApiScheme = "http://"
-        static let ApiHost = "portal-dev:8888/"
-        static let ApiPath = "api/"
+//        static let ApiScheme = "http://"
+//        static let ApiHost = "portal-dev:8888/"
+//        static let ApiPath = "api/"
         
         // live
         
-        // static let ApiScheme = "http://"
-        // static let ApiHost = "wczasynadbialym/"
-        // static let ApiPath = "api/"
+         static let ApiScheme = "http://"
+         static let ApiHost = "wczasynadbialym.pl/"
+         static let ApiPath = "api/"
     }
     
     // MARK: Method Keys
