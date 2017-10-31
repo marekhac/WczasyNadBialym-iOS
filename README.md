@@ -6,6 +6,8 @@ This is universal App and it should look "pretty" both on iPad and iPhone.
 
 Technologies used: **Swift 4, Auto Layout, Size Classes, Codable Protocol (JSON parsing)**
 
+Checkout WczasyNadBialym website available at [wczasynadbialym.pl](http://wczasynadbialym.pl)
+
 *For more details scroll down below these lovely screenshots :)*
 
 ![Accommodation](Docs/Images/accommodation.png)
@@ -31,7 +33,7 @@ Request for free `AppID` token to be able to get any responces from WczasyNadBia
 - Using Terminal go to the project folder, in which you cloned the app repo. 
 - Install cocoapod packages
 
-```$ pod install```
+	```$ pod install```
 	
 - Open `WczasyNadBialym.xcworkspace` file in Xcode 
 - Find the `NetworkConstants.swift` file 
