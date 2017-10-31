@@ -85,7 +85,7 @@ extension NetworkManager {
         }
     }
     
-    func getAccommodationPictures (_ accomodationId : String, _ completionHandlerForAccomodations: @escaping (_ result: AccommodationGalleryModel, _ error: NSError?) -> Void) {
+    func getAccommodationPictures (_ accomodationId : String, _ completionHandlerForAccomodations: @escaping (_ result: AccommodationGalleryModel?, _ error: NSError?) -> Void) {
         
         /* 1. Specify parameters to build URL */
         

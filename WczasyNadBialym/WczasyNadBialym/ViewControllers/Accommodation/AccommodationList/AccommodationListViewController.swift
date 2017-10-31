@@ -88,8 +88,8 @@ class AccommodationListViewController: UITableViewController {
         cell.price?.text = (self.accommodation[indexPath.row] as AccommodationModel).price
         let imgMiniURL = (self.accommodation[indexPath.row] as AccommodationModel).imgMiniURL
         
-        cell.imageMini.downloadImageAsync(imgMiniURL)
-        
+        cell.imageMini.downloadImageAsync(imgMiniURL, defaultImage: "accommodation_default_med.jpg")
+       
         return cell
     }
     

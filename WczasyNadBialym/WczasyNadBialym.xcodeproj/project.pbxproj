@@ -122,7 +122,6 @@
 		F44C7EAB1E8A9464005390D6 /* tenis.gif in Resources */ = {isa = PBXBuildFile; fileRef = F44C7E981E8A9464005390D6 /* tenis.gif */; };
 		F44C7EAE1E8A9464005390D6 /* tvsat.gif in Resources */ = {isa = PBXBuildFile; fileRef = F44C7E9B1E8A9464005390D6 /* tvsat.gif */; };
 		F44C7EAF1E8A9464005390D6 /* umywalka.gif in Resources */ = {isa = PBXBuildFile; fileRef = F44C7E9C1E8A9464005390D6 /* umywalka.gif */; };
-		F44C7EB11E8A978E005390D6 /* lodowka.png in Resources */ = {isa = PBXBuildFile; fileRef = F44C7EB01E8A978E005390D6 /* lodowka.png */; };
 		F44D23111EAF749A00C89BE2 /* AccommodationDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D230C1EAF749A00C89BE2 /* AccommodationDetailsModel.swift */; };
 		F44D23121EAF749A00C89BE2 /* AccommodationGalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D230D1EAF749A00C89BE2 /* AccommodationGalleryModel.swift */; };
 		F44D23131EAF749A00C89BE2 /* AccommodationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D230E1EAF749A00C89BE2 /* AccommodationModel.swift */; };
@@ -154,6 +153,7 @@
 		F4BC49DD1EC19F81000791AE /* EventNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49DC1EC19F81000791AE /* EventNetworkManager.swift */; };
 		F4BC49E01EC1A0DB000791AE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49DF1EC1A0DB000791AE /* EventModel.swift */; };
 		F4BC49E21EC1A134000791AE /* EventConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49E11EC1A134000791AE /* EventConstants.swift */; };
+		F4BF9D561FA75F99001DC2E9 /* accommodation_default_med.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4BF9D551FA75F98001DC2E9 /* accommodation_default_med.jpg */; };
 		F4C69AD91F96306100E65023 /* UITextView+HeightUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C69AD81F96306100E65023 /* UITextView+HeightUpdate.swift */; };
 		F4C69ADB1F9633C000E65023 /* UIView+AnimationUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C69ADA1F9633C000E65023 /* UIView+AnimationUpdate.swift */; };
 		F4C906611E9916FE001BCAE4 /* MKMapView+FillMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C906601E9916FE001BCAE4 /* MKMapView+FillMap.swift */; };
@@ -309,7 +309,6 @@
 		F44C7E981E8A9464005390D6 /* tenis.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tenis.gif; sourceTree = "<group>"; };
 		F44C7E9B1E8A9464005390D6 /* tvsat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tvsat.gif; sourceTree = "<group>"; };
 		F44C7E9C1E8A9464005390D6 /* umywalka.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = umywalka.gif; sourceTree = "<group>"; };
-		F44C7EB01E8A978E005390D6 /* lodowka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lodowka.png; path = ../../../../../../../../Applications/MAMP/htdocs/wczasymobileapi/public/img_pres/wyposazenie_noclegu/lodowka.png; sourceTree = "<group>"; };
 		F44D230C1EAF749A00C89BE2 /* AccommodationDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccommodationDetailsModel.swift; sourceTree = "<group>"; };
 		F44D230D1EAF749A00C89BE2 /* AccommodationGalleryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccommodationGalleryModel.swift; sourceTree = "<group>"; };
 		F44D230E1EAF749A00C89BE2 /* AccommodationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccommodationModel.swift; sourceTree = "<group>"; };
@@ -341,6 +340,7 @@
 		F4BC49DC1EC19F81000791AE /* EventNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNetworkManager.swift; sourceTree = "<group>"; };
 		F4BC49DF1EC1A0DB000791AE /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		F4BC49E11EC1A134000791AE /* EventConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventConstants.swift; sourceTree = "<group>"; };
+		F4BF9D551FA75F98001DC2E9 /* accommodation_default_med.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accommodation_default_med.jpg; sourceTree = "<group>"; };
 		F4C69AD81F96306100E65023 /* UITextView+HeightUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+HeightUpdate.swift"; sourceTree = "<group>"; };
 		F4C69ADA1F9633C000E65023 /* UIView+AnimationUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationUpdate.swift"; sourceTree = "<group>"; };
 		F4C906601E9916FE001BCAE4 /* MKMapView+FillMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+FillMap.swift"; sourceTree = "<group>"; };
@@ -441,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				F416D8021EBC76DA002A70C2 /* Services */,
+				F4BF9D541FA75F98001DC2E9 /* Acccommodation Default */,
 				F44C7E891E8A9464005390D6 /* Acccommodation Features */,
 				F44C7E561E8A945D005390D6 /* Acccommodation Advantages */,
 				F40A1FFB1E7ABC2300AF7A28 /* Icons */,
@@ -818,7 +819,6 @@
 		F44C7E891E8A9464005390D6 /* Acccommodation Features */ = {
 			isa = PBXGroup;
 			children = (
-				F44C7EB01E8A978E005390D6 /* lodowka.png */,
 				F44C7E8A1E8A9464005390D6 /* anekskuchenny.gif */,
 				F44C7E8B1E8A9464005390D6 /* czajnik.gif */,
 				F44C7E8D1E8A9464005390D6 /* internetwifi.gif */,
@@ -1052,6 +1052,14 @@
 			path = Event;
 			sourceTree = "<group>";
 		};
+		F4BF9D541FA75F98001DC2E9 /* Acccommodation Default */ = {
+			isa = PBXGroup;
+			children = (
+				F4BF9D551FA75F98001DC2E9 /* accommodation_default_med.jpg */,
+			);
+			path = "Acccommodation Default";
+			sourceTree = "<group>";
+		};
 		F4F9D1ED1E854A7D0064BC24 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1199,6 +1207,7 @@
 				F44C7EA01E8A9464005390D6 /* internetwifi.gif in Resources */,
 				F416BC451F5FE1920032EA1E /* Lato-HeavyItalic.ttf in Resources */,
 				F416BC561F5FE19A0032EA1E /* Ubuntu-MI.ttf in Resources */,
+				F4BF9D561FA75F99001DC2E9 /* accommodation_default_med.jpg in Resources */,
 				F44C7E7E1E8A945D005390D6 /* piaskownica.gif in Resources */,
 				F44C7E701E8A945D005390D6 /* akceptacjazwierzat.gif in Resources */,
 				F416D8231EBC76DA002A70C2 /* urzedy.jpg in Resources */,
@@ -1220,7 +1229,6 @@
 				F400063C1E6980060032033C /* Assets.xcassets in Resources */,
 				F44C7E791E8A945D005390D6 /* masaz.gif in Resources */,
 				F416D81C1EBC76DA002A70C2 /* kosciol.jpg in Resources */,
-				F44C7EB11E8A978E005390D6 /* lodowka.png in Resources */,
 				F44C7EA91E8A9464005390D6 /* telefon.gif in Resources */,
 				F40A1FFF1E7ABC2300AF7A28 /* phone_icon.png in Resources */,
 				F44C7EAB1E8A9464005390D6 /* tenis.gif in Resources */,

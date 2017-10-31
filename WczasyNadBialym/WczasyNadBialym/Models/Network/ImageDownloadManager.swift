@@ -10,7 +10,7 @@ import Foundation
 
 extension NetworkManager {
     
-    func downloadImagesAsync (_ imagePath:String, _ completionHandlerForAsyncImageDownload: @escaping (_ resultData: Data, _ error: NSError?) -> Void) {
+    func downloadImagesAsync (_ imagePath:String, _ completionHandlerForAsyncImageDownload: @escaping (_ resultData: Data?, _ error: NSError?) -> Void) {
         
         let controller = imagePath
         let method  = ""
@@ -21,10 +21,9 @@ extension NetworkManager {
 
             if let error = error {
                 ErrorHandler.report("Unable to download na image", error.localizedDescription)
+                completionHandlerForAsyncImageDownload(nil, error)
             } else {
-                if let result = data as Data? {
-                    completionHandlerForAsyncImageDownload(result, nil)
-                }
+                completionHandlerForAsyncImageDownload(data, nil)
             }
         }
     }

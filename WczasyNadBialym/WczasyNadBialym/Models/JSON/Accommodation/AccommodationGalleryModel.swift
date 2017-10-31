@@ -17,7 +17,7 @@ struct AccommodationGalleryModel : Codable {
     let mainImgMini: String
     let mainImgFull: String
     
-    static func picturesFromResults(_ jsonData: Data) -> AccommodationGalleryModel {
+    static func picturesFromResults(_ jsonData: Data) -> AccommodationGalleryModel? {
         
         var gallery : AccommodationGalleryModel? = nil
         
@@ -30,7 +30,7 @@ struct AccommodationGalleryModel : Codable {
             }
         }
         
-        return gallery!
+        return gallery // there might be no pictures in the gallery
     }
     
 }

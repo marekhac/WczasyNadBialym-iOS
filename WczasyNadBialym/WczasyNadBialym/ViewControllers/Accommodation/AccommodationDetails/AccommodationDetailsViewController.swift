@@ -74,19 +74,26 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
         
         NetworkManager.sharedInstance().getAccommodationPictures(selectedAccommodationId) { (pictures, error) in
             
-            if (pictures.mainImgMini.count != 0) {
-                self.picturesURLArray.append(pictures.dirMainPicture + pictures.mainImgMini)
-                self.largePicturesURLArray.append(pictures.dirMainPicture + pictures.mainImgFull)
+            if let pictures = pictures as AccommodationGalleryModel? {
+
+                if (pictures.mainImgMini.count != 0) {
+                    self.picturesURLArray.append(pictures.dirMainPicture + pictures.mainImgMini)
+                    self.largePicturesURLArray.append(pictures.dirMainPicture + pictures.mainImgFull)
+                }
+                
+                for picture in pictures.arrayOfPictures {
+                    self.picturesURLArray.append(pictures.dirMiniPictures + picture)
+                    self.largePicturesURLArray.append(pictures.dirLargePictures + picture)
+                }
+                
+                DispatchQueue.main.async() {
+                    self.imageCollectionView.reloadData()
+                }
+            }
+            else {
+                print ("No pictures to show")
             }
             
-            for picture in pictures.arrayOfPictures {
-                self.picturesURLArray.append(pictures.dirMiniPictures + picture)
-                self.largePicturesURLArray.append(pictures.dirLargePictures + picture)
-            }
-            
-            DispatchQueue.main.async() {
-                self.imageCollectionView.reloadData()
-            }
         }
    
         NetworkManager.sharedInstance().getAccommodationDetails(selectedAccommodationId, selectedAccommodationType) { (details, error) in

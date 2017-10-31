@@ -11,15 +11,21 @@ import UIKit
 
 extension UIImageView {
     
-    public func downloadImageAsync(_ url: String) {
+    public func downloadImageAsync(_ url: String, defaultImage image: String? = nil) {
         
         NetworkManager.sharedInstance().downloadImagesAsync(url) { (imageData, error) in
-            
-            let image = UIImage(data: imageData)
-            
-            if (image != nil) {
+    
+            if let downloadedImageData = imageData as Data? {
                 DispatchQueue.main.async() {
-                    self.image = image
+                    self.image = UIImage(data: downloadedImageData)
+                }
+            }
+            else {
+                if let defaultImage = image as String? {
+                    DispatchQueue.main.async() {
+                        self.image = UIImage(named: defaultImage)
+                        self.alpha = 0.5
+                    }
                 }
             }
         }
@@ -29,18 +35,14 @@ extension UIImageView {
         
         NetworkManager.sharedInstance().downloadImagesAsync(url) { (imageData, error) in
             
-            let image = UIImage(data: imageData)
-            
-            if (image != nil) {
+            if let downloadedImageData = imageData as Data? {
+                
                 DispatchQueue.main.async() {
-                    self.image = image
+                    self.image = UIImage(data: downloadedImageData)
                     
-                    if let result = image as UIImage? {
-                        completionHandlerForImageDownload(result, nil)
-                    }
-                    
+                    completionHandlerForImageDownload(self.image!, nil)
                 }
             }
-        }      
+        }
     }
 }
