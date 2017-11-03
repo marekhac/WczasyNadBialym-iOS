@@ -79,6 +79,7 @@
 		F4186C491ECB1120006C87D0 /* InfoCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186C481ECB1120006C87D0 /* InfoCategoriesViewController.swift */; };
 		F4186C4B1ECB236F006C87D0 /* InfoCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186C4A1ECB236F006C87D0 /* InfoCategoriesCell.swift */; };
 		F42277D81F851AB500DBB541 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42277D71F851AB500DBB541 /* ErrorModel.swift */; };
+		F42AED7A1FAC758200B133BC /* MenuTabsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AED791FAC758200B133BC /* MenuTabsEnum.swift */; };
 		F43134E21EC4822A0078D602 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43134E11EC4822A0078D602 /* EventDetailsViewController.swift */; };
 		F439C1281EAE2053005EBFB7 /* ServiceContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C1271EAE2053005EBFB7 /* ServiceContants.swift */; };
 		F439C1301EAE2290005EBFB7 /* ServiceNetwokManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C12F1EAE2290005EBFB7 /* ServiceNetwokManager.swift */; };
@@ -266,6 +267,7 @@
 		F4186C481ECB1120006C87D0 /* InfoCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesViewController.swift; sourceTree = "<group>"; };
 		F4186C4A1ECB236F006C87D0 /* InfoCategoriesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesCell.swift; sourceTree = "<group>"; };
 		F42277D71F851AB500DBB541 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		F42AED791FAC758200B133BC /* MenuTabsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabsEnum.swift; sourceTree = "<group>"; };
 		F43134E11EC4822A0078D602 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		F439C1271EAE2053005EBFB7 /* ServiceContants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceContants.swift; sourceTree = "<group>"; };
 		F439C12F1EAE2290005EBFB7 /* ServiceNetwokManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceNetwokManager.swift; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 			children = (
 				F4B7858A1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift */,
 				F4DEE2031F8B4F790044981E /* DataTypesEnum.swift */,
+				F42AED791FAC758200B133BC /* MenuTabsEnum.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1387,6 +1390,7 @@
 				F4EE43F31F2F4DBD00C99367 /* Date+CustomFormats.swift in Sources */,
 				F481E7B71EB1D9BC009637A1 /* AccommodationGalleryContentViewController.swift in Sources */,
 				F40C91DD1E698343006124FC /* NetworkConstants.swift in Sources */,
+				F42AED7A1FAC758200B133BC /* MenuTabsEnum.swift in Sources */,
 				F4DEE2041F8B4F790044981E /* DataTypesEnum.swift in Sources */,
 				F4C69AD91F96306100E65023 /* UITextView+HeightUpdate.swift in Sources */,
 				F48BDA3F1F9F7BDE0057F999 /* TextDownloadManager.swift in Sources */,

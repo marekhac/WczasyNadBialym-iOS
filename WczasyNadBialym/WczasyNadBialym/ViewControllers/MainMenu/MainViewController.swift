@@ -10,49 +10,46 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var contentView: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-      //  self.tabBarController?.tabBar.isHidden = true;
+        self.tabBarController?.tabBar.isHidden = true
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.addBlurSubview(below: contentView)
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+  
+    // MARK: - Actions
+    
+    @IBAction func eventsAction(_ sender: Any) {
+        self.tabBarController?.selectedIndex = MenuTabsEnum.events.rawValue
+    }
+    
+    @IBAction func servicesAction(_ sender: Any) {
+        self.tabBarController?.selectedIndex = MenuTabsEnum.services.rawValue
+    }
+    
+    @IBAction func informationsAction(_ sender: Any) {
+        self.tabBarController?.selectedIndex = MenuTabsEnum.informations.rawValue
+    }
     
     @IBAction func accommodationTypesAction(_ sender: Any) {
-        
-        print("AccommodationTypesAction");
-        self.tabBarController?.selectedIndex = 2
+        self.tabBarController?.selectedIndex = MenuTabsEnum.accommodations.rawValue
     }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /*
-        
-        if segue.identifier == "AccommodationTypesSegue"  {
-
-            print("AccommodationTypesSegue")
-            //(segue.destination as! AppTabBarController).selectedIndex = 1
-            (segue.destination as! AppTabBarController).selectedIndex = 1
-        }
-        
-        if segue.identifier == "InformationsSegue"  {
-                    
-            print("InformationsSegue")
-            (segue.destination as! AppTabBarController).selectedIndex = 0
-        }
-        */
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    
-
 }
