@@ -23,7 +23,7 @@ class InfoCategoriesViewController: UITableViewController {
         
         // blur tableview background
         
-        self.tableView.addBlurSubview(image: "background_green")
+        self.tableView.addBlurSubview(image: "background_gradient2")
     }
     
     override func viewDidLoad() {

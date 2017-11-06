@@ -15,22 +15,26 @@ class InfoDetailsViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var contentTextView: UITextView!
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.view.addBlurSubview(below: contentTextView)
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()     
-    
+        super.viewDidLoad()
+        
         let url = Info.url[category]!
         
+        switch category {
+            case .lake:
+                self.navigationItem.title = "O Jeziorze Białym"
+            case .essentials:
+                self.navigationItem.title = "Warto wiedzieć"
+        }
+        
         NetworkManager.sharedInstance().downloadTextAsync(url) { (dataString, error) in
-            
             DispatchQueue.main.async() {
                 self.contentTextView.text = dataString as String!
             }
         }
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
