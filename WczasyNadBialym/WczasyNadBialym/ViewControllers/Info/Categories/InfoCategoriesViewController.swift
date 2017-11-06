@@ -18,6 +18,15 @@ class InfoCategoriesViewController: UITableViewController {
     let infoCategories = [InfoCategory(category: .lake, longName: "O Jezioro Białym"),
                           InfoCategory(category: .essentials, longName: "Warto wiedzieć")]
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // blur tableview background
+        
+        self.tableView.addBlurSubview(image: "background_green")
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +45,11 @@ class InfoCategoriesViewController: UITableViewController {
         return self.infoCategories.count
     }
 
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        cell.selectedBackgroundColor(UIColor(white: 1, alpha: 0.5))
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "infoCategoriesCell", for: indexPath) as! InfoCategoriesCell

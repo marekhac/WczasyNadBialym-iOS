@@ -31,6 +31,7 @@ class AccommodationTypesViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+    
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -38,6 +39,8 @@ class AccommodationTypesViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
