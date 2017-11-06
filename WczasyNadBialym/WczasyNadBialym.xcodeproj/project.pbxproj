@@ -15,6 +15,7 @@
 		F40A1FFE1E7ABC2300AF7A28 /* dollar_coin.png in Resources */ = {isa = PBXBuildFile; fileRef = F40A1FFC1E7ABC2300AF7A28 /* dollar_coin.png */; };
 		F40A1FFF1E7ABC2300AF7A28 /* phone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F40A1FFD1E7ABC2300AF7A28 /* phone_icon.png */; };
 		F40A20011E7AC39300AF7A28 /* email_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F40A20001E7AC39300AF7A28 /* email_icon.png */; };
+		F40BA2A31FB07491001A717C /* AccommodationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40BA2A21FB07491001A717C /* AccommodationType.swift */; };
 		F40C91AB1E698040006124FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40C91A71E698040006124FC /* LaunchScreen.storyboard */; };
 		F40C91AC1E698040006124FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40C91A91E698040006124FC /* Main.storyboard */; };
 		F40C91B41E6980A1006124FC /* WczasyNadBialym.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F40C91B21E6980A1006124FC /* WczasyNadBialym.xcdatamodeld */; };
@@ -194,6 +195,7 @@
 		F40A1FFC1E7ABC2300AF7A28 /* dollar_coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar_coin.png; sourceTree = "<group>"; };
 		F40A1FFD1E7ABC2300AF7A28 /* phone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_icon.png; sourceTree = "<group>"; };
 		F40A20001E7AC39300AF7A28 /* email_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_icon.png; sourceTree = "<group>"; };
+		F40BA2A21FB07491001A717C /* AccommodationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationType.swift; sourceTree = "<group>"; };
 		F40C91A81E698040006124FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F40C91AA1E698040006124FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F40C91B31E6980A1006124FC /* WczasyNadBialym.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WczasyNadBialym.xcdatamodel; sourceTree = "<group>"; };
@@ -547,6 +549,7 @@
 		F40C91B71E6980A7006124FC /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				F40BA2A21FB07491001A717C /* AccommodationType.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -1389,6 +1392,7 @@
 				F4BC49DA1EC19DF2000791AE /* EventListTableViewController.swift in Sources */,
 				F4EE43F31F2F4DBD00C99367 /* Date+CustomFormats.swift in Sources */,
 				F481E7B71EB1D9BC009637A1 /* AccommodationGalleryContentViewController.swift in Sources */,
+				F40BA2A31FB07491001A717C /* AccommodationType.swift in Sources */,
 				F40C91DD1E698343006124FC /* NetworkConstants.swift in Sources */,
 				F42AED7A1FAC758200B133BC /* MenuTabsEnum.swift in Sources */,
 				F4DEE2041F8B4F790044981E /* DataTypesEnum.swift in Sources */,

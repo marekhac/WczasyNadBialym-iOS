@@ -12,7 +12,7 @@ import SVProgressHUD
 class AccommodationListViewController: UITableViewController {
 
     var accommodation = [AccommodationModel]()
-    var accommodationTypeName: String = ""
+    var accommodationType: AccommodationType?
     
     func reloadCollectionViewAndDismissHUD () {
         
@@ -47,8 +47,10 @@ class AccommodationListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = self.accommodationType!.longName
+    
         SVProgressHUD.show()
-        NetworkManager.sharedInstance().getAccommodationListBasic(accommodationTypeName) { (accommodationDict, error) in
+        NetworkManager.sharedInstance().getAccommodationListBasic(accommodationType!.shortName) { (accommodationDict, error) in
               print (accommodationDict)
             
             self.accommodation = accommodationDict
@@ -105,7 +107,7 @@ class AccommodationListViewController: UITableViewController {
             if segue.identifier == "showDetails" {
                 let controller = (segue.destination as! UINavigationController).topViewController as! AccommodationDetailsViewController
                 controller.selectedAccommodationId = String(selectedCell.accommodationId!)
-                controller.selectedAccommodationType = self.accommodationTypeName
+                controller.selectedAccommodationType = self.accommodationType!.shortName
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }

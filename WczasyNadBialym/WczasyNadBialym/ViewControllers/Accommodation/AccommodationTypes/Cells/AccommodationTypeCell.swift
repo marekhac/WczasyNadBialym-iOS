@@ -11,7 +11,7 @@ import UIKit
 class AccommodationTypeCell: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
-    var shortName: String = ""
+    var accommodationType: AccommodationType?
     
     override func awakeFromNib() {
         super.awakeFromNib()

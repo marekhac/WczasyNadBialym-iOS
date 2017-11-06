@@ -9,17 +9,7 @@
 import UIKit
 
 class AccommodationTypesViewController: UITableViewController {
-    
-    struct AccomodationType {
-        var shortName : String
-        var longName : String
-    }
-    
-    var accommodationTypes = [AccomodationType(shortName: "osrodek_wypoczynkowy", longName: "Ośrodki Wypoczynkowe"),
-                              AccomodationType(shortName: "pokoje", longName: "Wynajem Pokoi"),
-                              AccomodationType(shortName: "hotel_pensjonat", longName: "Hotele / Pensjonaty"),
-                              AccomodationType(shortName: "camping_pole", longName: "Pola Namiotowe")]
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -47,15 +37,15 @@ class AccommodationTypesViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.accommodationTypes.count
+        return AccommodationTypesArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "accommodationTypesCell", for: indexPath) as! AccommodationTypeCell
         
-        cell.name?.text = (self.accommodationTypes[indexPath.row] as AccomodationType).longName
-        cell.shortName = (self.accommodationTypes[indexPath.row] as AccomodationType).shortName
+        cell.name?.text = (AccommodationTypesArray[indexPath.row] as AccommodationType).longName
+        cell.accommodationType = AccommodationTypesArray[indexPath.row] as AccommodationType
         
         return cell
     }
@@ -67,9 +57,8 @@ class AccommodationTypesViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let selectedCell = sender as? AccommodationTypeCell {
             if let destinationVC = segue.destination as? AccommodationListViewController {
-                destinationVC.accommodationTypeName = selectedCell.shortName
+                destinationVC.accommodationType = selectedCell.accommodationType!
             }
         }
-        
     }
 }
