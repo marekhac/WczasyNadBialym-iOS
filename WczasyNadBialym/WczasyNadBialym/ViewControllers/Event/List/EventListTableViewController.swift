@@ -16,6 +16,8 @@ class EventListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "Imprezy"
+        
         NetworkManager.sharedInstance().getEventSections () { (eventSections, error) in
             print (eventSections)
             self.sections = eventSections

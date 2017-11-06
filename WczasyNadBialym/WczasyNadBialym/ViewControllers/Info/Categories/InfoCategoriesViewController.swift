@@ -25,11 +25,11 @@ class InfoCategoriesViewController: UITableViewController {
         
         self.tableView.addBlurSubview(image: "background_green")
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        self.navigationItem.title = "Informacje"
     }
 
     override func didReceiveMemoryWarning() {

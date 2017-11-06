@@ -18,6 +18,8 @@ class ServicesCategoriesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Usługi"
 
         self.serviceCategories = generateServiceCategories()
         
