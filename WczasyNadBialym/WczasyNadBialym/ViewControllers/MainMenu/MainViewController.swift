@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addBlurSubview(below: contentView)
+        self.view.addBlurSubview(at: 1)
         
         // Do any additional setup after loading the view.
     }
@@ -37,8 +37,9 @@ class MainViewController: UIViewController {
   
     // MARK: - Actions
     
-    @IBAction func eventsAction(_ sender: Any) {
-        self.tabBarController?.selectedIndex = MenuTabsEnum.events.rawValue
+    
+    @IBAction func eventsAction(_ sender: UIButton) {
+       self.tabBarController?.selectedIndex = MenuTabsEnum.events.rawValue
     }
     
     @IBAction func servicesAction(_ sender: Any) {
