@@ -56,23 +56,12 @@
 		F416BC5B1F5FE19A0032EA1E /* UbuntuMono-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F416BC3C1F5FE18A0032EA1E /* UbuntuMono-R.ttf */; };
 		F416BC5C1F5FE19A0032EA1E /* UbuntuMono-RI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F416BC3D1F5FE18A0032EA1E /* UbuntuMono-RI.ttf */; };
 		F416D8011EBC59A7002A70C2 /* ServiceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416D8001EBC59A7002A70C2 /* ServiceListCell.swift */; };
-		F416D8151EBC76DA002A70C2 /* apteka.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8031EBC76DA002A70C2 /* apteka.jpg */; };
-		F416D8161EBC76DA002A70C2 /* bank.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8041EBC76DA002A70C2 /* bank.jpg */; };
-		F416D8171EBC76DA002A70C2 /* bankomat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8051EBC76DA002A70C2 /* bankomat.jpg */; };
 		F416D8181EBC76DA002A70C2 /* dla_dzieci.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8061EBC76DA002A70C2 /* dla_dzieci.jpg */; };
 		F416D8191EBC76DA002A70C2 /* dyskoteka.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8071EBC76DA002A70C2 /* dyskoteka.jpg */; };
-		F416D81A1EBC76DA002A70C2 /* hot_spot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8081EBC76DA002A70C2 /* hot_spot.jpg */; };
 		F416D81B1EBC76DA002A70C2 /* kajaki.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8091EBC76DA002A70C2 /* kajaki.jpg */; };
-		F416D81C1EBC76DA002A70C2 /* kosciol.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D80A1EBC76DA002A70C2 /* kosciol.jpg */; };
 		F416D81D1EBC76DA002A70C2 /* muzeum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D80B1EBC76DA002A70C2 /* muzeum.jpg */; };
 		F416D81E1EBC76DA002A70C2 /* nurkowanie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D80C1EBC76DA002A70C2 /* nurkowanie.jpg */; };
-		F416D81F1EBC76DA002A70C2 /* opieka_medyczna.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D80D1EBC76DA002A70C2 /* opieka_medyczna.jpg */; };
 		F416D8201EBC76DA002A70C2 /* parking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D80E1EBC76DA002A70C2 /* parking.jpg */; };
-		F416D8211EBC76DA002A70C2 /* poczta_main_med.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D80F1EBC76DA002A70C2 /* poczta_main_med.jpg */; };
-		F416D8221EBC76DA002A70C2 /* stacja_paliw.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8101EBC76DA002A70C2 /* stacja_paliw.jpg */; };
-		F416D8231EBC76DA002A70C2 /* urzedy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8111EBC76DA002A70C2 /* urzedy.jpg */; };
-		F416D8241EBC76DA002A70C2 /* warsztaty_samoch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8121EBC76DA002A70C2 /* warsztaty_samoch.jpg */; };
-		F416D8251EBC76DA002A70C2 /* wc.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8131EBC76DA002A70C2 /* wc.jpg */; };
 		F416D8261EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8141EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg */; };
 		F416D8291EBC87B2002A70C2 /* ServiceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416D8281EBC87B2002A70C2 /* ServiceDetailsViewController.swift */; };
 		F416D82B1EBC8BD5002A70C2 /* address_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F416D82A1EBC8BD5002A70C2 /* address_icon.png */; };
@@ -155,7 +144,18 @@
 		F4BC49DD1EC19F81000791AE /* EventNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49DC1EC19F81000791AE /* EventNetworkManager.swift */; };
 		F4BC49E01EC1A0DB000791AE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49DF1EC1A0DB000791AE /* EventModel.swift */; };
 		F4BC49E21EC1A134000791AE /* EventConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49E11EC1A134000791AE /* EventConstants.swift */; };
+		F4BF482E1FB34BE900055444 /* hot_spot.png in Resources */ = {isa = PBXBuildFile; fileRef = F4BF482D1FB34BE800055444 /* hot_spot.png */; };
+		F4BF48301FB34C4800055444 /* wc.png in Resources */ = {isa = PBXBuildFile; fileRef = F4BF482F1FB34C4800055444 /* wc.png */; };
+		F4BF48321FB34C9300055444 /* stacja_paliw.png in Resources */ = {isa = PBXBuildFile; fileRef = F4BF48311FB34C9200055444 /* stacja_paliw.png */; };
+		F4BF48341FB34CD500055444 /* warsztaty_samoch.png in Resources */ = {isa = PBXBuildFile; fileRef = F4BF48331FB34CD400055444 /* warsztaty_samoch.png */; };
 		F4BF9D561FA75F99001DC2E9 /* accommodation_default_med.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4BF9D551FA75F98001DC2E9 /* accommodation_default_med.jpg */; };
+		F4C50C2B1FB348F900D0AF8F /* apteka.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C50C2A1FB348F800D0AF8F /* apteka.png */; };
+		F4C50C2D1FB349A500D0AF8F /* opieka_medyczna.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C50C2C1FB349A500D0AF8F /* opieka_medyczna.png */; };
+		F4C50C2F1FB349FF00D0AF8F /* bankomat.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C50C2E1FB349FF00D0AF8F /* bankomat.png */; };
+		F4C50C311FB34A5100D0AF8F /* bank.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C50C301FB34A5000D0AF8F /* bank.png */; };
+		F4C50C331FB34A9D00D0AF8F /* kosciol.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C50C321FB34A9C00D0AF8F /* kosciol.png */; };
+		F4C50C351FB34ACE00D0AF8F /* urzedy.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C50C341FB34ACE00D0AF8F /* urzedy.png */; };
+		F4C50C371FB34B3400D0AF8F /* poczta.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C50C361FB34B3300D0AF8F /* poczta.png */; };
 		F4C69AD91F96306100E65023 /* UITextView+HeightUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C69AD81F96306100E65023 /* UITextView+HeightUpdate.swift */; };
 		F4C69ADB1F9633C000E65023 /* UIView+AnimationUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C69ADA1F9633C000E65023 /* UIView+AnimationUpdate.swift */; };
 		F4C906611E9916FE001BCAE4 /* MKMapView+FillMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C906601E9916FE001BCAE4 /* MKMapView+FillMap.swift */; };
@@ -245,23 +245,12 @@
 		F416BC3C1F5FE18A0032EA1E /* UbuntuMono-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-R.ttf"; sourceTree = "<group>"; };
 		F416BC3D1F5FE18A0032EA1E /* UbuntuMono-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-RI.ttf"; sourceTree = "<group>"; };
 		F416D8001EBC59A7002A70C2 /* ServiceListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceListCell.swift; sourceTree = "<group>"; };
-		F416D8031EBC76DA002A70C2 /* apteka.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = apteka.jpg; sourceTree = "<group>"; };
-		F416D8041EBC76DA002A70C2 /* bank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bank.jpg; sourceTree = "<group>"; };
-		F416D8051EBC76DA002A70C2 /* bankomat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bankomat.jpg; sourceTree = "<group>"; };
 		F416D8061EBC76DA002A70C2 /* dla_dzieci.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dla_dzieci.jpg; sourceTree = "<group>"; };
 		F416D8071EBC76DA002A70C2 /* dyskoteka.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dyskoteka.jpg; sourceTree = "<group>"; };
-		F416D8081EBC76DA002A70C2 /* hot_spot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hot_spot.jpg; sourceTree = "<group>"; };
 		F416D8091EBC76DA002A70C2 /* kajaki.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kajaki.jpg; sourceTree = "<group>"; };
-		F416D80A1EBC76DA002A70C2 /* kosciol.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kosciol.jpg; sourceTree = "<group>"; };
 		F416D80B1EBC76DA002A70C2 /* muzeum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = muzeum.jpg; sourceTree = "<group>"; };
 		F416D80C1EBC76DA002A70C2 /* nurkowanie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nurkowanie.jpg; sourceTree = "<group>"; };
-		F416D80D1EBC76DA002A70C2 /* opieka_medyczna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opieka_medyczna.jpg; sourceTree = "<group>"; };
 		F416D80E1EBC76DA002A70C2 /* parking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = parking.jpg; sourceTree = "<group>"; };
-		F416D80F1EBC76DA002A70C2 /* poczta_main_med.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = poczta_main_med.jpg; sourceTree = "<group>"; };
-		F416D8101EBC76DA002A70C2 /* stacja_paliw.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stacja_paliw.jpg; sourceTree = "<group>"; };
-		F416D8111EBC76DA002A70C2 /* urzedy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = urzedy.jpg; sourceTree = "<group>"; };
-		F416D8121EBC76DA002A70C2 /* warsztaty_samoch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = warsztaty_samoch.jpg; sourceTree = "<group>"; };
-		F416D8131EBC76DA002A70C2 /* wc.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wc.jpg; sourceTree = "<group>"; };
 		F416D8141EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wypozyczalnia_sprzetu.jpg; sourceTree = "<group>"; };
 		F416D8281EBC87B2002A70C2 /* ServiceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewController.swift; sourceTree = "<group>"; };
 		F416D82A1EBC8BD5002A70C2 /* address_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = address_icon.png; sourceTree = "<group>"; };
@@ -344,7 +333,18 @@
 		F4BC49DC1EC19F81000791AE /* EventNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNetworkManager.swift; sourceTree = "<group>"; };
 		F4BC49DF1EC1A0DB000791AE /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		F4BC49E11EC1A134000791AE /* EventConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventConstants.swift; sourceTree = "<group>"; };
+		F4BF482D1FB34BE800055444 /* hot_spot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hot_spot.png; sourceTree = "<group>"; };
+		F4BF482F1FB34C4800055444 /* wc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wc.png; sourceTree = "<group>"; };
+		F4BF48311FB34C9200055444 /* stacja_paliw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stacja_paliw.png; sourceTree = "<group>"; };
+		F4BF48331FB34CD400055444 /* warsztaty_samoch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warsztaty_samoch.png; sourceTree = "<group>"; };
 		F4BF9D551FA75F98001DC2E9 /* accommodation_default_med.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accommodation_default_med.jpg; sourceTree = "<group>"; };
+		F4C50C2A1FB348F800D0AF8F /* apteka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apteka.png; sourceTree = "<group>"; };
+		F4C50C2C1FB349A500D0AF8F /* opieka_medyczna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = opieka_medyczna.png; sourceTree = "<group>"; };
+		F4C50C2E1FB349FF00D0AF8F /* bankomat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bankomat.png; sourceTree = "<group>"; };
+		F4C50C301FB34A5000D0AF8F /* bank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bank.png; sourceTree = "<group>"; };
+		F4C50C321FB34A9C00D0AF8F /* kosciol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kosciol.png; sourceTree = "<group>"; };
+		F4C50C341FB34ACE00D0AF8F /* urzedy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = urzedy.png; sourceTree = "<group>"; };
+		F4C50C361FB34B3300D0AF8F /* poczta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poczta.png; sourceTree = "<group>"; };
 		F4C69AD81F96306100E65023 /* UITextView+HeightUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+HeightUpdate.swift"; sourceTree = "<group>"; };
 		F4C69ADA1F9633C000E65023 /* UIView+AnimationUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AnimationUpdate.swift"; sourceTree = "<group>"; };
 		F4C906601E9916FE001BCAE4 /* MKMapView+FillMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+FillMap.swift"; sourceTree = "<group>"; };
@@ -708,23 +708,23 @@
 		F416D8021EBC76DA002A70C2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F416D8031EBC76DA002A70C2 /* apteka.jpg */,
-				F416D8041EBC76DA002A70C2 /* bank.jpg */,
-				F416D8051EBC76DA002A70C2 /* bankomat.jpg */,
+				F4C50C2A1FB348F800D0AF8F /* apteka.png */,
+				F4C50C301FB34A5000D0AF8F /* bank.png */,
+				F4C50C2E1FB349FF00D0AF8F /* bankomat.png */,
 				F416D8061EBC76DA002A70C2 /* dla_dzieci.jpg */,
 				F416D8071EBC76DA002A70C2 /* dyskoteka.jpg */,
-				F416D8081EBC76DA002A70C2 /* hot_spot.jpg */,
+				F4BF482D1FB34BE800055444 /* hot_spot.png */,
 				F416D8091EBC76DA002A70C2 /* kajaki.jpg */,
-				F416D80A1EBC76DA002A70C2 /* kosciol.jpg */,
+				F4C50C321FB34A9C00D0AF8F /* kosciol.png */,
 				F416D80B1EBC76DA002A70C2 /* muzeum.jpg */,
 				F416D80C1EBC76DA002A70C2 /* nurkowanie.jpg */,
-				F416D80D1EBC76DA002A70C2 /* opieka_medyczna.jpg */,
+				F4C50C2C1FB349A500D0AF8F /* opieka_medyczna.png */,
 				F416D80E1EBC76DA002A70C2 /* parking.jpg */,
-				F416D80F1EBC76DA002A70C2 /* poczta_main_med.jpg */,
-				F416D8101EBC76DA002A70C2 /* stacja_paliw.jpg */,
-				F416D8111EBC76DA002A70C2 /* urzedy.jpg */,
-				F416D8121EBC76DA002A70C2 /* warsztaty_samoch.jpg */,
-				F416D8131EBC76DA002A70C2 /* wc.jpg */,
+				F4C50C361FB34B3300D0AF8F /* poczta.png */,
+				F4BF48311FB34C9200055444 /* stacja_paliw.png */,
+				F4C50C341FB34ACE00D0AF8F /* urzedy.png */,
+				F4BF48331FB34CD400055444 /* warsztaty_samoch.png */,
+				F4BF482F1FB34C4800055444 /* wc.png */,
 				F416D8141EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg */,
 			);
 			path = Services;
@@ -1186,43 +1186,42 @@
 				F416BC4B1F5FE1920032EA1E /* Lato-Regular.ttf in Resources */,
 				F44C7E831E8A945D005390D6 /* salatelewizyjna.gif in Resources */,
 				F44C7EA71E8A9464005390D6 /* prysznic.gif in Resources */,
-				F416D8171EBC76DA002A70C2 /* bankomat.jpg in Resources */,
 				F44C7EA21E8A9464005390D6 /* kuchnia.gif in Resources */,
 				F416BC461F5FE1920032EA1E /* Lato-Italic.ttf in Resources */,
-				F416D8251EBC76DA002A70C2 /* wc.jpg in Resources */,
 				F44C7E781E8A945D005390D6 /* kuchnia.gif in Resources */,
 				F416D8191EBC76DA002A70C2 /* dyskoteka.jpg in Resources */,
-				F416D8241EBC76DA002A70C2 /* warsztaty_samoch.jpg in Resources */,
-				F416D8161EBC76DA002A70C2 /* bank.jpg in Resources */,
 				F416BC591F5FE19A0032EA1E /* UbuntuMono-B.ttf in Resources */,
 				F416BC541F5FE19A0032EA1E /* Ubuntu-LI.ttf in Resources */,
+				F4BF48301FB34C4800055444 /* wc.png in Resources */,
 				F416BC5B1F5FE19A0032EA1E /* UbuntuMono-R.ttf in Resources */,
-				F416D8221EBC76DA002A70C2 /* stacja_paliw.jpg in Resources */,
 				F40C91AC1E698040006124FC /* Main.storyboard in Resources */,
+				F4C50C371FB34B3400D0AF8F /* poczta.png in Resources */,
 				F44C7E881E8A945D005390D6 /* wypozsprwodnego.gif in Resources */,
 				F44C7EAE1E8A9464005390D6 /* tvsat.gif in Resources */,
+				F4C50C2D1FB349A500D0AF8F /* opieka_medyczna.png in Resources */,
 				F416BC491F5FE1920032EA1E /* Lato-Medium.ttf in Resources */,
-				F416D8151EBC76DA002A70C2 /* apteka.jpg in Resources */,
 				F416D81D1EBC76DA002A70C2 /* muzeum.jpg in Resources */,
 				F416BC471F5FE1920032EA1E /* Lato-Light.ttf in Resources */,
 				F44C7E7B1E8A945D005390D6 /* ognisko.gif in Resources */,
 				F44C7E771E8A945D005390D6 /* koszykowka.gif in Resources */,
 				F44C7EA51E8A9464005390D6 /* lodowka.gif in Resources */,
-				F416D8211EBC76DA002A70C2 /* poczta_main_med.jpg in Resources */,
 				F44C7E741E8A945D005390D6 /* grill.gif in Resources */,
+				F4C50C331FB34A9D00D0AF8F /* kosciol.png in Resources */,
+				F4C50C351FB34ACE00D0AF8F /* urzedy.png in Resources */,
 				F44C7EA01E8A9464005390D6 /* internetwifi.gif in Resources */,
 				F416BC451F5FE1920032EA1E /* Lato-HeavyItalic.ttf in Resources */,
+				F4BF48321FB34C9300055444 /* stacja_paliw.png in Resources */,
 				F416BC561F5FE19A0032EA1E /* Ubuntu-MI.ttf in Resources */,
 				F4BF9D561FA75F99001DC2E9 /* accommodation_default_med.jpg in Resources */,
 				F44C7E7E1E8A945D005390D6 /* piaskownica.gif in Resources */,
 				F44C7E701E8A945D005390D6 /* akceptacjazwierzat.gif in Resources */,
-				F416D8231EBC76DA002A70C2 /* urzedy.jpg in Resources */,
 				F40A1FFE1E7ABC2300AF7A28 /* dollar_coin.png in Resources */,
 				F416BC4D1F5FE1920032EA1E /* Lato-SemiboldItalic.ttf in Resources */,
 				F416BC501F5FE19A0032EA1E /* Ubuntu-B.ttf in Resources */,
 				F416BC581F5FE19A0032EA1E /* Ubuntu-RI.ttf in Resources */,
 				F416BC3E1F5FE18F0032EA1E /* Lato-Black.ttf in Resources */,
 				F44C7E761E8A945D005390D6 /* korttenisowy.gif in Resources */,
+				F4C50C2F1FB349FF00D0AF8F /* bankomat.png in Resources */,
 				F4F0BF8B1E8BCF2100FB456E /* accommodation_default.jpg in Resources */,
 				F44C7E7A1E8A945D005390D6 /* niepelnosprawni.gif in Resources */,
 				F44C7E9E1E8A9464005390D6 /* czajnik.gif in Resources */,
@@ -1234,14 +1233,16 @@
 				F416BC5C1F5FE19A0032EA1E /* UbuntuMono-RI.ttf in Resources */,
 				F400063C1E6980060032033C /* Assets.xcassets in Resources */,
 				F44C7E791E8A945D005390D6 /* masaz.gif in Resources */,
-				F416D81C1EBC76DA002A70C2 /* kosciol.jpg in Resources */,
 				F44C7EA91E8A9464005390D6 /* telefon.gif in Resources */,
+				F4BF482E1FB34BE900055444 /* hot_spot.png in Resources */,
+				F4BF48341FB34CD500055444 /* warsztaty_samoch.png in Resources */,
 				F40A1FFF1E7ABC2300AF7A28 /* phone_icon.png in Resources */,
 				F44C7EAB1E8A9464005390D6 /* tenis.gif in Resources */,
 				F416BC481F5FE1920032EA1E /* Lato-LightItalic.ttf in Resources */,
 				F416D81E1EBC76DA002A70C2 /* nurkowanie.jpg in Resources */,
 				F44C7E851E8A945D005390D6 /* silownia.gif in Resources */,
 				F44C7E811E8A945D005390D6 /* rowery.gif in Resources */,
+				F4C50C2B1FB348F900D0AF8F /* apteka.png in Resources */,
 				F416BC4E1F5FE1920032EA1E /* Lato-Thin.ttf in Resources */,
 				F416D8181EBC76DA002A70C2 /* dla_dzieci.jpg in Resources */,
 				F44C7EA81E8A9464005390D6 /* radio.gif in Resources */,
@@ -1258,7 +1259,6 @@
 				F416BC5A1F5FE19A0032EA1E /* UbuntuMono-BI.ttf in Resources */,
 				F44C7E801E8A945D005390D6 /* platnosckarta.gif in Resources */,
 				F416D8201EBC76DA002A70C2 /* parking.jpg in Resources */,
-				F416D81F1EBC76DA002A70C2 /* opieka_medyczna.jpg in Resources */,
 				F416BC421F5FE1920032EA1E /* Lato-Hairline.ttf in Resources */,
 				F44C7E7D1E8A945D005390D6 /* parkingbus.gif in Resources */,
 				F416BC401F5FE1920032EA1E /* Lato-Bold.ttf in Resources */,
@@ -1269,7 +1269,7 @@
 				F44C7EA61E8A9464005390D6 /* mikrofalowka.gif in Resources */,
 				F44C7EA11E8A9464005390D6 /* klimatyzacja.gif in Resources */,
 				F40A20011E7AC39300AF7A28 /* email_icon.png in Resources */,
-				F416D81A1EBC76DA002A70C2 /* hot_spot.jpg in Resources */,
+				F4C50C311FB34A5100D0AF8F /* bank.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

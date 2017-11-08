@@ -63,7 +63,6 @@ class ServiceListViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -97,7 +96,7 @@ class ServiceListViewController: UITableViewController {
         
         if (cell.imageMini.image == nil)
         {
-            let serviceImage = UIImage(named: serviceTypeName + ".jpg")
+            let serviceImage = UIImage(named: serviceTypeName + ".png")
             cell.imageMini.image = serviceImage
         }
             
