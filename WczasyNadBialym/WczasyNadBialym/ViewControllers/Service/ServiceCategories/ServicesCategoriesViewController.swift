@@ -14,6 +14,7 @@ class ServicesCategoriesViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tableView.addBlurSubview(image: "background_gradient1")
     }
     
     override func viewDidLoad() {
@@ -55,7 +56,14 @@ class ServicesCategoriesViewController: UITableViewController {
         
         // Dispose of any resources that can be recreated.
     }
-        
+    
+    // MARK: - Table view data source
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        cell.selectedBackgroundColor(UIColor(white: 1, alpha: 0.5))
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.serviceCategories.count
     }

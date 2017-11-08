@@ -38,6 +38,11 @@ class ServiceListViewController: UITableViewController {
         queue.addOperation(dismissProgressHUD)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.addBlurSubview(image: "background_gradient1")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,6 +75,10 @@ class ServiceListViewController: UITableViewController {
         return self.services.count
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        cell.selectedBackgroundColor(UIColor(white: 1, alpha: 0.5))
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
