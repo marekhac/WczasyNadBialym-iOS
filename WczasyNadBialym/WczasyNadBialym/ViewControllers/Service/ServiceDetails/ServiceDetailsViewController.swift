@@ -13,6 +13,12 @@ class ServiceDetailsViewController: UIViewController {
     var selectedServiceId: String = ""
     var selectedServiceType: String = ""
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var streetLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
