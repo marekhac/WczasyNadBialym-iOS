@@ -26,6 +26,11 @@ class ServiceDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // add background and blur for content view
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background_gradient2")!)
+        self.view.addBlurSubview(at: 0)
+
         // setup with default images
         
         let serviceImage = UIImage(named: self.selectedServiceType + ".png")
