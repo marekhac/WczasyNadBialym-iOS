@@ -13,7 +13,7 @@ struct Service {
     // MARK: Controller Keys
     struct Controllers {
         
-        static let Service = "uslugi/"
+        static let Services = "uslugi/"
     }
     
     // MARK: Methods
@@ -21,11 +21,13 @@ struct Service {
         
         static let Categories = "kategorie-uslug"
         static let List = "lista"
+        static let Details = "details"
     }
     
     // MARK: Method Keys
     struct ParameterKeys {
 
         static let Kind = "typ"
+        static let Id = "id"
     }
 }

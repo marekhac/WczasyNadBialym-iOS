@@ -14,7 +14,7 @@ extension NetworkManager {
         
         /* 1. Specify parameters to build URL */
         
-        let controller = Service.Controllers.Service
+        let controller = Service.Controllers.Services
         let method  = Service.Methods.Categories
         let parameters = [String: String]()
         
@@ -37,7 +37,7 @@ extension NetworkManager {
         
         /* 1. Specify parameters to build URL */
         
-        let controller = Service.Controllers.Service
+        let controller = Service.Controllers.Services
         let method  = Service.Methods.List
         let parameters = [Service.ParameterKeys.Kind : serviceType]
         
@@ -53,6 +53,29 @@ extension NetworkManager {
                 if let result = results {
                     let list = ServiceModel.servicesFromResults(result)
                     completionHandlerForServices(list, nil)
+                }
+            }
+        }
+    }
+    
+    func getServiceDetails (_ eventId : String, _ completionHandlerForEvents: @escaping (_ result: ServiceDetailModel, _ error: NSError?) -> Void) {
+        
+        /* 1. Specify parameters to build URL */
+        
+        let controller = Service.Controllers.Services
+        let method  = Service.Methods.Details
+        let parameters = [Service.ParameterKeys.Id : eventId]
+        
+        /* 2. Make the request */
+        let _ = taskForDownloadContent(controller, method, parameters) { (results, error) in
+            
+            /* 3. Send the desired value(s) to completion handler */
+            if let error = error {
+                ErrorHandler.report("Unable to download Service Details JSON", error.localizedDescription)
+            } else {
+                if let result = results {
+                    let list = ServiceDetailModel.detailsFromResults(result)
+                    completionHandlerForEvents(list, nil)
                 }
             }
         }

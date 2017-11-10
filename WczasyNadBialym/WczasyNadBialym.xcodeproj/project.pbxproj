@@ -149,6 +149,7 @@
 		F4BF48321FB34C9300055444 /* stacja_paliw.png in Resources */ = {isa = PBXBuildFile; fileRef = F4BF48311FB34C9200055444 /* stacja_paliw.png */; };
 		F4BF48341FB34CD500055444 /* warsztaty_samoch.png in Resources */ = {isa = PBXBuildFile; fileRef = F4BF48331FB34CD400055444 /* warsztaty_samoch.png */; };
 		F4BF9D561FA75F99001DC2E9 /* accommodation_default_med.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4BF9D551FA75F98001DC2E9 /* accommodation_default_med.jpg */; };
+		F4C3360A1FB452B8004F2EE5 /* ServiceDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C336091FB452B8004F2EE5 /* ServiceDetailsModel.swift */; };
 		F4C50C2B1FB348F900D0AF8F /* apteka.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C50C2A1FB348F800D0AF8F /* apteka.png */; };
 		F4C50C2D1FB349A500D0AF8F /* opieka_medyczna.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C50C2C1FB349A500D0AF8F /* opieka_medyczna.png */; };
 		F4C50C2F1FB349FF00D0AF8F /* bankomat.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C50C2E1FB349FF00D0AF8F /* bankomat.png */; };
@@ -338,6 +339,7 @@
 		F4BF48311FB34C9200055444 /* stacja_paliw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stacja_paliw.png; sourceTree = "<group>"; };
 		F4BF48331FB34CD400055444 /* warsztaty_samoch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warsztaty_samoch.png; sourceTree = "<group>"; };
 		F4BF9D551FA75F98001DC2E9 /* accommodation_default_med.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accommodation_default_med.jpg; sourceTree = "<group>"; };
+		F4C336091FB452B8004F2EE5 /* ServiceDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsModel.swift; sourceTree = "<group>"; };
 		F4C50C2A1FB348F800D0AF8F /* apteka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apteka.png; sourceTree = "<group>"; };
 		F4C50C2C1FB349A500D0AF8F /* opieka_medyczna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = opieka_medyczna.png; sourceTree = "<group>"; };
 		F4C50C2E1FB349FF00D0AF8F /* bankomat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bankomat.png; sourceTree = "<group>"; };
@@ -861,6 +863,7 @@
 			children = (
 				F481E7C91EB1DA4C009637A1 /* ServiceModel.swift */,
 				F44D23151EAF74FE00C89BE2 /* ServiceCategoryModel.swift */,
+				F4C336091FB452B8004F2EE5 /* ServiceDetailsModel.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -1043,8 +1046,8 @@
 		F4BC49DB1EC19F46000791AE /* Event */ = {
 			isa = PBXGroup;
 			children = (
-				F4BC49DC1EC19F81000791AE /* EventNetworkManager.swift */,
 				F4BC49E11EC1A134000791AE /* EventConstants.swift */,
+				F4BC49DC1EC19F81000791AE /* EventNetworkManager.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -1430,6 +1433,7 @@
 				F481E7BC1EB1D9BC009637A1 /* AccommodationTypesViewController.swift in Sources */,
 				F40C91B41E6980A1006124FC /* WczasyNadBialym.xcdatamodeld in Sources */,
 				F481E7B81EB1D9BC009637A1 /* AccommodationGalleryPageViewController.swift in Sources */,
+				F4C3360A1FB452B8004F2EE5 /* ServiceDetailsModel.swift in Sources */,
 				F40C91DB1E698343006124FC /* AccommodationNetworkManager.swift in Sources */,
 				F481E7B61EB1D9BC009637A1 /* ImageCell.swift in Sources */,
 				F40C91DE1E698343006124FC /* NetworkManager.swift in Sources */,
