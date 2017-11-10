@@ -118,6 +118,7 @@
 		F44D23131EAF749A00C89BE2 /* AccommodationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D230E1EAF749A00C89BE2 /* AccommodationModel.swift */; };
 		F44D23141EAF749A00C89BE2 /* AccommodationPropertiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D230F1EAF749A00C89BE2 /* AccommodationPropertiesModel.swift */; };
 		F44D23161EAF74FE00C89BE2 /* ServiceCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D23151EAF74FE00C89BE2 /* ServiceCategoryModel.swift */; };
+		F44F0F021FB5D03D007032DA /* ServiceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F0F011FB5D03D007032DA /* ServiceMapViewController.swift */; };
 		F4580C3C1ED3113A00944984 /* InfoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4580C3B1ED3113A00944984 /* InfoDetailsViewController.swift */; };
 		F475D9901F90F6C10054FFE8 /* UITableView+BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475D98F1F90F6C10054FFE8 /* UITableView+BlurEffect.swift */; };
 		F475D9921F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475D9911F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift */; };
@@ -308,6 +309,7 @@
 		F44D230E1EAF749A00C89BE2 /* AccommodationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccommodationModel.swift; sourceTree = "<group>"; };
 		F44D230F1EAF749A00C89BE2 /* AccommodationPropertiesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccommodationPropertiesModel.swift; sourceTree = "<group>"; };
 		F44D23151EAF74FE00C89BE2 /* ServiceCategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCategoryModel.swift; sourceTree = "<group>"; };
+		F44F0F011FB5D03D007032DA /* ServiceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMapViewController.swift; sourceTree = "<group>"; };
 		F4580C3B1ED3113A00944984 /* InfoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailsViewController.swift; sourceTree = "<group>"; };
 		F475D98F1F90F6C10054FFE8 /* UITableView+BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+BlurEffect.swift"; sourceTree = "<group>"; };
 		F475D9911F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+BackgroundColors.swift"; sourceTree = "<group>"; };
@@ -868,6 +870,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		F44F0F001FB5D032007032DA /* ServiceMap */ = {
+			isa = PBXGroup;
+			children = (
+				F44F0F011FB5D03D007032DA /* ServiceMapViewController.swift */,
+			);
+			path = ServiceMap;
+			sourceTree = "<group>";
+		};
 		F4580C3A1ED3110C00944984 /* Details */ = {
 			isa = PBXGroup;
 			children = (
@@ -960,6 +970,7 @@
 		F481E7BE1EB1D9E2009637A1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				F44F0F001FB5D032007032DA /* ServiceMap */,
 				F416D8271EBC8788002A70C2 /* ServiceDetails */,
 				F481E7BF1EB1DA0B009637A1 /* ServiceCategories */,
 				F481E7C31EB1DA0B009637A1 /* ServiceList */,
@@ -1402,6 +1413,7 @@
 				F4C69AD91F96306100E65023 /* UITextView+HeightUpdate.swift in Sources */,
 				F48BDA3F1F9F7BDE0057F999 /* TextDownloadManager.swift in Sources */,
 				F439C1301EAE2290005EBFB7 /* ServiceNetwokManager.swift in Sources */,
+				F44F0F021FB5D03D007032DA /* ServiceMapViewController.swift in Sources */,
 				F416D8291EBC87B2002A70C2 /* ServiceDetailsViewController.swift in Sources */,
 				F40C91DA1E698343006124FC /* AccommodationContants.swift in Sources */,
 				F4186C4B1ECB236F006C87D0 /* InfoCategoriesCell.swift in Sources */,

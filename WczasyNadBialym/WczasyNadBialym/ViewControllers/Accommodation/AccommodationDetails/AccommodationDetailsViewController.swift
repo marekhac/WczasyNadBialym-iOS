@@ -29,7 +29,8 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
     
     var gpsLat: Double = 0.0
     var gpsLng: Double = 0.0
-    
+    var pinTitle: String = ""
+    var pinSubtitle: String = ""
 
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -103,6 +104,8 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
             
             self.gpsLat = details.gpsLat
             self.gpsLng = details.gpsLng
+            self.pinTitle = details.name
+            self.pinSubtitle = details.phone
             
             DispatchQueue.main.async() {
                 self.mapView.fillMap(details.gpsLat, details.gpsLng, details.name, details.phone, self.mapType)
@@ -250,6 +253,8 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
                 let controller = segue.destination as! AccommodationMapViewController
                 controller.gpsLat = self.gpsLat
                 controller.gpsLng = self.gpsLng
+                controller.pinTitle = self.pinTitle
+                controller.pinSubtitle = self.pinSubtitle
             }
         
             if segue.identifier == "showAccommodationGallery" {

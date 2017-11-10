@@ -14,6 +14,10 @@ class ServiceDetailsViewController: UIViewController {
     var selectedServiceId: String = ""
     var selectedServiceType: String = ""
     let mapType = MKMapType.standard
+    var gpsLat: Double = 0.0
+    var gpsLng: Double = 0.0
+    var pinTitle: String = ""
+    var pinSubtitle: String = ""
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -38,6 +42,15 @@ class ServiceDetailsViewController: UIViewController {
   
         NetworkManager.sharedInstance().getServiceDetails(selectedServiceId) { (service, error) in
 
+            // store gps location
+            
+            self.gpsLat = service.gpsLat
+            self.gpsLng = service.gpsLng
+            self.pinTitle = service.name
+            self.pinSubtitle = service.phone
+            
+            // update ui
+            
             DispatchQueue.main.async() {
                 self.nameLabel.text = service.name
                 self.streetLabel.text = service.street
@@ -67,5 +80,16 @@ class ServiceDetailsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showServiceMap" {
+            let controller = segue.destination as! ServiceMapViewController
+            controller.gpsLat = self.gpsLat
+            controller.gpsLng = self.gpsLng
+            controller.pinTitle = self.pinTitle
+            controller.pinSubtitle = self.pinSubtitle
+        }
     }
 }
