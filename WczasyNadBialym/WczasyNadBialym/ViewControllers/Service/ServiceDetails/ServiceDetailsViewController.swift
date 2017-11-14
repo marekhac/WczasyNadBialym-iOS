@@ -59,7 +59,7 @@ class ServiceDetailsViewController: UIViewController {
                 
                 // remove all html tags
                 
-                let detailsStripped = service.description.replacingOccurrences(of: "<[^>]+>", with: "", options: String.CompareOptions.regularExpression, range: nil)
+                let detailsStripped = service.description.removeHTMLTags()
                 
                 self.descriptionTextView.text = detailsStripped
             }

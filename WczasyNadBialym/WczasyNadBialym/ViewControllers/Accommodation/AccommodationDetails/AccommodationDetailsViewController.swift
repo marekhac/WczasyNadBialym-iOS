@@ -123,7 +123,7 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
 
                 // remove all html tags
                 
-                let detailsStripped = details.description.replacingOccurrences(of: "<[^>]+>", with: "", options: String.CompareOptions.regularExpression, range: nil)
+                let detailsStripped = details.description.removeHTMLTags()
                 
                 self.descriptionTextView.text = detailsStripped
             }
