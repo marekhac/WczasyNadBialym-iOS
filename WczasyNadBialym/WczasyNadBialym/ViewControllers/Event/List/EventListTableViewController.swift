@@ -13,6 +13,14 @@ class EventListTableViewController: UITableViewController {
     var events = [String:[EventDetailModel]]()
     var sections = [EventsInYearModel]()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // blur tableview background
+        
+        self.tableView.addBlurSubview(image: "background_gradient2")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +41,8 @@ class EventListTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Table view data source
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return sections.count
@@ -43,20 +53,37 @@ class EventListTableViewController: UITableViewController {
        return sections[section].events.count
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        cell.selectedBackgroundColor(UIColor(white: 1, alpha: 0.5))
+    }
+        
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "test" //return sections[section].heading
+        return "Rok " +  String(sections[section].year)
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
+        
+        view.tintColor = UIColor(white: 1, alpha: 0.9)
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.orange // header section label color
+       // header.textLabel?.textAlignment = NSTextAlignment.center // header section label alignment
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellIdentifier = "eventsListCell"
-    
-        print ((sections[indexPath.section].events[indexPath.row] as EventsInYearModel.EventModel).name)
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! EventListCell
-        cell.name?.text = (sections[indexPath.section].events[indexPath.row] as EventsInYearModel.EventModel).name
-        cell.eventId =  (sections[indexPath.section].events[indexPath.row] as EventsInYearModel.EventModel).id
         
+        let event : EventsInYearModel.EventModel = sections[indexPath.section].events[indexPath.row]
+        
+        cell.name?.text = event.name
+        cell.eventId =  event.id
+        cell.date.text = event.date.getDate() + ", godz. " + event.date.getHourAndMinutes()
+        
+        NetworkManager.sharedInstance().getEventDetails(String(event.id)) { (details, error) in
+             cell.imageMini.downloadImageAsync(details.imgMedURL)
+        }
         return cell
     }
 

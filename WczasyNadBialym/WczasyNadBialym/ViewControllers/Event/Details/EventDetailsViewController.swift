@@ -12,7 +12,6 @@ class EventDetailsViewController: UIViewController {
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var place: UILabel!
-    @IBOutlet weak var startHour: UILabel!
     @IBOutlet weak var startDate: UILabel!
     @IBOutlet weak var medmageView: UIImageView!
     @IBOutlet weak var descriptionTextView: UITextView!
@@ -45,9 +44,8 @@ class EventDetailsViewController: UIViewController {
             DispatchQueue.main.async {
                 self.name.text = details.name.uppercased()
                 self.place.text = details.place.uppercased()
-                //self.startDate.text = details.date.getDate()
-                //self.startHour.text = details.date.getHourAndMinutes()
-            
+                self.startDate.text = details.date.getDate() + ", godz. " + details.date.getHourAndMinutes()
+                
                 // remove all html tags
                 
                 let detailsStripped = details.description.replacingOccurrences(of: "<[^>]+>", with: "", options: String.CompareOptions.regularExpression, range: nil)
