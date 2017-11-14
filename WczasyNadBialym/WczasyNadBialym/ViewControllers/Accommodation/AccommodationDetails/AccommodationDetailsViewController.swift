@@ -143,8 +143,6 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
             
             self.accommodationPropertiesPostProcessOperations(focusOnTheBottomOfScrollView: false)
         }
-        
-
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class EventListTableViewController: UITableViewController {
-
+ 
     var events = [String:[EventDetailModel]]()
     var sections = [EventsInYearModel]()
     
@@ -17,6 +18,8 @@ class EventListTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         self.sections.removeAll()
+        
+        SVProgressHUD.show()
         
         // blur tableview background
         
@@ -27,14 +30,21 @@ class EventListTableViewController: UITableViewController {
             // skip empty sections. f.e. years where there aren't any events
             
             for section in eventSections {
+                SVProgressHUD.dismiss()
+                
                 if (section.events.count != 0) {
                     self.sections.append(section)
                 }
             }
             
-            OperationQueue.main.addOperation({
-                self.tableView.reloadData()
-            })
+            if (self.sections.count == 0) {
+                SVProgressHUD.showInfo(withStatus: "Brak imprez \u{1F494}")
+            }
+            else {
+                OperationQueue.main.addOperation({
+                    self.tableView.reloadData()
+                })
+            }
         }
         
     }
@@ -42,9 +52,11 @@ class EventListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        SVProgressHUD.setMinimumDismissTimeInterval(2)
+        
         self.navigationItem.title = "Imprezy"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
