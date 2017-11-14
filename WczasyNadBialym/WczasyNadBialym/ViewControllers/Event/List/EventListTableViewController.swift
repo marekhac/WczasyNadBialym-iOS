@@ -16,24 +16,33 @@ class EventListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.sections.removeAll()
+        
         // blur tableview background
         
         self.tableView.addBlurSubview(image: "background_gradient2")
+        
+        NetworkManager.sharedInstance().getEventSections () { (eventSections, error) in
+            
+            // skip empty sections. f.e. years where there aren't any events
+            
+            for section in eventSections {
+                if (section.events.count != 0) {
+                    self.sections.append(section)
+                }
+            }
+            
+            OperationQueue.main.addOperation({
+                self.tableView.reloadData()
+            })
+        }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "Imprezy"
-        
-        NetworkManager.sharedInstance().getEventSections () { (eventSections, error) in
-            print (eventSections)
-            self.sections = eventSections
-            
-            OperationQueue.main.addOperation({
-                self.tableView.reloadData()
-            })
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +68,7 @@ class EventListTableViewController: UITableViewController {
     }
         
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Rok " +  String(sections[section].year)
+        return "Rok " +  String(self.sections[section].year)
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
