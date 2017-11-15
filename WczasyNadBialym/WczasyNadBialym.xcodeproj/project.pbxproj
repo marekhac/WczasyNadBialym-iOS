@@ -123,6 +123,7 @@
 		F4580C3C1ED3113A00944984 /* InfoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4580C3B1ED3113A00944984 /* InfoDetailsViewController.swift */; };
 		F475D9901F90F6C10054FFE8 /* UITableView+BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475D98F1F90F6C10054FFE8 /* UITableView+BlurEffect.swift */; };
 		F475D9921F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475D9911F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift */; };
+		F47605D01FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47605CF1FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift */; };
 		F481E7B41EB1D9BC009637A1 /* AccommodationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481E7A31EB1D9BC009637A1 /* AccommodationDetailsViewController.swift */; };
 		F481E7B51EB1D9BC009637A1 /* FeaturesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481E7A51EB1D9BC009637A1 /* FeaturesCell.swift */; };
 		F481E7B61EB1D9BC009637A1 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481E7A61EB1D9BC009637A1 /* ImageCell.swift */; };
@@ -315,6 +316,7 @@
 		F4580C3B1ED3113A00944984 /* InfoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailsViewController.swift; sourceTree = "<group>"; };
 		F475D98F1F90F6C10054FFE8 /* UITableView+BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+BlurEffect.swift"; sourceTree = "<group>"; };
 		F475D9911F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+BackgroundColors.swift"; sourceTree = "<group>"; };
+		F47605CF1FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewHeightEnum.swift; sourceTree = "<group>"; };
 		F481E7A31EB1D9BC009637A1 /* AccommodationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccommodationDetailsViewController.swift; sourceTree = "<group>"; };
 		F481E7A51EB1D9BC009637A1 /* FeaturesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturesCell.swift; sourceTree = "<group>"; };
 		F481E7A61EB1D9BC009637A1 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
@@ -566,6 +568,7 @@
 				F4B7858A1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift */,
 				F4DEE2031F8B4F790044981E /* DataTypesEnum.swift */,
 				F42AED791FAC758200B133BC /* MenuTabsEnum.swift */,
+				F47605CF1FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1413,6 +1416,7 @@
 				F40C91DD1E698343006124FC /* NetworkConstants.swift in Sources */,
 				F42AED7A1FAC758200B133BC /* MenuTabsEnum.swift in Sources */,
 				F4DEE2041F8B4F790044981E /* DataTypesEnum.swift in Sources */,
+				F47605D01FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift in Sources */,
 				F4C69AD91F96306100E65023 /* UITextView+HeightUpdate.swift in Sources */,
 				F48BDA3F1F9F7BDE0057F999 /* TextDownloadManager.swift in Sources */,
 				F439C1301EAE2290005EBFB7 /* ServiceNetwokManager.swift in Sources */,

@@ -15,7 +15,6 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
     let featuresReuseIdentifier = "featuresCell"
     
     var accommodationProperties = [String]()
-    
     var selectedAccommodationId: String = ""
     var selectedAccommodationType: String = ""
     var picturesURLArray = [String]()
@@ -51,7 +50,7 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
     
     @IBOutlet weak var featuresSegmentedControl: UISegmentedControl!
     
-    
+    @IBOutlet weak var imageCollectionViewHeightContraint: NSLayoutConstraint!
     @IBOutlet weak var accommodationPropertiesCollectionViewHeightContraint: NSLayoutConstraint!
 
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +59,10 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // hide images collection view (since we don't know if there are any images at all)
+        
+        self.imageCollectionViewHeightContraint.constant = ImageCollectionViewHeight.small.rawValue // left small row for better user experience
         
         // header
         
@@ -76,7 +79,7 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
         NetworkManager.sharedInstance().getAccommodationPictures(selectedAccommodationId) { (pictures, error) in
             
             if let pictures = pictures as AccommodationGalleryModel? {
-
+                
                 if (pictures.mainImgMini.count != 0) {
                     self.picturesURLArray.append(pictures.dirMainPicture + pictures.mainImgMini)
                     self.largePicturesURLArray.append(pictures.dirMainPicture + pictures.mainImgFull)
@@ -88,13 +91,14 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
                 }
                 
                 DispatchQueue.main.async() {
+                    self.imageCollectionViewHeightContraint.constant = ImageCollectionViewHeight.large.rawValue
                     self.imageCollectionView.reloadData()
+                    self.view.updateLayoutWithAnimation(andDuration: 0.5)
                 }
             }
             else {
                 print ("No pictures to show")
             }
-            
         }
    
         NetworkManager.sharedInstance().getAccommodationDetails(selectedAccommodationId, selectedAccommodationType) { (details, error) in
@@ -111,7 +115,7 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
                 self.mapView.fillMap(details.gpsLat, details.gpsLng, details.name, details.phone, self.mapType)
             }
             
-            // display mini image
+            // display contact info
             
             DispatchQueue.main.async{
                 self.nameLabel.text = details.name
