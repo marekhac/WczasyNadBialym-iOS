@@ -21,7 +21,9 @@ class CustomSplitViewController: UISplitViewController, UISplitViewControllerDel
         // to always show master view in portrait mode
         // we call it here to avoid "unbalanced calls to begin/end appearance transitions" errors
         
-        preferredDisplayMode = .primaryOverlay
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            preferredDisplayMode = .primaryOverlay
+        }
     }
     
     // THIS IS VERY IMPORTANT: This way detail view will not cover master view!
