@@ -14,7 +14,16 @@ class CustomSplitViewController: UISplitViewController, UISplitViewControllerDel
         super.viewDidLoad()
         self.delegate = self
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        // to always show master view in portrait mode
+        // we call it here to avoid "unbalanced calls to begin/end appearance transitions" errors
+        
+        preferredDisplayMode = .primaryOverlay
+    }
+    
     // THIS IS VERY IMPORTANT: This way detail view will not cover master view!
     
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {

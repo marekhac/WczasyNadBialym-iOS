@@ -143,6 +143,7 @@
 		F48FF5E71EC1B326003F1B06 /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48FF5E61EC1B326003F1B06 /* EventListCell.swift */; };
 		F49B16951FA124F300A3E50C /* InfoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B16941FA124F300A3E50C /* InfoConstants.swift */; };
 		F4B7858B1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7858A1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift */; };
+		F4BA24271FBD9C4B00DC3A86 /* FrontStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BA24261FBD9C4B00DC3A86 /* FrontStoryboard.storyboard */; };
 		F4BC49DA1EC19DF2000791AE /* EventListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49D91EC19DF2000791AE /* EventListTableViewController.swift */; };
 		F4BC49DD1EC19F81000791AE /* EventNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49DC1EC19F81000791AE /* EventNetworkManager.swift */; };
 		F4BC49E01EC1A0DB000791AE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49DF1EC1A0DB000791AE /* EventModel.swift */; };
@@ -336,6 +337,7 @@
 		F48FF5E61EC1B326003F1B06 /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
 		F49B16941FA124F300A3E50C /* InfoConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoConstants.swift; sourceTree = "<group>"; };
 		F4B7858A1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesEnum.swift; sourceTree = "<group>"; };
+		F4BA24261FBD9C4B00DC3A86 /* FrontStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FrontStoryboard.storyboard; sourceTree = "<group>"; };
 		F4BC49D91EC19DF2000791AE /* EventListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListTableViewController.swift; sourceTree = "<group>"; };
 		F4BC49DC1EC19F81000791AE /* EventNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNetworkManager.swift; sourceTree = "<group>"; };
 		F4BC49DF1EC1A0DB000791AE /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
@@ -486,6 +488,7 @@
 			children = (
 				F40C91A91E698040006124FC /* Main.storyboard */,
 				F40C91A71E698040006124FC /* LaunchScreen.storyboard */,
+				F4BA24261FBD9C4B00DC3A86 /* FrontStoryboard.storyboard */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -1281,6 +1284,7 @@
 				F416D8201EBC76DA002A70C2 /* parking.jpg in Resources */,
 				F416BC421F5FE1920032EA1E /* Lato-Hairline.ttf in Resources */,
 				F44C7E7D1E8A945D005390D6 /* parkingbus.gif in Resources */,
+				F4BA24271FBD9C4B00DC3A86 /* FrontStoryboard.storyboard in Resources */,
 				F416BC401F5FE1920032EA1E /* Lato-Bold.ttf in Resources */,
 				F44C7E9D1E8A9464005390D6 /* anekskuchenny.gif in Resources */,
 				F44C7E861E8A945D005390D6 /* spa.gif in Resources */,

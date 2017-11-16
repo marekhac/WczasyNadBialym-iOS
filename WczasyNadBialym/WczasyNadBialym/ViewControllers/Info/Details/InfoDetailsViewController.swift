@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InfoDetailsViewController: UIViewController, UIWebViewDelegate {
+class InfoDetailsViewController: UIViewController {
 
     var category : InfoCategoriesEnum = .lake // default
  

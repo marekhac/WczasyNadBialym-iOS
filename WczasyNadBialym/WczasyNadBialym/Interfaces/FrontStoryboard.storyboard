@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LIr-Rz-ekO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="oJs-xw-ZVv">
+            <objects>
+                <viewController id="LIr-Rz-ekO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SmJ-vm-2J3"/>
+                        <viewControllerLayoutGuide type="bottom" id="WDt-ba-UqZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i5S-EX-U5e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlA-tg-9lm" userLabel="Background View">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_gradient2" translatesAutoresizingMaskIntoConstraints="NO" id="fXG-37-WnM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fXG-37-WnM" secondAttribute="bottom" id="2JH-SZ-obd"/>
+                                    <constraint firstItem="fXG-37-WnM" firstAttribute="leading" secondItem="DlA-tg-9lm" secondAttribute="leading" id="caz-eM-qZE"/>
+                                    <constraint firstItem="fXG-37-WnM" firstAttribute="top" secondItem="DlA-tg-9lm" secondAttribute="top" id="gep-d6-DOD"/>
+                                    <constraint firstAttribute="trailing" secondItem="fXG-37-WnM" secondAttribute="trailing" id="pbk-nI-Bnp"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wczasy_logo" translatesAutoresizingMaskIntoConstraints="NO" id="lOj-bs-qte">
+                                <rect key="frame" x="0.0" y="184" width="375" height="307"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lOj-bs-qte" firstAttribute="top" secondItem="SmJ-vm-2J3" secondAttribute="bottom" constant="164" id="5Qf-qm-kxK"/>
+                            <constraint firstAttribute="trailing" secondItem="DlA-tg-9lm" secondAttribute="trailing" id="HZB-Ex-eeI"/>
+                            <constraint firstItem="DlA-tg-9lm" firstAttribute="top" secondItem="SmJ-vm-2J3" secondAttribute="bottom" id="IPx-w2-Ltb"/>
+                            <constraint firstItem="WDt-ba-UqZ" firstAttribute="top" secondItem="lOj-bs-qte" secondAttribute="bottom" constant="176" id="N2m-Xs-9h3"/>
+                            <constraint firstItem="lOj-bs-qte" firstAttribute="leading" secondItem="DlA-tg-9lm" secondAttribute="leading" id="ldE-3Y-wzI"/>
+                            <constraint firstItem="lOj-bs-qte" firstAttribute="trailing" secondItem="DlA-tg-9lm" secondAttribute="trailing" id="ov4-2s-tq5"/>
+                            <constraint firstItem="DlA-tg-9lm" firstAttribute="leading" secondItem="i5S-EX-U5e" secondAttribute="leading" id="r9Z-Sg-lqv"/>
+                            <constraint firstItem="WDt-ba-UqZ" firstAttribute="top" secondItem="DlA-tg-9lm" secondAttribute="bottom" id="uIw-by-hFI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hax-fb-L7U"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BsF-h9-Fmz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9x-hV-FVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-858.39999999999998" y="3144.3778110944531"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background_gradient2" width="640" height="1136"/>
+        <image name="wczasy_logo" width="1185" height="197"/>
+    </resources>
+</document>
