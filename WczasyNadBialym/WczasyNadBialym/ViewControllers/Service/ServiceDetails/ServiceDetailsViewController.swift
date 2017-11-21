@@ -41,37 +41,45 @@ class ServiceDetailsViewController: UIViewController {
         self.imageView.image = serviceImage
   
         NetworkManager.sharedInstance().getServiceDetails(selectedServiceId) { (service, error) in
-
+            
             // store gps location
             
-            self.gpsLat = service.gpsLat
-            self.gpsLng = service.gpsLng
-            self.pinTitle = service.name
-            self.pinSubtitle = service.phone
-            
-            // update ui
-            
-            DispatchQueue.main.async() {
-                self.nameLabel.text = service.name
-                self.streetLabel.text = service.street
-                self.cityLabel.text = service.city
-                self.phoneLabel.text = service.phone
+            if let service = service {
                 
-                // remove all html tags
+                self.gpsLat = service.gpsLat
+                self.gpsLng = service.gpsLng
+                self.pinTitle = service.name
+                self.pinSubtitle = service.phone
                 
-                let detailsStripped = service.description.removeHTMLTags()
+                // update ui
                 
-                self.descriptionTextView.text = detailsStripped
+                DispatchQueue.main.async() {
+                    self.nameLabel.text = service.name
+                    self.streetLabel.text = service.street
+                    self.cityLabel.text = service.city
+                    self.phoneLabel.text = service.phone
+                    
+                    // remove all html tags
+                    
+                    let detailsStripped = service.description.removeHTMLTags()
+                    
+                    self.descriptionTextView.text = detailsStripped
+                }
+                
+                // assign mini image if present
+                
+                self.imageView.downloadImageAsync(service.miniImgURL)
+                
+                // map generator
+                
+                DispatchQueue.main.async() {
+                    self.mapView.fillMap(service.gpsLat, service.gpsLng, service.name, service.phone, self.mapType)
+                }
             }
-            
-            // assign mini image if present
-            
-            self.imageView.downloadImageAsync(service.miniImgURL)
-            
-            // map generator
-            
-            DispatchQueue.main.async() {
-                self.mapView.fillMap(service.gpsLat, service.gpsLng, service.name, service.phone, self.mapType)
+            else {
+                DispatchQueue.main.async() {
+                    self.view.addBlurSubview(style: .light, animation: .curveLinear)
+                }
             }
         }
         // Do any additional setup after loading the view.

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SVProgressHUD
 
 extension NetworkManager {
     
@@ -24,7 +25,7 @@ extension NetworkManager {
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {
-                ErrorHandler.report("Unable to download Accommodaiton List JSON", error.localizedDescription)
+                ErrorHandler.report("Unable to download Accommodation List", error.localizedDescription, displayWithHUD: true)
             } else {
                 if let result = results {
                     let list = AccommodationModel.accommodationsFromResults(result)
@@ -49,7 +50,7 @@ extension NetworkManager {
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {
-                ErrorHandler.report("Unable to download Accommodaiton Details JSON", error.localizedDescription)
+                ErrorHandler.report("Unable to download Accommodaiton Details", error.localizedDescription, displayWithHUD: true)
             } else {
                 //if let result = results as? [String:AnyObject] {
                 if let result = results {

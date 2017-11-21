@@ -23,7 +23,7 @@ extension NetworkManager {
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {
-                ErrorHandler.report("Unable to download Serivce Categories JSON", error.localizedDescription)
+                ErrorHandler.report("Unable to download Serivce Categories", error.localizedDescription)
             } else {
                 if let result = results {
                     let list = ServiceCategoryModel.servicesFromResults(result)
@@ -48,7 +48,7 @@ extension NetworkManager {
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {
-                ErrorHandler.report("Unable to download Serivce List JSON", error.localizedDescription)
+                ErrorHandler.report("Unable to download Serivce List", error.localizedDescription, displayWithHUD: true)
             } else {
                 if let result = results {
                     let list = ServiceModel.servicesFromResults(result)
@@ -58,7 +58,7 @@ extension NetworkManager {
         }
     }
     
-    func getServiceDetails (_ eventId : String, _ completionHandlerForEvents: @escaping (_ result: ServiceDetailModel, _ error: NSError?) -> Void) {
+    func getServiceDetails (_ eventId : String, _ completionHandlerForEvents: @escaping (_ result: ServiceDetailModel?, _ error: NSError?) -> Void) {
         
         /* 1. Specify parameters to build URL */
         
@@ -71,7 +71,8 @@ extension NetworkManager {
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {
-                ErrorHandler.report("Unable to download Service Details JSON", error.localizedDescription)
+                ErrorHandler.report("Unable to download Service Details", error.localizedDescription, displayWithHUD: true)
+                completionHandlerForEvents(nil, error)
             } else {
                 if let result = results {
                     let list = ServiceDetailModel.detailsFromResults(result)

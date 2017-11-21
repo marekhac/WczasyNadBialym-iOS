@@ -7,11 +7,16 @@
 //
 
 import Foundation
+import SVProgressHUD
 
 struct ErrorHandler {
     
-    static func report(_ title: String, _ message: String)
+    static func report(_ message: String, _ description: String, displayWithHUD hud: Bool = false)
     {
-        print ("ERROR: \(title) - \(message)")
+        print ("\n\("🚧") ERROR: \(message) \("😠") \(description) \("🚧")")
+        
+        if (hud) {
+            SVProgressHUD.showError(withStatus: message)
+        }
     }
 }

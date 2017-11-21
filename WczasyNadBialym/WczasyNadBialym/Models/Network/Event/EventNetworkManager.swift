@@ -24,7 +24,7 @@ extension NetworkManager {
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {
-                ErrorHandler.report("Unable to download Event Sections JSON", error.localizedDescription)
+                ErrorHandler.report("Unable to download Event Sections", error.localizedDescription, displayWithHUD: true)
             } else {
                 if let results = results {
                     let eventsSections = EventsInYearModel.eventsInYearFromResults(results)
@@ -47,7 +47,7 @@ extension NetworkManager {
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {
-                ErrorHandler.report("Unable to download Event Details JSON", error.localizedDescription)
+                ErrorHandler.report("Unable to download Event Details", error.localizedDescription, displayWithHUD: true)
             } else {
                 if let result = results {
                     let list = EventDetailModel.detailsFromResults(result)
