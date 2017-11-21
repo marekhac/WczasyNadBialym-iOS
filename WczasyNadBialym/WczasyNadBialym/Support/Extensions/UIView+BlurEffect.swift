@@ -48,4 +48,11 @@ extension UIView {
         blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(blurView)
     }
+    
+    func addBlurSubview (style blurStyle: UIBlurEffectStyle, animation animationStyle:UIViewAnimationOptions) {
+        UIView.transition(with: self, duration: 0.5, options: UIViewAnimationOptions.curveLinear,
+                          animations: {
+                                self.addBlurSubview(style: blurStyle)
+                          }, completion: nil)
+    }
 }
