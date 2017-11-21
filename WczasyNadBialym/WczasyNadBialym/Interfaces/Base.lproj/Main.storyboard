@@ -626,16 +626,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RGO-Cc-hx8">
-                                <rect key="frame" x="0.0" y="64" width="375" height="449"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RGO-Cc-hx8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RGO-Cc-hx8" firstAttribute="leading" secondItem="beq-yY-Mi1" secondAttribute="leading" id="9Un-x5-OHm"/>
-                            <constraint firstAttribute="trailing" secondItem="RGO-Cc-hx8" secondAttribute="trailing" id="kLd-KV-Ile"/>
-                            <constraint firstItem="13q-1R-ZV9" firstAttribute="top" secondItem="RGO-Cc-hx8" secondAttribute="bottom" constant="105" id="lok-Pc-bNh"/>
-                            <constraint firstItem="RGO-Cc-hx8" firstAttribute="top" secondItem="XEk-8X-fqY" secondAttribute="bottom" constant="127" id="mve-1O-ILP"/>
+                            <constraint firstItem="13q-1R-ZV9" firstAttribute="top" secondItem="RGO-Cc-hx8" secondAttribute="bottom" id="TVW-qA-3GF"/>
+                            <constraint firstItem="RGO-Cc-hx8" firstAttribute="leading" secondItem="beq-yY-Mi1" secondAttribute="leading" id="VrA-gx-cmc"/>
+                            <constraint firstAttribute="trailing" secondItem="RGO-Cc-hx8" secondAttribute="trailing" id="doT-2m-pYg"/>
+                            <constraint firstItem="RGO-Cc-hx8" firstAttribute="top" secondItem="XEk-8X-fqY" secondAttribute="bottom" id="eST-po-vy2"/>
                         </constraints>
                     </view>
                     <connections>
