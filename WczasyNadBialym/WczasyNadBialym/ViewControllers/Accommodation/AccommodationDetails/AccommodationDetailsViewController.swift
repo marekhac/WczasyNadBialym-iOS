@@ -59,6 +59,7 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.headerView.isHidden = true
         
         // hide images collection view (since we don't know if there are any images at all)
         
@@ -124,7 +125,8 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
                 
                 self.phoneTextView.updateHeight(of: self.phoneTextViewHeightContraint)
                 self.view.updateLayoutWithAnimation(andDuration: 0.5)
-
+                self.headerView.isHidden = false
+                
                 // remove all html tags
                 
                 let detailsStripped = details.description.removeHTMLTags()
