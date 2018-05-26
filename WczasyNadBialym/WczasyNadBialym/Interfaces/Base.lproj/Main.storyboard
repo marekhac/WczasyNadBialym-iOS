@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o9H-7I-cwO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o9H-7I-cwO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -113,14 +113,14 @@
                                             <action selector="eventsAction:" destination="LIt-zk-gl2" eventType="touchUpInside" id="ssP-Do-TQo"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Temperatura" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpz-HL-B8g">
-                                        <rect key="frame" x="122" y="311" width="97.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Temperatura w Okunince" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpz-HL-B8g">
+                                        <rect key="frame" x="75" y="311" width="191.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="24'C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yv-Lu-uae">
-                                        <rect key="frame" x="128" y="349" width="85.5" height="49"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yv-Lu-uae">
+                                        <rect key="frame" x="152.5" y="349" width="36" height="49"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -154,6 +154,7 @@
                     <tabBarItem key="tabBarItem" title="Menu" id="ghM-pc-Nlb"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="y5x-85-6Ph" id="blW-Fs-Rew"/>
+                        <outlet property="temperatureLabel" destination="0yv-Lu-uae" id="e9Q-k4-D4M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8I2-s9-yPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1067,6 +1068,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="nwD-dw-6g0" id="MhD-Xe-WqS"/>
                         <outlet property="descriptionTextView" destination="IUT-YN-bYh" id="dTR-6s-KAa"/>
+                        <outlet property="headerView" destination="p4y-NJ-XqJ" id="7r1-1M-RDd"/>
                         <outlet property="imageView" destination="CCm-WM-add" id="lSa-WC-jSl"/>
                         <outlet property="mapView" destination="UVY-lD-523" id="mFe-TN-8RG"/>
                         <outlet property="nameLabel" destination="uzg-vW-AMQ" id="6XP-ng-1H8"/>

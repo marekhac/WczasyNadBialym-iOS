@@ -142,6 +142,9 @@
 		F48BDA3F1F9F7BDE0057F999 /* TextDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48BDA3E1F9F7BDE0057F999 /* TextDownloadManager.swift */; };
 		F48FF5E71EC1B326003F1B06 /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48FF5E61EC1B326003F1B06 /* EventListCell.swift */; };
 		F49B16951FA124F300A3E50C /* InfoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B16941FA124F300A3E50C /* InfoConstants.swift */; };
+		F4AA0FDB1FE2BE47009F3FF3 /* WeatherConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA0FDA1FE2BE47009F3FF3 /* WeatherConstants.swift */; };
+		F4AA0FDD1FE2BF34009F3FF3 /* WeatherNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA0FDC1FE2BF34009F3FF3 /* WeatherNetworkManager.swift */; };
+		F4AA0FE01FE2BFE7009F3FF3 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA0FDF1FE2BFE7009F3FF3 /* WeatherModel.swift */; };
 		F4B7858B1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7858A1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift */; };
 		F4BA24271FBD9C4B00DC3A86 /* FrontStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BA24261FBD9C4B00DC3A86 /* FrontStoryboard.storyboard */; };
 		F4BC49DA1EC19DF2000791AE /* EventListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49D91EC19DF2000791AE /* EventListTableViewController.swift */; };
@@ -336,6 +339,9 @@
 		F48BDA3E1F9F7BDE0057F999 /* TextDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDownloadManager.swift; sourceTree = "<group>"; };
 		F48FF5E61EC1B326003F1B06 /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
 		F49B16941FA124F300A3E50C /* InfoConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoConstants.swift; sourceTree = "<group>"; };
+		F4AA0FDA1FE2BE47009F3FF3 /* WeatherConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConstants.swift; sourceTree = "<group>"; };
+		F4AA0FDC1FE2BF34009F3FF3 /* WeatherNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetworkManager.swift; sourceTree = "<group>"; };
+		F4AA0FDF1FE2BFE7009F3FF3 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		F4B7858A1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesEnum.swift; sourceTree = "<group>"; };
 		F4BA24261FBD9C4B00DC3A86 /* FrontStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FrontStoryboard.storyboard; sourceTree = "<group>"; };
 		F4BC49D91EC19DF2000791AE /* EventListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListTableViewController.swift; sourceTree = "<group>"; };
@@ -622,6 +628,7 @@
 		F40C91D01E698309006124FC /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				F4AA0FDE1FE2BFCA009F3FF3 /* Weather */,
 				F42277D61F851AA900DBB541 /* Error */,
 				F4BC49DE1EC1A0CC000791AE /* Event */,
 				F44D23101EAF749A00C89BE2 /* Service */,
@@ -633,6 +640,7 @@
 		F40C91D31E698343006124FC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F4AA0FD91FE2BE28009F3FF3 /* Weather */,
 				F49B16931FA124F300A3E50C /* Info */,
 				F4BC49DB1EC19F46000791AE /* Event */,
 				F439C1261EAE2053005EBFB7 /* Service */,
@@ -1044,6 +1052,23 @@
 			path = Info;
 			sourceTree = "<group>";
 		};
+		F4AA0FD91FE2BE28009F3FF3 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				F4AA0FDA1FE2BE47009F3FF3 /* WeatherConstants.swift */,
+				F4AA0FDC1FE2BF34009F3FF3 /* WeatherNetworkManager.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		F4AA0FDE1FE2BFCA009F3FF3 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				F4AA0FDF1FE2BFE7009F3FF3 /* WeatherModel.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
 		F4BC49D71EC19DC3000791AE /* Event */ = {
 			isa = PBXGroup;
 			children = (
@@ -1160,7 +1185,6 @@
 				TargetAttributes = {
 					F40006111E697B710032033C = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 9T8G87UPPL;
 						ProvisioningStyle = Automatic;
 					};
 					F400062A1E697B720032033C = {
@@ -1446,6 +1470,7 @@
 				F4BC49E01EC1A0DB000791AE /* EventModel.swift in Sources */,
 				F41853511F2875D0006AE1CD /* ErrorHandler.swift in Sources */,
 				F481E7B91EB1D9BC009637A1 /* AccommodationListViewController.swift in Sources */,
+				F4AA0FDB1FE2BE47009F3FF3 /* WeatherConstants.swift in Sources */,
 				F475D9901F90F6C10054FFE8 /* UITableView+BlurEffect.swift in Sources */,
 				F481E7CA1EB1DA4C009637A1 /* ServiceModel.swift in Sources */,
 				F4F9D1F11E854CBA0064BC24 /* UIImageView+ImageFromServerURL.swift in Sources */,
@@ -1455,6 +1480,8 @@
 				F457A6031FBAFD61000019BF /* String+RemoveHTMLTags.swift in Sources */,
 				F40C91CF1E6980AF006124FC /* MainViewController.swift in Sources */,
 				F4580C3C1ED3113A00944984 /* InfoDetailsViewController.swift in Sources */,
+				F4AA0FDD1FE2BF34009F3FF3 /* WeatherNetworkManager.swift in Sources */,
+				F4AA0FE01FE2BFE7009F3FF3 /* WeatherModel.swift in Sources */,
 				F48FF5E71EC1B326003F1B06 /* EventListCell.swift in Sources */,
 				F43134E21EC4822A0078D602 /* EventDetailsViewController.swift in Sources */,
 				F44D23131EAF749A00C89BE2 /* AccommodationModel.swift in Sources */,
@@ -1613,7 +1640,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 030FF5EC43097CAAA89FEA54 /* Pods-WczasyNadBialym.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 9T8G87UPPL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1627,7 +1654,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7FA0F9676DF057771EEF998 /* Pods-WczasyNadBialym.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 9T8G87UPPL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
