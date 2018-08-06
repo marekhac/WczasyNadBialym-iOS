@@ -12,6 +12,7 @@
 		F40006161E697B710032033C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40006151E697B710032033C /* AppDelegate.swift */; };
 		F40006301E697B720032033C /* WczasyNadBialymTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400062F1E697B720032033C /* WczasyNadBialymTests.swift */; };
 		F400063C1E6980060032033C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F400063B1E6980060032033C /* Assets.xcassets */; };
+		F4074A7921146AEA00111E94 /* EventStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4074A7821146AEA00111E94 /* EventStoryboard.storyboard */; };
 		F40A1FFE1E7ABC2300AF7A28 /* dollar_coin.png in Resources */ = {isa = PBXBuildFile; fileRef = F40A1FFC1E7ABC2300AF7A28 /* dollar_coin.png */; };
 		F40A1FFF1E7ABC2300AF7A28 /* phone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F40A1FFD1E7ABC2300AF7A28 /* phone_icon.png */; };
 		F40A20011E7AC39300AF7A28 /* email_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F40A20001E7AC39300AF7A28 /* email_icon.png */; };
@@ -173,6 +174,9 @@
 		F4E46D811E88FCD400E64EEC /* ImageDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E46D801E88FCD400E64EEC /* ImageDownloadManager.swift */; };
 		F4EE43F31F2F4DBD00C99367 /* Date+CustomFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EE43F21F2F4DBD00C99367 /* Date+CustomFormats.swift */; };
 		F4F0BF8B1E8BCF2100FB456E /* accommodation_default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F0BF8A1E8BCF2100FB456E /* accommodation_default.jpg */; };
+		F4F97EEB211477780057BF1F /* ServiceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F97EEA211477780057BF1F /* ServiceStoryboard.storyboard */; };
+		F4F97EED211489740057BF1F /* AccommodationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F97EEC211489740057BF1F /* AccommodationStoryboard.storyboard */; };
+		F4F97EEF21148CB50057BF1F /* InfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F97EEE21148CB50057BF1F /* InfoStoryboard.storyboard */; };
 		F4F9D1F11E854CBA0064BC24 /* UIImageView+ImageFromServerURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9D1F01E854CBA0064BC24 /* UIImageView+ImageFromServerURL.swift */; };
 /* End PBXBuildFile section */
 
@@ -200,6 +204,7 @@
 		F400062F1E697B720032033C /* WczasyNadBialymTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WczasyNadBialymTests.swift; sourceTree = "<group>"; };
 		F40006311E697B720032033C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F400063B1E6980060032033C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4074A7821146AEA00111E94 /* EventStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventStoryboard.storyboard; sourceTree = "<group>"; };
 		F40A1FFC1E7ABC2300AF7A28 /* dollar_coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar_coin.png; sourceTree = "<group>"; };
 		F40A1FFD1E7ABC2300AF7A28 /* phone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_icon.png; sourceTree = "<group>"; };
 		F40A20001E7AC39300AF7A28 /* email_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_icon.png; sourceTree = "<group>"; };
@@ -370,6 +375,9 @@
 		F4E46D801E88FCD400E64EEC /* ImageDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadManager.swift; sourceTree = "<group>"; };
 		F4EE43F21F2F4DBD00C99367 /* Date+CustomFormats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+CustomFormats.swift"; sourceTree = "<group>"; };
 		F4F0BF8A1E8BCF2100FB456E /* accommodation_default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accommodation_default.jpg; sourceTree = "<group>"; };
+		F4F97EEA211477780057BF1F /* ServiceStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServiceStoryboard.storyboard; sourceTree = "<group>"; };
+		F4F97EEC211489740057BF1F /* AccommodationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccommodationStoryboard.storyboard; sourceTree = "<group>"; };
+		F4F97EEE21148CB50057BF1F /* InfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoStoryboard.storyboard; sourceTree = "<group>"; };
 		F4F9D1F01E854CBA0064BC24 /* UIImageView+ImageFromServerURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageFromServerURL.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -495,6 +503,10 @@
 				F40C91A91E698040006124FC /* Main.storyboard */,
 				F40C91A71E698040006124FC /* LaunchScreen.storyboard */,
 				F4BA24261FBD9C4B00DC3A86 /* FrontStoryboard.storyboard */,
+				F4074A7821146AEA00111E94 /* EventStoryboard.storyboard */,
+				F4F97EEA211477780057BF1F /* ServiceStoryboard.storyboard */,
+				F4F97EEC211489740057BF1F /* AccommodationStoryboard.storyboard */,
+				F4F97EEE21148CB50057BF1F /* InfoStoryboard.storyboard */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -1141,7 +1153,6 @@
 				F400060F1E697B710032033C /* Frameworks */,
 				F40006101E697B710032033C /* Resources */,
 				3551A90F25E901E1341F54CB /* [CP] Embed Pods Frameworks */,
-				3BB4D9741D9C0B4E9F497E87 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1160,8 +1171,6 @@
 				F40006271E697B720032033C /* Sources */,
 				F40006281E697B720032033C /* Frameworks */,
 				F40006291E697B720032033C /* Resources */,
-				C407E53E614E8950F8360D29 /* [CP] Embed Pods Frameworks */,
-				138FFDF8AC0FFACA6E7D070B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1227,11 +1236,13 @@
 				F416D8261EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg in Resources */,
 				F416BC531F5FE19A0032EA1E /* Ubuntu-L.ttf in Resources */,
 				F44C7E821E8A945D005390D6 /* salakonferencyjna.gif in Resources */,
+				F4F97EEB211477780057BF1F /* ServiceStoryboard.storyboard in Resources */,
 				F416D81B1EBC76DA002A70C2 /* kajaki.jpg in Resources */,
 				F44C7E7F1E8A945D005390D6 /* placzabaw.gif in Resources */,
 				F44C7EA31E8A9464005390D6 /* lazienka.gif in Resources */,
 				F416BC4B1F5FE1920032EA1E /* Lato-Regular.ttf in Resources */,
 				F44C7E831E8A945D005390D6 /* salatelewizyjna.gif in Resources */,
+				F4F97EEF21148CB50057BF1F /* InfoStoryboard.storyboard in Resources */,
 				F44C7EA71E8A9464005390D6 /* prysznic.gif in Resources */,
 				F44C7EA21E8A9464005390D6 /* kuchnia.gif in Resources */,
 				F416BC461F5FE1920032EA1E /* Lato-Italic.ttf in Resources */,
@@ -1284,6 +1295,7 @@
 				F4BF482E1FB34BE900055444 /* hot_spot.png in Resources */,
 				F4BF48341FB34CD500055444 /* warsztaty_samoch.png in Resources */,
 				F40A1FFF1E7ABC2300AF7A28 /* phone_icon.png in Resources */,
+				F4F97EED211489740057BF1F /* AccommodationStoryboard.storyboard in Resources */,
 				F44C7EAB1E8A9464005390D6 /* tenis.gif in Resources */,
 				F416BC481F5FE1920032EA1E /* Lato-LightItalic.ttf in Resources */,
 				F416D81E1EBC76DA002A70C2 /* nurkowanie.jpg in Resources */,
@@ -1299,6 +1311,7 @@
 				F416BC511F5FE19A0032EA1E /* Ubuntu-BI.ttf in Resources */,
 				F416BC521F5FE19A0032EA1E /* Ubuntu-C.ttf in Resources */,
 				F416BC4C1F5FE1920032EA1E /* Lato-Semibold.ttf in Resources */,
+				F4074A7921146AEA00111E94 /* EventStoryboard.storyboard in Resources */,
 				F416D82B1EBC8BD5002A70C2 /* address_icon.png in Resources */,
 				F416BC431F5FE1920032EA1E /* Lato-HairlineItalic.ttf in Resources */,
 				F44C7EAA1E8A9464005390D6 /* telewizor.gif in Resources */,
@@ -1331,21 +1344,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		138FFDF8AC0FFACA6E7D070B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3551A90F25E901E1341F54CB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1362,36 +1360,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3BB4D9741D9C0B4E9F497E87 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C407E53E614E8950F8360D29 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E90DE101786866868199CCA2 /* [CP] Check Pods Manifest.lock */ = {
