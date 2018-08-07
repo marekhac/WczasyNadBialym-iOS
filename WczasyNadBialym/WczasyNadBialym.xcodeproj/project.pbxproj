@@ -120,6 +120,7 @@
 		F44D23141EAF749A00C89BE2 /* AccommodationPropertiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D230F1EAF749A00C89BE2 /* AccommodationPropertiesModel.swift */; };
 		F44D23161EAF74FE00C89BE2 /* ServiceCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D23151EAF74FE00C89BE2 /* ServiceCategoryModel.swift */; };
 		F44F0F021FB5D03D007032DA /* ServiceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F0F011FB5D03D007032DA /* ServiceMapViewController.swift */; };
+		F4510FFA2118802900D337B2 /* ServiceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4510FF92118802900D337B2 /* ServiceListViewModel.swift */; };
 		F457A6031FBAFD61000019BF /* String+RemoveHTMLTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457A6021FBAFD61000019BF /* String+RemoveHTMLTags.swift */; };
 		F4580C3C1ED3113A00944984 /* InfoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4580C3B1ED3113A00944984 /* InfoDetailsViewController.swift */; };
 		F475D9901F90F6C10054FFE8 /* UITableView+BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475D98F1F90F6C10054FFE8 /* UITableView+BlurEffect.swift */; };
@@ -321,6 +322,7 @@
 		F44D230F1EAF749A00C89BE2 /* AccommodationPropertiesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccommodationPropertiesModel.swift; sourceTree = "<group>"; };
 		F44D23151EAF74FE00C89BE2 /* ServiceCategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCategoryModel.swift; sourceTree = "<group>"; };
 		F44F0F011FB5D03D007032DA /* ServiceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMapViewController.swift; sourceTree = "<group>"; };
+		F4510FF92118802900D337B2 /* ServiceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewModel.swift; sourceTree = "<group>"; };
 		F457A6021FBAFD61000019BF /* String+RemoveHTMLTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemoveHTMLTags.swift"; sourceTree = "<group>"; };
 		F4580C3B1ED3113A00944984 /* InfoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailsViewController.swift; sourceTree = "<group>"; };
 		F475D98F1F90F6C10054FFE8 /* UITableView+BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+BlurEffect.swift"; sourceTree = "<group>"; };
@@ -1028,6 +1030,7 @@
 			children = (
 				F481E7C41EB1DA0B009637A1 /* Cells */,
 				F481E7C51EB1DA0B009637A1 /* ServiceListViewController.swift */,
+				F4510FF92118802900D337B2 /* ServiceListViewModel.swift */,
 			);
 			path = ServiceList;
 			sourceTree = "<group>";
@@ -1457,6 +1460,7 @@
 				F481E7BA1EB1D9BC009637A1 /* AccommodationListCell.swift in Sources */,
 				F4C69ADB1F9633C000E65023 /* UIView+AnimationUpdate.swift in Sources */,
 				F40006161E697B710032033C /* AppDelegate.swift in Sources */,
+				F4510FFA2118802900D337B2 /* ServiceListViewModel.swift in Sources */,
 				F4BC49DD1EC19F81000791AE /* EventNetworkManager.swift in Sources */,
 				F481E7BC1EB1D9BC009637A1 /* AccommodationTypesViewController.swift in Sources */,
 				F40C91B41E6980A1006124FC /* WczasyNadBialym.xcdatamodeld in Sources */,

@@ -11,36 +11,33 @@ import SVProgressHUD
 
 class ServiceListViewController: UITableViewController {
 
-    var services = [ServiceModel]()
-    var serviceTypeName: String = ""
+    let backgroundImageName = "background_gradient1"
+    var serviceTypeName: String = "" // value will be assigned by parent view controller
     
-    func reloadTableViewAndDismissHUD () {
+    lazy var viewModel: ServiceListViewModel = {
+        return ServiceListViewModel()
+    }()
+    
+    // init view model
+    
+    func initViewModel () {
         
-        let queue = OperationQueue()
+        // initialize callback closures
+        // used [weak self] to avoid retain cycle
         
-        let reloadTableView = BlockOperation(block: {
-            
-            OperationQueue.main.addOperation({
-                self.tableView.reloadData()
-            })
-        })
-        
-        queue.addOperation(reloadTableView)
-        
-        let dismissProgressHUD = BlockOperation(block: {
-            
-            OperationQueue.main.addOperation({
+        viewModel.reloadTableViewClosure = { [weak self] () in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
                 SVProgressHUD.dismiss()
-            })
-        })
-        
-        dismissProgressHUD.addDependency(reloadTableView)
-        queue.addOperation(dismissProgressHUD)
+            }
+        }
+    
+        viewModel.initFetchServices(for: serviceTypeName)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.addBlurSubview(image: "background_gradient1")
+        self.tableView.addBlurSubview(image: backgroundImageName)
     }
     
     override func viewDidLoad() {
@@ -48,13 +45,7 @@ class ServiceListViewController: UITableViewController {
         
         SVProgressHUD.show()
         
-        NetworkManager.sharedInstance().getServiceList (serviceTypeName) { (servicesDict, error) in
-            print (servicesDict)
-            
-            self.services = servicesDict
-      
-            self.reloadTableViewAndDismissHUD()
-        }
+        initViewModel()
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,13 +56,11 @@ class ServiceListViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return self.services.count
+        return viewModel.numberOfCells
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -84,12 +73,13 @@ class ServiceListViewController: UITableViewController {
         let cellIdentifier = "serviceListCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ServiceListCell
         
+        let serviceModel = viewModel.getServiceModel(at: indexPath)
+        
         // Configure the cell...
+        cell.name?.text = serviceModel.name
+        cell.serviceId = serviceModel.id
         
-        cell.name?.text = (self.services[indexPath.row] as ServiceModel).name
-        cell.serviceId = (self.services[indexPath.row] as ServiceModel).id
-        
-        let imgMiniURL = (self.services[indexPath.row] as ServiceModel).imgMiniURL
+        let imgMiniURL = serviceModel.imgMiniURL
         cell.imageMini.downloadImageAsync(imgMiniURL)
         
         // if there's no image, use default one from Assests/Services
