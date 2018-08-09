@@ -32,7 +32,7 @@ class ServiceListViewController: UITableViewController {
             }
         }
     
-        viewModel.initFetchServices(for: serviceTypeName)
+        viewModel.fetchServices(for: serviceTypeName)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -105,5 +105,4 @@ class ServiceListViewController: UITableViewController {
             }
         }
     }
-    
 }
