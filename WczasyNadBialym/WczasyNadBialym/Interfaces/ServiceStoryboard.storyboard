@@ -363,6 +363,7 @@
                         <outlet property="mapView" destination="bYj-hf-SM6" id="T82-4U-sjO"/>
                         <outlet property="nameLabel" destination="XAa-Ys-w2p" id="E8e-IT-fqj"/>
                         <outlet property="phoneLabel" destination="e2A-Wb-nTr" id="YtG-Eh-ho6"/>
+                        <outlet property="scrollView" destination="9NV-bv-sOG" id="5FS-Ku-65v"/>
                         <outlet property="streetLabel" destination="OuB-Lo-dLc" id="Xu3-Ww-b9u"/>
                     </connections>
                 </viewController>

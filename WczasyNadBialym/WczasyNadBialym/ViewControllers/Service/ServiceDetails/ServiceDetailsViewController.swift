@@ -8,8 +8,11 @@
 
 import UIKit
 import MapKit
+import SVProgressHUD
 
 class ServiceDetailsViewController: UIViewController {
+
+    let backgroundImageName = "background_gradient2"
 
     var selectedServiceId: String = ""
     var selectedServiceType: String = ""
@@ -26,63 +29,88 @@ class ServiceDetailsViewController: UIViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    lazy var viewModel: ServiceDetailsViewModel = {
+        return ServiceDetailsViewModel()
+    }()
+    
+    // init view model
+    
+    func initViewModel () {
+        
+        viewModel.updateViewClosure = {
+            DispatchQueue.main.async {
+                
+                let serviceDetailsModel = self.viewModel.getServiceDetailsModel()
+                
+                if let serviceDetailsModel = serviceDetailsModel {
+                    
+                    self.gpsLat = serviceDetailsModel.gpsLat
+                    self.gpsLng = serviceDetailsModel.gpsLng
+                    self.pinTitle = serviceDetailsModel.name
+                    self.pinSubtitle = serviceDetailsModel.phone
+                    
+                    // update ui
+                    
+                    DispatchQueue.main.async() {
+                        self.nameLabel.text = serviceDetailsModel.name
+                        self.streetLabel.text = serviceDetailsModel.street
+                        self.cityLabel.text = serviceDetailsModel.city
+                        self.phoneLabel.text = serviceDetailsModel.phone
+                        
+                        // remove all html tags
+                        
+                        let detailsStripped = serviceDetailsModel.description.removeHTMLTags()
+                        
+                        self.descriptionTextView.text = detailsStripped
+                    }
+                    
+                    // assign mini image if present
+                    
+                    self.imageView.downloadImageAsync(serviceDetailsModel.miniImgURL)
+                    
+                    // map generator
+                    
+                    DispatchQueue.main.async() {
+                        self.mapView.fillMap(serviceDetailsModel.gpsLat, serviceDetailsModel.gpsLng,
+                                             serviceDetailsModel.name, serviceDetailsModel.phone, self.mapType)
+                        
+                        SVProgressHUD.dismiss()
+                        self.scrollView.isHidden = false
+                    }
+                }
+                else {
+                    DispatchQueue.main.async() {
+                        self.view.addBlurSubview(style: .light, animation: .curveLinear)
+                    }
+                }
+            }
+        }
+
+        viewModel.fetchServiceDetails(for: selectedServiceId)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // hide everything while loading
+        
+        self.scrollView.isHidden = true
+        
         // add background and blur for content view
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background_gradient2")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: backgroundImageName)!)
         self.view.addBlurSubview(at: 0)
 
         // setup with default images
         
         let serviceImage = UIImage(named: self.selectedServiceType + ".png")
         self.imageView.image = serviceImage
-  
-        NetworkManager.sharedInstance().getServiceDetails(selectedServiceId) { (service, error) in
-            
-            // store gps location
-            
-            if let service = service {
-                
-                self.gpsLat = service.gpsLat
-                self.gpsLng = service.gpsLng
-                self.pinTitle = service.name
-                self.pinSubtitle = service.phone
-                
-                // update ui
-                
-                DispatchQueue.main.async() {
-                    self.nameLabel.text = service.name
-                    self.streetLabel.text = service.street
-                    self.cityLabel.text = service.city
-                    self.phoneLabel.text = service.phone
-                    
-                    // remove all html tags
-                    
-                    let detailsStripped = service.description.removeHTMLTags()
-                    
-                    self.descriptionTextView.text = detailsStripped
-                }
-                
-                // assign mini image if present
-                
-                self.imageView.downloadImageAsync(service.miniImgURL)
-                
-                // map generator
-                
-                DispatchQueue.main.async() {
-                    self.mapView.fillMap(service.gpsLat, service.gpsLng, service.name, service.phone, self.mapType)
-                }
-            }
-            else {
-                DispatchQueue.main.async() {
-                    self.view.addBlurSubview(style: .light, animation: .curveLinear)
-                }
-            }
-        }
-        // Do any additional setup after loading the view.
+        
+        SVProgressHUD.show()
+        
+        initViewModel()
     }
 
     override func didReceiveMemoryWarning() {

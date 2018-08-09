@@ -74,6 +74,7 @@
 		F43134E21EC4822A0078D602 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43134E11EC4822A0078D602 /* EventDetailsViewController.swift */; };
 		F439C1281EAE2053005EBFB7 /* ServiceContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C1271EAE2053005EBFB7 /* ServiceContants.swift */; };
 		F439C1301EAE2290005EBFB7 /* ServiceNetwokManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C12F1EAE2290005EBFB7 /* ServiceNetwokManager.swift */; };
+		F44BF942211AECEE00272E1A /* ServiceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BF941211AECEE00272E1A /* ServiceDetailsViewModel.swift */; };
 		F44C7E701E8A945D005390D6 /* akceptacjazwierzat.gif in Resources */ = {isa = PBXBuildFile; fileRef = F44C7E571E8A945D005390D6 /* akceptacjazwierzat.gif */; };
 		F44C7E711E8A945D005390D6 /* basen.gif in Resources */ = {isa = PBXBuildFile; fileRef = F44C7E581E8A945D005390D6 /* basen.gif */; };
 		F44C7E721E8A945D005390D6 /* bilard.gif in Resources */ = {isa = PBXBuildFile; fileRef = F44C7E591E8A945D005390D6 /* bilard.gif */; };
@@ -276,6 +277,7 @@
 		F43134E11EC4822A0078D602 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		F439C1271EAE2053005EBFB7 /* ServiceContants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceContants.swift; sourceTree = "<group>"; };
 		F439C12F1EAE2290005EBFB7 /* ServiceNetwokManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceNetwokManager.swift; sourceTree = "<group>"; };
+		F44BF941211AECEE00272E1A /* ServiceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewModel.swift; sourceTree = "<group>"; };
 		F44C7E571E8A945D005390D6 /* akceptacjazwierzat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = akceptacjazwierzat.gif; sourceTree = "<group>"; };
 		F44C7E581E8A945D005390D6 /* basen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = basen.gif; sourceTree = "<group>"; };
 		F44C7E591E8A945D005390D6 /* bilard.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bilard.gif; sourceTree = "<group>"; };
@@ -768,6 +770,7 @@
 			isa = PBXGroup;
 			children = (
 				F416D8281EBC87B2002A70C2 /* ServiceDetailsViewController.swift */,
+				F44BF941211AECEE00272E1A /* ServiceDetailsViewModel.swift */,
 			);
 			path = ServiceDetails;
 			sourceTree = "<group>";
@@ -1439,6 +1442,7 @@
 				F44D23121EAF749A00C89BE2 /* AccommodationGalleryModel.swift in Sources */,
 				F44D23111EAF749A00C89BE2 /* AccommodationDetailsModel.swift in Sources */,
 				F4BC49E01EC1A0DB000791AE /* EventModel.swift in Sources */,
+				F44BF942211AECEE00272E1A /* ServiceDetailsViewModel.swift in Sources */,
 				F41853511F2875D0006AE1CD /* ErrorHandler.swift in Sources */,
 				F481E7B91EB1D9BC009637A1 /* AccommodationListViewController.swift in Sources */,
 				F4AA0FDB1FE2BE47009F3FF3 /* WeatherConstants.swift in Sources */,
