@@ -38,7 +38,7 @@
         <scene sceneID="vF2-4J-fde">
             <objects>
                 <splitViewController title="Split" id="Png-2j-lqB" customClass="CustomSplitViewController" customModule="WczasyNadBialym" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Informacje" id="NJE-zG-wFD"/>
+                    <tabBarItem key="tabBarItem" title="Informacje" image="info" id="NJE-zG-wFD"/>
                     <toolbarItems/>
                     <connections>
                         <segue destination="fmk-yI-WZX" kind="relationship" relationship="masterViewController" id="gFo-FJ-zBl"/>
@@ -179,5 +179,6 @@
     </scenes>
     <resources>
         <image name="background_gradient2" width="640" height="1136"/>
+        <image name="info" width="28" height="28"/>
     </resources>
 </document>

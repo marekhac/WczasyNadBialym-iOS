@@ -45,7 +45,7 @@
         <scene sceneID="gLj-gL-B9n">
             <objects>
                 <splitViewController title="Split" id="nfO-be-RRx" customClass="CustomSplitViewController" customModule="WczasyNadBialym" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Noclegi" id="KG6-r5-doS"/>
+                    <tabBarItem key="tabBarItem" title="Noclegi" image="accommodation" id="KG6-r5-doS"/>
                     <toolbarItems/>
                     <connections>
                         <segue destination="GkR-92-xsl" kind="relationship" relationship="masterViewController" id="d9m-YI-jS6"/>
@@ -589,6 +589,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="accommodation" width="28" height="28"/>
         <image name="akceptacjazwierzat.gif" width="40" height="39"/>
     </resources>
 </document>

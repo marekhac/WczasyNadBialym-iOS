@@ -35,7 +35,7 @@
         <scene sceneID="HVn-Q7-8SB">
             <objects>
                 <splitViewController title="Split" id="ZaR-Lw-30F" customClass="CustomSplitViewController" customModule="WczasyNadBialym" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Usługi" id="nTj-70-R7F"/>
+                    <tabBarItem key="tabBarItem" title="Usługi" image="services" id="nTj-70-R7F"/>
                     <toolbarItems/>
                     <connections>
                         <segue destination="fb3-6L-7dU" kind="relationship" relationship="masterViewController" id="fB3-h4-HpV"/>
@@ -93,7 +93,7 @@
         <scene sceneID="wdM-Xp-YX3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f19-m9-ePJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Uslugi" id="lyo-7L-Ha0"/>
+                    <tabBarItem key="tabBarItem" title="Uslugi" landscapeImage="accommodation" id="lyo-7L-Ha0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="enH-Mb-Tsk">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -405,4 +405,8 @@
             <point key="canvasLocation" x="3510" y="-1716"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="accommodation" width="28" height="28"/>
+        <image name="services" width="28" height="28"/>
+    </resources>
 </document>

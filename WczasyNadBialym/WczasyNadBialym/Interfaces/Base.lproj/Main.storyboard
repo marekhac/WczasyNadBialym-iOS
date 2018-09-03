@@ -123,7 +123,7 @@
                             </constraint>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Menu" id="ghM-pc-Nlb"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="accommodation" id="ghM-pc-Nlb"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="y5x-85-6Ph" id="blW-Fs-Rew"/>
                         <outlet property="temperatureLabel" destination="0yv-Lu-uae" id="e9Q-k4-D4M"/>
@@ -158,7 +158,9 @@
         <scene sceneID="TRG-v1-i6Y">
             <objects>
                 <viewControllerPlaceholder storyboardName="ServiceStoryboard" id="5oH-F0-lwP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="D02-PX-5OP"/>
+                    <tabBarItem key="tabBarItem" title="Services" image="accommodation" selectedImage="accommodation" id="D02-PX-5OP">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W3V-2C-yDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,7 +170,7 @@
         <scene sceneID="QfX-uv-Qa2">
             <objects>
                 <viewControllerPlaceholder storyboardName="EventStoryboard" id="Eln-FT-kBu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ean-eh-Hpv"/>
+                    <tabBarItem key="tabBarItem" title="Events" id="ean-eh-Hpv"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbb-ZI-ZI4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,7 +180,7 @@
         <scene sceneID="khB-NY-FkO">
             <objects>
                 <viewControllerPlaceholder storyboardName="AccommodationStoryboard" id="dHk-wT-g6D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="RYn-Va-SkU"/>
+                    <tabBarItem key="tabBarItem" title="Accommodation" image="accommodation" id="RYn-Va-SkU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cC-vy-bpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,6 +198,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="accommodation" width="28" height="28"/>
         <image name="background_blue" width="750" height="1334"/>
         <image name="wczasy_logo" width="1185" height="197"/>
     </resources>
