@@ -225,8 +225,16 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
             let focusOnTheBottomOfScrollView = BlockOperation(block: {
                 
                 OperationQueue.main.addOperation({
-                    let bottomOffset = CGPoint(x: 0, y: self.scrollView.contentSize.height - self.scrollView.bounds.size.height)
-                    self.scrollView.setContentOffset(bottomOffset, animated: true)
+                    let contentSizeHeight = self.scrollView.contentSize.height;
+                    let boundsSizeHeight = self.scrollView.bounds.size.height;
+                    
+                    // if contentSizeHeight is larger than boundsSizeHeight (f.e. iPad in portrait mode)
+                    // we should not touch content offset at all
+                    
+                    if (boundsSizeHeight < contentSizeHeight) {
+                        let bottomOffset = CGPoint(x: 0, y: contentSizeHeight - boundsSizeHeight)
+                        self.scrollView.setContentOffset(bottomOffset, animated: true)
+                    }
                 })
             })
             
