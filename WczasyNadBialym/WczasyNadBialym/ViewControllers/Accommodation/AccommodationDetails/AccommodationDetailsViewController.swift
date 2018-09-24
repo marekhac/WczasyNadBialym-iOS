@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import SVProgressHUD
 
 class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -57,8 +58,125 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
         super.viewWillAppear(true)
     }
 
+    lazy var viewModel: AccommodationDetailsViewModel = {
+        return AccommodationDetailsViewModel()
+    }()
+    
+    // init view model
+    
+    func initViewModel () {
+        
+        let dispatchGroup = DispatchGroup()
+        
+        viewModel.updateGalleryViewClosure = {
+            DispatchQueue.main.async {
+                let accomodationGalleryModel = self.viewModel.getAccommodationGallery()
+                
+                if let pictures = accomodationGalleryModel {
+                    if (pictures.mainImgMini.count != 0) {
+                        self.picturesURLArray.append(pictures.dirMainPicture + pictures.mainImgMini)
+                        self.largePicturesURLArray.append(pictures.dirMainPicture + pictures.mainImgFull)
+                    }
+                    
+                    for picture in pictures.arrayOfPictures {
+                        self.picturesURLArray.append(pictures.dirMiniPictures + picture)
+                        self.largePicturesURLArray.append(pictures.dirLargePictures + picture)
+                    }
+                    
+                    self.imageCollectionViewHeightContraint.constant = ImageCollectionViewHeight.large.rawValue
+                    self.imageCollectionView.reloadData()
+                    self.view.updateLayoutWithAnimation(andDuration: 0.5)
+                }
+                else {
+                    print ("No pictures to show")
+                }
+                dispatchGroup.leave()
+            }
+        }
+        
+        viewModel.updateDetailViewClosure = {
+            DispatchQueue.main.async {
+                let accommodationDetailsModel = self.viewModel.getAccommodationDetailsModel()
+                
+                if let details = accommodationDetailsModel {
+                    self.gpsLat = details.gpsLat
+                    self.gpsLng = details.gpsLng
+                    self.pinTitle = details.name
+                    self.pinSubtitle = details.phone
+                    
+                    self.mapView.fillMap(details.gpsLat, details.gpsLng, details.name, details.phone, self.mapType)
+                    
+                    self.nameLabel.text = details.name
+                    self.priceLabel.text = details.price
+                    self.phoneTextView.text = details.phone.replacingOccurrences(of: "<br>", with: "\n")
+                    
+                    self.phoneTextView.updateHeight(of: self.phoneTextViewHeightContraint)
+                    self.view.updateLayoutWithAnimation(andDuration: 0.5)
+                    self.headerView.isHidden = false
+                    
+                    // remove all html tags
+                    
+                    let detailsStripped = details.description.removeHTMLTags()
+                    self.descriptionTextView.text = detailsStripped
+                }
+                else {
+                    print ("No accommodation details to show")
+                }
+                dispatchGroup.leave()
+
+            }
+        }
+        
+        viewModel.updatePropertiesViewClosure = {
+            DispatchQueue.main.async {
+                let accommodationPropertiesModel = self.viewModel.getAccommodationProperties()
+                
+                if let properties = accommodationPropertiesModel {
+                    
+                    self.featutesFilesArray = properties.features
+                    self.advantagesFilesArray = properties.advantages
+                    
+                    // accommodationProperties will store features or advantages
+                    // depends on user demand. Default is features
+                    
+                    self.accommodationProperties = self.featutesFilesArray
+                    
+                    // reload and update collection view height
+                    
+                    self.accommodationPropertiesPostProcessOperations(focusOnTheBottomOfScrollView: false)
+                }
+                else {
+                    print ("No properties to save")
+                }
+                dispatchGroup.leave()
+            }
+        }
+        
+        // Use GCD to synchronize the network tasks
+        
+        dispatchGroup.enter()
+        self.viewModel.fetchAccommodationDetails(for: self.selectedAccommodationId, accommodationType: self.selectedAccommodationType)
+        
+        dispatchGroup.enter()
+        self.viewModel.fetchAccommodationGallery(for: self.selectedAccommodationId)
+        
+        dispatchGroup.enter()
+        self.viewModel.fetchAccommodationProperties(for: self.selectedAccommodationId)
+
+        // call closure when the group's task count reaches 0
+        
+        dispatchGroup.notify(queue: .main) { [weak self] in
+            SVProgressHUD.dismiss()
+            self?.scrollView.isHidden = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // hide everything while loading
+        
+        self.scrollView.isHidden = true
         self.headerView.isHidden = true
         
         // hide images collection view (since we don't know if there are any images at all)
@@ -77,78 +195,9 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
 
         print("selected accommodation id: \(self.selectedAccommodationId)");
         
-        NetworkManager.sharedInstance().getAccommodationPictures(selectedAccommodationId) { (pictures, error) in
-            
-            if let pictures = pictures as AccommodationGalleryModel? {
-                
-                if (pictures.mainImgMini.count != 0) {
-                    self.picturesURLArray.append(pictures.dirMainPicture + pictures.mainImgMini)
-                    self.largePicturesURLArray.append(pictures.dirMainPicture + pictures.mainImgFull)
-                }
-                
-                for picture in pictures.arrayOfPictures {
-                    self.picturesURLArray.append(pictures.dirMiniPictures + picture)
-                    self.largePicturesURLArray.append(pictures.dirLargePictures + picture)
-                }
-                
-                DispatchQueue.main.async() {
-                    self.imageCollectionViewHeightContraint.constant = ImageCollectionViewHeight.large.rawValue
-                    self.imageCollectionView.reloadData()
-                    self.view.updateLayoutWithAnimation(andDuration: 0.5)
-                }
-            }
-            else {
-                print ("No pictures to show")
-            }
-        }
-   
-        NetworkManager.sharedInstance().getAccommodationDetails(selectedAccommodationId, selectedAccommodationType) { (details, error) in
-            print (details)
-            
-            // map generator
-            
-            self.gpsLat = details.gpsLat
-            self.gpsLng = details.gpsLng
-            self.pinTitle = details.name
-            self.pinSubtitle = details.phone
-            
-            DispatchQueue.main.async() {
-                self.mapView.fillMap(details.gpsLat, details.gpsLng, details.name, details.phone, self.mapType)
-            }
-            
-            // display contact info
-            
-            DispatchQueue.main.async{
-                self.nameLabel.text = details.name
-                self.priceLabel.text = details.price
-                self.phoneTextView.text = details.phone.replacingOccurrences(of: "<br>", with: "\n")
-                
-                self.phoneTextView.updateHeight(of: self.phoneTextViewHeightContraint)
-                self.view.updateLayoutWithAnimation(andDuration: 0.5)
-                self.headerView.isHidden = false
-                
-                // remove all html tags
-                
-                let detailsStripped = details.description.removeHTMLTags()
-                
-                self.descriptionTextView.text = detailsStripped
-            }
-        }
+        SVProgressHUD.show()
         
-        NetworkManager.sharedInstance().getAccommodationProperties(selectedAccommodationId) { (properties, error) in
-
-            self.featutesFilesArray = properties.features
-            self.advantagesFilesArray = properties.advantages
-            
-            // accommodationProperties will store features or advantages
-            // depends on user demand. Default is features
-            
-            self.accommodationProperties = self.featutesFilesArray
-            
-            // reload and update collection view height
-            
-            self.accommodationPropertiesPostProcessOperations(focusOnTheBottomOfScrollView: false)
-        }
+        initViewModel()
     }
 
     override func didReceiveMemoryWarning() {

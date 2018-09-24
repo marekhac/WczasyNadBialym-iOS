@@ -25,6 +25,7 @@
 		F40C91DB1E698343006124FC /* AccommodationNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C91D61E698343006124FC /* AccommodationNetworkManager.swift */; };
 		F40C91DD1E698343006124FC /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C91D81E698343006124FC /* NetworkConstants.swift */; };
 		F40C91DE1E698343006124FC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40C91D91E698343006124FC /* NetworkManager.swift */; };
+		F40D459421511E5C00CE37BA /* AccommodationDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40D459321511E5C00CE37BA /* AccommodationDetailsViewModel.swift */; };
 		F416BC3E1F5FE18F0032EA1E /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F416BC151F5FE18A0032EA1E /* Lato-Black.ttf */; };
 		F416BC3F1F5FE1920032EA1E /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F416BC161F5FE18A0032EA1E /* Lato-BlackItalic.ttf */; };
 		F416BC401F5FE1920032EA1E /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F416BC171F5FE18A0032EA1E /* Lato-Bold.ttf */; };
@@ -219,6 +220,7 @@
 		F40C91D61E698343006124FC /* AccommodationNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccommodationNetworkManager.swift; sourceTree = "<group>"; };
 		F40C91D81E698343006124FC /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		F40C91D91E698343006124FC /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F40D459321511E5C00CE37BA /* AccommodationDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccommodationDetailsViewModel.swift; sourceTree = "<group>"; };
 		F416BC151F5FE18A0032EA1E /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		F416BC161F5FE18A0032EA1E /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		F416BC171F5FE18A0032EA1E /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -935,6 +937,7 @@
 			isa = PBXGroup;
 			children = (
 				F481E7A31EB1D9BC009637A1 /* AccommodationDetailsViewController.swift */,
+				F40D459321511E5C00CE37BA /* AccommodationDetailsViewModel.swift */,
 				F481E7A41EB1D9BC009637A1 /* CollectionViewCells */,
 			);
 			path = AccommodationDetails;
@@ -1200,6 +1203,7 @@
 				TargetAttributes = {
 					F40006111E697B710032033C = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = X9888GP63R;
 						ProvisioningStyle = Automatic;
 					};
 					F400062A1E697B720032033C = {
@@ -1433,6 +1437,7 @@
 				F439C1301EAE2290005EBFB7 /* ServiceNetwokManager.swift in Sources */,
 				F44F0F021FB5D03D007032DA /* ServiceMapViewController.swift in Sources */,
 				F416D8291EBC87B2002A70C2 /* ServiceDetailsViewController.swift in Sources */,
+				F40D459421511E5C00CE37BA /* AccommodationDetailsViewModel.swift in Sources */,
 				F40C91DA1E698343006124FC /* AccommodationContants.swift in Sources */,
 				F4186C4B1ECB236F006C87D0 /* InfoCategoriesCell.swift in Sources */,
 				F49B16951FA124F300A3E50C /* InfoConstants.swift in Sources */,
@@ -1616,7 +1621,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 030FF5EC43097CAAA89FEA54 /* Pods-WczasyNadBialym.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1630,7 +1635,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7FA0F9676DF057771EEF998 /* Pods-WczasyNadBialym.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
