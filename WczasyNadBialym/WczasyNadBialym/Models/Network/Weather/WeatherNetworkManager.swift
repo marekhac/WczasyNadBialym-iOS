@@ -24,7 +24,7 @@ extension NetworkManager {
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {
-                ErrorHandler.report("Unable to download Event Details", error.localizedDescription, displayWithHUD: true)
+                ErrorHandler.report("Unable to download Weather Details", error.localizedDescription, displayWithHUD: true)
             } else {
                 if let result = results {
                     let list = WeatherModel.currentMeasurement(result)
