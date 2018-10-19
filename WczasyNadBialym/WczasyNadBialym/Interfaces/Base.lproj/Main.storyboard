@@ -123,7 +123,7 @@
                             </constraint>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Menu" image="accommodation" id="ghM-pc-Nlb"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="home" id="ghM-pc-Nlb"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="y5x-85-6Ph" id="blW-Fs-Rew"/>
                         <outlet property="temperatureLabel" destination="0yv-Lu-uae" id="e9Q-k4-D4M"/>
@@ -200,6 +200,7 @@
     <resources>
         <image name="accommodation" width="28" height="28"/>
         <image name="background_blue" width="750" height="1334"/>
+        <image name="home" width="28" height="28"/>
         <image name="wczasy_logo" width="1185" height="197"/>
     </resources>
 </document>
