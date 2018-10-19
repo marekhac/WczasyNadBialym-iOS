@@ -105,7 +105,6 @@
 		F44C7E9E1E8A9464005390D6 /* czajnik.gif in Resources */ = {isa = PBXBuildFile; fileRef = F44C7E8B1E8A9464005390D6 /* czajnik.gif */; };
 		F44C7EA01E8A9464005390D6 /* internetwifi.gif in Resources */ = {isa = PBXBuildFile; fileRef = F44C7E8D1E8A9464005390D6 /* internetwifi.gif */; };
 		F44C7EA11E8A9464005390D6 /* klimatyzacja.gif in Resources */ = {isa = PBXBuildFile; fileRef = F44C7E8E1E8A9464005390D6 /* klimatyzacja.gif */; };
-		F44C7EA21E8A9464005390D6 /* kuchnia.gif in Resources */ = {isa = PBXBuildFile; fileRef = F44C7E8F1E8A9464005390D6 /* kuchnia.gif */; };
 		F44C7EA31E8A9464005390D6 /* lazienka.gif in Resources */ = {isa = PBXBuildFile; fileRef = F44C7E901E8A9464005390D6 /* lazienka.gif */; };
 		F44C7EA51E8A9464005390D6 /* lodowka.gif in Resources */ = {isa = PBXBuildFile; fileRef = F44C7E921E8A9464005390D6 /* lodowka.gif */; };
 		F44C7EA61E8A9464005390D6 /* mikrofalowka.gif in Resources */ = {isa = PBXBuildFile; fileRef = F44C7E931E8A9464005390D6 /* mikrofalowka.gif */; };
@@ -309,7 +308,6 @@
 		F44C7E8B1E8A9464005390D6 /* czajnik.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = czajnik.gif; sourceTree = "<group>"; };
 		F44C7E8D1E8A9464005390D6 /* internetwifi.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = internetwifi.gif; sourceTree = "<group>"; };
 		F44C7E8E1E8A9464005390D6 /* klimatyzacja.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = klimatyzacja.gif; sourceTree = "<group>"; };
-		F44C7E8F1E8A9464005390D6 /* kuchnia.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = kuchnia.gif; sourceTree = "<group>"; };
 		F44C7E901E8A9464005390D6 /* lazienka.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = lazienka.gif; sourceTree = "<group>"; };
 		F44C7E921E8A9464005390D6 /* lodowka.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = lodowka.gif; sourceTree = "<group>"; };
 		F44C7E931E8A9464005390D6 /* mikrofalowka.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mikrofalowka.gif; sourceTree = "<group>"; };
@@ -868,7 +866,6 @@
 				F44C7E8B1E8A9464005390D6 /* czajnik.gif */,
 				F44C7E8D1E8A9464005390D6 /* internetwifi.gif */,
 				F44C7E8E1E8A9464005390D6 /* klimatyzacja.gif */,
-				F44C7E8F1E8A9464005390D6 /* kuchnia.gif */,
 				F44C7E901E8A9464005390D6 /* lazienka.gif */,
 				F44C7E921E8A9464005390D6 /* lodowka.gif */,
 				F44C7E931E8A9464005390D6 /* mikrofalowka.gif */,
@@ -1254,7 +1251,6 @@
 				F44C7E831E8A945D005390D6 /* salatelewizyjna.gif in Resources */,
 				F4F97EEF21148CB50057BF1F /* InfoStoryboard.storyboard in Resources */,
 				F44C7EA71E8A9464005390D6 /* prysznic.gif in Resources */,
-				F44C7EA21E8A9464005390D6 /* kuchnia.gif in Resources */,
 				F416BC461F5FE1920032EA1E /* Lato-Italic.ttf in Resources */,
 				F44C7E781E8A945D005390D6 /* kuchnia.gif in Resources */,
 				F416D8191EBC76DA002A70C2 /* dyskoteka.jpg in Resources */,
