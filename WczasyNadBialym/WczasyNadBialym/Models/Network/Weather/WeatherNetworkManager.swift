@@ -20,15 +20,16 @@ extension NetworkManager {
     
     
         /* 2. Make the request */
-        let _ = taskForDownloadContent(controller, method, parameters) { (results, error) in
+        getRequest(controller, method, parameters) { (results, error) in
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {
                 ErrorHandler.report("Unable to download Weather Details", error.localizedDescription, displayWithHUD: true)
             } else {
                 if let result = results {
-                    let list = WeatherModel.currentMeasurement(result)
-                    completionHandlerForWeather(list, nil)
+                    if let list = WeatherModel.currentMeasurement(result) {
+                     completionHandlerForWeather(list, nil)
+                    }
                 }
             }
         }

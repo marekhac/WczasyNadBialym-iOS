@@ -2,38 +2,17 @@
 //  EventModel.swift
 //  WczasyNadBialym
 //
-//  Created by Marek Hać on 09.05.2017.
-//  Copyright © 2017 Marek Hać. All rights reserved.
+//  Created by Marek Hać on 26.11.2018.
+//  Copyright © 2018 Marek Hać. All rights reserved.
 //
 
 import Foundation
 
-struct EventsInYearModel : Codable {
-    struct EventModel : Codable {
-        let id : Int
-        let name : String
-        let place : String
-        let date : Date
-        
-    }
-    let year: Int
-    let events: [EventModel]
+struct EventModel : Codable {
+    let id : Int
+    let name : String
+    let place : String
+    let date : Date
+    let timestamp : Int32
     
-    static func eventsInYearFromResults(_ jsonData: Data) -> [EventsInYearModel] {
-        
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(Date.Formatter.customDateAndHourFormat)
-        
-        var eventsInYear = [EventsInYearModel]()
-        do {
-            eventsInYear = try decoder.decode([EventsInYearModel].self, from: jsonData)
-        } catch {
-            if(!ErrorModel.unwrapFrom(jsonData)) {
-                ErrorHandler.report("Unable to parse Service Categories JSON", error.localizedDescription)
-            }
-        }
-        
-        return eventsInYear
-    }
 }
-

@@ -19,7 +19,7 @@ extension NetworkManager {
         let parameters = [String: String]()
         
         /* 2. Make the request */
-        let _ = taskForDownloadContent(controller, method, parameters) { (results, error) in
+        getRequest(controller, method, parameters) { (results, error) in
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {
@@ -44,7 +44,7 @@ extension NetworkManager {
         // let parameters = [String: String]
         
         /* 2. Make the request */
-        let _ = taskForDownloadContent(controller, method, parameters) { (results, error) in
+        getRequest(controller, method, parameters) { (results, error) in
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {
@@ -67,7 +67,7 @@ extension NetworkManager {
         let parameters = [Service.ParameterKeys.Id : eventId]
         
         /* 2. Make the request */
-        let _ = taskForDownloadContent(controller, method, parameters) { (results, error) in
+        getRequest(controller, method, parameters) { (results, error) in
             
             /* 3. Send the desired value(s) to completion handler */
             if let error = error {

@@ -9,7 +9,6 @@
 import Foundation
 class NetworkManager : NSObject {
    
-    // shared session
     var session = URLSession.shared
 
     // MARK: Initializers
@@ -18,48 +17,60 @@ class NetworkManager : NSObject {
         super.init()
     }
     
-    func taskForDownloadContent(_ controller: String, _ method: String, _ parameters: [String:String], _ datatype: DownloadedDataType = .json, completionHandlerForDownloadData: @escaping (_ result: Data?, _ error: NSError?) -> Void) -> URLSessionDataTask {
+    func getRequest(_ controller: String, _ method: String, _ parameters: [String:String], _ datatype: DownloadedDataType = .json, completionHandlerForDownloadData: @escaping (_ result: Data?, _ error: NSError?) -> Void) {
         
-        /* 1. Set the parameters */
-        
-        /* 2/3. Build the URL, Configure the request */
         let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters, datatype, withPathExtension: method))
                
-        /* 4. Make the request */
+        let task = self.buildTask(request: request as URLRequest, completionHandler: completionHandlerForDownloadData)
+        task.resume()
+    }
+    
+    func postRequest(_ controller: String, _ method: String, _ json: [String: Any], _ datatype: DownloadedDataType = .json, completionHandlerForDownloadData: @escaping (_ result: Data?, _ error: NSError?) -> Void) {
+        
+        let parameters = [String: String]()
+        let jsonData = try? JSONSerialization.data(withJSONObject: json) // json to data
+        
+        let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters, datatype, withPathExtension: method))
+        
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.httpBody = jsonData
+        
+        let task = self.buildTask(request: request as URLRequest, completionHandler: completionHandlerForDownloadData)
+        task.resume()
+    }
+    
+    func buildTask(request: URLRequest, completionHandler: @escaping (_ result: Data?, _ error: NSError?) -> Void) -> URLSessionDataTask {
+        
         let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
             
             func sendError(_ error: String) {
                 print(error)
                 let userInfo = [NSLocalizedDescriptionKey : error]
                 let errorData : Data? = nil
-                completionHandlerForDownloadData(errorData, NSError(domain: "taskForDownloadContent", code: 1, userInfo: userInfo))
+                completionHandler(errorData, NSError(domain: "networkRequest", code: 1, userInfo: userInfo))
             }
             
-            /* GUARD: Was there an error? */
             guard (error == nil) else {
                 sendError("There was an error with your request: \(String(describing: error))")
                 return
             }
             
-            /* GUARD: Did we get a successful 2XX response? */
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
                 sendError("Your request returned a status code other than 2xx!")
                 return
             }
             
-            /* GUARD: Was there any data returned? */
             guard let data = data else {
                 sendError("No data was returned by the request!")
                 return
             }
             
-            /* 5/6. Parse the data and use the data (happens in completion handler) */
-            completionHandlerForDownloadData(data, nil)
+            // parse data
+            
+            completionHandler(data, nil)
         }
-        
-        /* 7. Start the request */
-        task.resume()
-        
         return task
     }
     

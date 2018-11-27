@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Event {
+struct EventURLParams {
     
     // MARK: Controller Keys
     struct Controllers {
@@ -21,6 +21,7 @@ struct Event {
         
         static let List = "lista"
         static let Details = "details"
+        static let Sync = "sync"
     }
     
     // MARK: Method Keys

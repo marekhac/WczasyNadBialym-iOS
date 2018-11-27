@@ -12,6 +12,7 @@
 		F40006161E697B710032033C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40006151E697B710032033C /* AppDelegate.swift */; };
 		F40006301E697B720032033C /* WczasyNadBialymTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400062F1E697B720032033C /* WczasyNadBialymTests.swift */; };
 		F400063C1E6980060032033C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F400063B1E6980060032033C /* Assets.xcassets */; };
+		F400B25621AC061F00B6D371 /* EventSyncModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400B25521AC061F00B6D371 /* EventSyncModel.swift */; };
 		F4074A7921146AEA00111E94 /* EventStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4074A7821146AEA00111E94 /* EventStoryboard.storyboard */; };
 		F40A1FFE1E7ABC2300AF7A28 /* dollar_coin.png in Resources */ = {isa = PBXBuildFile; fileRef = F40A1FFC1E7ABC2300AF7A28 /* dollar_coin.png */; };
 		F40A1FFF1E7ABC2300AF7A28 /* phone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F40A1FFD1E7ABC2300AF7A28 /* phone_icon.png */; };
@@ -67,10 +68,14 @@
 		F416D8261EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8141EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg */; };
 		F416D8291EBC87B2002A70C2 /* ServiceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416D8281EBC87B2002A70C2 /* ServiceDetailsViewController.swift */; };
 		F416D82B1EBC8BD5002A70C2 /* address_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F416D82A1EBC8BD5002A70C2 /* address_icon.png */; };
+		F416DEA72192D12C0086B577 /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416DEA62192D12C0086B577 /* Synchronizer.swift */; };
+		F416DEAC2192E78F0086B577 /* CDEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416DEAB2192E78F0086B577 /* CDEvent.swift */; };
 		F41853511F2875D0006AE1CD /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41853501F2875D0006AE1CD /* ErrorHandler.swift */; };
 		F4186C491ECB1120006C87D0 /* InfoCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186C481ECB1120006C87D0 /* InfoCategoriesViewController.swift */; };
 		F4186C4B1ECB236F006C87D0 /* InfoCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186C4A1ECB236F006C87D0 /* InfoCategoriesCell.swift */; };
 		F42277D81F851AB500DBB541 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42277D71F851AB500DBB541 /* ErrorModel.swift */; };
+		F428E5E521AD262B00A6784A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F428E5E421AD262B00A6784A /* CoreDataManager.swift */; };
+		F428E5E721AD2D9900A6784A /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F428E5E621AD2D9900A6784A /* EventModel.swift */; };
 		F42AED7A1FAC758200B133BC /* MenuTabsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AED791FAC758200B133BC /* MenuTabsEnum.swift */; };
 		F43134E21EC4822A0078D602 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43134E11EC4822A0078D602 /* EventDetailsViewController.swift */; };
 		F439C1281EAE2053005EBFB7 /* ServiceContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C1271EAE2053005EBFB7 /* ServiceContants.swift */; };
@@ -152,7 +157,6 @@
 		F4BA24271FBD9C4B00DC3A86 /* FrontStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BA24261FBD9C4B00DC3A86 /* FrontStoryboard.storyboard */; };
 		F4BC49DA1EC19DF2000791AE /* EventListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49D91EC19DF2000791AE /* EventListTableViewController.swift */; };
 		F4BC49DD1EC19F81000791AE /* EventNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49DC1EC19F81000791AE /* EventNetworkManager.swift */; };
-		F4BC49E01EC1A0DB000791AE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49DF1EC1A0DB000791AE /* EventModel.swift */; };
 		F4BC49E21EC1A134000791AE /* EventConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49E11EC1A134000791AE /* EventConstants.swift */; };
 		F4BF482E1FB34BE900055444 /* hot_spot.png in Resources */ = {isa = PBXBuildFile; fileRef = F4BF482D1FB34BE800055444 /* hot_spot.png */; };
 		F4BF48301FB34C4800055444 /* wc.png in Resources */ = {isa = PBXBuildFile; fileRef = F4BF482F1FB34C4800055444 /* wc.png */; };
@@ -206,6 +210,7 @@
 		F400062F1E697B720032033C /* WczasyNadBialymTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WczasyNadBialymTests.swift; sourceTree = "<group>"; };
 		F40006311E697B720032033C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F400063B1E6980060032033C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F400B25521AC061F00B6D371 /* EventSyncModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSyncModel.swift; sourceTree = "<group>"; };
 		F4074A7821146AEA00111E94 /* EventStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventStoryboard.storyboard; sourceTree = "<group>"; };
 		F40A1FFC1E7ABC2300AF7A28 /* dollar_coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar_coin.png; sourceTree = "<group>"; };
 		F40A1FFD1E7ABC2300AF7A28 /* phone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_icon.png; sourceTree = "<group>"; };
@@ -270,10 +275,14 @@
 		F416D8141EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wypozyczalnia_sprzetu.jpg; sourceTree = "<group>"; };
 		F416D8281EBC87B2002A70C2 /* ServiceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewController.swift; sourceTree = "<group>"; };
 		F416D82A1EBC8BD5002A70C2 /* address_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = address_icon.png; sourceTree = "<group>"; };
+		F416DEA62192D12C0086B577 /* Synchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
+		F416DEAB2192E78F0086B577 /* CDEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDEvent.swift; sourceTree = "<group>"; };
 		F41853501F2875D0006AE1CD /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		F4186C481ECB1120006C87D0 /* InfoCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesViewController.swift; sourceTree = "<group>"; };
 		F4186C4A1ECB236F006C87D0 /* InfoCategoriesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesCell.swift; sourceTree = "<group>"; };
 		F42277D71F851AB500DBB541 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		F428E5E421AD262B00A6784A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F428E5E621AD2D9900A6784A /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		F42AED791FAC758200B133BC /* MenuTabsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabsEnum.swift; sourceTree = "<group>"; };
 		F43134E11EC4822A0078D602 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		F439C1271EAE2053005EBFB7 /* ServiceContants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceContants.swift; sourceTree = "<group>"; };
@@ -355,7 +364,6 @@
 		F4BA24261FBD9C4B00DC3A86 /* FrontStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FrontStoryboard.storyboard; sourceTree = "<group>"; };
 		F4BC49D91EC19DF2000791AE /* EventListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListTableViewController.swift; sourceTree = "<group>"; };
 		F4BC49DC1EC19F81000791AE /* EventNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNetworkManager.swift; sourceTree = "<group>"; };
-		F4BC49DF1EC1A0DB000791AE /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		F4BC49E11EC1A134000791AE /* EventConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventConstants.swift; sourceTree = "<group>"; };
 		F4BF482D1FB34BE800055444 /* hot_spot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hot_spot.png; sourceTree = "<group>"; };
 		F4BF482F1FB34C4800055444 /* wc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wc.png; sourceTree = "<group>"; };
@@ -518,6 +526,7 @@
 		F40C91AD1E6980A1006124FC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F416DEA52192D1000086B577 /* Synchronizer */,
 				F40C91D31E698343006124FC /* Network */,
 				F40C91D01E698309006124FC /* JSON */,
 				F40C91AE1E6980A1006124FC /* CoreData */,
@@ -528,9 +537,11 @@
 		F40C91AE1E6980A1006124FC /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				F416DEAA2192E78F0086B577 /* Extensions */,
 				F40C91AF1E6980A1006124FC /* Entities */,
 				F40C91B01E6980A1006124FC /* Helpers */,
 				F40C91B11E6980A1006124FC /* Models */,
+				F428E5E421AD262B00A6784A /* CoreDataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -773,6 +784,22 @@
 				F44BF941211AECEE00272E1A /* ServiceDetailsViewModel.swift */,
 			);
 			path = ServiceDetails;
+			sourceTree = "<group>";
+		};
+		F416DEA52192D1000086B577 /* Synchronizer */ = {
+			isa = PBXGroup;
+			children = (
+				F416DEA62192D12C0086B577 /* Synchronizer.swift */,
+			);
+			path = Synchronizer;
+			sourceTree = "<group>";
+		};
+		F416DEAA2192E78F0086B577 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F416DEAB2192E78F0086B577 /* CDEvent.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F4186C421ECB10F7006C87D0 /* Info */ = {
@@ -1117,8 +1144,9 @@
 		F4BC49DE1EC1A0CC000791AE /* Event */ = {
 			isa = PBXGroup;
 			children = (
-				F4BC49DF1EC1A0DB000791AE /* EventModel.swift */,
 				F4E2437D1EDD8EF2009BBE51 /* EventDetailsModel.swift */,
+				F400B25521AC061F00B6D371 /* EventSyncModel.swift */,
+				F428E5E621AD2D9900A6784A /* EventModel.swift */,
 			);
 			path = Event;
 			sourceTree = "<group>";
@@ -1423,10 +1451,12 @@
 				F4BC49DA1EC19DF2000791AE /* EventListTableViewController.swift in Sources */,
 				F4EE43F31F2F4DBD00C99367 /* Date+CustomFormats.swift in Sources */,
 				F481E7B71EB1D9BC009637A1 /* AccommodationGalleryContentViewController.swift in Sources */,
+				F400B25621AC061F00B6D371 /* EventSyncModel.swift in Sources */,
 				F40BA2A31FB07491001A717C /* AccommodationType.swift in Sources */,
 				F40C91DD1E698343006124FC /* NetworkConstants.swift in Sources */,
 				F42AED7A1FAC758200B133BC /* MenuTabsEnum.swift in Sources */,
 				F4DEE2041F8B4F790044981E /* DataTypesEnum.swift in Sources */,
+				F416DEA72192D12C0086B577 /* Synchronizer.swift in Sources */,
 				F47605D01FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift in Sources */,
 				F4C69AD91F96306100E65023 /* UITextView+HeightUpdate.swift in Sources */,
 				F48BDA3F1F9F7BDE0057F999 /* TextDownloadManager.swift in Sources */,
@@ -1434,6 +1464,7 @@
 				F44F0F021FB5D03D007032DA /* ServiceMapViewController.swift in Sources */,
 				F416D8291EBC87B2002A70C2 /* ServiceDetailsViewController.swift in Sources */,
 				F40D459421511E5C00CE37BA /* AccommodationDetailsViewModel.swift in Sources */,
+				F428E5E521AD262B00A6784A /* CoreDataManager.swift in Sources */,
 				F40C91DA1E698343006124FC /* AccommodationContants.swift in Sources */,
 				F4186C4B1ECB236F006C87D0 /* InfoCategoriesCell.swift in Sources */,
 				F49B16951FA124F300A3E50C /* InfoConstants.swift in Sources */,
@@ -1442,7 +1473,6 @@
 				F439C1281EAE2053005EBFB7 /* ServiceContants.swift in Sources */,
 				F44D23121EAF749A00C89BE2 /* AccommodationGalleryModel.swift in Sources */,
 				F44D23111EAF749A00C89BE2 /* AccommodationDetailsModel.swift in Sources */,
-				F4BC49E01EC1A0DB000791AE /* EventModel.swift in Sources */,
 				F44BF942211AECEE00272E1A /* ServiceDetailsViewModel.swift in Sources */,
 				F41853511F2875D0006AE1CD /* ErrorHandler.swift in Sources */,
 				F481E7B91EB1D9BC009637A1 /* AccommodationListViewController.swift in Sources */,
@@ -1450,6 +1480,8 @@
 				F475D9901F90F6C10054FFE8 /* UITableView+BlurEffect.swift in Sources */,
 				F481E7CA1EB1DA4C009637A1 /* ServiceModel.swift in Sources */,
 				F4F9D1F11E854CBA0064BC24 /* UIImageView+ImageFromServerURL.swift in Sources */,
+				F416DEAC2192E78F0086B577 /* CDEvent.swift in Sources */,
+				F428E5E721AD2D9900A6784A /* EventModel.swift in Sources */,
 				F4C906611E9916FE001BCAE4 /* MKMapView+FillMap.swift in Sources */,
 				F4DEE2021F8B454A0044981E /* UIView+BlurEffect.swift in Sources */,
 				F481E7BB1EB1D9BC009637A1 /* AccommodationMapViewController.swift in Sources */,
@@ -1619,7 +1651,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.wczasynadbialym.WczasyNadBialym-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1633,7 +1665,7 @@
 			buildSettings = {
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.wczasynadbialym.WczasyNadBialym-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";

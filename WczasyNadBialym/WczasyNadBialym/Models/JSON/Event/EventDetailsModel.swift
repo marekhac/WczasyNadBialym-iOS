@@ -16,7 +16,7 @@ struct EventDetailModel : Codable {
     let imgMedURL : String
     let imgFullURL : String
     
-    static func detailsFromResults(_ jsonData : Data) -> EventDetailModel {
+    static func detailsFromResults(_ jsonData : Data) -> EventDetailModel? {
         
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(Date.Formatter.customDateAndHourFormat)
@@ -33,6 +33,6 @@ struct EventDetailModel : Codable {
             }
         }
     
-        return details!
+        return details
     }
 }

@@ -13,7 +13,7 @@ struct WeatherModel : Codable {
     let temp: Float
     let humidity: Int
 
-    static func currentMeasurement(_ jsonData: Data) -> WeatherModel {
+    static func currentMeasurement(_ jsonData: Data) -> WeatherModel? {
         
         let decoder = JSONDecoder()
         var weather : WeatherModel? = nil
@@ -25,7 +25,7 @@ struct WeatherModel : Codable {
             }
         }
         
-      return weather!
+      return weather
     }
     
 }

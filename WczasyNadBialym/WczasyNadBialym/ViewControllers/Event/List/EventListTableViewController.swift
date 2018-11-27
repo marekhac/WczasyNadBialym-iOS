@@ -12,41 +12,83 @@ import SVProgressHUD
 class EventListTableViewController: UITableViewController {
  
     var events = [String:[EventDetailModel]]()
-    var sections = [EventsInYearModel]()
+    var eventsToShow = [CDEvent]()
+    
+    @IBAction func startSynchronization(_ sender: Any) {
+        
+        print("start synchronization")
+    
+        let synchronizer = Synchronizer()
+        
+        let coreDataManager = synchronizer.coreDataManager
+        let viewContext = coreDataManager.viewContext
+        
+        // create dict with ids and timestamps
+        
+        var localIds = [String : Any]()
+        let events = coreDataManager.allEvents()
+        
+        for event in events {
+            localIds[String(event.id)] = event.timestamp
+        }
+        
+        // send local ids and timestamps to server to be processed
+        
+        NetworkManager.sharedInstance().postEventDeltas (localIds) { (results, error) in
+            
+            // in results we got array of events to update, and array of indexes to delete
+            
+            // delete
+            
+            for index in results.delete {
+                _ = CDEvent.delete(index: index, from: viewContext)
+            }
+            
+            // update
+            
+            for event in results.update {
+                _ = CDEvent(insert: event, into: viewContext)
+            }
+            
+            // save changes to persitent store
+            
+            try! coreDataManager.viewContext.save()
+            
+            // get all current events from coredata
+            
+            self.eventsToShow = coreDataManager.allEvents()
+            
+            // update the tableview
+            
+            DispatchQueue.main.sync {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.sections.removeAll()
         
         SVProgressHUD.show()
         
         // blur tableview background
         
         self.tableView.addBlurSubview(image: "background_gradient2")
+
+        let synchronizer = Synchronizer()
         
-        NetworkManager.sharedInstance().getEventSections () { (eventSections, error) in
-            
-            // skip empty sections. f.e. years where there aren't any events
-            
-            for section in eventSections {
-                SVProgressHUD.dismiss()
+        let coreDataManager = synchronizer.coreDataManager
+        eventsToShow = coreDataManager.allEvents()
                 
-                if (section.events.count != 0) {
-                    self.sections.append(section)
-                }
-            }
-            
-            if (self.sections.count == 0) {
-                SVProgressHUD.showInfo(withStatus: "Brak imprez \u{1F494}")
-            }
-            else {
-                OperationQueue.main.addOperation({
-                    self.tableView.reloadData()
-                })
-            }
-        }
+        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        print(paths[0])
         
+        if (self.eventsToShow.count == 0) {
+            SVProgressHUD.showInfo(withStatus: "Brak imprez \u{1F494}")
+        }
+        else {
+            SVProgressHUD.dismiss()
+        }
     }
     
     override func viewDidLoad() {
@@ -66,21 +108,17 @@ class EventListTableViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return sections.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-       return sections[section].events.count
+       return self.eventsToShow.count
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
         cell.selectedBackgroundColor(UIColor(white: 1, alpha: 0.5))
-    }
-        
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Rok " +  String(self.sections[section].year)
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
@@ -95,12 +133,14 @@ class EventListTableViewController: UITableViewController {
         
         let cellIdentifier = "eventsListCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! EventListCell
-        
-        let event : EventsInYearModel.EventModel = sections[indexPath.section].events[indexPath.row]
+
+        let event : CDEvent = eventsToShow[indexPath.row]
         
         cell.name?.text = event.name
-        cell.eventId =  event.id
-        cell.date.text = event.date.getDate() + ", godz. " + event.date.getHourAndMinutes()
+        cell.eventId = Int(event.id)
+        cell.date.text = "test" //event.date.getHourAndMinutes()
+        
+//        cell.date.text = event.date.getDate() + ", godz. " + event.date.getHourAndMinutes()
         
         NetworkManager.sharedInstance().getEventDetails(String(event.id)) { (details, error) in
              cell.imageMini.downloadImageAsync(details.imgMedURL)

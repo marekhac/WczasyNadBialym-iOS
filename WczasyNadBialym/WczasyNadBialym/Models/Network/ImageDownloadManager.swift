@@ -17,7 +17,7 @@ extension NetworkManager {
         let parameters = [String: String]()
         let datatype = DownloadedDataType.data
         
-        let _ = taskForDownloadContent(controller, method, parameters, datatype) { (data, error) in
+        getRequest(controller, method, parameters, datatype) { (data, error) in
 
             if let error = error {
                 ErrorHandler.report("Unable to download na image", error.localizedDescription)
