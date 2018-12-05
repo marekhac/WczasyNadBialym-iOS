@@ -14,5 +14,6 @@ struct EventModel : Codable {
     let place : String
     let date : Date
     let timestamp : Int32
-    
+    let imgMedURL : String
+    let imgFullURL : String
 }

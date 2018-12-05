@@ -68,7 +68,6 @@
 		F416D8261EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8141EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg */; };
 		F416D8291EBC87B2002A70C2 /* ServiceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416D8281EBC87B2002A70C2 /* ServiceDetailsViewController.swift */; };
 		F416D82B1EBC8BD5002A70C2 /* address_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F416D82A1EBC8BD5002A70C2 /* address_icon.png */; };
-		F416DEA72192D12C0086B577 /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416DEA62192D12C0086B577 /* Synchronizer.swift */; };
 		F416DEAC2192E78F0086B577 /* CDEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416DEAB2192E78F0086B577 /* CDEvent.swift */; };
 		F41853511F2875D0006AE1CD /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41853501F2875D0006AE1CD /* ErrorHandler.swift */; };
 		F4186C491ECB1120006C87D0 /* InfoCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186C481ECB1120006C87D0 /* InfoCategoriesViewController.swift */; };
@@ -76,6 +75,8 @@
 		F42277D81F851AB500DBB541 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42277D71F851AB500DBB541 /* ErrorModel.swift */; };
 		F428E5E521AD262B00A6784A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F428E5E421AD262B00A6784A /* CoreDataManager.swift */; };
 		F428E5E721AD2D9900A6784A /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F428E5E621AD2D9900A6784A /* EventModel.swift */; };
+		F428E5EB21AD534D00A6784A /* Synchronizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F428E5EA21AD534C00A6784A /* Synchronizer.swift */; };
+		F428E5ED21AD68AE00A6784A /* CDEventImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F428E5EC21AD68AE00A6784A /* CDEventImage.swift */; };
 		F42AED7A1FAC758200B133BC /* MenuTabsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AED791FAC758200B133BC /* MenuTabsEnum.swift */; };
 		F43134E21EC4822A0078D602 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43134E11EC4822A0078D602 /* EventDetailsViewController.swift */; };
 		F439C1281EAE2053005EBFB7 /* ServiceContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C1271EAE2053005EBFB7 /* ServiceContants.swift */; };
@@ -275,7 +276,6 @@
 		F416D8141EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wypozyczalnia_sprzetu.jpg; sourceTree = "<group>"; };
 		F416D8281EBC87B2002A70C2 /* ServiceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewController.swift; sourceTree = "<group>"; };
 		F416D82A1EBC8BD5002A70C2 /* address_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = address_icon.png; sourceTree = "<group>"; };
-		F416DEA62192D12C0086B577 /* Synchronizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
 		F416DEAB2192E78F0086B577 /* CDEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDEvent.swift; sourceTree = "<group>"; };
 		F41853501F2875D0006AE1CD /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		F4186C481ECB1120006C87D0 /* InfoCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesViewController.swift; sourceTree = "<group>"; };
@@ -283,6 +283,8 @@
 		F42277D71F851AB500DBB541 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		F428E5E421AD262B00A6784A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F428E5E621AD2D9900A6784A /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		F428E5EA21AD534C00A6784A /* Synchronizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synchronizer.swift; sourceTree = "<group>"; };
+		F428E5EC21AD68AE00A6784A /* CDEventImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDEventImage.swift; sourceTree = "<group>"; };
 		F42AED791FAC758200B133BC /* MenuTabsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabsEnum.swift; sourceTree = "<group>"; };
 		F43134E11EC4822A0078D602 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		F439C1271EAE2053005EBFB7 /* ServiceContants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceContants.swift; sourceTree = "<group>"; };
@@ -789,7 +791,7 @@
 		F416DEA52192D1000086B577 /* Synchronizer */ = {
 			isa = PBXGroup;
 			children = (
-				F416DEA62192D12C0086B577 /* Synchronizer.swift */,
+				F428E5EA21AD534C00A6784A /* Synchronizer.swift */,
 			);
 			path = Synchronizer;
 			sourceTree = "<group>";
@@ -798,6 +800,7 @@
 			isa = PBXGroup;
 			children = (
 				F416DEAB2192E78F0086B577 /* CDEvent.swift */,
+				F428E5EC21AD68AE00A6784A /* CDEventImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1442,6 +1445,7 @@
 				F481E7CD1EB1E31B009637A1 /* CustomSplitViewController.swift in Sources */,
 				F481E7C61EB1DA0B009637A1 /* ServiceCategoryCell.swift in Sources */,
 				F481E7BD1EB1D9BC009637A1 /* AccommodationTypeCell.swift in Sources */,
+				F428E5EB21AD534D00A6784A /* Synchronizer.swift in Sources */,
 				F44D23141EAF749A00C89BE2 /* AccommodationPropertiesModel.swift in Sources */,
 				F4BC49E21EC1A134000791AE /* EventConstants.swift in Sources */,
 				F44D23161EAF74FE00C89BE2 /* ServiceCategoryModel.swift in Sources */,
@@ -1456,7 +1460,6 @@
 				F40C91DD1E698343006124FC /* NetworkConstants.swift in Sources */,
 				F42AED7A1FAC758200B133BC /* MenuTabsEnum.swift in Sources */,
 				F4DEE2041F8B4F790044981E /* DataTypesEnum.swift in Sources */,
-				F416DEA72192D12C0086B577 /* Synchronizer.swift in Sources */,
 				F47605D01FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift in Sources */,
 				F4C69AD91F96306100E65023 /* UITextView+HeightUpdate.swift in Sources */,
 				F48BDA3F1F9F7BDE0057F999 /* TextDownloadManager.swift in Sources */,
@@ -1504,6 +1507,7 @@
 				F481E7B81EB1D9BC009637A1 /* AccommodationGalleryPageViewController.swift in Sources */,
 				F4C3360A1FB452B8004F2EE5 /* ServiceDetailsModel.swift in Sources */,
 				F40C91DB1E698343006124FC /* AccommodationNetworkManager.swift in Sources */,
+				F428E5ED21AD68AE00A6784A /* CDEventImage.swift in Sources */,
 				F481E7B61EB1D9BC009637A1 /* ImageCell.swift in Sources */,
 				F40C91DE1E698343006124FC /* NetworkManager.swift in Sources */,
 				F481E7B51EB1D9BC009637A1 /* FeaturesCell.swift in Sources */,

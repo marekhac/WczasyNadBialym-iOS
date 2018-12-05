@@ -13,14 +13,13 @@ class EventListTableViewController: UITableViewController {
  
     var events = [String:[EventDetailModel]]()
     var eventsToShow = [CDEvent]()
+    var imageMini = UIImageView()
     
     @IBAction func startSynchronization(_ sender: Any) {
         
         print("start synchronization")
     
-        let synchronizer = Synchronizer()
-        
-        let coreDataManager = synchronizer.coreDataManager
+        let coreDataManager = CoreDataManager()
         let viewContext = coreDataManager.viewContext
         
         // create dict with ids and timestamps
@@ -47,7 +46,23 @@ class EventListTableViewController: UITableViewController {
             // update
             
             for event in results.update {
-                _ = CDEvent(insert: event, into: viewContext)
+                
+                let eventEntity = CDEvent(insert: event, into: viewContext)
+                
+                // download images
+                
+                self.imageMini.downloadImageAsyncAndReturnImage(event.imgMedURL) { [weak self] (resultImage, error) in
+                    
+                    let imageData = NSData(data: UIImageJPEGRepresentation(resultImage, 1.0)!)
+                    
+                    let eventImageEntity = CDEventImage(insert: imageData, into: viewContext)
+                    
+                    eventEntity.addToImages(eventImageEntity) // assign image entity to event entity
+                    
+                    try! coreDataManager.viewContext.save()
+                    
+                    self?.tableView.reloadData()
+                }
             }
             
             // save changes to persitent store
@@ -139,12 +154,15 @@ class EventListTableViewController: UITableViewController {
         cell.name?.text = event.name
         cell.eventId = Int(event.id)
         cell.date.text = "test" //event.date.getHourAndMinutes()
-        
-//        cell.date.text = event.date.getDate() + ", godz. " + event.date.getHourAndMinutes()
-        
-        NetworkManager.sharedInstance().getEventDetails(String(event.id)) { (details, error) in
-             cell.imageMini.downloadImageAsync(details.imgMedURL)
+       
+        for data in event.images! {
+            
+            var eventImage : CDEventImage
+            eventImage = data as! CDEventImage
+            
+            cell.imageMini.image = UIImage(data: eventImage.image! as Data)
         }
+        
         return cell
     }
 
