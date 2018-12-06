@@ -14,10 +14,10 @@ extension UIView {
     func addBlurSubview (below view: UIView) {
         // Do any additional setup after loading the view.
         
-        if !UIAccessibilityIsReduceTransparencyEnabled() {
+        if !UIAccessibility.isReduceTransparencyEnabled {
             self.backgroundColor = UIColor.clear
             
-            let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.extraLight)
+            let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.extraLight)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
             
             // always fill the view
@@ -33,7 +33,7 @@ extension UIView {
     }
     
     func addBlurSubview (at index: Int) {
-        let extraLightBlur = UIBlurEffect(style: UIBlurEffectStyle.extraLight)
+        let extraLightBlur = UIBlurEffect(style: UIBlurEffect.Style.extraLight)
         let blurView = UIVisualEffectView(effect: extraLightBlur)
         blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurView.frame = self.bounds
@@ -41,7 +41,7 @@ extension UIView {
         self.insertSubview(blurView, at: index)
     }
     
-    func addBlurSubview (style blurStyle: UIBlurEffectStyle) {
+    func addBlurSubview (style blurStyle: UIBlurEffect.Style) {
         let blurEffect = UIBlurEffect(style: blurStyle)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = self.bounds
@@ -49,8 +49,8 @@ extension UIView {
         self.addSubview(blurView)
     }
     
-    func addBlurSubview (style blurStyle: UIBlurEffectStyle, animation animationStyle:UIViewAnimationOptions) {
-        UIView.transition(with: self, duration: 0.5, options: UIViewAnimationOptions.curveLinear,
+    func addBlurSubview (style blurStyle: UIBlurEffect.Style, animation animationStyle:UIView.AnimationOptions) {
+        UIView.transition(with: self, duration: 0.5, options: UIView.AnimationOptions.curveLinear,
                           animations: {
                                 self.addBlurSubview(style: blurStyle)
                           }, completion: nil)

@@ -32,7 +32,7 @@ class InfoDetailsViewController: UIViewController {
         
         NetworkManager.sharedInstance().downloadTextAsync(url) { (dataString, error) in
             DispatchQueue.main.async() {
-                self.contentTextView.text = dataString as String!
+                self.contentTextView.text = dataString as String
             }
         }
     }

@@ -25,7 +25,7 @@ class AccommodationGalleryPageViewController: UIPageViewController, UIPageViewCo
         
         self.dataSource = self
         self.setViewControllers([getViewController(at: selectedPictureIndex)] as [UIViewController],
-                                direction: UIPageViewControllerNavigationDirection.forward,
+                                direction: UIPageViewController.NavigationDirection.forward,
                                 animated: false,
                                 completion: nil)
         

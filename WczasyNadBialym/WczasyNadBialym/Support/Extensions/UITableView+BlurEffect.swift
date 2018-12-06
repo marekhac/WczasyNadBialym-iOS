@@ -26,6 +26,6 @@ extension UITableView {
         
         // add blur
         
-        imageView.addBlurSubview(style: UIBlurEffectStyle.light)
+        imageView.addBlurSubview(style: UIBlurEffect.Style.light)
     }
 }
