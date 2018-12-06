@@ -24,10 +24,8 @@ struct AccommodationGalleryModel : Codable {
         let decoder = JSONDecoder()
         do {
             gallery = try decoder.decode(AccommodationGalleryModel.self, from: jsonData)
-        } catch {
-            if(!ErrorModel.unwrapFrom(jsonData)) {
-                ErrorHandler.report("Unable to parse Accommodation Gallery JSON", error.localizedDescription)
-            }
+        } catch let error {
+            ErrorHandler.report("Unable to parse Accommodation Gallery JSON", error.localizedDescription)
         }
         
         return gallery // there might be no pictures in the gallery

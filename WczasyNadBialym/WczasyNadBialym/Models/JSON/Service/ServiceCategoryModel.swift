@@ -24,19 +24,16 @@ struct ServiceCategoryModel : Codable {
         self.type = ""
     }
 
-    static func servicesFromResults(_ jsonData : Data) -> [ServiceCategoryModel] {
+    static func servicesFromResults(_ jsonData : Data) -> [ServiceCategoryModel]? {
         
         let decoder = JSONDecoder()
         var categories = [ServiceCategoryModel]()
         do {
             categories = try decoder.decode([ServiceCategoryModel].self, from: jsonData)
-        } catch {
-            if(!ErrorModel.unwrapFrom(jsonData)) {
-                ErrorHandler.report("Unable to parse Service Categories JSON", error.localizedDescription)
-            }
+        } catch let error {
+            ErrorHandler.report("Unable to parse Service Categories JSON", error.localizedDescription)
         }
         
         return categories
     }
-    
 }

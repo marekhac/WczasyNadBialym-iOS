@@ -12,26 +12,18 @@ extension NetworkManager {
 
     func getCurrentMeasurement (_ completionHandlerForWeather: @escaping (_ result: WeatherModel, _ error: NSError?) -> Void) {
         
-        /* 1. Specify parameters to build URL */
-        
         let controller = Weather.Controllers.Weather
         let method  = Weather.Methods.CurrentMeasurement
         let parameters = [String: String]()
-    
-    
-        /* 2. Make the request */
-        let _ = taskForDownloadContent(controller, method, parameters) { (results, error) in
-            
-            /* 3. Send the desired value(s) to completion handler */
+        
+        let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
             if let error = error {
                 ErrorHandler.report("Unable to download Weather Details", error.localizedDescription, displayWithHUD: true)
             } else {
-                if let result = results {
-                    let list = WeatherModel.currentMeasurement(result)
-                    completionHandlerForWeather(list, nil)
+                if let weatherData = content?.parseData(using: WeatherModel.currentMeasurement) {
+                    completionHandlerForWeather(weatherData as! WeatherModel, nil)
                 }
             }
         }
-
     }
 }

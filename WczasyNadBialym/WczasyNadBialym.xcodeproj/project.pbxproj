@@ -174,6 +174,7 @@
 		F4DEE2041F8B4F790044981E /* DataTypesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DEE2031F8B4F790044981E /* DataTypesEnum.swift */; };
 		F4E2437E1EDD8EF2009BBE51 /* EventDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2437D1EDD8EF2009BBE51 /* EventDetailsModel.swift */; };
 		F4E46D811E88FCD400E64EEC /* ImageDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E46D801E88FCD400E64EEC /* ImageDownloadManager.swift */; };
+		F4E7723D21B9224F0007A521 /* Data+ParseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7723C21B9224F0007A521 /* Data+ParseData.swift */; };
 		F4EE43F31F2F4DBD00C99367 /* Date+CustomFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EE43F21F2F4DBD00C99367 /* Date+CustomFormats.swift */; };
 		F4F0BF8B1E8BCF2100FB456E /* accommodation_default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F0BF8A1E8BCF2100FB456E /* accommodation_default.jpg */; };
 		F4F97EEB211477780057BF1F /* ServiceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F97EEA211477780057BF1F /* ServiceStoryboard.storyboard */; };
@@ -377,6 +378,7 @@
 		F4DEE2031F8B4F790044981E /* DataTypesEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTypesEnum.swift; sourceTree = "<group>"; };
 		F4E2437D1EDD8EF2009BBE51 /* EventDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsModel.swift; sourceTree = "<group>"; };
 		F4E46D801E88FCD400E64EEC /* ImageDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadManager.swift; sourceTree = "<group>"; };
+		F4E7723C21B9224F0007A521 /* Data+ParseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+ParseData.swift"; sourceTree = "<group>"; };
 		F4EE43F21F2F4DBD00C99367 /* Date+CustomFormats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+CustomFormats.swift"; sourceTree = "<group>"; };
 		F4F0BF8A1E8BCF2100FB456E /* accommodation_default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accommodation_default.jpg; sourceTree = "<group>"; };
 		F4F97EEA211477780057BF1F /* ServiceStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServiceStoryboard.storyboard; sourceTree = "<group>"; };
@@ -1143,6 +1145,7 @@
 				F475D9911F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift */,
 				F4C69AD81F96306100E65023 /* UITextView+HeightUpdate.swift */,
 				F4C69ADA1F9633C000E65023 /* UIView+AnimationUpdate.swift */,
+				F4E7723C21B9224F0007A521 /* Data+ParseData.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1442,6 +1445,7 @@
 				F439C1281EAE2053005EBFB7 /* ServiceContants.swift in Sources */,
 				F44D23121EAF749A00C89BE2 /* AccommodationGalleryModel.swift in Sources */,
 				F44D23111EAF749A00C89BE2 /* AccommodationDetailsModel.swift in Sources */,
+				F4E7723D21B9224F0007A521 /* Data+ParseData.swift in Sources */,
 				F4BC49E01EC1A0DB000791AE /* EventModel.swift in Sources */,
 				F44BF942211AECEE00272E1A /* ServiceDetailsViewModel.swift in Sources */,
 				F41853511F2875D0006AE1CD /* ErrorHandler.swift in Sources */,

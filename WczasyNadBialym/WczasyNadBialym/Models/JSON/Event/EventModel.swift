@@ -19,7 +19,7 @@ struct EventsInYearModel : Codable {
     let year: Int
     let events: [EventModel]
     
-    static func eventsInYearFromResults(_ jsonData: Data) -> [EventsInYearModel] {
+    static func eventsInYearFromResults(_ jsonData: Data) -> [EventsInYearModel]? {
         
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(Date.Formatter.customDateAndHourFormat)
@@ -27,10 +27,8 @@ struct EventsInYearModel : Codable {
         var eventsInYear = [EventsInYearModel]()
         do {
             eventsInYear = try decoder.decode([EventsInYearModel].self, from: jsonData)
-        } catch {
-            if(!ErrorModel.unwrapFrom(jsonData)) {
-                ErrorHandler.report("Unable to parse Service Categories JSON", error.localizedDescription)
-            }
+        } catch let error {
+            ErrorHandler.report("Unable to parse Events in Year", error.localizedDescription)
         }
         
         return eventsInYear

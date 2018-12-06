@@ -16,7 +16,7 @@ struct EventDetailModel : Codable {
     let imgMedURL : String
     let imgFullURL : String
     
-    static func detailsFromResults(_ jsonData : Data) -> EventDetailModel {
+    static func detailsFromResults(_ jsonData : Data) -> EventDetailModel? {
         
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(Date.Formatter.customDateAndHourFormat)
@@ -24,15 +24,12 @@ struct EventDetailModel : Codable {
         var details : EventDetailModel? = nil
         do {
             details = try decoder.decode(EventDetailModel.self, from: jsonData)
-            
        //     details?.date.getHourAndMinutes()
             
-        } catch {
-            if(!ErrorModel.unwrapFrom(jsonData)) {
-                ErrorHandler.report("Unable to parse Event Detail JSON", error.localizedDescription)
-            }
+        } catch let error {
+            ErrorHandler.report("Unable to parse Event Detail JSON", error.localizedDescription)
         }
-    
-        return details!
+        
+        return details
     }
 }

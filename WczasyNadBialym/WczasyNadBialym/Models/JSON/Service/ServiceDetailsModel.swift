@@ -19,7 +19,7 @@ struct ServiceDetailModel : Codable {
     let gpsLat: Double
     let gpsLng: Double
     
-    static func detailsFromResults(_ jsonData : Data) -> ServiceDetailModel {
+    static func detailsFromResults(_ jsonData : Data) -> ServiceDetailModel? {
         
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(Date.Formatter.customDateAndHourFormat)
@@ -27,13 +27,10 @@ struct ServiceDetailModel : Codable {
         var details : ServiceDetailModel? = nil
         do {
             details = try decoder.decode(ServiceDetailModel.self, from: jsonData)
-            
-        } catch {
-            if(!ErrorModel.unwrapFrom(jsonData)) {
-                ErrorHandler.report("Unable to parse Service Detail JSON", error.localizedDescription)
-            }
+        } catch let error {
+            ErrorHandler.report("Unble to parse Service Detail JSON", error.localizedDescription)
         }
         
-        return details!
+        return details
     }
 }

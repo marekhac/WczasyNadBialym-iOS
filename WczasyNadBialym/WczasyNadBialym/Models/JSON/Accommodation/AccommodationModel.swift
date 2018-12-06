@@ -21,10 +21,8 @@ struct AccommodationModel : Codable {
         var accommodations = [AccommodationModel]()
         do {
             accommodations = try decoder.decode([AccommodationModel].self, from: jsonData)
-        } catch {
-            if(!ErrorModel.unwrapFrom(jsonData)) {
-               ErrorHandler.report("Unable to parse Accommodation Model JSON", error.localizedDescription)
-            }
+        } catch let error {
+            ErrorHandler.report("Unable to parse Accommodation Model JSON", error.localizedDescription)
         }
         
         return accommodations

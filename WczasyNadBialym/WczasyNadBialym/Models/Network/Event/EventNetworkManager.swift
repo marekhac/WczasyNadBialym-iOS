@@ -12,46 +12,33 @@ extension NetworkManager {
     
     func getEventSections (_ completionHandlerForEventsList: @escaping (_ result: [EventsInYearModel], _ error: NSError?) -> Void) {
         
-        /* 1. Specify parameters to build URL */
-        
-        
         let controller = Event.Controllers.Events
         let method = Event.Methods.List
         let parameters = [String: String]()
         
-        /* 2. Make the request */
-        let _ = taskForDownloadContent(controller, method, parameters) { (results, error) in
-            
-            /* 3. Send the desired value(s) to completion handler */
+        let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
             if let error = error {
                 ErrorHandler.report("Unable to download Event Sections", error.localizedDescription, displayWithHUD: true)
             } else {
-                if let results = results {
-                    let eventsSections = EventsInYearModel.eventsInYearFromResults(results)
-                        completionHandlerForEventsList(eventsSections, nil)
+                if let sections = content?.parseData(using: EventsInYearModel.eventsInYearFromResults) {
+                    completionHandlerForEventsList(sections as! [EventsInYearModel], nil)
                 }
             }
         }
     }
     
     func getEventDetails (_ eventId : String, _ completionHandlerForEvents: @escaping (_ result: EventDetailModel, _ error: NSError?) -> Void) {
-   
-        /* 1. Specify parameters to build URL */
         
         let controller = Event.Controllers.Events
         let method  = Event.Methods.Details
         let parameters = [Event.ParameterKeys.Id : eventId]
         
-        /* 2. Make the request */
-        let _ = taskForDownloadContent(controller, method, parameters) { (results, error) in
-            
-            /* 3. Send the desired value(s) to completion handler */
+        let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
             if let error = error {
                 ErrorHandler.report("Unable to download Event Details", error.localizedDescription, displayWithHUD: true)
             } else {
-                if let result = results {
-                    let list = EventDetailModel.detailsFromResults(result)
-                    completionHandlerForEvents(list, nil)
+                if let details = content?.parseData(using: EventDetailModel.detailsFromResults) {
+                    completionHandlerForEvents(details as! EventDetailModel, nil)
                 }
             }
         }
