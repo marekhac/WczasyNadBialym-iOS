@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o9H-7I-cwO">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o9H-7I-cwO">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Lato-Regular.ttf">
-            <string>Lato-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Menu-->
         <scene sceneID="oa6-Bl-Oak">
@@ -24,103 +18,108 @@
                         <viewControllerLayoutGuide type="bottom" id="N54-Xg-5Ns"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F8Z-eW-jq7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_blue" translatesAutoresizingMaskIntoConstraints="NO" id="y5x-85-6Ph" userLabel="Background View">
-                                <rect key="frame" x="16" y="20" width="343" height="598"/>
+                                <rect key="frame" x="16" y="20" width="288" height="411"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="bqB-EO-zLD">
-                                <rect key="frame" x="17" y="120" width="341" height="398"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZES-Lv-EUa" userLabel="Main Menu Stack View">
+                                <rect key="frame" x="36" y="40" width="248" height="371"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="wczasy_logo" translatesAutoresizingMaskIntoConstraints="NO" id="rWd-Is-f9L">
-                                        <rect key="frame" x="0.0" y="0.0" width="341" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="341" id="MXE-Lr-zmf"/>
-                                            <constraint firstAttribute="height" constant="90" id="ikU-rL-SDJ">
-                                                <variation key="heightClass=compact-widthClass=compact" constant="60"/>
-                                            </constraint>
-                                        </constraints>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="200" verticalHuggingPriority="200" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="wczasy_logo" translatesAutoresizingMaskIntoConstraints="NO" id="rWd-Is-f9L" userLabel="Wczasy Logo">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="112.5"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMB-tL-eoF">
-                                        <rect key="frame" x="117" y="108" width="107" height="33"/>
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                        <state key="normal" title="INFORMACJE">
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="informationsAction:" destination="LIt-zk-gl2" eventType="touchUpInside" id="Cje-Ek-4i1"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQV-Go-Cou">
-                                        <rect key="frame" x="133.5" y="158.5" width="74" height="33"/>
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                        <state key="normal" title="NOCLEGI">
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="accommodationTypesAction:" destination="LIt-zk-gl2" eventType="touchUpInside" id="EE2-xn-Fv8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMf-t8-IO5">
-                                        <rect key="frame" x="140.5" y="209.5" width="60" height="33"/>
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                        <state key="normal" title="USŁUGI">
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="servicesAction:" destination="LIt-zk-gl2" eventType="touchUpInside" id="gCm-4A-GvS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Te2-mN-0Sa">
-                                        <rect key="frame" x="133.5" y="260" width="74" height="33"/>
-                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                        <state key="normal" title="IMPREZY">
-                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="eventsAction:" destination="LIt-zk-gl2" eventType="touchUpInside" id="ssP-Do-TQo"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Temperatura w Okunince" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpz-HL-B8g">
-                                        <rect key="frame" x="75" y="311" width="191.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yv-Lu-uae">
-                                        <rect key="frame" x="152.5" y="349" width="36" height="49"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="ND2-BW-Tnx" userLabel="Menu buttons Stack View">
+                                        <rect key="frame" x="0.0" y="129.5" width="248" height="112"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="PCh-Wh-gp0" userLabel="1st Buttons Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="248" height="45.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMB-tL-eoF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="45.5"/>
+                                                        <state key="normal" image="info_menu">
+                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="informationsAction:" destination="LIt-zk-gl2" eventType="touchUpInside" id="Cje-Ek-4i1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQV-Go-Cou">
+                                                        <rect key="frame" x="136.5" y="0.0" width="111.5" height="45.5"/>
+                                                        <state key="normal" image="accommodation_menu">
+                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="accommodationTypesAction:" destination="LIt-zk-gl2" eventType="touchUpInside" id="EE2-xn-Fv8"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Opi-5S-P6H" userLabel="2nd Buttons Stack View">
+                                                <rect key="frame" x="0.0" y="66.5" width="248" height="45.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMf-t8-IO5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="45.5"/>
+                                                        <state key="normal" image="services_menu">
+                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="servicesAction:" destination="LIt-zk-gl2" eventType="touchUpInside" id="gCm-4A-GvS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Te2-mN-0Sa">
+                                                        <rect key="frame" x="138" y="0.0" width="110" height="45.5"/>
+                                                        <state key="normal" image="events_menu">
+                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="eventsAction:" destination="LIt-zk-gl2" eventType="touchUpInside" id="ssP-Do-TQo"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <variation key="heightClass=compact-widthClass=compact" axis="horizontal" spacing="10"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" distribution="fillEqually" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="AEP-Cv-MEU" userLabel="Temperature Stack View">
+                                        <rect key="frame" x="28.5" y="258.5" width="191.5" height="112.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Temperatura w Okunince" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpz-HL-B8g">
+                                                <rect key="frame" x="0.0" y="0.0" width="191.5" height="56"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="257" verticalCompressionResistancePriority="749" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="36" translatesAutoresizingMaskIntoConstraints="NO" id="0yv-Lu-uae">
+                                                <rect key="frame" x="77.5" y="57" width="36" height="55.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="jQV-Go-Cou" firstAttribute="leading" secondItem="Te2-mN-0Sa" secondAttribute="leading" id="Iij-cx-9BY"/>
-                                </constraints>
-                                <variation key="heightClass=compact-widthClass=compact" spacing="10"/>
+                                <variation key="heightClass=compact-widthClass=regular"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="y5x-85-6Ph" firstAttribute="leading" secondItem="F8Z-eW-jq7" secondAttribute="leadingMargin" id="3vB-9h-J5h"/>
-                            <constraint firstItem="N54-Xg-5Ns" firstAttribute="top" secondItem="bqB-EO-zLD" secondAttribute="bottom" constant="100" id="3zB-Qn-AY2">
-                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y5x-85-6Ph" secondAttribute="trailing" id="Bb7-xx-GXo"/>
+                            <constraint firstItem="y5x-85-6Ph" firstAttribute="top" secondItem="rhF-eo-CtV" secondAttribute="bottom" id="Ite-2c-LBg"/>
+                            <constraint firstItem="N54-Xg-5Ns" firstAttribute="top" secondItem="y5x-85-6Ph" secondAttribute="bottom" id="RhV-M4-sYp"/>
+                            <constraint firstItem="N54-Xg-5Ns" firstAttribute="top" secondItem="ZES-Lv-EUa" secondAttribute="bottom" constant="20" id="k2K-Bc-MWq">
+                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="N54-Xg-5Ns" firstAttribute="top" secondItem="y5x-85-6Ph" secondAttribute="bottom" id="Dkz-Kp-73N"/>
-                            <constraint firstItem="bqB-EO-zLD" firstAttribute="centerX" secondItem="y5x-85-6Ph" secondAttribute="centerX" id="SPo-Im-Xn3"/>
-                            <constraint firstItem="bqB-EO-zLD" firstAttribute="leading" secondItem="F8Z-eW-jq7" secondAttribute="leadingMargin" constant="1" id="cMv-hS-ymh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bqB-EO-zLD" secondAttribute="trailing" constant="1" id="hJ9-qf-UpA"/>
-                            <constraint firstItem="y5x-85-6Ph" firstAttribute="top" secondItem="rhF-eo-CtV" secondAttribute="bottom" id="hS8-2o-IMw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bqB-EO-zLD" secondAttribute="trailing" constant="1" id="ijv-Cn-usJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="y5x-85-6Ph" secondAttribute="trailing" id="mCY-xl-g0s"/>
-                            <constraint firstItem="bqB-EO-zLD" firstAttribute="leading" secondItem="F8Z-eW-jq7" secondAttribute="leadingMargin" constant="1" id="ncm-Yo-7eA"/>
-                            <constraint firstItem="bqB-EO-zLD" firstAttribute="top" secondItem="rhF-eo-CtV" secondAttribute="bottom" constant="100" id="vNx-CJ-Z4e">
-                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                            <constraint firstItem="ZES-Lv-EUa" firstAttribute="top" secondItem="rhF-eo-CtV" secondAttribute="bottom" constant="20" id="kJg-Wc-7Mb">
+                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="ZES-Lv-EUa" firstAttribute="leading" secondItem="F8Z-eW-jq7" secondAttribute="leadingMargin" constant="20" id="rVJ-W6-Thp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZES-Lv-EUa" secondAttribute="trailing" constant="20" id="vGp-ft-kWl"/>
+                            <constraint firstItem="y5x-85-6Ph" firstAttribute="leading" secondItem="F8Z-eW-jq7" secondAttribute="leadingMargin" id="zDX-rP-Cjj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Menu" image="home" id="ghM-pc-Nlb"/>
@@ -131,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8I2-s9-yPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3167" y="508"/>
+            <point key="canvasLocation" x="-3168.75" y="505.79710144927537"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VTy-Qh-FZy">
@@ -198,9 +197,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="accommodation" width="28" height="28"/>
+        <image name="accommodation" width="32" height="32"/>
+        <image name="accommodation_menu" width="138" height="100"/>
         <image name="background_blue" width="750" height="1334"/>
-        <image name="home" width="28" height="28"/>
-        <image name="wczasy_logo" width="1185" height="197"/>
+        <image name="events_menu" width="138" height="100"/>
+        <image name="home" width="32" height="32"/>
+        <image name="info_menu" width="138" height="100"/>
+        <image name="services_menu" width="138" height="100"/>
+        <image name="wczasy_logo" width="296" height="49"/>
     </resources>
 </document>
