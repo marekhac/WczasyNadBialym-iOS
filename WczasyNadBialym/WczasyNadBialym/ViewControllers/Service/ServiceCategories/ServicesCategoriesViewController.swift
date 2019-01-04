@@ -11,6 +11,7 @@ import UIKit
 class ServicesCategoriesViewController: UITableViewController {
 
     var serviceCategories = [ServiceCategoryModel]()
+    var categoryNameLong : String = ""
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -72,20 +73,20 @@ class ServicesCategoriesViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "serviceCategoryCell", for: indexPath) as! ServiceCategoryCell
         
-        cell.name?.text = (self.serviceCategories[indexPath.row] as ServiceCategoryModel).longName
-        cell.shortName = (self.serviceCategories[indexPath.row] as ServiceCategoryModel).shortName
-               
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        cell.shortName = (self.serviceCategories[indexPath.row] as ServiceCategoryModel).shortName
+        cell.longName = (self.serviceCategories[indexPath.row] as ServiceCategoryModel).longName
+        
+        cell.name?.text = cell.longName
+        
+        return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let selectedCell = sender as? ServiceCategoryCell {
             if let destinationVC = segue.destination as? ServiceListViewController {
-                destinationVC.serviceTypeName = selectedCell.shortName
+                destinationVC.categoryNameShort = selectedCell.shortName
+                destinationVC.categoryNameLong = selectedCell.longName
             }
         }
     }

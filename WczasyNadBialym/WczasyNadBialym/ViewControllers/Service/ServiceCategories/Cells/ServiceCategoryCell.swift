@@ -12,6 +12,7 @@ class ServiceCategoryCell: UITableViewCell {
 
     @IBOutlet weak var name: UILabel!
     var shortName: String = ""
+    var longName: String = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()

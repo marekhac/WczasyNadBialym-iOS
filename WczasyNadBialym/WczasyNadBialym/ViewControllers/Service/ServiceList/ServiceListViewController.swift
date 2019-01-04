@@ -12,7 +12,11 @@ import SVProgressHUD
 class ServiceListViewController: UITableViewController {
 
     let backgroundImageName = "background_gradient1"
-    var serviceTypeName: String = "" // value will be assigned by parent view controller
+    
+    // these values will be assigned by parent view controller in prepare for segue
+    
+    var categoryNameShort: String = ""
+    var categoryNameLong: String = ""
     
     lazy var viewModel: ServiceListViewModel = {
         return ServiceListViewModel()
@@ -29,10 +33,11 @@ class ServiceListViewController: UITableViewController {
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
                 SVProgressHUD.dismiss()
+                
             }
         }
     
-        viewModel.fetchServices(for: serviceTypeName)
+        viewModel.fetchServices(for: categoryNameShort)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +47,7 @@ class ServiceListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = self.categoryNameLong
         
         SVProgressHUD.show()
         
@@ -86,7 +92,7 @@ class ServiceListViewController: UITableViewController {
         
         if (cell.imageMini.image == nil)
         {
-            let serviceImage = UIImage(named: serviceTypeName + ".png")
+            let serviceImage = UIImage(named: categoryNameShort + ".png")
             cell.imageMini.image = serviceImage
         }
             
@@ -99,7 +105,7 @@ class ServiceListViewController: UITableViewController {
             if segue.identifier == "showServiceDetails" {
                 let controller = (segue.destination as! UINavigationController).topViewController as! ServiceDetailsViewController
                 controller.selectedServiceId = String(selectedCell.serviceId!)
-                controller.selectedServiceType = self.serviceTypeName
+                controller.selectedServiceType = self.categoryNameShort
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
