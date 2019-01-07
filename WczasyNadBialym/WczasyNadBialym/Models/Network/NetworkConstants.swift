@@ -14,17 +14,11 @@ extension NetworkManager {
 
         static let AppId = "YOUR_APPID";
         
-        // localhost
+        // take different settings depends on configuration scheme
         
-//        static let ApiScheme = "http://"
-//        static let ApiHost = "portal-dev:8888/"
-//        static let ApiPath = "api/"
-        
-        // live
-        
-         static let ApiScheme = "http://"
-         static let ApiHost = "wczasynadbialym.pl/"
-         static let ApiPath = "api/"
+        static let ApiScheme = Environment().config(PlistKey.ApiScheme)
+        static let ApiHost = Environment().config(PlistKey.ApiHost)
+        static let ApiPath = Environment().config(PlistKey.ApiPath)
     }
     
     // MARK: Method Keys

@@ -77,5 +77,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>api_host</key>
+	<string>${api_host}</string>
+	<key>api_path</key>
+	<string>${api_path}</string>
+	<key>api_scheme</key>
+	<string>${api_scheme}</string>
 </dict>
 </plist>

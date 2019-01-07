@@ -124,6 +124,7 @@
 		F4510FFA2118802900D337B2 /* ServiceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4510FF92118802900D337B2 /* ServiceListViewModel.swift */; };
 		F457A6031FBAFD61000019BF /* String+RemoveHTMLTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457A6021FBAFD61000019BF /* String+RemoveHTMLTags.swift */; };
 		F4580C3C1ED3113A00944984 /* InfoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4580C3B1ED3113A00944984 /* InfoDetailsViewController.swift */; };
+		F474253B21E3463200EF6709 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F474253A21E3463200EF6709 /* Environment.swift */; };
 		F475D9901F90F6C10054FFE8 /* UITableView+BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475D98F1F90F6C10054FFE8 /* UITableView+BlurEffect.swift */; };
 		F475D9921F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475D9911F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift */; };
 		F47605D01FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47605CF1FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift */; };
@@ -196,9 +197,13 @@
 /* Begin PBXFileReference section */
 		030FF5EC43097CAAA89FEA54 /* Pods-WczasyNadBialym.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.debug.xcconfig"; sourceTree = "<group>"; };
 		14A7C8B563466650EE466434 /* Pods-WczasyNadBialymTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.debug.xcconfig"; sourceTree = "<group>"; };
+		180CBC6AD55BE8587FA87E67 /* Pods-WczasyNadBialymTests.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.debug (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.debug (production).xcconfig"; sourceTree = "<group>"; };
+		25C20DA79BCF32001109BE4A /* Pods-WczasyNadBialymTests.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.debug (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.debug (development).xcconfig"; sourceTree = "<group>"; };
 		2E20FD0D4A8B806D82AC545A /* Pods_WczasyNadBialym.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WczasyNadBialym.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFACF7B467DC54A56426E98 /* Pods_WczasyNadBialymTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WczasyNadBialymTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F03B196EB7DB8ECA3D1515D /* Pods-WczasyNadBialymTests.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.release (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.release (production).xcconfig"; sourceTree = "<group>"; };
 		5FE74C89DAC5DA9A180EB9D0 /* Pods-WczasyNadBialymTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.release.xcconfig"; sourceTree = "<group>"; };
+		7A13E6EC0D7750BF9E5E4CCC /* Pods-WczasyNadBialymTests.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.release (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.release (development).xcconfig"; sourceTree = "<group>"; };
 		A7FA0F9676DF057771EEF998 /* Pods-WczasyNadBialym.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.release.xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.release.xcconfig"; sourceTree = "<group>"; };
 		F40006121E697B710032033C /* WczasyNadBialym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WczasyNadBialym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40006151E697B710032033C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -328,6 +333,7 @@
 		F4510FF92118802900D337B2 /* ServiceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewModel.swift; sourceTree = "<group>"; };
 		F457A6021FBAFD61000019BF /* String+RemoveHTMLTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemoveHTMLTags.swift"; sourceTree = "<group>"; };
 		F4580C3B1ED3113A00944984 /* InfoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailsViewController.swift; sourceTree = "<group>"; };
+		F474253A21E3463200EF6709 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		F475D98F1F90F6C10054FFE8 /* UITableView+BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+BlurEffect.swift"; sourceTree = "<group>"; };
 		F475D9911F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+BackgroundColors.swift"; sourceTree = "<group>"; };
 		F47605CF1FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewHeightEnum.swift; sourceTree = "<group>"; };
@@ -414,6 +420,10 @@
 				A7FA0F9676DF057771EEF998 /* Pods-WczasyNadBialym.release.xcconfig */,
 				14A7C8B563466650EE466434 /* Pods-WczasyNadBialymTests.debug.xcconfig */,
 				5FE74C89DAC5DA9A180EB9D0 /* Pods-WczasyNadBialymTests.release.xcconfig */,
+				25C20DA79BCF32001109BE4A /* Pods-WczasyNadBialymTests.debug (development).xcconfig */,
+				180CBC6AD55BE8587FA87E67 /* Pods-WczasyNadBialymTests.debug (production).xcconfig */,
+				7A13E6EC0D7750BF9E5E4CCC /* Pods-WczasyNadBialymTests.release (development).xcconfig */,
+				3F03B196EB7DB8ECA3D1515D /* Pods-WczasyNadBialymTests.release (production).xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -603,6 +613,7 @@
 		F40C91B91E6980A7006124FC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F474253A21E3463200EF6709 /* Environment.swift */,
 				F41853501F2875D0006AE1CD /* ErrorHandler.swift */,
 			);
 			path = Helpers;
@@ -1475,6 +1486,7 @@
 				F4BC49DD1EC19F81000791AE /* EventNetworkManager.swift in Sources */,
 				F481E7BC1EB1D9BC009637A1 /* AccommodationTypesViewController.swift in Sources */,
 				F40C91B41E6980A1006124FC /* WczasyNadBialym.xcdatamodeld in Sources */,
+				F474253B21E3463200EF6709 /* Environment.swift in Sources */,
 				F481E7B81EB1D9BC009637A1 /* AccommodationGalleryPageViewController.swift in Sources */,
 				F4C3360A1FB452B8004F2EE5 /* ServiceDetailsModel.swift in Sources */,
 				F40C91DB1E698343006124FC /* AccommodationNetworkManager.swift in Sources */,
@@ -1526,7 +1538,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F40006321E697B720032033C /* Debug */ = {
+		F40006321E697B720032033C /* Debug (Development) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1581,10 +1593,14 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				api_host = "portal-dev:8888/";
+				api_path = api/;
+				api_scheme = "http://";
+				debug_log = true;
 			};
-			name = Debug;
+			name = "Debug (Development)";
 		};
-		F40006331E697B720032033C /* Release */ = {
+		F40006331E697B720032033C /* Release (Development) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1632,10 +1648,14 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				api_host = "portal-dev:8888/";
+				api_path = api/;
+				api_scheme = "http://";
+				debug_log = true;
 			};
-			name = Release;
+			name = "Release (Development)";
 		};
-		F40006351E697B720032033C /* Debug */ = {
+		F40006351E697B720032033C /* Debug (Development) */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 030FF5EC43097CAAA89FEA54 /* Pods-WczasyNadBialym.debug.xcconfig */;
 			buildSettings = {
@@ -1648,9 +1668,121 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
 			};
-			name = Debug;
+			name = "Debug (Development)";
 		};
-		F40006361E697B720032033C /* Release */ = {
+		F40006361E697B720032033C /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 030FF5EC43097CAAA89FEA54 /* Pods-WczasyNadBialym.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = X9888GP63R;
+				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.wczasynadbialym.WczasyNadBialym-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.2;
+				debug_log = false;
+			};
+			name = "Release (Development)";
+		};
+		F40006381E697B720032033C /* Debug (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25C20DA79BCF32001109BE4A /* Pods-WczasyNadBialymTests.debug (development).xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9T8G87UPPL;
+				INFOPLIST_FILE = WczasyNadBialymTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.WczasyNadBialymTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WczasyNadBialym.app/WczasyNadBialym";
+			};
+			name = "Debug (Development)";
+		};
+		F40006391E697B720032033C /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A13E6EC0D7750BF9E5E4CCC /* Pods-WczasyNadBialymTests.release (development).xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9T8G87UPPL;
+				INFOPLIST_FILE = WczasyNadBialymTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.WczasyNadBialymTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WczasyNadBialym.app/WczasyNadBialym";
+			};
+			name = "Release (Development)";
+		};
+		F47CA6FB21DF896D005334E4 /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				api_host = wczasynadbialym.pl/;
+				api_path = api/;
+				api_scheme = "http://";
+				debug_log = true;
+			};
+			name = "Debug (Production)";
+		};
+		F47CA6FC21DF896D005334E4 /* Debug (Production) */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7FA0F9676DF057771EEF998 /* Pods-WczasyNadBialym.release.xcconfig */;
 			buildSettings = {
@@ -1663,11 +1795,11 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
 			};
-			name = Release;
+			name = "Debug (Production)";
 		};
-		F40006381E697B720032033C /* Debug */ = {
+		F47CA6FD21DF896D005334E4 /* Debug (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14A7C8B563466650EE466434 /* Pods-WczasyNadBialymTests.debug.xcconfig */;
+			baseConfigurationReference = 180CBC6AD55BE8587FA87E67 /* Pods-WczasyNadBialymTests.debug (production).xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1680,11 +1812,82 @@
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WczasyNadBialym.app/WczasyNadBialym";
 			};
-			name = Debug;
+			name = "Debug (Production)";
 		};
-		F40006391E697B720032033C /* Release */ = {
+		F47CA6FE21DF8971005334E4 /* Release (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FE74C89DAC5DA9A180EB9D0 /* Pods-WczasyNadBialymTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				api_host = wczasynadbialym.pl/;
+				api_path = api/;
+				api_scheme = "http://";
+				debug_log = false;
+			};
+			name = "Release (Production)";
+		};
+		F47CA6FF21DF8971005334E4 /* Release (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7FA0F9676DF057771EEF998 /* Pods-WczasyNadBialym.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = X9888GP63R;
+				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pl.wczasynadbialym.WczasyNadBialym-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.2;
+				debug_log = false;
+			};
+			name = "Release (Production)";
+		};
+		F47CA70021DF8971005334E4 /* Release (Production) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F03B196EB7DB8ECA3D1515D /* Pods-WczasyNadBialymTests.release (production).xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1697,7 +1900,7 @@
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WczasyNadBialym.app/WczasyNadBialym";
 			};
-			name = Release;
+			name = "Release (Production)";
 		};
 /* End XCBuildConfiguration section */
 
@@ -1705,29 +1908,35 @@
 		F400060D1E697B710032033C /* Build configuration list for PBXProject "WczasyNadBialym" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F40006321E697B720032033C /* Debug */,
-				F40006331E697B720032033C /* Release */,
+				F40006321E697B720032033C /* Debug (Development) */,
+				F47CA6FB21DF896D005334E4 /* Debug (Production) */,
+				F40006331E697B720032033C /* Release (Development) */,
+				F47CA6FE21DF8971005334E4 /* Release (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Development)";
 		};
 		F40006341E697B720032033C /* Build configuration list for PBXNativeTarget "WczasyNadBialym" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F40006351E697B720032033C /* Debug */,
-				F40006361E697B720032033C /* Release */,
+				F40006351E697B720032033C /* Debug (Development) */,
+				F47CA6FC21DF896D005334E4 /* Debug (Production) */,
+				F40006361E697B720032033C /* Release (Development) */,
+				F47CA6FF21DF8971005334E4 /* Release (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Development)";
 		};
 		F40006371E697B720032033C /* Build configuration list for PBXNativeTarget "WczasyNadBialymTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F40006381E697B720032033C /* Debug */,
-				F40006391E697B720032033C /* Release */,
+				F40006381E697B720032033C /* Debug (Development) */,
+				F47CA6FD21DF896D005334E4 /* Debug (Production) */,
+				F40006391E697B720032033C /* Release (Development) */,
+				F47CA70021DF8971005334E4 /* Release (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Development)";
 		};
 /* End XCConfigurationList section */
 
