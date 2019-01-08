@@ -20,7 +20,7 @@ extension NetworkManager {
         let _ = taskForDownloadContent(controller, method, parameters, datatype) { (data, error) in
 
             if let error = error {
-                ErrorHandler.report("Unable to download na image", error.localizedDescription)
+                LogEventHandler.report(LogEventType.debug, "Unable to download na image", error.localizedDescription)
                 completionHandlerForAsyncImageDownload(nil, error)
             } else {
                 completionHandlerForAsyncImageDownload(data, nil)

@@ -14,6 +14,7 @@ public enum PlistKey {
     case ApiScheme
     case ApiHost
     case ApiPath
+    case DebugLog
     
     func value() -> String {
         switch self {
@@ -23,6 +24,8 @@ public enum PlistKey {
             return "api_host"
         case .ApiPath:
             return "api_path"
+        case .DebugLog:
+            return "debug_log"
         }
     }
 }
@@ -45,6 +48,8 @@ public struct Environment {
             return infoDict[PlistKey.ApiHost.value()] as! String
         case .ApiPath:
             return infoDict[PlistKey.ApiPath.value()] as! String
+        case .DebugLog:
+            return infoDict[PlistKey.DebugLog.value()] as! String
         }
     }
 }

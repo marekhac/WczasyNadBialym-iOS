@@ -18,7 +18,7 @@ extension NetworkManager {
         
         let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
             if let error = error {
-                ErrorHandler.report("Unable to download Weather Details", error.localizedDescription, displayWithHUD: true)
+                LogEventHandler.report(LogEventType.error, "Unable to download Weather Details", error.localizedDescription)
             } else {
                 if let weatherData = content?.parseData(using: WeatherModel.currentMeasurement) {
                     completionHandlerForWeather(weatherData as! WeatherModel, nil)

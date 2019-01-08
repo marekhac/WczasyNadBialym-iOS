@@ -51,10 +51,9 @@ class AccommodationListViewController: UITableViewController {
     
         SVProgressHUD.show()
         NetworkManager.sharedInstance().getAccommodationListBasic(accommodationType!.shortName) { (accommodationDict, error) in
-              print (accommodationDict)
             
             self.accommodation = accommodationDict
-            
+
             self.reloadCollectionViewAndDismissHUD()
         }
         

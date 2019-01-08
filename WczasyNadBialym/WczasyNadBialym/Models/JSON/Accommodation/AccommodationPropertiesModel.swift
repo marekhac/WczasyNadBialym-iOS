@@ -22,7 +22,7 @@ struct AccommodationPropertiesModel : Codable {
             properties = try decoder.decode(AccommodationPropertiesModel.self, from: jsonData)
         } catch {
             if(!ErrorModel.unwrapFrom(jsonData)) {
-                ErrorHandler.report("Unable to parse Accommodation Properties JSON", error.localizedDescription)
+                LogEventHandler.report(LogEventType.error, "Unable to parse Accommodation Properties JSON", error.localizedDescription)
             }
         }
         

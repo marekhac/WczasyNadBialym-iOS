@@ -67,7 +67,7 @@
 		F416D8261EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F416D8141EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg */; };
 		F416D8291EBC87B2002A70C2 /* ServiceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F416D8281EBC87B2002A70C2 /* ServiceDetailsViewController.swift */; };
 		F416D82B1EBC8BD5002A70C2 /* address_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F416D82A1EBC8BD5002A70C2 /* address_icon.png */; };
-		F41853511F2875D0006AE1CD /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41853501F2875D0006AE1CD /* ErrorHandler.swift */; };
+		F41853511F2875D0006AE1CD /* LogEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41853501F2875D0006AE1CD /* LogEventHandler.swift */; };
 		F4186C491ECB1120006C87D0 /* InfoCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186C481ECB1120006C87D0 /* InfoCategoriesViewController.swift */; };
 		F4186C4B1ECB236F006C87D0 /* InfoCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186C4A1ECB236F006C87D0 /* InfoCategoriesCell.swift */; };
 		F42277D81F851AB500DBB541 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42277D71F851AB500DBB541 /* ErrorModel.swift */; };
@@ -125,6 +125,7 @@
 		F457A6031FBAFD61000019BF /* String+RemoveHTMLTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457A6021FBAFD61000019BF /* String+RemoveHTMLTags.swift */; };
 		F4580C3C1ED3113A00944984 /* InfoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4580C3B1ED3113A00944984 /* InfoDetailsViewController.swift */; };
 		F474253B21E3463200EF6709 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F474253A21E3463200EF6709 /* Environment.swift */; };
+		F474253F21E3718600EF6709 /* LogEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F474253E21E3718600EF6709 /* LogEventType.swift */; };
 		F475D9901F90F6C10054FFE8 /* UITableView+BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475D98F1F90F6C10054FFE8 /* UITableView+BlurEffect.swift */; };
 		F475D9921F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475D9911F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift */; };
 		F47605D01FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47605CF1FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift */; };
@@ -198,16 +199,19 @@
 		030FF5EC43097CAAA89FEA54 /* Pods-WczasyNadBialym.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.debug.xcconfig"; sourceTree = "<group>"; };
 		14A7C8B563466650EE466434 /* Pods-WczasyNadBialymTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.debug.xcconfig"; sourceTree = "<group>"; };
 		180CBC6AD55BE8587FA87E67 /* Pods-WczasyNadBialymTests.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.debug (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.debug (production).xcconfig"; sourceTree = "<group>"; };
+		192F64CBACD816735A72D3C1 /* Pods-WczasyNadBialym.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.debug (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.debug (development).xcconfig"; sourceTree = "<group>"; };
 		25C20DA79BCF32001109BE4A /* Pods-WczasyNadBialymTests.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.debug (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.debug (development).xcconfig"; sourceTree = "<group>"; };
+		297C12511CCCBFBF0C3777CC /* Pods-WczasyNadBialym.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.debug (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.debug (production).xcconfig"; sourceTree = "<group>"; };
 		2E20FD0D4A8B806D82AC545A /* Pods_WczasyNadBialym.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WczasyNadBialym.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFACF7B467DC54A56426E98 /* Pods_WczasyNadBialymTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WczasyNadBialymTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F03B196EB7DB8ECA3D1515D /* Pods-WczasyNadBialymTests.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.release (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.release (production).xcconfig"; sourceTree = "<group>"; };
+		40F82B8B331C74C475AFA021 /* Pods-WczasyNadBialym.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.release (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.release (production).xcconfig"; sourceTree = "<group>"; };
 		5FE74C89DAC5DA9A180EB9D0 /* Pods-WczasyNadBialymTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.release.xcconfig"; sourceTree = "<group>"; };
 		7A13E6EC0D7750BF9E5E4CCC /* Pods-WczasyNadBialymTests.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.release (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.release (development).xcconfig"; sourceTree = "<group>"; };
 		A7FA0F9676DF057771EEF998 /* Pods-WczasyNadBialym.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.release.xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.release.xcconfig"; sourceTree = "<group>"; };
+		C4E3B93B5B96664F7D73C6FA /* Pods-WczasyNadBialym.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.release (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.release (development).xcconfig"; sourceTree = "<group>"; };
 		F40006121E697B710032033C /* WczasyNadBialym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WczasyNadBialym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40006151E697B710032033C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F40006261E697B710032033C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F400062B1E697B720032033C /* WczasyNadBialymTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WczasyNadBialymTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F400062F1E697B720032033C /* WczasyNadBialymTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WczasyNadBialymTests.swift; sourceTree = "<group>"; };
 		F40006311E697B720032033C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -276,7 +280,7 @@
 		F416D8141EBC76DA002A70C2 /* wypozyczalnia_sprzetu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wypozyczalnia_sprzetu.jpg; sourceTree = "<group>"; };
 		F416D8281EBC87B2002A70C2 /* ServiceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewController.swift; sourceTree = "<group>"; };
 		F416D82A1EBC8BD5002A70C2 /* address_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = address_icon.png; sourceTree = "<group>"; };
-		F41853501F2875D0006AE1CD /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		F41853501F2875D0006AE1CD /* LogEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEventHandler.swift; sourceTree = "<group>"; };
 		F4186C481ECB1120006C87D0 /* InfoCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesViewController.swift; sourceTree = "<group>"; };
 		F4186C4A1ECB236F006C87D0 /* InfoCategoriesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesCell.swift; sourceTree = "<group>"; };
 		F42277D71F851AB500DBB541 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
@@ -334,6 +338,8 @@
 		F457A6021FBAFD61000019BF /* String+RemoveHTMLTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemoveHTMLTags.swift"; sourceTree = "<group>"; };
 		F4580C3B1ED3113A00944984 /* InfoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailsViewController.swift; sourceTree = "<group>"; };
 		F474253A21E3463200EF6709 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		F474253C21E3634300EF6709 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F474253E21E3718600EF6709 /* LogEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEventType.swift; sourceTree = "<group>"; };
 		F475D98F1F90F6C10054FFE8 /* UITableView+BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+BlurEffect.swift"; sourceTree = "<group>"; };
 		F475D9911F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+BackgroundColors.swift"; sourceTree = "<group>"; };
 		F47605CF1FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewHeightEnum.swift; sourceTree = "<group>"; };
@@ -424,6 +430,10 @@
 				180CBC6AD55BE8587FA87E67 /* Pods-WczasyNadBialymTests.debug (production).xcconfig */,
 				7A13E6EC0D7750BF9E5E4CCC /* Pods-WczasyNadBialymTests.release (development).xcconfig */,
 				3F03B196EB7DB8ECA3D1515D /* Pods-WczasyNadBialymTests.release (production).xcconfig */,
+				192F64CBACD816735A72D3C1 /* Pods-WczasyNadBialym.debug (development).xcconfig */,
+				297C12511CCCBFBF0C3777CC /* Pods-WczasyNadBialym.debug (production).xcconfig */,
+				C4E3B93B5B96664F7D73C6FA /* Pods-WczasyNadBialym.release (development).xcconfig */,
+				40F82B8B331C74C475AFA021 /* Pods-WczasyNadBialym.release (production).xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -467,7 +477,7 @@
 				F40C91A51E69803A006124FC /* Data */,
 				F400063A1E6980060032033C /* Assets */,
 				F40006151E697B710032033C /* AppDelegate.swift */,
-				F40006261E697B710032033C /* Info.plist */,
+				F474253C21E3634300EF6709 /* Info.plist */,
 			);
 			path = WczasyNadBialym;
 			sourceTree = "<group>";
@@ -595,6 +605,7 @@
 			isa = PBXGroup;
 			children = (
 				F40BA2A21FB07491001A717C /* AccommodationType.swift */,
+				F474253E21E3718600EF6709 /* LogEventType.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -614,7 +625,7 @@
 			isa = PBXGroup;
 			children = (
 				F474253A21E3463200EF6709 /* Environment.swift */,
-				F41853501F2875D0006AE1CD /* ErrorHandler.swift */,
+				F41853501F2875D0006AE1CD /* LogEventHandler.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1453,6 +1464,7 @@
 				F40C91DA1E698343006124FC /* AccommodationContants.swift in Sources */,
 				F4186C4B1ECB236F006C87D0 /* InfoCategoriesCell.swift in Sources */,
 				F49B16951FA124F300A3E50C /* InfoConstants.swift in Sources */,
+				F474253F21E3718600EF6709 /* LogEventType.swift in Sources */,
 				F481E7B41EB1D9BC009637A1 /* AccommodationDetailsViewController.swift in Sources */,
 				F416D8011EBC59A7002A70C2 /* ServiceListCell.swift in Sources */,
 				F439C1281EAE2053005EBFB7 /* ServiceContants.swift in Sources */,
@@ -1461,7 +1473,7 @@
 				F4E7723D21B9224F0007A521 /* Data+ParseData.swift in Sources */,
 				F4BC49E01EC1A0DB000791AE /* EventModel.swift in Sources */,
 				F44BF942211AECEE00272E1A /* ServiceDetailsViewModel.swift in Sources */,
-				F41853511F2875D0006AE1CD /* ErrorHandler.swift in Sources */,
+				F41853511F2875D0006AE1CD /* LogEventHandler.swift in Sources */,
 				F481E7B91EB1D9BC009637A1 /* AccommodationListViewController.swift in Sources */,
 				F4AA0FDB1FE2BE47009F3FF3 /* WeatherConstants.swift in Sources */,
 				F475D9901F90F6C10054FFE8 /* UITableView+BlurEffect.swift in Sources */,
@@ -1650,14 +1662,14 @@
 				VALIDATE_PRODUCT = YES;
 				api_host = "portal-dev:8888/";
 				api_path = api/;
-				api_scheme = "http://";
+				api_scheme = "https://";
 				debug_log = true;
 			};
 			name = "Release (Development)";
 		};
 		F40006351E697B720032033C /* Debug (Development) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 030FF5EC43097CAAA89FEA54 /* Pods-WczasyNadBialym.debug.xcconfig */;
+			baseConfigurationReference = 192F64CBACD816735A72D3C1 /* Pods-WczasyNadBialym.debug (development).xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
@@ -1672,7 +1684,7 @@
 		};
 		F40006361E697B720032033C /* Release (Development) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 030FF5EC43097CAAA89FEA54 /* Pods-WczasyNadBialym.debug.xcconfig */;
+			baseConfigurationReference = C4E3B93B5B96664F7D73C6FA /* Pods-WczasyNadBialym.release (development).xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
@@ -1682,7 +1694,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
-				debug_log = false;
+				api_host = wczasynadbialym.pl/;
+				debug_log = true;
 			};
 			name = "Release (Development)";
 		};
@@ -1784,7 +1797,7 @@
 		};
 		F47CA6FC21DF896D005334E4 /* Debug (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7FA0F9676DF057771EEF998 /* Pods-WczasyNadBialym.release.xcconfig */;
+			baseConfigurationReference = 297C12511CCCBFBF0C3777CC /* Pods-WczasyNadBialym.debug (production).xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
@@ -1794,6 +1807,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
+				api_host = "portal-dev:8888/";
 			};
 			name = "Debug (Production)";
 		};
@@ -1864,14 +1878,14 @@
 				VALIDATE_PRODUCT = YES;
 				api_host = wczasynadbialym.pl/;
 				api_path = api/;
-				api_scheme = "http://";
+				api_scheme = "https://";
 				debug_log = false;
 			};
 			name = "Release (Production)";
 		};
 		F47CA6FF21DF8971005334E4 /* Release (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7FA0F9676DF057771EEF998 /* Pods-WczasyNadBialym.release.xcconfig */;
+			baseConfigurationReference = 40F82B8B331C74C475AFA021 /* Pods-WczasyNadBialym.release (production).xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;

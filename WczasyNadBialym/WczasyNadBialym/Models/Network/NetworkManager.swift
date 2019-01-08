@@ -24,7 +24,7 @@ class NetworkManager : NSObject {
         let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
             
             func sendError(_ error: String) {
-                print(error)
+                LogEventHandler.report(LogEventType.error, error)
                 let userInfo = [NSLocalizedDescriptionKey : error]
                 let errorData : Data? = nil
                 completionHandlerForDownloadData(errorData, NSError(domain: "taskForDownloadContent", code: 1, userInfo: userInfo))
@@ -77,7 +77,8 @@ class NetworkManager : NSObject {
             }
         }
         
-        print("DOWNLOAD FILE FROM: \(urlString)")
+        LogEventHandler.report(LogEventType.debug, "DOWNLOAD FILE FROM: \(urlString)")
+        
         
         return NSURL(string: urlString)! as URL
     }

@@ -28,9 +28,7 @@ class ServiceListViewModel {
     
     func fetchServices(for serviceTypeName: String) {
         
-        NetworkManager.sharedInstance().getServiceList (serviceTypeName) { (servicesDict, error) in
-            print (servicesDict)
-            
+        NetworkManager.sharedInstance().getServiceList (serviceTypeName) { (servicesDict, error) in            
             self.services = servicesDict
         }
     }

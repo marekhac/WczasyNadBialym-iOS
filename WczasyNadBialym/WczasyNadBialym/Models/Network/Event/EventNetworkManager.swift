@@ -18,7 +18,7 @@ extension NetworkManager {
         
         let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
             if let error = error {
-                ErrorHandler.report("Unable to download Event Sections", error.localizedDescription, displayWithHUD: true)
+                LogEventHandler.report(LogEventType.error, "Unable to download Event Sections", error.localizedDescription, displayWithHUD: true)
             } else {
                 if let sections = content?.parseData(using: EventsInYearModel.eventsInYearFromResults) {
                     completionHandlerForEventsList(sections as! [EventsInYearModel], nil)
@@ -35,7 +35,7 @@ extension NetworkManager {
         
         let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
             if let error = error {
-                ErrorHandler.report("Unable to download Event Details", error.localizedDescription, displayWithHUD: true)
+                LogEventHandler.report(LogEventType.error, "Unable to download Event Details", error.localizedDescription, displayWithHUD: true)
             } else {
                 if let details = content?.parseData(using: EventDetailModel.detailsFromResults) {
                     completionHandlerForEvents(details as! EventDetailModel, nil)

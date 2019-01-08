@@ -35,8 +35,6 @@ class EventDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         NetworkManager.sharedInstance().getEventDetails(selectedEventId) { (details, error) in
-            print (details)
-                    
             self.medmageView.downloadImageAsyncAndReturnImage(details.imgMedURL) { (resultImage, error) in
                self.backgroundImageView.image = resultImage
             }

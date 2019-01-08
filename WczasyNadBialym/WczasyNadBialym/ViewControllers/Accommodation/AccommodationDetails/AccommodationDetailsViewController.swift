@@ -88,7 +88,7 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
                     self.view.updateLayoutWithAnimation(andDuration: 0.5)
                 }
                 else {
-                    print ("No pictures to show")
+                    LogEventHandler.report(LogEventType.debug, "No pictures to show")
                 }
                 dispatchGroup.leave()
             }
@@ -120,7 +120,7 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
                     self.descriptionTextView.text = detailsStripped
                 }
                 else {
-                    print ("No accommodation details to show")
+                    LogEventHandler.report(LogEventType.debug, "No accommodations to show")
                 }
                 dispatchGroup.leave()
 
@@ -146,7 +146,7 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
                     self.accommodationPropertiesPostProcessOperations(focusOnTheBottomOfScrollView: false)
                 }
                 else {
-                    print ("No properties to save")
+                    LogEventHandler.report(LogEventType.debug, "No properties to save")
                 }
                 dispatchGroup.leave()
             }
@@ -193,8 +193,8 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
         self.mainView.backgroundColor = UIColor(patternImage: UIImage(named:"background_gradient2")!)
         self.mainView.addBlurSubview(at: 0)
 
-        print("selected accommodation id: \(self.selectedAccommodationId)");
-        
+        LogEventHandler.report(LogEventType.debug, "Selected accommodation id: \(self.selectedAccommodationId)")
+
         SVProgressHUD.show()
         
         initViewModel()
@@ -238,10 +238,7 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
     // MARK: - UICollectionViewDelegate protocol
         
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // handle tap events
-        print("You selected cell #\(indexPath.item)!")
-       // self.selectedPicture = indexPath.item
-        
+        LogEventHandler.report(LogEventType.debug, "Selected accommodation picture cell: \(indexPath.item)")
     }
     
     func accommodationPropertiesPostProcessOperations(focusOnTheBottomOfScrollView focus: Bool) {

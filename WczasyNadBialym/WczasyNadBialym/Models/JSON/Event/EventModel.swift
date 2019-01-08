@@ -28,7 +28,7 @@ struct EventsInYearModel : Codable {
         do {
             eventsInYear = try decoder.decode([EventsInYearModel].self, from: jsonData)
         } catch let error {
-            ErrorHandler.report("Unable to parse Events in Year", error.localizedDescription)
+            LogEventHandler.report(LogEventType.error, "Unable to parse Events in Year", error.localizedDescription)
         }
         
         return eventsInYear

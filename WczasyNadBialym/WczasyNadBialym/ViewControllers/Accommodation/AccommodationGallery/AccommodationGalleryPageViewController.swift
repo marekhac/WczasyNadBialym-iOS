@@ -17,12 +17,9 @@ class AccommodationGalleryPageViewController: UIPageViewController, UIPageViewCo
         super.viewDidLoad()
         
         self.automaticallyAdjustsScrollViewInsets = false // fix: for tap & move image issue
-        
         self.delegate = self
         self.dataSource = self
-        
-        print(selectedPictureIndex)
-        
+                        
         self.dataSource = self
         self.setViewControllers([getViewController(at: selectedPictureIndex)] as [UIViewController],
                                 direction: UIPageViewController.NavigationDirection.forward,

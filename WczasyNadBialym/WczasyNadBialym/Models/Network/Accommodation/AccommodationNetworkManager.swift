@@ -19,7 +19,7 @@ extension NetworkManager {
         
         let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
             if let error = error {
-                ErrorHandler.report("Unable to download Accommodation List", error.localizedDescription, displayWithHUD: true)
+                LogEventHandler.report(LogEventType.error, "Unable to download Accommodation List", error.localizedDescription, displayWithHUD: true)
             } else {
                 if let list = content?.parseData(using: AccommodationModel.accommodationsFromResults) {
                     completionHandlerForAccomodations(list as! [AccommodationModel], nil)
@@ -37,7 +37,7 @@ extension NetworkManager {
         
         let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
             if let error = error {
-                ErrorHandler.report("Unable to download Accommodaiton Details", error.localizedDescription, displayWithHUD: true)
+                LogEventHandler.report(LogEventType.error, "Unable to download Accommodaiton Details", error.localizedDescription, displayWithHUD: true)
             } else {
                 if let details = content?.parseData(using: AccommodationDetailModel.detailsFromResults) {
                     completionHandlerForDetails(details as! AccommodationDetailModel, nil)
@@ -55,7 +55,7 @@ extension NetworkManager {
         
         let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
             if let error = error {
-                ErrorHandler.report("Unable to download Accommodaiton Properties JSON", error.localizedDescription)
+                LogEventHandler.report(LogEventType.error, "Unable to download Accommodaiton Properties JSON", error.localizedDescription)
             } else {
                 if let properties = content?.parseData(using: AccommodationPropertiesModel.propertiesFromResults) {
                     completionHandlerForProperties(properties as! AccommodationPropertiesModel, nil)
@@ -73,7 +73,7 @@ extension NetworkManager {
         
         let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
             if let error = error {
-                ErrorHandler.report("Unable to download Accommodaiton Pictures JSON", error.localizedDescription)
+                LogEventHandler.report(LogEventType.error, "Unable to download Accommodaiton Pictures JSON", error.localizedDescription)
             } else {
                 if let pictures = content?.parseData(using: AccommodationGalleryModel.picturesFromResults) {
                     completionHandlerForPictures(pictures as? AccommodationGalleryModel, nil)

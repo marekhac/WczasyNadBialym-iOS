@@ -27,7 +27,7 @@ struct EventDetailModel : Codable {
        //     details?.date.getHourAndMinutes()
             
         } catch let error {
-            ErrorHandler.report("Unable to parse Event Detail JSON", error.localizedDescription)
+            LogEventHandler.report(LogEventType.error, "Unable to parse Event Detail JSON", error.localizedDescription)
         }
         
         return details

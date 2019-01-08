@@ -24,7 +24,7 @@ struct ErrorModel : Codable {
             return false
         }
         
-        ErrorHandler.report("MESSAGE FROM BACKEND", error!.description)
+        LogEventHandler.report(LogEventType.debug, "MESSAGE FROM BACKEND", error!.description)
         return true
     }
 }

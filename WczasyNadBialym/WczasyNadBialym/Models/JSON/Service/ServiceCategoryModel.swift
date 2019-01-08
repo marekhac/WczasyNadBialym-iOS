@@ -31,7 +31,7 @@ struct ServiceCategoryModel : Codable {
         do {
             categories = try decoder.decode([ServiceCategoryModel].self, from: jsonData)
         } catch let error {
-            ErrorHandler.report("Unable to parse Service Categories JSON", error.localizedDescription)
+            LogEventHandler.report(LogEventType.error, "Unable to parse Service Categories JSON", error.localizedDescription)
         }
         
         return categories
