@@ -70,7 +70,7 @@
 		F41853511F2875D0006AE1CD /* LogEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41853501F2875D0006AE1CD /* LogEventHandler.swift */; };
 		F4186C491ECB1120006C87D0 /* InfoCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186C481ECB1120006C87D0 /* InfoCategoriesViewController.swift */; };
 		F4186C4B1ECB236F006C87D0 /* InfoCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186C4A1ECB236F006C87D0 /* InfoCategoriesCell.swift */; };
-		F42277D81F851AB500DBB541 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42277D71F851AB500DBB541 /* ErrorModel.swift */; };
+		F42277D81F851AB500DBB541 /* ErrorDescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42277D71F851AB500DBB541 /* ErrorDescriptionModel.swift */; };
 		F42AED7A1FAC758200B133BC /* MenuTabsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AED791FAC758200B133BC /* MenuTabsEnum.swift */; };
 		F43134E21EC4822A0078D602 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43134E11EC4822A0078D602 /* EventDetailsViewController.swift */; };
 		F439C1281EAE2053005EBFB7 /* ServiceContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C1271EAE2053005EBFB7 /* ServiceContants.swift */; };
@@ -283,7 +283,7 @@
 		F41853501F2875D0006AE1CD /* LogEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEventHandler.swift; sourceTree = "<group>"; };
 		F4186C481ECB1120006C87D0 /* InfoCategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesViewController.swift; sourceTree = "<group>"; };
 		F4186C4A1ECB236F006C87D0 /* InfoCategoriesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesCell.swift; sourceTree = "<group>"; };
-		F42277D71F851AB500DBB541 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		F42277D71F851AB500DBB541 /* ErrorDescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDescriptionModel.swift; sourceTree = "<group>"; };
 		F42AED791FAC758200B133BC /* MenuTabsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabsEnum.swift; sourceTree = "<group>"; };
 		F43134E11EC4822A0078D602 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		F439C1271EAE2053005EBFB7 /* ServiceContants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceContants.swift; sourceTree = "<group>"; };
@@ -828,7 +828,7 @@
 		F42277D61F851AA900DBB541 /* Error */ = {
 			isa = PBXGroup;
 			children = (
-				F42277D71F851AB500DBB541 /* ErrorModel.swift */,
+				F42277D71F851AB500DBB541 /* ErrorDescriptionModel.swift */,
 			);
 			name = Error;
 			path = WczasyNadBialym/Models/Network/Error;
@@ -1444,7 +1444,7 @@
 				F44D23141EAF749A00C89BE2 /* AccommodationPropertiesModel.swift in Sources */,
 				F4BC49E21EC1A134000791AE /* EventConstants.swift in Sources */,
 				F44D23161EAF74FE00C89BE2 /* ServiceCategoryModel.swift in Sources */,
-				F42277D81F851AB500DBB541 /* ErrorModel.swift in Sources */,
+				F42277D81F851AB500DBB541 /* ErrorDescriptionModel.swift in Sources */,
 				F475D9921F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift in Sources */,
 				F481E7C71EB1DA0B009637A1 /* ServicesCategoriesViewController.swift in Sources */,
 				F4BC49DA1EC19DF2000791AE /* EventListTableViewController.swift in Sources */,

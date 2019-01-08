@@ -28,7 +28,9 @@ struct ServiceDetailModel : Codable {
         do {
             details = try decoder.decode(ServiceDetailModel.self, from: jsonData)
         } catch let error {
-            LogEventHandler.report(LogEventType.error, "Unable to parse Service Detail JSON", error.localizedDescription)
+            if(!ErrorDescriptionModel.unwrapFrom(jsonData)) {
+                LogEventHandler.report(LogEventType.error, "Unable to parse Service Detail JSON", error.localizedDescription)
+            }
         }
         
         return details

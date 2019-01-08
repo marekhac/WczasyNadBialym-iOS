@@ -20,7 +20,9 @@ struct WeatherModel : Codable {
         do {
             weather = try decoder.decode(WeatherModel.self, from: jsonData)
         } catch let error {
-            LogEventHandler.report(LogEventType.debug, "Unable to parse Weather data JSON - ", error.localizedDescription)
+            if(!ErrorDescriptionModel.unwrapFrom(jsonData)) {
+                LogEventHandler.report(LogEventType.debug, "Unable to parse Weather data JSON - ", error.localizedDescription)
+            }
         }
         
       return weather

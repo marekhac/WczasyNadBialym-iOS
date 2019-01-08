@@ -17,7 +17,11 @@ struct LogEventHandler {
         let logEvent = logEventType.rawValue
         
         if (debugLog || (logEventType == .info)) {
-            print ("\(logEvent) \(message) \n \(description)")
+            if (description != "") {
+                print ("\(logEvent) \(message) --> \(description)")
+            } else {
+                print ("\(logEvent) \(message)")
+            }
             
             if (hud) {
                 SVProgressHUD.showError(withStatus: message)
