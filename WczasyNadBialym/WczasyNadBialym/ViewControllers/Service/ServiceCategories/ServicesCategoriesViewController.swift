@@ -27,12 +27,16 @@ class ServicesCategoriesViewController: UITableViewController {
         
         /* services can also be downloaded using API */
 
-//        NetworkManager.sharedInstance().getServiceCategories { (serviceCategoriesDict, error) in
+//        NetworkManager.sharedInstance().getServiceCategories { (serviceCategoriesDict) in
+//
+//        if let serviceCategoriesDict = serviceCategoriesDict {
 //            self.serviceCategories = serviceCategoriesDict
 //            OperationQueue.main.addOperation({
 //                self.tableView.reloadData()
 //            })
 //        }
+//    }
+        
     }
 
     func generateServiceCategories() -> [ServiceCategoryModel] {

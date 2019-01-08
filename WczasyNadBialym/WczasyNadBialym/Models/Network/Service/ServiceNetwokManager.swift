@@ -10,7 +10,7 @@ import Foundation
 
 extension NetworkManager {
     
-    func getServiceCategories (_ completionHandlerForServices: @escaping (_ result: [ServiceCategoryModel], _ error: NSError?) -> Void) {
+    func getServiceCategories (_ completionHandlerForServices: @escaping (_ result: [ServiceCategoryModel]?) -> Void) {
         
         let controller = Service.Controllers.Services
         let method  = Service.Methods.Categories
@@ -20,14 +20,13 @@ extension NetworkManager {
             if let error = error {
                 LogEventHandler.report(LogEventType.error, "Unable to download Serivce Categories", error.localizedDescription)
             } else {
-                if let categories = content?.parseData(using: ServiceCategoryModel.servicesFromResults) {
-                    completionHandlerForServices(categories as! [ServiceCategoryModel], nil)
-                }
+                let categories = content?.parseData(using: ServiceCategoryModel.servicesFromResults)
+                completionHandlerForServices(categories as? [ServiceCategoryModel])
             }
         }
     }
     
-    func getServiceList (_ serviceType : String, _ completionHandlerForServices: @escaping (_ result: [ServiceModel], _ error: NSError?) -> Void) {
+    func getServiceList (_ serviceType : String, _ completionHandlerForServices: @escaping (_ result: [ServiceModel]?) -> Void) {
         
         let controller = Service.Controllers.Services
         let method  = Service.Methods.List
@@ -38,14 +37,13 @@ extension NetworkManager {
             if let error = error {
                 LogEventHandler.report(LogEventType.error, "Unable to download Serivce List", error.localizedDescription, displayWithHUD: true)
             } else {
-                if let list = content?.parseData(using: ServiceModel.servicesFromResults) {
-                    completionHandlerForServices(list as! [ServiceModel], nil)
-                }
+                let list = content?.parseData(using: ServiceModel.servicesFromResults)
+                completionHandlerForServices(list as? [ServiceModel])
             }
         }
     }
     
-    func getServiceDetails (_ eventId : String, _ completionHandlerForEvents: @escaping (_ result: ServiceDetailModel?, _ error: NSError?) -> Void) {
+    func getServiceDetails (_ eventId : String, _ completionHandlerForEvents: @escaping (_ result: ServiceDetailModel?) -> Void) {
         
         let controller = Service.Controllers.Services
         let method  = Service.Methods.Details
@@ -54,11 +52,9 @@ extension NetworkManager {
         let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
             if let error = error {
                 LogEventHandler.report(LogEventType.error, "Unable to download Service Details", error.localizedDescription, displayWithHUD: true)
-                completionHandlerForEvents(nil, error)
             } else {
-                if let details = content?.parseData(using: ServiceDetailModel.detailsFromResults) {
-                    completionHandlerForEvents(details as? ServiceDetailModel, nil)
-                }
+                let details = content?.parseData(using: ServiceDetailModel.detailsFromResults)
+                completionHandlerForEvents(details as? ServiceDetailModel)
             }
         }
     }

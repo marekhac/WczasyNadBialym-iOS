@@ -10,7 +10,7 @@ import Foundation
 
 extension NetworkManager {
     
-    func getEventSections (_ completionHandlerForEventsList: @escaping (_ result: [EventsInYearModel], _ error: NSError?) -> Void) {
+    func getEventSections (_ completionHandlerForEventsList: @escaping (_ result: [EventsInYearModel]?) -> Void) {
         
         let controller = Event.Controllers.Events
         let method = Event.Methods.List
@@ -20,14 +20,13 @@ extension NetworkManager {
             if let error = error {
                 LogEventHandler.report(LogEventType.error, "Unable to download Event Sections", error.localizedDescription, displayWithHUD: true)
             } else {
-                if let sections = content?.parseData(using: EventsInYearModel.eventsInYearFromResults) {
-                    completionHandlerForEventsList(sections as! [EventsInYearModel], nil)
-                }
+                let sections = content?.parseData(using: EventsInYearModel.eventsInYearFromResults)
+                completionHandlerForEventsList(sections as? [EventsInYearModel])
             }
         }
     }
     
-    func getEventDetails (_ eventId : String, _ completionHandlerForEvents: @escaping (_ result: EventDetailModel, _ error: NSError?) -> Void) {
+    func getEventDetails (_ eventId : String, _ completionHandlerForEvents: @escaping (_ result: EventDetailModel?) -> Void) {
         
         let controller = Event.Controllers.Events
         let method  = Event.Methods.Details
@@ -37,9 +36,8 @@ extension NetworkManager {
             if let error = error {
                 LogEventHandler.report(LogEventType.error, "Unable to download Event Details", error.localizedDescription, displayWithHUD: true)
             } else {
-                if let details = content?.parseData(using: EventDetailModel.detailsFromResults) {
-                    completionHandlerForEvents(details as! EventDetailModel, nil)
-                }
+                let details = content?.parseData(using: EventDetailModel.detailsFromResults)
+                completionHandlerForEvents(details as? EventDetailModel)
             }
         }
     }

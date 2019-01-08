@@ -33,22 +33,33 @@ class EventDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        NetworkManager.sharedInstance().getEventDetails(selectedEventId) { (details, error) in
-            self.medmageView.downloadImageAsyncAndReturnImage(details.imgMedURL) { (resultImage, error) in
-               self.backgroundImageView.image = resultImage
-            }
+        
+        NetworkManager.sharedInstance().getEventDetails(selectedEventId) { (details) in
             
-            DispatchQueue.main.async {
-                self.name.text = details.name.uppercased()
-                self.place.text = details.place.uppercased()
-                self.startDate.text = details.date.getDate() + ", godz. " + details.date.getHourAndMinutes()
+            if let details = details {
+               
+                // download image
                 
-                // remove all html tags
+                self.medmageView.downloadImageAsyncAndReturnImage(details.imgMedURL) { (resultImage, error) in
+                    self.backgroundImageView.image = resultImage
+                }
                 
-                let detailsStripped = details.description.removeHTMLTags()
+                // update ui with content
                 
-                self.descriptionTextView.text = detailsStripped
+                DispatchQueue.main.async {
+                    self.name.text = details.name.uppercased()
+                    self.place.text = details.place.uppercased()
+                    self.startDate.text = details.date.getDate() + ", godz. " + details.date.getHourAndMinutes()
+                    
+                    // remove all html tags
+                    
+                    let detailsStripped = details.description.removeHTMLTags()
+                    
+                    self.descriptionTextView.text = detailsStripped
+                }
+            }
+            else {
+                LogEventHandler.report(LogEventType.debug, "No Event Details to show")
             }
         }
     }

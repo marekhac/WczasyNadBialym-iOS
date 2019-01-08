@@ -25,28 +25,30 @@ class EventListTableViewController: UITableViewController {
         
         self.tableView.addBlurSubview(image: "background_gradient2")
         
-        NetworkManager.sharedInstance().getEventSections () { (eventSections, error) in
+        NetworkManager.sharedInstance().getEventSections () { (eventSections) in
             
-            // skip empty sections. f.e. years where there aren't any events
-            
-            for section in eventSections {
-                SVProgressHUD.dismiss()
+            if let eventSections = eventSections {
                 
-                if (section.events.count != 0) {
-                    self.sections.append(section)
+                // skip empty sections. f.e. years where there aren't any events
+                
+                for section in eventSections {
+                    SVProgressHUD.dismiss()
+                    
+                    if (section.events.count != 0) {
+                        self.sections.append(section)
+                    }
+                }
+                
+                if (self.sections.count == 0) {
+                    SVProgressHUD.showInfo(withStatus: "Brak imprez \u{1F494}")
+                }
+                else {
+                    OperationQueue.main.addOperation({
+                        self.tableView.reloadData()
+                    })
                 }
             }
-            
-            if (self.sections.count == 0) {
-                SVProgressHUD.showInfo(withStatus: "Brak imprez \u{1F494}")
-            }
-            else {
-                OperationQueue.main.addOperation({
-                    self.tableView.reloadData()
-                })
-            }
         }
-        
     }
     
     override func viewDidLoad() {
@@ -102,8 +104,10 @@ class EventListTableViewController: UITableViewController {
         cell.eventId =  event.id
         cell.date.text = event.date.getDate() + ", godz. " + event.date.getHourAndMinutes()
         
-        NetworkManager.sharedInstance().getEventDetails(String(event.id)) { (details, error) in
-             cell.imageMini.downloadImageAsync(details.imgMedURL)
+        NetworkManager.sharedInstance().getEventDetails(String(event.id)) { (details) in
+            if let details = details {
+                cell.imageMini.downloadImageAsync(details.imgMedURL)
+            }
         }
         return cell
     }

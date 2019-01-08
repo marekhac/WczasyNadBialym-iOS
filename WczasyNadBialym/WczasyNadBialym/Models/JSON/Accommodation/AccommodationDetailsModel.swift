@@ -20,7 +20,7 @@ struct AccommodationDetailModel : Codable {
     let gpsLat: Double
     let gpsLng: Double
     
-    static func detailsFromResults(_ jsonData: Data) -> AccommodationDetailModel {
+    static func detailsFromResults(_ jsonData: Data) -> AccommodationDetailModel? {
         
         var accommodationDetails : AccommodationDetailModel? = nil
         
@@ -31,6 +31,6 @@ struct AccommodationDetailModel : Codable {
             LogEventHandler.report(LogEventType.error, "Unable to parse Accommodation Details JSON", error.localizedDescription)
         }
         
-        return accommodationDetails!
+        return accommodationDetails
     }
 }

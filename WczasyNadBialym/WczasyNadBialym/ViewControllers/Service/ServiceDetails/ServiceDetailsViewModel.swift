@@ -23,9 +23,11 @@ class ServiceDetailsViewModel {
     }
     
     func fetchServiceDetails(for serviceId: String) {
-        NetworkManager.sharedInstance().getServiceDetails(serviceId) { (service, error) in
+        NetworkManager.sharedInstance().getServiceDetails(serviceId) { (service) in
             
-            self.serviceDetails = service // optional
+            if let service = service {
+                self.serviceDetails = service 
+            }
         }
     }
 }

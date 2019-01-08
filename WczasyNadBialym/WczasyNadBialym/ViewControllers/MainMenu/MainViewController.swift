@@ -22,13 +22,16 @@ class MainViewController: UIViewController {
     }
     
     func setupCurrentTemperature() {
-        NetworkManager.sharedInstance().getCurrentMeasurement() { (weather, error) in
+        NetworkManager.sharedInstance().getCurrentMeasurement() { (weather) in
             
-            let currentTemperature = weather.temp.rounded()
-            LogEventHandler.report(LogEventType.info, "Current temperature: \(currentTemperature)");
-            
-            DispatchQueue.main.async {
-                self.temperatureLabel.text = String(currentTemperature) + " °C"
+            if let weather = weather {
+                
+                let currentTemperature = weather.temp.rounded()
+                LogEventHandler.report(LogEventType.info, "Current temperature: \(currentTemperature)");
+                
+                DispatchQueue.main.async {
+                    self.temperatureLabel.text = String(currentTemperature) + " °C"
+                }
             }
         }
     }

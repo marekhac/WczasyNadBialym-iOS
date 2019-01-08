@@ -51,19 +51,19 @@ class AccommodationDetailsViewModel {
     // MARK: fetch methods
     
     func fetchAccommodationDetails(for accommodationId: String, accommodationType: String) {
-        NetworkManager.sharedInstance().getAccommodationDetails(accommodationId, accommodationType) { (details, error) in
+        NetworkManager.sharedInstance().getAccommodationDetails(accommodationId, accommodationType) { (details) in
             self.accommodationDetails = details
         }
     }
     
     func fetchAccommodationGallery(for accommodationId: String) {
-         NetworkManager.sharedInstance().getAccommodationPictures(accommodationId) { (pictures, error) in
+         NetworkManager.sharedInstance().getAccommodationPictures(accommodationId) { (pictures) in
             self.accommodationGallery = pictures 
         }
     }
 
     func fetchAccommodationProperties(for accommodationId: String) {
-        NetworkManager.sharedInstance().getAccommodationProperties(accommodationId) { (properties, error) in
+        NetworkManager.sharedInstance().getAccommodationProperties(accommodationId) { (properties) in
             self.accommodationProperties = properties
         }
     }

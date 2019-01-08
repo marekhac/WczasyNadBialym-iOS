@@ -50,11 +50,16 @@ class AccommodationListViewController: UITableViewController {
         self.navigationItem.title = self.accommodationType!.longName
     
         SVProgressHUD.show()
-        NetworkManager.sharedInstance().getAccommodationListBasic(accommodationType!.shortName) { (accommodationDict, error) in
+        NetworkManager.sharedInstance().getAccommodationListBasic(accommodationType!.shortName) { (accommodationDict) in
             
-            self.accommodation = accommodationDict
-
-            self.reloadCollectionViewAndDismissHUD()
+            if let accommodationDict = accommodationDict {
+                self.accommodation = accommodationDict
+                self.reloadCollectionViewAndDismissHUD()
+            }
+            else {
+                LogEventHandler.report(LogEventType.error, "Unable to parse Accommodation Basic List");
+                SVProgressHUD.dismiss()
+            }
         }
         
         // Do any additional setup after loading the view.

@@ -15,7 +15,7 @@ struct AccommodationModel : Codable {
     let price : String
     let imgMiniURL : String
     
-    static func accommodationsFromResults(_ jsonData: Data) -> [AccommodationModel] {
+    static func accommodationsFromResults(_ jsonData: Data) -> [AccommodationModel]? {
             
         let decoder = JSONDecoder()
         var accommodations = [AccommodationModel]()

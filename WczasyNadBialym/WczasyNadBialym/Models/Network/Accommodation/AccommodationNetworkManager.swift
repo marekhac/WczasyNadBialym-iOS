@@ -11,7 +11,7 @@ import SVProgressHUD
 
 extension NetworkManager {
     
-    func getAccommodationListBasic (_ accomodationType : String, _ completionHandlerForAccomodations: @escaping (_ result: [AccommodationModel], _ error: NSError?) -> Void) {
+    func getAccommodationListBasic (_ accomodationType : String, _ completionHandlerForAccomodations: @escaping (_ result: [AccommodationModel]?) -> Void) {
         
         let controller = Accommodation.Controllers.Accommodation
         let method  = Accommodation.Methods.ListBasic
@@ -21,14 +21,13 @@ extension NetworkManager {
             if let error = error {
                 LogEventHandler.report(LogEventType.error, "Unable to download Accommodation List", error.localizedDescription, displayWithHUD: true)
             } else {
-                if let list = content?.parseData(using: AccommodationModel.accommodationsFromResults) {
-                    completionHandlerForAccomodations(list as! [AccommodationModel], nil)
-                }
+                let list = content?.parseData(using: AccommodationModel.accommodationsFromResults)
+                    completionHandlerForAccomodations(list as? [AccommodationModel])
             }
         }
     }
     
-    func getAccommodationDetails (_ accomodationId : String, _ accomodationType : String, _ completionHandlerForDetails: @escaping (_ result: AccommodationDetailModel, _ error: NSError?) -> Void) {
+    func getAccommodationDetails (_ accomodationId : String, _ accomodationType : String, _ completionHandlerForDetails: @escaping (_ result: AccommodationDetailModel?) -> Void) {
         
         let controller = Accommodation.Controllers.Accommodation
         let method  = Accommodation.Methods.Details
@@ -39,14 +38,13 @@ extension NetworkManager {
             if let error = error {
                 LogEventHandler.report(LogEventType.error, "Unable to download Accommodaiton Details", error.localizedDescription, displayWithHUD: true)
             } else {
-                if let details = content?.parseData(using: AccommodationDetailModel.detailsFromResults) {
-                    completionHandlerForDetails(details as! AccommodationDetailModel, nil)
-                }
+                let details = content?.parseData(using: AccommodationDetailModel.detailsFromResults)
+                completionHandlerForDetails(details as? AccommodationDetailModel)
             }
         }
     }
     
-    func getAccommodationProperties (_ accomodationId : String, _ completionHandlerForProperties: @escaping (_ result: AccommodationPropertiesModel, _ error: NSError?) -> Void) {
+    func getAccommodationProperties (_ accomodationId : String, _ completionHandlerForProperties: @escaping (_ result: AccommodationPropertiesModel?) -> Void) {
         
         let controller = Accommodation.Controllers.Accommodation
         let method  = Accommodation.Methods.Features
@@ -57,14 +55,13 @@ extension NetworkManager {
             if let error = error {
                 LogEventHandler.report(LogEventType.error, "Unable to download Accommodaiton Properties JSON", error.localizedDescription)
             } else {
-                if let properties = content?.parseData(using: AccommodationPropertiesModel.propertiesFromResults) {
-                    completionHandlerForProperties(properties as! AccommodationPropertiesModel, nil)
-                }
+                let properties = content?.parseData(using: AccommodationPropertiesModel.propertiesFromResults)
+                    completionHandlerForProperties(properties as? AccommodationPropertiesModel)
             }
         }
     }
     
-    func getAccommodationPictures (_ accomodationId : String, _ completionHandlerForPictures: @escaping (_ result: AccommodationGalleryModel?, _ error: NSError?) -> Void) {
+    func getAccommodationPictures (_ accomodationId : String, _ completionHandlerForPictures: @escaping (_ result: AccommodationGalleryModel?) -> Void) {
         
         let controller = Accommodation.Controllers.Accommodation
         let method  = Accommodation.Methods.Pictures
@@ -75,9 +72,11 @@ extension NetworkManager {
             if let error = error {
                 LogEventHandler.report(LogEventType.error, "Unable to download Accommodaiton Pictures JSON", error.localizedDescription)
             } else {
-                if let pictures = content?.parseData(using: AccommodationGalleryModel.picturesFromResults) {
-                    completionHandlerForPictures(pictures as? AccommodationGalleryModel, nil)
-                }
+                let pictures = content?.parseData(using: AccommodationGalleryModel.picturesFromResults)
+                
+                // if pictures is nil, we will handle it in completionHandlerForPictures
+                
+                completionHandlerForPictures(pictures as? AccommodationGalleryModel)
             }
         }
     }
