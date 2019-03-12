@@ -1671,6 +1671,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 192F64CBACD816735A72D3C1 /* Pods-WczasyNadBialym.debug (development).xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1686,6 +1688,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4E3B93B5B96664F7D73C6FA /* Pods-WczasyNadBialym.release (development).xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1799,6 +1803,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 297C12511CCCBFBF0C3777CC /* Pods-WczasyNadBialym.debug (production).xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1887,6 +1893,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 40F82B8B331C74C475AFA021 /* Pods-WczasyNadBialym.release (production).xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
