@@ -7,8 +7,11 @@
 //
 
 import UIKit
-
+import GoogleMobileAds
 class EventDetailsViewController: UIViewController {
+    
+    @IBOutlet weak var bannerView: GADBannerView!
+    var adHandler : AdvertisementHandler?
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var place: UILabel!
@@ -23,13 +26,6 @@ class EventDetailsViewController: UIViewController {
     @IBOutlet var mainView: UIView!
     
     var selectedEventId : String = ""
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-       
-        self.view.addBlurSubview(below: contentView)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +57,22 @@ class EventDetailsViewController: UIViewController {
             else {
                 LogEventHandler.report(LogEventType.debug, "No Event Details to show")
             }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.view.addBlurSubview(below: contentView)
+        displayAdvertisementBanner()
+    }
+    
+    // MARK: - Request for advertisement
+    
+    func displayAdvertisementBanner() {
+        self.adHandler = AdvertisementHandler(bannerAdView: self.bannerView)
+        if let adHandler = self.adHandler {
+            adHandler.showAd(viewController: self)
         }
     }
         

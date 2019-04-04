@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZaR-Lw-30F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZaR-Lw-30F">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -231,7 +231,7 @@
                                                 </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="T63-vl-v2u" userLabel="Address Stack View">
-                                                <rect key="frame" x="153" y="63.5" width="253" height="61.5"/>
+                                                <rect key="frame" x="153" y="63" width="253" height="61.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ul. Kwiatowa 19/3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OuB-Lo-dLc" userLabel="Street">
                                                         <rect key="frame" x="0.0" y="0.0" width="132.5" height="20.5"/>
@@ -279,19 +279,25 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
                                                 <subviews>
                                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYj-hf-SM6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
                                                     </mapView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaw-gG-62T">
-                                                        <rect key="frame" x="161" y="231" width="92" height="9"/>
+                                                        <rect key="frame" x="161" y="149" width="92" height="30"/>
                                                         <state key="normal" title="Otwórz mapę"/>
                                                         <connections>
                                                             <segue destination="SBy-8h-eLg" kind="show" identifier="showServiceMap" id="qAb-o1-1md"/>
                                                         </connections>
                                                     </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2YZ-7t-vZ5" customClass="GADBannerView">
+                                                        <rect key="frame" x="8" y="190" width="398" height="50"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="YzO-jP-xf7"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="bYj-hf-SM6" firstAttribute="leading" secondItem="a0D-Mb-HoD" secondAttribute="leading" id="IyE-vV-Hpf"/>
-                                                    <constraint firstAttribute="bottom" secondItem="bYj-hf-SM6" secondAttribute="bottom" constant="20" symbolic="YES" id="kRc-pS-Bjo"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -357,6 +363,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="650"/>
                     <connections>
+                        <outlet property="bannerView" destination="2YZ-7t-vZ5" id="N1N-mA-jTG"/>
                         <outlet property="cityLabel" destination="K8c-9i-Eup" id="ENd-FV-hIc"/>
                         <outlet property="descriptionTextView" destination="O7k-ms-MZC" id="Gge-NH-wkX"/>
                         <outlet property="imageView" destination="jL2-GF-SIL" id="TAv-OZ-cUb"/>
@@ -383,30 +390,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oaL-cS-mVE">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="c3F-Qp-saY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </mapView>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oaL-cS-mVE">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                    </mapView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nvi-Er-vKx" customClass="GADBannerView">
+                                        <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="h7S-dW-ryc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oaL-cS-mVE" firstAttribute="top" secondItem="m1R-Oo-auG" secondAttribute="top" id="6x6-gO-SDo"/>
-                            <constraint firstItem="oaL-cS-mVE" firstAttribute="leading" secondItem="m1R-Oo-auG" secondAttribute="leading" id="Mex-DB-sDo"/>
-                            <constraint firstAttribute="trailing" secondItem="oaL-cS-mVE" secondAttribute="trailing" id="U1e-1p-22b"/>
-                            <constraint firstItem="ylj-PE-7F0" firstAttribute="top" secondItem="oaL-cS-mVE" secondAttribute="bottom" id="Zoy-Rl-wIl"/>
+                            <constraint firstItem="c3F-Qp-saY" firstAttribute="top" secondItem="m1R-Oo-auG" secondAttribute="top" id="6bC-zW-7dz"/>
+                            <constraint firstItem="c3F-Qp-saY" firstAttribute="leading" secondItem="ZH0-Ya-ftL" secondAttribute="leading" id="c2p-fv-Lyi"/>
+                            <constraint firstItem="ylj-PE-7F0" firstAttribute="top" secondItem="c3F-Qp-saY" secondAttribute="bottom" id="cRJ-Ef-nUo"/>
+                            <constraint firstAttribute="trailing" secondItem="c3F-Qp-saY" secondAttribute="trailing" id="n5M-tX-pll"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZH0-Ya-ftL"/>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="Nvi-Er-vKx" id="Fv1-hT-IBN"/>
                         <outlet property="mapView" destination="oaL-cS-mVE" id="Gkf-56-Wo0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugw-NY-8VN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3510" y="-1716"/>
+            <point key="canvasLocation" x="3509.5999999999999" y="-1716.7916041979013"/>
         </scene>
     </scenes>
     <resources>
-        <image name="accommodation" width="28" height="28"/>
-        <image name="services" width="28" height="28"/>
+        <image name="accommodation" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="services" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
 </document>

@@ -147,6 +147,7 @@
 		F48BDA3F1F9F7BDE0057F999 /* TextDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48BDA3E1F9F7BDE0057F999 /* TextDownloadManager.swift */; };
 		F48FF5E71EC1B326003F1B06 /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48FF5E61EC1B326003F1B06 /* EventListCell.swift */; };
 		F49B16951FA124F300A3E50C /* InfoConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B16941FA124F300A3E50C /* InfoConstants.swift */; };
+		F4A3F37F2254874D0009A256 /* AdvertisementHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A3F37E2254874D0009A256 /* AdvertisementHandler.swift */; };
 		F4AA0FDB1FE2BE47009F3FF3 /* WeatherConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA0FDA1FE2BE47009F3FF3 /* WeatherConstants.swift */; };
 		F4AA0FDD1FE2BF34009F3FF3 /* WeatherNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA0FDC1FE2BF34009F3FF3 /* WeatherNetworkManager.swift */; };
 		F4AA0FE01FE2BFE7009F3FF3 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA0FDF1FE2BFE7009F3FF3 /* WeatherModel.swift */; };
@@ -337,6 +338,7 @@
 		F4510FF92118802900D337B2 /* ServiceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewModel.swift; sourceTree = "<group>"; };
 		F457A6021FBAFD61000019BF /* String+RemoveHTMLTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemoveHTMLTags.swift"; sourceTree = "<group>"; };
 		F4580C3B1ED3113A00944984 /* InfoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoDetailsViewController.swift; sourceTree = "<group>"; };
+		F45A076D2238FBE90088E88F /* WczasyNadBialym.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WczasyNadBialym.entitlements; sourceTree = "<group>"; };
 		F474253A21E3463200EF6709 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		F474253C21E3634300EF6709 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F474253E21E3718600EF6709 /* LogEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEventType.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 		F48BDA3E1F9F7BDE0057F999 /* TextDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDownloadManager.swift; sourceTree = "<group>"; };
 		F48FF5E61EC1B326003F1B06 /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
 		F49B16941FA124F300A3E50C /* InfoConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoConstants.swift; sourceTree = "<group>"; };
+		F4A3F37E2254874D0009A256 /* AdvertisementHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisementHandler.swift; sourceTree = "<group>"; };
 		F4AA0FDA1FE2BE47009F3FF3 /* WeatherConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConstants.swift; sourceTree = "<group>"; };
 		F4AA0FDC1FE2BF34009F3FF3 /* WeatherNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetworkManager.swift; sourceTree = "<group>"; };
 		F4AA0FDF1FE2BFE7009F3FF3 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
@@ -470,6 +473,7 @@
 		F40006141E697B710032033C /* WczasyNadBialym */ = {
 			isa = PBXGroup;
 			children = (
+				F45A076D2238FBE90088E88F /* WczasyNadBialym.entitlements */,
 				F40C91BD1E6980AF006124FC /* ViewControllers */,
 				F40C91B51E6980A7006124FC /* Support */,
 				F40C91AD1E6980A1006124FC /* Models */,
@@ -626,6 +630,7 @@
 			children = (
 				F474253A21E3463200EF6709 /* Environment.swift */,
 				F41853501F2875D0006AE1CD /* LogEventHandler.swift */,
+				F4A3F37E2254874D0009A256 /* AdvertisementHandler.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1228,6 +1233,11 @@
 						DevelopmentTeam = X9888GP63R;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					F400062A1E697B720032033C = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1384,11 +1394,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1481,6 +1495,7 @@
 				F4F9D1F11E854CBA0064BC24 /* UIImageView+ImageFromServerURL.swift in Sources */,
 				F4C906611E9916FE001BCAE4 /* MKMapView+FillMap.swift in Sources */,
 				F4DEE2021F8B454A0044981E /* UIView+BlurEffect.swift in Sources */,
+				F4A3F37F2254874D0009A256 /* AdvertisementHandler.swift in Sources */,
 				F481E7BB1EB1D9BC009637A1 /* AccommodationMapViewController.swift in Sources */,
 				F457A6031FBAFD61000019BF /* String+RemoveHTMLTags.swift in Sources */,
 				F40C91CF1E6980AF006124FC /* MainViewController.swift in Sources */,
@@ -1673,6 +1688,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = WczasyNadBialym/WczasyNadBialym.entitlements;
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1681,6 +1697,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
+				ad_app_id = "ca-app-pub-3940256099942544~1458002511";
+				ad_unit_id = "ca-app-pub-3940256099942544/2934735716";
 			};
 			name = "Debug (Development)";
 		};
@@ -1690,6 +1708,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = WczasyNadBialym/WczasyNadBialym.entitlements;
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1698,6 +1717,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
+				ad_app_id = "ca-app-pub-3940256099942544~1458002511";
+				ad_unit_id = "ca-app-pub-3940256099942544/2934735716";
 				api_host = wczasynadbialym.pl/;
 				debug_log = true;
 			};
@@ -1805,6 +1826,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = WczasyNadBialym/WczasyNadBialym.entitlements;
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1813,6 +1835,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
+				ad_app_id = "ca-app-pub-3940256099942544~1458002511";
+				ad_unit_id = "ca-app-pub-3940256099942544/2934735716";
 				api_host = "portal-dev:8888/";
 			};
 			name = "Debug (Production)";
@@ -1895,6 +1919,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = WczasyNadBialym/WczasyNadBialym.entitlements;
 				DEVELOPMENT_TEAM = X9888GP63R;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1903,6 +1928,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
+				ad_app_id = "ca-app-pub-3940256099942544~1458002511";
+				ad_unit_id = "ca-app-pub-3940256099942544/2934735716";
 				debug_log = false;
 			};
 			name = "Release (Production)";

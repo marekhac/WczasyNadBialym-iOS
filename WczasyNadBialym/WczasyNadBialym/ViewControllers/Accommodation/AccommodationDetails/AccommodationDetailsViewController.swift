@@ -9,9 +9,13 @@
 import UIKit
 import MapKit
 import SVProgressHUD
+import GoogleMobileAds
 
 class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
-
+    
+    @IBOutlet weak var bannerView: GADBannerView!
+    var adHandler : AdvertisementHandler?
+    
     let imagesReuseIdentifier = "imageCell" // also enter this string as the cell identifier in the storyboard
     let featuresReuseIdentifier = "featuresCell"
     
@@ -53,10 +57,6 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
     
     @IBOutlet weak var imageCollectionViewHeightContraint: NSLayoutConstraint!
     @IBOutlet weak var accommodationPropertiesCollectionViewHeightContraint: NSLayoutConstraint!
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-    }
 
     lazy var viewModel: AccommodationDetailsViewModel = {
         return AccommodationDetailsViewModel()
@@ -171,6 +171,11 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
         }
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -198,11 +203,22 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
         SVProgressHUD.show()
         
         initViewModel()
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        displayAdvertisementBanner()
+    }
+    
+    // MARK: - Request for advertisement
+    
+    func displayAdvertisementBanner() {
+        self.adHandler = AdvertisementHandler(bannerAdView: self.bannerView)
+        if let adHandler = self.adHandler {
+            adHandler.showAd(viewController: self)
+        }
     }
     
     // MARK: - UICollectionViewDataSource protocol

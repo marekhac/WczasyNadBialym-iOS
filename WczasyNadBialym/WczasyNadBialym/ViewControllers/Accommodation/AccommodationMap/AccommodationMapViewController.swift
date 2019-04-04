@@ -8,9 +8,13 @@
 
 import UIKit
 import MapKit
+import GoogleMobileAds
 
 class AccommodationMapViewController: UIViewController, MKMapViewDelegate {
 
+    @IBOutlet weak var bannerView: GADBannerView!
+    var adHandler : AdvertisementHandler?
+    
     var gpsLat: Double = 0.0
     var gpsLng: Double = 0.0
     var pinTitle: String = ""
@@ -27,6 +31,21 @@ class AccommodationMapViewController: UIViewController, MKMapViewDelegate {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        displayAdvertisementBanner()
+    }
+    
+    // MARK: - Request for advertisement
+    
+    func displayAdvertisementBanner() {
+        self.adHandler = AdvertisementHandler(bannerAdView: self.bannerView)
+        if let adHandler = self.adHandler {
+            adHandler.showAd(viewController: self)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

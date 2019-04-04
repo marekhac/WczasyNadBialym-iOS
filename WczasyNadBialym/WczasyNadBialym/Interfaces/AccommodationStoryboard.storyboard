@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nfO-be-RRx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nfO-be-RRx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -244,7 +243,6 @@
                                                     <constraint firstAttribute="trailing" secondItem="xaW-CR-ii0" secondAttribute="trailing" id="0HK-Ih-rXK"/>
                                                     <constraint firstItem="V9O-5s-E3O" firstAttribute="leading" secondItem="fVu-M1-x1K" secondAttribute="leading" id="3v3-lq-C8Q"/>
                                                     <constraint firstAttribute="trailing" secondItem="V9O-5s-E3O" secondAttribute="trailing" id="EeQ-l7-rbr"/>
-                                                    <constraint firstItem="t6m-TG-Cts" firstAttribute="top" secondItem="fVu-M1-x1K" secondAttribute="top" id="FQy-Or-IFI"/>
                                                     <constraint firstAttribute="bottom" secondItem="xaW-CR-ii0" secondAttribute="bottom" id="RJj-w0-ycb"/>
                                                     <constraint firstAttribute="trailing" secondItem="t6m-TG-Cts" secondAttribute="trailing" id="Tgd-zb-7P9"/>
                                                     <constraint firstItem="xaW-CR-ii0" firstAttribute="leading" secondItem="fVu-M1-x1K" secondAttribute="leading" id="ZO8-83-2Pu"/>
@@ -261,7 +259,7 @@
                                         </constraints>
                                     </view>
                                     <segmentedControl opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lta-QC-IZK" userLabel="Segment Controll">
-                                        <rect key="frame" x="112" y="700" width="191" height="29"/>
+                                        <rect key="frame" x="111.5" y="700" width="191" height="29"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="7Wm-VI-6Iu"/>
@@ -324,15 +322,22 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
                                                 <subviews>
                                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkR-pZ-4YD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="199"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
                                                     </mapView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rr4-IF-0HL">
-                                                        <rect key="frame" x="161" y="210" width="92" height="30"/>
+                                                        <rect key="frame" x="161" y="149" width="92" height="30"/>
                                                         <state key="normal" title="Otwórz mapę"/>
                                                         <connections>
                                                             <segue destination="0rc-AV-Cuy" kind="show" identifier="showAccommodationMap" id="R4f-Ul-BS0"/>
                                                         </connections>
                                                     </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ca-u7-Xb0" customClass="GADBannerView">
+                                                        <rect key="frame" x="8" y="190" width="398" height="50"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Sdb-2j-aiE"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="bkR-pZ-4YD" firstAttribute="leading" secondItem="CC5-dx-aef" secondAttribute="leading" id="fM3-Hl-lOf"/>
@@ -389,7 +394,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="akceptacjazwierzat.gif" translatesAutoresizingMaskIntoConstraints="NO" id="3CK-Yb-kp7" userLabel="Feature Image View">
-                                                            <rect key="frame" x="8" y="8" width="34" height="34"/>
+                                                            <rect key="frame" x="8" y="28" width="34" height="14"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
                                                     </subviews>
@@ -456,6 +461,7 @@
                     <size key="freeformSize" width="414" height="1002"/>
                     <connections>
                         <outlet property="accommodationPropertiesCollectionViewHeightContraint" destination="LYz-TC-5Rj" id="t6k-qg-nkV"/>
+                        <outlet property="bannerView" destination="0Ca-u7-Xb0" id="oL4-AG-47I"/>
                         <outlet property="descriptionTextView" destination="Yp2-kT-rZw" id="jrx-v6-wQP"/>
                         <outlet property="featuresCollectionView" destination="j1Y-iV-SCa" id="MHa-eQ-8PR"/>
                         <outlet property="featuresSegmentedControl" destination="Lta-QC-IZK" id="nWU-Fx-fP7"/>
@@ -473,7 +479,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQW-zI-jeq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2682" y="318"/>
+            <point key="canvasLocation" x="2681.5999999999999" y="317.54122938530736"/>
         </scene>
         <!--Accommodation Map View Controller-->
         <scene sceneID="1Vy-Rw-ZEa">
@@ -487,20 +493,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6OO-sG-hDh">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C4o-on-xfN">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </mapView>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6OO-sG-hDh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
+                                    </mapView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUN-Zy-NZF" customClass="GADBannerView">
+                                        <rect key="frame" x="0.0" y="553" width="375" height="50"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="nqa-mz-aSm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6OO-sG-hDh" firstAttribute="leading" secondItem="3Ia-PA-8sN" secondAttribute="leading" id="ANE-eB-Uc9"/>
-                            <constraint firstItem="eIV-S8-usU" firstAttribute="top" secondItem="6OO-sG-hDh" secondAttribute="bottom" id="Jr2-HI-qMh"/>
-                            <constraint firstAttribute="trailing" secondItem="6OO-sG-hDh" secondAttribute="trailing" id="bJU-vT-ybx"/>
-                            <constraint firstItem="6OO-sG-hDh" firstAttribute="top" secondItem="BFb-Jp-6zy" secondAttribute="bottom" id="gFr-dS-Amf"/>
+                            <constraint firstItem="eIV-S8-usU" firstAttribute="top" secondItem="C4o-on-xfN" secondAttribute="bottom" id="5T4-Kf-KkO"/>
+                            <constraint firstItem="C4o-on-xfN" firstAttribute="leading" secondItem="F6u-kk-7ei" secondAttribute="leading" id="Od9-LA-mgg"/>
+                            <constraint firstItem="C4o-on-xfN" firstAttribute="trailing" secondItem="F6u-kk-7ei" secondAttribute="trailing" id="QnB-T8-0ux"/>
+                            <constraint firstItem="C4o-on-xfN" firstAttribute="top" secondItem="BFb-Jp-6zy" secondAttribute="bottom" id="bOG-mq-iU6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="F6u-kk-7ei"/>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="oUN-Zy-NZF" id="mOF-z5-WYV"/>
                         <outlet property="mapView" destination="6OO-sG-hDh" id="Fve-QL-zzG"/>
                     </connections>
                 </viewController>
@@ -589,7 +608,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="accommodation" width="28" height="28"/>
+        <image name="accommodation" width="51.200000762939453" height="51.200000762939453"/>
         <image name="akceptacjazwierzat.gif" width="40" height="39"/>
     </resources>
 </document>

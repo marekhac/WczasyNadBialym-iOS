@@ -9,9 +9,13 @@
 import UIKit
 import MapKit
 import SVProgressHUD
+import GoogleMobileAds
 
 class ServiceDetailsViewController: UIViewController {
 
+    @IBOutlet weak var bannerView: GADBannerView!
+    var adHandler : AdvertisementHandler?
+    
     let backgroundImageName = "background_gradient2"
 
     var selectedServiceId: String = ""
@@ -111,6 +115,21 @@ class ServiceDetailsViewController: UIViewController {
         SVProgressHUD.show()
         
         initViewModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        displayAdvertisementBanner()
+    }
+    
+    // MARK: - Request for advertisement
+    
+    func displayAdvertisementBanner() {
+        self.adHandler = AdvertisementHandler(bannerAdView: self.bannerView)
+        if let adHandler = self.adHandler {
+            adHandler.showAd(viewController: self)
+        }
     }
 
     override func didReceiveMemoryWarning() {

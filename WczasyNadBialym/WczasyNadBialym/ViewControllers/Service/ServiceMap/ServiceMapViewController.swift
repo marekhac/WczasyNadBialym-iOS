@@ -8,8 +8,12 @@
 
 import UIKit
 import MapKit
+import GoogleMobileAds
 
 class ServiceMapViewController: UIViewController, MKMapViewDelegate {
+    
+    @IBOutlet weak var bannerView: GADBannerView!
+    var adHandler : AdvertisementHandler?
     
     var gpsLat: Double = 0.0
     var gpsLng: Double = 0.0
@@ -23,6 +27,21 @@ class ServiceMapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         
         self.mapView.fillMap(self.gpsLat, self.gpsLng, self.pinTitle, self.pinSubtitle, mapType)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        displayAdvertisementBanner()
+    }
+    
+    // MARK: - Request for advertisement
+    
+    func displayAdvertisementBanner() {
+        self.adHandler = AdvertisementHandler(bannerAdView: self.bannerView)
+        if let adHandler = self.adHandler {
+            adHandler.showAd(viewController: self)
+        }
     }
     
     override func didReceiveMemoryWarning() {
