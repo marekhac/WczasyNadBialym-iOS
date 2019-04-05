@@ -17,7 +17,7 @@ class ServiceDetailsViewController: UIViewController {
     var adHandler : AdvertisementHandler?
     
     let backgroundImageName = "background_gradient2"
-
+    
     var selectedServiceId: String = ""
     var selectedServiceType: String = ""
     let mapType = MKMapType.standard
@@ -30,7 +30,7 @@ class ServiceDetailsViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var streetLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var phoneTextView: UITextView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -57,18 +57,29 @@ class ServiceDetailsViewController: UIViewController {
                     
                     // update ui
                     
-                    DispatchQueue.main.async() {
-                        self.nameLabel.text = serviceDetailsModel.name
-                        self.streetLabel.text = serviceDetailsModel.street
-                        self.cityLabel.text = serviceDetailsModel.city
-                        self.phoneLabel.text = serviceDetailsModel.phone
-                        
-                        // remove all html tags
-                        
-                        let detailsStripped = serviceDetailsModel.description.removeHTMLTags()
-                        
-                        self.descriptionTextView.text = detailsStripped
+                    
+                    self.nameLabel.text = serviceDetailsModel.name
+                    self.streetLabel.text = serviceDetailsModel.street
+                    self.cityLabel.text = serviceDetailsModel.city
+                    
+                    var phoneNumber = serviceDetailsModel.phone
+                    
+                    // add "tel." prefix to phone number (if it's not already present)
+                    
+                    if (!phoneNumber.isEmpty) {
+                        if (!phoneNumber.contains("tel")) {
+                            phoneNumber = "tel. " + phoneNumber
+                        }
                     }
+                    
+                    self.phoneTextView.text = phoneNumber
+                    
+                    // remove all html tags
+                    
+                    let detailsStripped = serviceDetailsModel.description.removeHTMLTags()
+                    
+                    self.descriptionTextView.text = detailsStripped
+                    
                     
                     // assign mini image if present
                     
