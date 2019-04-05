@@ -201,16 +201,24 @@
 		14A7C8B563466650EE466434 /* Pods-WczasyNadBialymTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.debug.xcconfig"; sourceTree = "<group>"; };
 		180CBC6AD55BE8587FA87E67 /* Pods-WczasyNadBialymTests.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.debug (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.debug (production).xcconfig"; sourceTree = "<group>"; };
 		192F64CBACD816735A72D3C1 /* Pods-WczasyNadBialym.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.debug (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.debug (development).xcconfig"; sourceTree = "<group>"; };
+		1EC8CF8791B1A1E99F0D2EBA /* Pods-WczasyNadBialymTests.debugoff (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.debugoff (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.debugoff (development).xcconfig"; sourceTree = "<group>"; };
 		25C20DA79BCF32001109BE4A /* Pods-WczasyNadBialymTests.debug (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.debug (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.debug (development).xcconfig"; sourceTree = "<group>"; };
 		297C12511CCCBFBF0C3777CC /* Pods-WczasyNadBialym.debug (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.debug (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.debug (production).xcconfig"; sourceTree = "<group>"; };
 		2E20FD0D4A8B806D82AC545A /* Pods_WczasyNadBialym.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WczasyNadBialym.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFACF7B467DC54A56426E98 /* Pods_WczasyNadBialymTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WczasyNadBialymTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F03B196EB7DB8ECA3D1515D /* Pods-WczasyNadBialymTests.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.release (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.release (production).xcconfig"; sourceTree = "<group>"; };
 		40F82B8B331C74C475AFA021 /* Pods-WczasyNadBialym.release (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.release (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.release (production).xcconfig"; sourceTree = "<group>"; };
+		4B1DD3AF4E26352F7C58459A /* Pods-WczasyNadBialym.debugoff (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.debugoff (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.debugoff (development).xcconfig"; sourceTree = "<group>"; };
 		5FE74C89DAC5DA9A180EB9D0 /* Pods-WczasyNadBialymTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.release.xcconfig"; sourceTree = "<group>"; };
+		66CD30B8A90818E2406258B1 /* Pods-WczasyNadBialymTests.debugon (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.debugon (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.debugon (production).xcconfig"; sourceTree = "<group>"; };
+		6E9E32F05B8018EEA2AB979E /* Pods-WczasyNadBialymTests.debugoff (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.debugoff (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.debugoff (production).xcconfig"; sourceTree = "<group>"; };
 		7A13E6EC0D7750BF9E5E4CCC /* Pods-WczasyNadBialymTests.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.release (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.release (development).xcconfig"; sourceTree = "<group>"; };
+		9B9EBDDC1BBFA058A5E4A4D4 /* Pods-WczasyNadBialym.debugoff (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.debugoff (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.debugoff (production).xcconfig"; sourceTree = "<group>"; };
 		A7FA0F9676DF057771EEF998 /* Pods-WczasyNadBialym.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.release.xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.release.xcconfig"; sourceTree = "<group>"; };
+		C2655586D6A9222BD2AF0AC4 /* Pods-WczasyNadBialym.debugon (production).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.debugon (production).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.debugon (production).xcconfig"; sourceTree = "<group>"; };
 		C4E3B93B5B96664F7D73C6FA /* Pods-WczasyNadBialym.release (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.release (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.release (development).xcconfig"; sourceTree = "<group>"; };
+		C89283FD3A5C899323C2F058 /* Pods-WczasyNadBialym.debugon (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialym.debugon (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialym/Pods-WczasyNadBialym.debugon (development).xcconfig"; sourceTree = "<group>"; };
+		F332DB59F8B2AF5660B91D75 /* Pods-WczasyNadBialymTests.debugon (development).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WczasyNadBialymTests.debugon (development).xcconfig"; path = "Pods/Target Support Files/Pods-WczasyNadBialymTests/Pods-WczasyNadBialymTests.debugon (development).xcconfig"; sourceTree = "<group>"; };
 		F40006121E697B710032033C /* WczasyNadBialym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WczasyNadBialym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40006151E697B710032033C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F400062B1E697B720032033C /* WczasyNadBialymTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WczasyNadBialymTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -437,6 +445,14 @@
 				297C12511CCCBFBF0C3777CC /* Pods-WczasyNadBialym.debug (production).xcconfig */,
 				C4E3B93B5B96664F7D73C6FA /* Pods-WczasyNadBialym.release (development).xcconfig */,
 				40F82B8B331C74C475AFA021 /* Pods-WczasyNadBialym.release (production).xcconfig */,
+				C89283FD3A5C899323C2F058 /* Pods-WczasyNadBialym.debugon (development).xcconfig */,
+				C2655586D6A9222BD2AF0AC4 /* Pods-WczasyNadBialym.debugon (production).xcconfig */,
+				4B1DD3AF4E26352F7C58459A /* Pods-WczasyNadBialym.debugoff (development).xcconfig */,
+				9B9EBDDC1BBFA058A5E4A4D4 /* Pods-WczasyNadBialym.debugoff (production).xcconfig */,
+				F332DB59F8B2AF5660B91D75 /* Pods-WczasyNadBialymTests.debugon (development).xcconfig */,
+				66CD30B8A90818E2406258B1 /* Pods-WczasyNadBialymTests.debugon (production).xcconfig */,
+				1EC8CF8791B1A1E99F0D2EBA /* Pods-WczasyNadBialymTests.debugoff (development).xcconfig */,
+				6E9E32F05B8018EEA2AB979E /* Pods-WczasyNadBialymTests.debugoff (production).xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1565,7 +1581,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F40006321E697B720032033C /* Debug (Development) */ = {
+		F40006321E697B720032033C /* DebugOn (Development) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1625,9 +1641,9 @@
 				api_scheme = "http://";
 				debug_log = true;
 			};
-			name = "Debug (Development)";
+			name = "DebugOn (Development)";
 		};
-		F40006331E697B720032033C /* Release (Development) */ = {
+		F40006331E697B720032033C /* DebugOff (Development) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1680,11 +1696,11 @@
 				api_scheme = "https://";
 				debug_log = true;
 			};
-			name = "Release (Development)";
+			name = "DebugOff (Development)";
 		};
-		F40006351E697B720032033C /* Debug (Development) */ = {
+		F40006351E697B720032033C /* DebugOn (Development) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 192F64CBACD816735A72D3C1 /* Pods-WczasyNadBialym.debug (development).xcconfig */;
+			baseConfigurationReference = C89283FD3A5C899323C2F058 /* Pods-WczasyNadBialym.debugon (development).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1700,11 +1716,11 @@
 				ad_app_id = "ca-app-pub-3940256099942544~1458002511";
 				ad_unit_id = "ca-app-pub-3940256099942544/2934735716";
 			};
-			name = "Debug (Development)";
+			name = "DebugOn (Development)";
 		};
-		F40006361E697B720032033C /* Release (Development) */ = {
+		F40006361E697B720032033C /* DebugOff (Development) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4E3B93B5B96664F7D73C6FA /* Pods-WczasyNadBialym.release (development).xcconfig */;
+			baseConfigurationReference = 4B1DD3AF4E26352F7C58459A /* Pods-WczasyNadBialym.debugoff (development).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1719,14 +1735,15 @@
 				SWIFT_VERSION = 4.2;
 				ad_app_id = "ca-app-pub-3940256099942544~1458002511";
 				ad_unit_id = "ca-app-pub-3940256099942544/2934735716";
-				api_host = wczasynadbialym.pl/;
-				debug_log = true;
+				api_host = "portal-dev:8888/";
+				api_scheme = "http://";
+				debug_log = false;
 			};
-			name = "Release (Development)";
+			name = "DebugOff (Development)";
 		};
-		F40006381E697B720032033C /* Debug (Development) */ = {
+		F40006381E697B720032033C /* DebugOn (Development) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25C20DA79BCF32001109BE4A /* Pods-WczasyNadBialymTests.debug (development).xcconfig */;
+			baseConfigurationReference = F332DB59F8B2AF5660B91D75 /* Pods-WczasyNadBialymTests.debugon (development).xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1739,11 +1756,11 @@
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WczasyNadBialym.app/WczasyNadBialym";
 			};
-			name = "Debug (Development)";
+			name = "DebugOn (Development)";
 		};
-		F40006391E697B720032033C /* Release (Development) */ = {
+		F40006391E697B720032033C /* DebugOff (Development) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A13E6EC0D7750BF9E5E4CCC /* Pods-WczasyNadBialymTests.release (development).xcconfig */;
+			baseConfigurationReference = 1EC8CF8791B1A1E99F0D2EBA /* Pods-WczasyNadBialymTests.debugoff (development).xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1756,9 +1773,9 @@
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WczasyNadBialym.app/WczasyNadBialym";
 			};
-			name = "Release (Development)";
+			name = "DebugOff (Development)";
 		};
-		F47CA6FB21DF896D005334E4 /* Debug (Production) */ = {
+		F47CA6FB21DF896D005334E4 /* DebugOn (Production) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1818,11 +1835,11 @@
 				api_scheme = "http://";
 				debug_log = true;
 			};
-			name = "Debug (Production)";
+			name = "DebugOn (Production)";
 		};
-		F47CA6FC21DF896D005334E4 /* Debug (Production) */ = {
+		F47CA6FC21DF896D005334E4 /* DebugOn (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 297C12511CCCBFBF0C3777CC /* Pods-WczasyNadBialym.debug (production).xcconfig */;
+			baseConfigurationReference = C2655586D6A9222BD2AF0AC4 /* Pods-WczasyNadBialym.debugon (production).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1831,19 +1848,21 @@
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.wczasynadbialym.WczasyNadBialym-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
 				ad_app_id = "ca-app-pub-3940256099942544~1458002511";
 				ad_unit_id = "ca-app-pub-3940256099942544/2934735716";
-				api_host = "portal-dev:8888/";
+				api_host = wczasynadbialym.pl/;
+				api_scheme = "https://";
 			};
-			name = "Debug (Production)";
+			name = "DebugOn (Production)";
 		};
-		F47CA6FD21DF896D005334E4 /* Debug (Production) */ = {
+		F47CA6FD21DF896D005334E4 /* DebugOn (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 180CBC6AD55BE8587FA87E67 /* Pods-WczasyNadBialymTests.debug (production).xcconfig */;
+			baseConfigurationReference = 66CD30B8A90818E2406258B1 /* Pods-WczasyNadBialymTests.debugon (production).xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1856,9 +1875,9 @@
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WczasyNadBialym.app/WczasyNadBialym";
 			};
-			name = "Debug (Production)";
+			name = "DebugOn (Production)";
 		};
-		F47CA6FE21DF8971005334E4 /* Release (Production) */ = {
+		F47CA6FE21DF8971005334E4 /* DebugOff (Production) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1911,11 +1930,11 @@
 				api_scheme = "https://";
 				debug_log = false;
 			};
-			name = "Release (Production)";
+			name = "DebugOff (Production)";
 		};
-		F47CA6FF21DF8971005334E4 /* Release (Production) */ = {
+		F47CA6FF21DF8971005334E4 /* DebugOff (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40F82B8B331C74C475AFA021 /* Pods-WczasyNadBialym.release (production).xcconfig */;
+			baseConfigurationReference = 9B9EBDDC1BBFA058A5E4A4D4 /* Pods-WczasyNadBialym.debugoff (production).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1932,11 +1951,11 @@
 				ad_unit_id = "ca-app-pub-3940256099942544/2934735716";
 				debug_log = false;
 			};
-			name = "Release (Production)";
+			name = "DebugOff (Production)";
 		};
-		F47CA70021DF8971005334E4 /* Release (Production) */ = {
+		F47CA70021DF8971005334E4 /* DebugOff (Production) */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F03B196EB7DB8ECA3D1515D /* Pods-WczasyNadBialymTests.release (production).xcconfig */;
+			baseConfigurationReference = 6E9E32F05B8018EEA2AB979E /* Pods-WczasyNadBialymTests.debugoff (production).xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1949,7 +1968,7 @@
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WczasyNadBialym.app/WczasyNadBialym";
 			};
-			name = "Release (Production)";
+			name = "DebugOff (Production)";
 		};
 /* End XCBuildConfiguration section */
 
@@ -1957,35 +1976,35 @@
 		F400060D1E697B710032033C /* Build configuration list for PBXProject "WczasyNadBialym" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F40006321E697B720032033C /* Debug (Development) */,
-				F47CA6FB21DF896D005334E4 /* Debug (Production) */,
-				F40006331E697B720032033C /* Release (Development) */,
-				F47CA6FE21DF8971005334E4 /* Release (Production) */,
+				F40006321E697B720032033C /* DebugOn (Development) */,
+				F47CA6FB21DF896D005334E4 /* DebugOn (Production) */,
+				F40006331E697B720032033C /* DebugOff (Development) */,
+				F47CA6FE21DF8971005334E4 /* DebugOff (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Development)";
+			defaultConfigurationName = "DebugOff (Development)";
 		};
 		F40006341E697B720032033C /* Build configuration list for PBXNativeTarget "WczasyNadBialym" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F40006351E697B720032033C /* Debug (Development) */,
-				F47CA6FC21DF896D005334E4 /* Debug (Production) */,
-				F40006361E697B720032033C /* Release (Development) */,
-				F47CA6FF21DF8971005334E4 /* Release (Production) */,
+				F40006351E697B720032033C /* DebugOn (Development) */,
+				F47CA6FC21DF896D005334E4 /* DebugOn (Production) */,
+				F40006361E697B720032033C /* DebugOff (Development) */,
+				F47CA6FF21DF8971005334E4 /* DebugOff (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Development)";
+			defaultConfigurationName = "DebugOff (Development)";
 		};
 		F40006371E697B720032033C /* Build configuration list for PBXNativeTarget "WczasyNadBialymTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F40006381E697B720032033C /* Debug (Development) */,
-				F47CA6FD21DF896D005334E4 /* Debug (Production) */,
-				F40006391E697B720032033C /* Release (Development) */,
-				F47CA70021DF8971005334E4 /* Release (Production) */,
+				F40006381E697B720032033C /* DebugOn (Development) */,
+				F47CA6FD21DF896D005334E4 /* DebugOn (Production) */,
+				F40006391E697B720032033C /* DebugOff (Development) */,
+				F47CA70021DF8971005334E4 /* DebugOff (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "Release (Development)";
+			defaultConfigurationName = "DebugOff (Development)";
 		};
 /* End XCConfigurationList section */
 

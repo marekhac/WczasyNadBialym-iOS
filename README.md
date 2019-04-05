@@ -44,6 +44,17 @@ Request for free `AppID` token to be able to get any responces from WczasyNadBia
 
 	example: ``` static let AppId = "123456"```
 
+**Run schemes**
+
+* Production - use production version of WczasyNadBialymAPI
+* Development - use development (local) version of WczasyNadBialymAPI
+
+**Build configurations**
+
+* DebugOn - print a lot of useful debug and error logs
+* DebugOff - hide all debug and error logs
+
+
 
 
 
