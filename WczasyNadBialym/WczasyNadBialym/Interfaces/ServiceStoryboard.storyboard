@@ -290,10 +290,10 @@
                                                 </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="T63-vl-v2u" userLabel="Address Stack View">
-                                                <rect key="frame" x="154" y="60.5" width="252" height="44.5"/>
+                                                <rect key="frame" x="154" y="61" width="252" height="44"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ul. Kwiatowa 19/3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OuB-Lo-dLc" userLabel="Street">
-                                                        <rect key="frame" x="0.0" y="0.0" width="137.5" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="136" height="20"/>
                                                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -302,7 +302,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Włodawa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="K8c-9i-Eup" userLabel="City">
-                                                        <rect key="frame" x="0.0" y="23.5" width="72.5" height="21"/>
+                                                        <rect key="frame" x="0.0" y="23" width="70.5" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="ch5-aK-AqU"/>
                                                         </constraints>
@@ -380,7 +380,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4bL-sP-R6z"/>
                     </view>
-                    <navigationItem key="navigationItem" id="d9g-GX-dEc"/>
+                    <navigationItem key="navigationItem" id="d9g-GX-dEc">
+                        <barButtonItem key="backBarButtonItem" title="Wstecz" id="sfC-Yx-L3O"/>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="650"/>
                     <connections>

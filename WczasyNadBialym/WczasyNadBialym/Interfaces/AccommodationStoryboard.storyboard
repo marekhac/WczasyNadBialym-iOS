@@ -203,25 +203,25 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="938"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIf-fP-soN" userLabel="Header View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fVu-M1-x1K">
-                                                <rect key="frame" x="8" y="8" width="398" height="87"/>
+                                                <rect key="frame" x="8" y="8" width="398" height="86"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6m-TG-Cts" userLabel="Name Label">
-                                                        <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="398" height="20"/>
                                                         <fontDescription key="fontDescription" name="Lato-Heavy" family="Lato" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-5s-E3O" userLabel="Price Label">
-                                                        <rect key="frame" x="0.0" y="26.5" width="398" height="19.5"/>
+                                                        <rect key="frame" x="0.0" y="26" width="398" height="19"/>
                                                         <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
                                                         <color key="textColor" red="0.89576062820000002" green="0.6048455613" blue="0.16919772350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xaW-CR-ii0" userLabel="Phone Text View">
-                                                        <rect key="frame" x="0.0" y="52" width="398" height="35"/>
+                                                        <rect key="frame" x="0.0" y="51" width="398" height="35"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="bMr-z5-jUD"/>
@@ -259,7 +259,7 @@
                                         </constraints>
                                     </view>
                                     <segmentedControl opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lta-QC-IZK" userLabel="Segment Controll">
-                                        <rect key="frame" x="111.5" y="700" width="191" height="29"/>
+                                        <rect key="frame" x="111.5" y="699" width="191" height="29"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="7Wm-VI-6Iu"/>
@@ -273,7 +273,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Q3S-P2-f91" userLabel="Image Collection View">
-                                        <rect key="frame" x="0.0" y="96" width="414" height="89"/>
+                                        <rect key="frame" x="0.0" y="95" width="414" height="89"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="89" id="MQk-4y-fBo"/>
@@ -316,7 +316,7 @@
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPB-qD-h0W" userLabel="Map View">
-                                        <rect key="frame" x="0.0" y="185" width="414" height="250"/>
+                                        <rect key="frame" x="0.0" y="184" width="414" height="250"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="CC5-dx-aef">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
@@ -354,7 +354,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUC-j0-iJF" userLabel="Description View">
-                                        <rect key="frame" x="0.0" y="435" width="414" height="250"/>
+                                        <rect key="frame" x="0.0" y="434" width="414" height="250"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Yp2-kT-rZw">
                                                 <rect key="frame" x="10" y="0.0" width="393" height="250"/>
@@ -374,7 +374,7 @@
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j1Y-iV-SCa" userLabel="Features Collection View">
-                                        <rect key="frame" x="8" y="746" width="398" height="50"/>
+                                        <rect key="frame" x="8" y="745" width="398" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="LYz-TC-5Rj"/>
@@ -456,7 +456,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nKU-x5-AH7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="iro-j2-FMh"/>
+                    <navigationItem key="navigationItem" id="iro-j2-FMh">
+                        <barButtonItem key="backBarButtonItem" title="Wstecz" id="5To-ps-wnB"/>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="1002"/>
                     <connections>
