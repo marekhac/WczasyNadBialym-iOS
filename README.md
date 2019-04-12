@@ -17,10 +17,6 @@ Checkout WczasyNadBialym website available at [wczasynadbialym.pl](http://wczasy
 - Xcode 9 or newer
 - iPhone or iPad device with iOS 9 or newer
 - Special AppID token (can be generated [here](http://wczasynadbialym.pl/index/appid-request) for free)
-
-**Source code**
-
-
 	
 **Create AppID token**
 
