@@ -15,14 +15,12 @@ Checkout WczasyNadBialym website available at [wczasynadbialym.pl](http://wczasy
 **Requirements**
 
 - Xcode 9 or newer
-- iPhone or iPad device with iOS 9  
+- iPhone or iPad device with iOS 9 or newer
 - Special AppID token (can be generated [here](http://wczasynadbialym.pl/index/appid-request) for free)
 
 **Source code**
 
-- Clone app repository 
 
-	```$ git clone git@github.com:marekhac/WczasyNadBialym-iOS.git```
 	
 **Create AppID token**
 
@@ -30,19 +28,17 @@ Request for free `AppID` token to be able to get any responces from WczasyNadBia
 
 **Before first run**
 
-- Using Terminal go to the project folder, in which you cloned the app repo. 
+- Using Terminal go to the project folder, in which you already cloned the repo. 
 - Install cocoapod packages
 
 	```$ pod install```
 	
 - Open `WczasyNadBialym.xcworkspace` file in Xcode 
-- Find the `NetworkConstants.swift` file 
+- Go to `Build Settings`, then scroll down to `User-Defined` section and find `app_id` key.
 
-![Accommodation](Docs/Images/appid_token.png)
+- Fill `app_id` key, with the value of your `AppId` token 
 
-- Assign your token to `AppId` static variable
-
-	example: ``` static let AppId = "123456"```
+	![Accommodation](Docs/Images/appid_token.png)
 
 **Run schemes**
 
