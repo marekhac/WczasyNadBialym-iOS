@@ -11,6 +11,7 @@
 import Foundation
 
 public enum PlistKey {
+    case AppId
     case ApiScheme
     case ApiHost
     case ApiPath
@@ -19,6 +20,8 @@ public enum PlistKey {
     
     func value() -> String {
         switch self {
+        case .AppId:
+            return "app_id"
         case .ApiScheme:
             return "api_scheme"
         case .ApiHost:
@@ -45,6 +48,8 @@ public struct Environment {
     }
     public func config(_ key: PlistKey) -> String {
         switch key {
+        case .AppId:
+            return infoDict[PlistKey.AppId.value()] as! String
         case .ApiScheme:
             return infoDict[PlistKey.ApiScheme.value()] as! String
         case .ApiHost:

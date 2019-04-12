@@ -91,6 +91,8 @@
 	<string>${api_path}</string>
 	<key>api_scheme</key>
 	<string>${api_scheme}</string>
+	<key>app_id</key>
+	<string>${app_id}</string>
 	<key>debug_log</key>
 	<string>${debug_log}</string>
 </dict>

@@ -12,7 +12,7 @@ extension NetworkManager {
     
     struct Constants {
 
-        static let AppId = "YOUR_APPID";
+        static let AppId = Environment().config(PlistKey.AppId)
         
         // take different settings depends on configuration scheme
         

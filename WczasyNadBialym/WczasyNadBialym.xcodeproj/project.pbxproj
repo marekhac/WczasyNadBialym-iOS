@@ -1715,6 +1715,7 @@
 				SWIFT_VERSION = 4.2;
 				ad_app_id = "ca-app-pub-3940256099942544~1458002511";
 				ad_unit_id = "ca-app-pub-3940256099942544/2934735716";
+				app_id = 123456;
 			};
 			name = "DebugOn (Development)";
 		};
@@ -1737,6 +1738,7 @@
 				ad_unit_id = "ca-app-pub-3940256099942544/2934735716";
 				api_host = "portal-dev:8888/";
 				api_scheme = "http://";
+				app_id = 123456;
 				debug_log = false;
 			};
 			name = "DebugOff (Development)";
@@ -1857,6 +1859,7 @@
 				ad_unit_id = "ca-app-pub-3940256099942544/2934735716";
 				api_host = wczasynadbialym.pl/;
 				api_scheme = "https://";
+				app_id = 123456;
 			};
 			name = "DebugOn (Production)";
 		};
@@ -1949,6 +1952,7 @@
 				SWIFT_VERSION = 4.2;
 				ad_app_id = "ca-app-pub-3940256099942544~1458002511";
 				ad_unit_id = "ca-app-pub-3940256099942544/2934735716";
+				app_id = 123456;
 				debug_log = false;
 			};
 			name = "DebugOff (Production)";
