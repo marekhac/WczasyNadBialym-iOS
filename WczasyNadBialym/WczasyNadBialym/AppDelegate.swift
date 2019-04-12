@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 import GoogleMobileAds
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -32,7 +35,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController!.displayModeButtonItem
         splitViewController!.delegate = self
   
+        // AdMob
+        
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        // AppCenter
+        
+        let appCenterId = Environment().config(PlistKey.AppCenterId)
+        MSAppCenter.start(appCenterId, withServices:[MSAnalytics.self, MSCrashes.self])
         
         return true
     }
