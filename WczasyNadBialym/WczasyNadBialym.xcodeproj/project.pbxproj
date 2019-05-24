@@ -12,6 +12,7 @@
 		F40006161E697B710032033C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40006151E697B710032033C /* AppDelegate.swift */; };
 		F40006301E697B720032033C /* WczasyNadBialymTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400062F1E697B720032033C /* WczasyNadBialymTests.swift */; };
 		F400063C1E6980060032033C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F400063B1E6980060032033C /* Assets.xcassets */; };
+		F4005D6022972E4400875F60 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4005D5F22972E4400875F60 /* EventListViewModel.swift */; };
 		F4074A7921146AEA00111E94 /* EventStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4074A7821146AEA00111E94 /* EventStoryboard.storyboard */; };
 		F40A1FFE1E7ABC2300AF7A28 /* dollar_coin.png in Resources */ = {isa = PBXBuildFile; fileRef = F40A1FFC1E7ABC2300AF7A28 /* dollar_coin.png */; };
 		F40A1FFF1E7ABC2300AF7A28 /* phone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F40A1FFD1E7ABC2300AF7A28 /* phone_icon.png */; };
@@ -72,7 +73,6 @@
 		F4186C4B1ECB236F006C87D0 /* InfoCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4186C4A1ECB236F006C87D0 /* InfoCategoriesCell.swift */; };
 		F42277D81F851AB500DBB541 /* ErrorDescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42277D71F851AB500DBB541 /* ErrorDescriptionModel.swift */; };
 		F42AED7A1FAC758200B133BC /* MenuTabsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AED791FAC758200B133BC /* MenuTabsEnum.swift */; };
-		F43134E21EC4822A0078D602 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43134E11EC4822A0078D602 /* EventDetailsViewController.swift */; };
 		F439C1281EAE2053005EBFB7 /* ServiceContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C1271EAE2053005EBFB7 /* ServiceContants.swift */; };
 		F439C1301EAE2290005EBFB7 /* ServiceNetwokManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C12F1EAE2290005EBFB7 /* ServiceNetwokManager.swift */; };
 		F44BF942211AECEE00272E1A /* ServiceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BF941211AECEE00272E1A /* ServiceDetailsViewModel.swift */; };
@@ -153,7 +153,7 @@
 		F4AA0FE01FE2BFE7009F3FF3 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA0FDF1FE2BFE7009F3FF3 /* WeatherModel.swift */; };
 		F4B7858B1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7858A1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift */; };
 		F4BA24271FBD9C4B00DC3A86 /* FrontStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BA24261FBD9C4B00DC3A86 /* FrontStoryboard.storyboard */; };
-		F4BC49DA1EC19DF2000791AE /* EventListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49D91EC19DF2000791AE /* EventListTableViewController.swift */; };
+		F4BC49DA1EC19DF2000791AE /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49D91EC19DF2000791AE /* EventListViewController.swift */; };
 		F4BC49DD1EC19F81000791AE /* EventNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49DC1EC19F81000791AE /* EventNetworkManager.swift */; };
 		F4BC49E01EC1A0DB000791AE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49DF1EC1A0DB000791AE /* EventModel.swift */; };
 		F4BC49E21EC1A134000791AE /* EventConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49E11EC1A134000791AE /* EventConstants.swift */; };
@@ -178,6 +178,8 @@
 		F4E2437E1EDD8EF2009BBE51 /* EventDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E2437D1EDD8EF2009BBE51 /* EventDetailsModel.swift */; };
 		F4E46D811E88FCD400E64EEC /* ImageDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E46D801E88FCD400E64EEC /* ImageDownloadManager.swift */; };
 		F4E7723D21B9224F0007A521 /* Data+ParseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E7723C21B9224F0007A521 /* Data+ParseData.swift */; };
+		F4EDD9172297BE0F00FF4448 /* EventPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EDD9162297BE0F00FF4448 /* EventPreviewViewController.swift */; };
+		F4EDD91A2297C0EC00FF4448 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EDD9192297C0EC00FF4448 /* EventDetailsViewController.swift */; };
 		F4EE43F31F2F4DBD00C99367 /* Date+CustomFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EE43F21F2F4DBD00C99367 /* Date+CustomFormats.swift */; };
 		F4F0BF8B1E8BCF2100FB456E /* accommodation_default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F0BF8A1E8BCF2100FB456E /* accommodation_default.jpg */; };
 		F4F97EEB211477780057BF1F /* ServiceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F97EEA211477780057BF1F /* ServiceStoryboard.storyboard */; };
@@ -225,6 +227,7 @@
 		F400062F1E697B720032033C /* WczasyNadBialymTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WczasyNadBialymTests.swift; sourceTree = "<group>"; };
 		F40006311E697B720032033C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F400063B1E6980060032033C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4005D5F22972E4400875F60 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 		F4074A7821146AEA00111E94 /* EventStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventStoryboard.storyboard; sourceTree = "<group>"; };
 		F40A1FFC1E7ABC2300AF7A28 /* dollar_coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar_coin.png; sourceTree = "<group>"; };
 		F40A1FFD1E7ABC2300AF7A28 /* phone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_icon.png; sourceTree = "<group>"; };
@@ -294,7 +297,6 @@
 		F4186C4A1ECB236F006C87D0 /* InfoCategoriesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesCell.swift; sourceTree = "<group>"; };
 		F42277D71F851AB500DBB541 /* ErrorDescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDescriptionModel.swift; sourceTree = "<group>"; };
 		F42AED791FAC758200B133BC /* MenuTabsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabsEnum.swift; sourceTree = "<group>"; };
-		F43134E11EC4822A0078D602 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		F439C1271EAE2053005EBFB7 /* ServiceContants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceContants.swift; sourceTree = "<group>"; };
 		F439C12F1EAE2290005EBFB7 /* ServiceNetwokManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceNetwokManager.swift; sourceTree = "<group>"; };
 		F44BF941211AECEE00272E1A /* ServiceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -377,7 +379,7 @@
 		F4AA0FDF1FE2BFE7009F3FF3 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		F4B7858A1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesEnum.swift; sourceTree = "<group>"; };
 		F4BA24261FBD9C4B00DC3A86 /* FrontStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FrontStoryboard.storyboard; sourceTree = "<group>"; };
-		F4BC49D91EC19DF2000791AE /* EventListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListTableViewController.swift; sourceTree = "<group>"; };
+		F4BC49D91EC19DF2000791AE /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		F4BC49DC1EC19F81000791AE /* EventNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNetworkManager.swift; sourceTree = "<group>"; };
 		F4BC49DF1EC1A0DB000791AE /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		F4BC49E11EC1A134000791AE /* EventConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventConstants.swift; sourceTree = "<group>"; };
@@ -402,6 +404,8 @@
 		F4E2437D1EDD8EF2009BBE51 /* EventDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsModel.swift; sourceTree = "<group>"; };
 		F4E46D801E88FCD400E64EEC /* ImageDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadManager.swift; sourceTree = "<group>"; };
 		F4E7723C21B9224F0007A521 /* Data+ParseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+ParseData.swift"; sourceTree = "<group>"; };
+		F4EDD9162297BE0F00FF4448 /* EventPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPreviewViewController.swift; sourceTree = "<group>"; };
+		F4EDD9192297C0EC00FF4448 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		F4EE43F21F2F4DBD00C99367 /* Date+CustomFormats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+CustomFormats.swift"; sourceTree = "<group>"; };
 		F4F0BF8A1E8BCF2100FB456E /* accommodation_default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accommodation_default.jpg; sourceTree = "<group>"; };
 		F4F97EEA211477780057BF1F /* ServiceStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServiceStoryboard.storyboard; sourceTree = "<group>"; };
@@ -855,14 +859,6 @@
 			path = WczasyNadBialym/Models/Network/Error;
 			sourceTree = SOURCE_ROOT;
 		};
-		F43134E01EC481CA0078D602 /* Details */ = {
-			isa = PBXGroup;
-			children = (
-				F43134E11EC4822A0078D602 /* EventDetailsViewController.swift */,
-			);
-			path = Details;
-			sourceTree = "<group>";
-		};
 		F439C1261EAE2053005EBFB7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -1135,7 +1131,8 @@
 		F4BC49D71EC19DC3000791AE /* Event */ = {
 			isa = PBXGroup;
 			children = (
-				F43134E01EC481CA0078D602 /* Details */,
+				F4EDD9182297C0DC00FF4448 /* Details */,
+				F4EDD9152297BE0F00FF4448 /* Preview */,
 				F4BC49D81EC19DC3000791AE /* List */,
 			);
 			path = Event;
@@ -1145,7 +1142,8 @@
 			isa = PBXGroup;
 			children = (
 				F48FF5C41EC1AC82003F1B06 /* Cells */,
-				F4BC49D91EC19DF2000791AE /* EventListTableViewController.swift */,
+				F4BC49D91EC19DF2000791AE /* EventListViewController.swift */,
+				F4005D5F22972E4400875F60 /* EventListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -1175,6 +1173,23 @@
 			);
 			path = "Acccommodation Default";
 			sourceTree = "<group>";
+		};
+		F4EDD9152297BE0F00FF4448 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				F4EDD9162297BE0F00FF4448 /* EventPreviewViewController.swift */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		F4EDD9182297C0DC00FF4448 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				F4EDD9192297C0EC00FF4448 /* EventDetailsViewController.swift */,
+			);
+			name = Details;
+			path = WczasyNadBialym/ViewControllers/Details;
+			sourceTree = SOURCE_ROOT;
 		};
 		F4F9D1ED1E854A7D0064BC24 /* Extensions */ = {
 			isa = PBXGroup;
@@ -1246,7 +1261,7 @@
 				TargetAttributes = {
 					F40006111E697B710032033C = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = X9888GP63R;
+						DevelopmentTeam = ABCDEFGHIJ;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1470,6 +1485,7 @@
 			files = (
 				F481E7CD1EB1E31B009637A1 /* CustomSplitViewController.swift in Sources */,
 				F481E7C61EB1DA0B009637A1 /* ServiceCategoryCell.swift in Sources */,
+				F4EDD9172297BE0F00FF4448 /* EventPreviewViewController.swift in Sources */,
 				F481E7BD1EB1D9BC009637A1 /* AccommodationTypeCell.swift in Sources */,
 				F44D23141EAF749A00C89BE2 /* AccommodationPropertiesModel.swift in Sources */,
 				F4BC49E21EC1A134000791AE /* EventConstants.swift in Sources */,
@@ -1477,7 +1493,7 @@
 				F42277D81F851AB500DBB541 /* ErrorDescriptionModel.swift in Sources */,
 				F475D9921F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift in Sources */,
 				F481E7C71EB1DA0B009637A1 /* ServicesCategoriesViewController.swift in Sources */,
-				F4BC49DA1EC19DF2000791AE /* EventListTableViewController.swift in Sources */,
+				F4BC49DA1EC19DF2000791AE /* EventListViewController.swift in Sources */,
 				F4EE43F31F2F4DBD00C99367 /* Date+CustomFormats.swift in Sources */,
 				F481E7B71EB1D9BC009637A1 /* AccommodationGalleryContentViewController.swift in Sources */,
 				F40BA2A31FB07491001A717C /* AccommodationType.swift in Sources */,
@@ -1485,6 +1501,7 @@
 				F42AED7A1FAC758200B133BC /* MenuTabsEnum.swift in Sources */,
 				F4DEE2041F8B4F790044981E /* DataTypesEnum.swift in Sources */,
 				F47605D01FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift in Sources */,
+				F4005D6022972E4400875F60 /* EventListViewModel.swift in Sources */,
 				F4C69AD91F96306100E65023 /* UITextView+HeightUpdate.swift in Sources */,
 				F48BDA3F1F9F7BDE0057F999 /* TextDownloadManager.swift in Sources */,
 				F439C1301EAE2290005EBFB7 /* ServiceNetwokManager.swift in Sources */,
@@ -1519,7 +1536,6 @@
 				F4AA0FDD1FE2BF34009F3FF3 /* WeatherNetworkManager.swift in Sources */,
 				F4AA0FE01FE2BFE7009F3FF3 /* WeatherModel.swift in Sources */,
 				F48FF5E71EC1B326003F1B06 /* EventListCell.swift in Sources */,
-				F43134E21EC4822A0078D602 /* EventDetailsViewController.swift in Sources */,
 				F44D23131EAF749A00C89BE2 /* AccommodationModel.swift in Sources */,
 				F481E7C81EB1DA0B009637A1 /* ServiceListViewController.swift in Sources */,
 				F481E7BA1EB1D9BC009637A1 /* AccommodationListCell.swift in Sources */,
@@ -1531,6 +1547,7 @@
 				F40C91B41E6980A1006124FC /* WczasyNadBialym.xcdatamodeld in Sources */,
 				F474253B21E3463200EF6709 /* Environment.swift in Sources */,
 				F481E7B81EB1D9BC009637A1 /* AccommodationGalleryPageViewController.swift in Sources */,
+				F4EDD91A2297C0EC00FF4448 /* EventDetailsViewController.swift in Sources */,
 				F4C3360A1FB452B8004F2EE5 /* ServiceDetailsModel.swift in Sources */,
 				F40C91DB1E698343006124FC /* AccommodationNetworkManager.swift in Sources */,
 				F481E7B61EB1D9BC009637A1 /* ImageCell.swift in Sources */,
@@ -1705,11 +1722,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WczasyNadBialym/WczasyNadBialym.entitlements;
-				DEVELOPMENT_TEAM = X9888GP63R;
+				DEVELOPMENT_TEAM = ABCDEFGHIJ;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pl.wczasynadbialym.WczasyNadBialym-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.wczasynadbialym.WczasyNadBialymiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
@@ -1727,11 +1744,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WczasyNadBialym/WczasyNadBialym.entitlements;
-				DEVELOPMENT_TEAM = X9888GP63R;
+				DEVELOPMENT_TEAM = ABCDEFGHIJ;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pl.wczasynadbialym.WczasyNadBialym-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.wczasynadbialym.WczasyNadBialymiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
@@ -1848,12 +1865,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WczasyNadBialym/WczasyNadBialym.entitlements;
-				DEVELOPMENT_TEAM = X9888GP63R;
+				DEVELOPMENT_TEAM = ABCDEFGHIJ;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "pl.wczasynadbialym.WczasyNadBialym-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.wczasynadbialym.WczasyNadBialymiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
@@ -1945,11 +1962,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = WczasyNadBialym/WczasyNadBialym.entitlements;
-				DEVELOPMENT_TEAM = X9888GP63R;
+				DEVELOPMENT_TEAM = ABCDEFGHIJ;
 				INFOPLIST_FILE = WczasyNadBialym/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pl.wczasynadbialym.WczasyNadBialym-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = pl.wczasynadbialym.WczasyNadBialymiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;

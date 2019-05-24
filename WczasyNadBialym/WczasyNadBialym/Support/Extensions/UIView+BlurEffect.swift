@@ -17,7 +17,7 @@ extension UIView {
         if !UIAccessibility.isReduceTransparencyEnabled {
             self.backgroundColor = UIColor.clear
             
-            let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.extraLight)
+            let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
             let blurEffectView = UIVisualEffectView(effect: blurEffect)
             
             // always fill the view

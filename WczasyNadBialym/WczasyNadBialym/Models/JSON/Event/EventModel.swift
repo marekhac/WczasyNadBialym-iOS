@@ -8,32 +8,29 @@
 
 import Foundation
 
-struct EventsInYearModel : Codable {
     struct EventModel : Codable {
         let id : Int
         let name : String
         let place : String
         let date : Date
-    }
     
-    let year: Int
-    let events: [EventModel]
+
+    static func eventsFromResults(_ jsonData: Data) -> [EventModel]? {
     
-    static func eventsInYearFromResults(_ jsonData: Data) -> [EventsInYearModel]? {
-        
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(Date.Formatter.customDateAndHourFormat)
         
-        var eventsInYear = [EventsInYearModel]()
+        var events = [EventModel]()
         do {
-            eventsInYear = try decoder.decode([EventsInYearModel].self, from: jsonData)
+            events = try decoder.decode([EventModel].self, from: jsonData)
         } catch let error {
             if(!ErrorDescriptionModel.unwrapFrom(jsonData)) {
-                LogEventHandler.report(LogEventType.error, "Unable to parse JSON for Events in Year", error.localizedDescription)
+                LogEventHandler.report(LogEventType.error, "Unable to parse JSON for Events List", error.localizedDescription)
             }
         }
         
-        return eventsInYear
+        return events
+        
     }
 }
 

@@ -10,7 +10,7 @@ import Foundation
 
 extension NetworkManager {
     
-    func getEventSections (_ completionHandlerForEventsList: @escaping (_ result: [EventsInYearModel]?) -> Void) {
+    func getEventsList(_ completionHandlerForEventsList: @escaping (_ result: [EventModel]?) -> Void) {
         
         let controller = Event.Controllers.Events
         let method = Event.Methods.List
@@ -20,8 +20,8 @@ extension NetworkManager {
             if let error = error {
                 LogEventHandler.report(LogEventType.error, "Unable to download Event Sections", error.localizedDescription, displayWithHUD: true)
             } else {
-                let sections = content?.parseData(using: EventsInYearModel.eventsInYearFromResults)
-                completionHandlerForEventsList(sections as? [EventsInYearModel])
+                let sections = content?.parseData(using: EventModel.eventsFromResults)
+                completionHandlerForEventsList(sections as? [EventModel])
             }
         }
     }
