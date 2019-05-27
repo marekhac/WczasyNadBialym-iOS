@@ -10,14 +10,13 @@ import UIKit
 import MapKit
 import SVProgressHUD
 import GoogleMobileAds
+import WebKit
 
 class ServiceDetailsViewController: UIViewController {
-
-    @IBOutlet weak var bannerView: GADBannerView!
+    
     var adHandler : AdvertisementHandler?
-    
     let backgroundImageName = "background_gradient2"
-    
+    var backgroundImage : UIImage?
     var selectedServiceId: String = ""
     var selectedServiceType: String = ""
     let mapType = MKMapType.standard
@@ -25,15 +24,16 @@ class ServiceDetailsViewController: UIViewController {
     var gpsLng: Double = 0.0
     var pinTitle: String = ""
     var pinSubtitle: String = ""
-    
+
+    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var streetLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var phoneTextView: UITextView!
-    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var descriptionTextView: UITextView!
-    @IBOutlet weak var scrollView: UIScrollView!
     
     lazy var viewModel: ServiceDetailsViewModel = {
         return ServiceDetailsViewModel()
@@ -57,10 +57,18 @@ class ServiceDetailsViewController: UIViewController {
                     
                     // update ui
                     
-                    
                     self.nameLabel.text = serviceDetailsModel.name
-                    self.streetLabel.text = serviceDetailsModel.street
-                    self.cityLabel.text = serviceDetailsModel.city
+                    
+                    // create address by join street and city
+                    
+                    var address = serviceDetailsModel.street
+                    
+                    if (!address.isEmpty) {
+                        address = address + ", "
+                    }
+                    
+                    address = address + serviceDetailsModel.city
+                    self.addressLabel.text = address
                     
                     var phoneNumber = serviceDetailsModel.phone
                     
@@ -77,47 +85,42 @@ class ServiceDetailsViewController: UIViewController {
                     // remove all html tags
                     
                     let detailsStripped = serviceDetailsModel.description.removeHTMLTags()
-                    
                     self.descriptionTextView.text = detailsStripped
                     
+                    // assign med image if present
                     
-                    // assign mini image if present
+                    self.imageView.downloadImageAsync(serviceDetailsModel.medImgURL)
+             
+                    SVProgressHUD.dismiss()
                     
-                    self.imageView.downloadImageAsync(serviceDetailsModel.miniImgURL)
+                    // remove blured loading view
                     
-                    // map generator
-                    
-                    DispatchQueue.main.async() {
-                        self.mapView.fillMap(serviceDetailsModel.gpsLat, serviceDetailsModel.gpsLng,
-                                             serviceDetailsModel.name, serviceDetailsModel.phone, self.mapType)
-                        
-                        SVProgressHUD.dismiss()
-                        self.scrollView.isHidden = false
-                    }
-                }
-                else {
-                    DispatchQueue.main.async() {
-                        self.view.addBlurSubview(style: .light, animation: .curveLinear)
+                    if let viewWithLoadingTag = self.view.viewWithTag(ViewTag.loading.rawValue) {
+                        viewWithLoadingTag.removeFromSuperview()
                     }
                 }
             }
         }
-
-        viewModel.fetchServiceDetails(for: selectedServiceId)
+        self.viewModel.fetchServiceDetails(for: selectedServiceId)
     }
-    
+       
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // hide everything while loading
         
-        self.scrollView.isHidden = true
+        // blur background
         
-        // add background and blur for content view
+        self.view.addBlurSubview(at: 1, style: UIBlurEffect.Style.light)
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: backgroundImageName)!)
-        self.view.addBlurSubview(at: 0)
-
+        // setup background
+        
+        if let backgroundImage = backgroundImage {
+            self.backgroundImageView.image = backgroundImage
+        }
+        
+        // blur main screen while loading the content
+        
+        self.view.addBlurSubview (style: UIBlurEffect.Style.light, tag: ViewTag.loading)
+        
         // setup with default images
         
         let serviceImage = UIImage(named: self.selectedServiceType + ".png")

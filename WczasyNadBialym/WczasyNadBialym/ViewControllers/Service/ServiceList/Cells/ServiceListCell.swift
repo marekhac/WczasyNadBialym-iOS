@@ -13,7 +13,8 @@ class ServiceListCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var imageMini: UIImageView!
     
-     var serviceId: Int?
+    var serviceId: Int?
+    var realServiceImage: UIImage?
     
     override func awakeFromNib() {
         super.awakeFromNib()

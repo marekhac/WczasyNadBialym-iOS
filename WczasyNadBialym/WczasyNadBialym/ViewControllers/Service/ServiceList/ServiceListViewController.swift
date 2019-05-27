@@ -11,7 +11,7 @@ import SVProgressHUD
 
 class ServiceListViewController: UITableViewController {
 
-    let backgroundImageName = "background_gradient1"
+    let backgroundImageName = "background_blue"
     
     // these values will be assigned by parent view controller in prepare for segue
     
@@ -86,16 +86,15 @@ class ServiceListViewController: UITableViewController {
         cell.serviceId = serviceModel.id
         
         let imgMiniURL = serviceModel.imgMiniURL
-        cell.imageMini.downloadImageAsync(imgMiniURL)
         
-        // if there's no image, use default one from Assests/Services
-        
-        if (cell.imageMini.image == nil)
-        {
-            let serviceImage = UIImage(named: categoryNameShort + ".png")
-            cell.imageMini.image = serviceImage
-        }
+        cell.imageMini.image = UIImage(named: categoryNameShort + ".png") // default image
+        cell.imageMini.downloadImageAsyncAndReturnImage(imgMiniURL) { (image, error) in
             
+            // we use real service image in details view, to setup blured background
+            
+            cell.realServiceImage = image
+        }
+        
         return cell
     }
     
@@ -106,6 +105,7 @@ class ServiceListViewController: UITableViewController {
                 let controller = (segue.destination as! UINavigationController).topViewController as! ServiceDetailsViewController
                 controller.selectedServiceId = String(selectedCell.serviceId!)
                 controller.selectedServiceType = self.categoryNameShort
+                controller.backgroundImage = selectedCell.realServiceImage;
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }

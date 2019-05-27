@@ -29,11 +29,13 @@ class EventDetailsViewController: UIViewController {
         
         displayAdvertisementBanner()
         
-        // setup background
+        // add blur layer over background
+        self.view.addBlurSubview(below: contentView)
+        
+        // setup background with real service image (if exists)
         
         if let backgroundImage = backgroundImage {
             self.backgroundImageView.image = backgroundImage
-            self.view.addBlurSubview(below: contentView)
         }
         
         self.nameLabel.text = self.nameText

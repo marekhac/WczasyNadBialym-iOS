@@ -35,6 +35,7 @@ class EventPreviewViewController: UIViewController {
         
         if let backgroundImage = backgroundImage {
             self.backgroundImageView.image = backgroundImage
+            self.view.addBlurSubview(below: contentView)
         }
         
         NetworkManager.sharedInstance().getEventDetails(selectedEventId) { (details) in
@@ -66,7 +67,6 @@ class EventPreviewViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        self.view.addBlurSubview(below: contentView)
         displayAdvertisementBanner()
     }
     
@@ -84,7 +84,10 @@ class EventPreviewViewController: UIViewController {
                 let controller = segue.destination as! EventDetailsViewController
                 controller.nameText = self.name.text
                 controller.descriptionText = self.descriptionText;
-                controller.backgroundImage = self.backgroundImage;
+                
+                if let backgroundImage = backgroundImage {
+                    controller.backgroundImage = backgroundImage;
+                }
             }
         }
     

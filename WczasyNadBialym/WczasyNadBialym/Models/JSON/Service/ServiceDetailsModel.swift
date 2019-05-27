@@ -16,6 +16,7 @@ struct ServiceDetailModel : Codable {
     let phone: String
     let description: String
     let miniImgURL : String
+    let medImgURL : String
     let gpsLat: Double
     let gpsLng: Double
     

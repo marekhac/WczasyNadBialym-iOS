@@ -151,6 +151,7 @@
 		F4AA0FDB1FE2BE47009F3FF3 /* WeatherConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA0FDA1FE2BE47009F3FF3 /* WeatherConstants.swift */; };
 		F4AA0FDD1FE2BF34009F3FF3 /* WeatherNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA0FDC1FE2BF34009F3FF3 /* WeatherNetworkManager.swift */; };
 		F4AA0FE01FE2BFE7009F3FF3 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA0FDF1FE2BFE7009F3FF3 /* WeatherModel.swift */; };
+		F4B010C9229C0DD400E75BE6 /* ViewTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B010C8229C0DD400E75BE6 /* ViewTag.swift */; };
 		F4B7858B1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B7858A1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift */; };
 		F4BA24271FBD9C4B00DC3A86 /* FrontStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BA24261FBD9C4B00DC3A86 /* FrontStoryboard.storyboard */; };
 		F4BC49DA1EC19DF2000791AE /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC49D91EC19DF2000791AE /* EventListViewController.swift */; };
@@ -377,6 +378,7 @@
 		F4AA0FDA1FE2BE47009F3FF3 /* WeatherConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherConstants.swift; sourceTree = "<group>"; };
 		F4AA0FDC1FE2BF34009F3FF3 /* WeatherNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetworkManager.swift; sourceTree = "<group>"; };
 		F4AA0FDF1FE2BFE7009F3FF3 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		F4B010C8229C0DD400E75BE6 /* ViewTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTag.swift; sourceTree = "<group>"; };
 		F4B7858A1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCategoriesEnum.swift; sourceTree = "<group>"; };
 		F4BA24261FBD9C4B00DC3A86 /* FrontStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FrontStoryboard.storyboard; sourceTree = "<group>"; };
 		F4BC49D91EC19DF2000791AE /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
@@ -630,6 +632,7 @@
 			children = (
 				F40BA2A21FB07491001A717C /* AccommodationType.swift */,
 				F474253E21E3718600EF6709 /* LogEventType.swift */,
+				F4B010C8229C0DD400E75BE6 /* ViewTag.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -1550,6 +1553,7 @@
 				F4EDD91A2297C0EC00FF4448 /* EventDetailsViewController.swift in Sources */,
 				F4C3360A1FB452B8004F2EE5 /* ServiceDetailsModel.swift in Sources */,
 				F40C91DB1E698343006124FC /* AccommodationNetworkManager.swift in Sources */,
+				F4B010C9229C0DD400E75BE6 /* ViewTag.swift in Sources */,
 				F481E7B61EB1D9BC009637A1 /* ImageCell.swift in Sources */,
 				F40C91DE1E698343006124FC /* NetworkManager.swift in Sources */,
 				F481E7B51EB1D9BC009637A1 /* FeaturesCell.swift in Sources */,

@@ -15,7 +15,7 @@ class ServicesCategoriesViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.addBlurSubview(image: "background_gradient1")
+        self.tableView.addBlurSubview(image: "background_blue")
     }
     
     override func viewDidLoad() {
