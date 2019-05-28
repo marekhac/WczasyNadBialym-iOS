@@ -7,36 +7,36 @@
 //
 
 import UIKit
+import WebKit
 
 class InfoDetailsViewController: UIViewController {
 
     var category : InfoCategoriesEnum = .lake // default
  
-    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var webView: WKWebView!
     
     override func viewWillAppear(_ animated: Bool) {
-        self.view.addBlurSubview(below: contentTextView)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
         let url = Info.url[category]!
         
         switch category {
-            case .lake:
-                self.navigationItem.title = "O Jeziorze Białym"
-            case .essentials:
-                self.navigationItem.title = "Warto wiedzieć"
+        case .lake:
+            self.navigationItem.title = "O Jeziorze Białym"
+        case .essentials:
+            self.navigationItem.title = "Warto wiedzieć"
         }
         
         NetworkManager.sharedInstance().downloadTextAsync(url) { (dataString, error) in
             DispatchQueue.main.async() {
-                self.contentTextView.text = dataString as String
+
+                if let resourcePath = Bundle.main.resourcePath {
+                    let url = URL.init(fileURLWithPath: resourcePath)
+                    self.webView.loadHTMLString(dataString as String, baseURL: url)
+                }
             }
         }
     }
-
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         

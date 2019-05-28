@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Png-2j-lqB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Png-2j-lqB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <deployment version="4352" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Lato-Black.ttf">
             <string>Lato-Black</string>
-        </array>
-        <array key="Lato-Regular.ttf">
-            <string>Lato-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -86,7 +83,9 @@
                             <outlet property="delegate" destination="xyv-PU-qCE" id="p1X-s1-V7g"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Gge-Mc-tin"/>
+                    <navigationItem key="navigationItem" title="Informacje" id="Gge-Mc-tin">
+                        <barButtonItem key="backBarButtonItem" title="Wstecz" id="OK2-Vp-QkM"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3S-4a-KYU" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,30 +109,32 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_gradient2" translatesAutoresizingMaskIntoConstraints="NO" id="tJF-e5-rWd" userLabel="Background Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                     </imageView>
+                                    <wkWebView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aC7-HB-hbn">
+                                        <rect key="frame" x="4" y="4" width="367" height="595"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration" allowsAirPlayForMediaPlayback="NO" allowsPictureInPictureMediaPlayback="NO">
+                                            <dataDetectorTypes key="dataDetectorTypes"/>
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences" javaScriptEnabled="NO"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aC7-HB-hbn" secondAttribute="bottom" constant="4" id="7zg-9E-spD"/>
+                                    <constraint firstItem="aC7-HB-hbn" firstAttribute="leading" secondItem="oak-UN-7YQ" secondAttribute="leading" constant="4" id="NM3-uM-JIb"/>
                                     <constraint firstItem="tJF-e5-rWd" firstAttribute="leading" secondItem="oak-UN-7YQ" secondAttribute="leading" id="Oti-7j-xhu"/>
                                     <constraint firstItem="tJF-e5-rWd" firstAttribute="top" secondItem="oak-UN-7YQ" secondAttribute="top" id="Vns-Qy-FlL"/>
+                                    <constraint firstItem="aC7-HB-hbn" firstAttribute="top" secondItem="oak-UN-7YQ" secondAttribute="top" constant="4" id="fwg-fc-Nfj"/>
                                     <constraint firstAttribute="bottom" secondItem="tJF-e5-rWd" secondAttribute="bottom" id="nPE-rj-B7N"/>
                                     <constraint firstAttribute="trailing" secondItem="tJF-e5-rWd" secondAttribute="trailing" id="oB9-ZG-zq0"/>
+                                    <constraint firstAttribute="trailing" secondItem="aC7-HB-hbn" secondAttribute="trailing" constant="4" id="zXU-37-eax"/>
                                 </constraints>
                             </view>
-                            <textView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="xTu-a9-QBX">
-                                <rect key="frame" x="5" y="64" width="365" height="603"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, </string>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xTu-a9-QBX" firstAttribute="leading" secondItem="E6L-CT-yGb" secondAttribute="leading" constant="5" id="5p4-qh-SlW"/>
-                            <constraint firstItem="xTu-a9-QBX" firstAttribute="top" secondItem="ZwZ-lR-wNC" secondAttribute="bottom" id="7r2-ux-rdY"/>
-                            <constraint firstAttribute="trailing" secondItem="xTu-a9-QBX" secondAttribute="trailing" constant="5" id="Fd8-pr-Mwc"/>
                             <constraint firstItem="jzK-S5-ON6" firstAttribute="top" secondItem="oak-UN-7YQ" secondAttribute="bottom" id="O7d-S6-duQ"/>
-                            <constraint firstItem="jzK-S5-ON6" firstAttribute="top" secondItem="xTu-a9-QBX" secondAttribute="bottom" id="Wz6-xF-qVd"/>
                             <constraint firstAttribute="trailing" secondItem="oak-UN-7YQ" secondAttribute="trailing" id="hEh-xJ-0Jc"/>
                             <constraint firstItem="oak-UN-7YQ" firstAttribute="leading" secondItem="E6L-CT-yGb" secondAttribute="leading" id="jMd-ug-voX"/>
                             <constraint firstItem="oak-UN-7YQ" firstAttribute="top" secondItem="ZwZ-lR-wNC" secondAttribute="bottom" id="vta-xq-Awd"/>
@@ -141,12 +142,12 @@
                         <viewLayoutGuide key="safeArea" id="nhp-TO-dct"/>
                     </view>
                     <connections>
-                        <outlet property="contentTextView" destination="xTu-a9-QBX" id="CC1-Rk-TTU"/>
+                        <outlet property="webView" destination="aC7-HB-hbn" id="y9f-bX-n4d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4g-f0-UFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="2908"/>
+            <point key="canvasLocation" x="4" y="2907.7961019490258"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T8l-Cy-PG9">
@@ -179,6 +180,6 @@
     </scenes>
     <resources>
         <image name="background_gradient2" width="640" height="1136"/>
-        <image name="info" width="28" height="28"/>
+        <image name="info" width="51.200000762939453" height="51.200000762939453"/>
     </resources>
 </document>

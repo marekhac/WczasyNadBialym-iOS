@@ -20,7 +20,7 @@ extension NetworkManager {
         let _ = taskForDownloadContent(controller, method, parameters, datatype) { (data, error) in
             
             if let error = error {
-                LogEventHandler.report(LogEventType.debug, "Unable to download na image", error.localizedDescription)
+                LogEventHandler.report(LogEventType.debug, "Unable to download text", error.localizedDescription)
             } else {
                 if let unwrappedData = data {
                     

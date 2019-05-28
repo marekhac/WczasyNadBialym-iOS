@@ -11,8 +11,8 @@ import Foundation
 struct Info {
     struct Path {
         
-        static let about = "../mobile/lake.txt"
-        static let essentials = "../mobile/essentials.txt"
+        static let about = "../mobile/lake.html"
+        static let essentials = "../mobile/essentials.html"
     }
     
     static let url : [InfoCategoriesEnum : String] = [.lake : Info.Path.about,
