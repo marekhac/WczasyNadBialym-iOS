@@ -56,4 +56,12 @@ extension UIView {
                                 self.addBlurSubview(style: blurStyle)
                           }, completion: nil)
     }
+    
+    func removeBlurSubviewForTag (_ tag: ViewTag) {
+        DispatchQueue.main.async {
+            if let viewWithLoadingTag = self.viewWithTag(tag.rawValue) {
+                viewWithLoadingTag.removeFromSuperview()
+            }
+        }
+    }
 }

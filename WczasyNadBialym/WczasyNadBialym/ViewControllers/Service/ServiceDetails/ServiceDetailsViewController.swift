@@ -95,9 +95,7 @@ class ServiceDetailsViewController: UIViewController {
                     
                     // remove blured loading view
                     
-                    if let viewWithLoadingTag = self.view.viewWithTag(ViewTag.loading.rawValue) {
-                        viewWithLoadingTag.removeFromSuperview()
-                    }
+                    self.view.removeBlurSubviewForTag(.loading)
                 }
             }
         }
@@ -109,7 +107,7 @@ class ServiceDetailsViewController: UIViewController {
         
         // blur background
         
-        self.view.addBlurSubview(at: 1, style: UIBlurEffect.Style.light)
+        self.view.addBlurSubview(at: 1, style: .light)
         
         // setup background
         
@@ -119,7 +117,7 @@ class ServiceDetailsViewController: UIViewController {
         
         // blur main screen while loading the content
         
-        self.view.addBlurSubview (style: UIBlurEffect.Style.light, tag: ViewTag.loading)
+        self.view.addBlurSubview (style: .light, tag: .loading)
         
         // setup with default images
         

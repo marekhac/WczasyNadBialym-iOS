@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import SVProgressHUD
 import GoogleMobileAds
+
 class EventPreviewViewController: UIViewController {
     
     @IBOutlet weak var bannerView: GADBannerView!
@@ -30,6 +32,11 @@ class EventPreviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SVProgressHUD.show()
+        
+        // blur main screen while loading the content
+        
+        self.view.addBlurSubview (style: .light, tag: .loading)
         
         // setup background
         
@@ -61,6 +68,12 @@ class EventPreviewViewController: UIViewController {
             else {
                 LogEventHandler.report(LogEventType.debug, "No Event Details to show")
             }
+            
+            SVProgressHUD.dismiss()
+            
+            // remove blured loading view
+            
+            self.view.removeBlurSubviewForTag(.loading);
         }
     }
     
