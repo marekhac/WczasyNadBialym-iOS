@@ -32,6 +32,12 @@ class EventPreviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        // add the recognizer to the view.
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        self.fillImageView.addGestureRecognizer(tapRecognizer)
+        
         SVProgressHUD.show()
         
         // blur main screen while loading the content
@@ -81,6 +87,19 @@ class EventPreviewViewController: UIViewController {
         super.viewWillAppear(true)
         
         displayAdvertisementBanner()
+    }
+    
+    @objc func imageTapped(gestureRecognizer: UITapGestureRecognizer) {
+        
+        if let eventShowPosterViewController = UIStoryboard(name: "EventStoryboard", bundle: nil).instantiateViewController(withIdentifier: "Poster") as? EventShowPosterViewController {
+            
+            eventShowPosterViewController.posterImage = self.fillImageView.image
+            eventShowPosterViewController.backgroundImage = self.backgroundImageView.image
+                        
+            if let navigator = navigationController {
+                navigator.pushViewController(eventShowPosterViewController, animated: true)
+            }
+        }
     }
     
     // MARK: - Request for advertisement
