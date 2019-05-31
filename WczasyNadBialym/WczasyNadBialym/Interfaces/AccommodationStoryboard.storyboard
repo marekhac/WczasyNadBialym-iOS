@@ -24,10 +24,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Master-->
+        <!--Lista noclegów-->
         <scene sceneID="m7m-GP-WR8">
             <objects>
-                <navigationController title="Master" id="GkR-92-xsl" sceneMemberID="viewController">
+                <navigationController title="Lista noclegów" id="GkR-92-xsl" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="KIB-7i-whK">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -92,7 +92,9 @@
                             <outlet property="delegate" destination="YXh-Ud-wPh" id="rAZ-J6-6rs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="B5V-x6-tGU"/>
+                    <navigationItem key="navigationItem" id="B5V-x6-tGU">
+                        <barButtonItem key="backBarButtonItem" title="Wstecz" id="NfA-M9-9Mp"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50X-OV-6hz" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,7 +183,9 @@
                             <outlet property="delegate" destination="bI5-b8-uSL" id="8NU-d7-p8y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="oac-lG-7WD"/>
+                    <navigationItem key="navigationItem" id="oac-lG-7WD">
+                        <barButtonItem key="backBarButtonItem" title="Wstecz" id="tlx-2F-Qd0"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdH-NU-ynv" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,26 +207,38 @@
                                 <rect key="frame" x="0.0" y="64" width="414" height="938"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIf-fP-soN" userLabel="Header View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fVu-M1-x1K">
-                                                <rect key="frame" x="8" y="8" width="398" height="86"/>
+                                                <rect key="frame" x="4" y="5" width="406" height="90"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6m-TG-Cts" userLabel="Name Label">
-                                                        <rect key="frame" x="0.0" y="0.0" width="398" height="20"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="t6m-TG-Cts" userLabel="Name Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="406" height="21.5"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.35509417808219179" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Lato-Heavy" family="Lato" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Lato-Heavy" family="Lato" pointSize="19"/>
+                                                        </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9O-5s-E3O" userLabel="Price Label">
-                                                        <rect key="frame" x="0.0" y="26" width="398" height="19"/>
-                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                                                        <rect key="frame" x="0.0" y="27.5" width="406" height="21.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
                                                         <color key="textColor" red="0.89576062820000002" green="0.6048455613" blue="0.16919772350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="19"/>
+                                                        </variation>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xaW-CR-ii0" userLabel="Phone Text View">
-                                                        <rect key="frame" x="0.0" y="51" width="398" height="35"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <rect key="frame" x="0.0" y="55" width="406" height="35"/>
+                                                        <color key="backgroundColor" white="1" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="bMr-z5-jUD"/>
                                                         </constraints>
@@ -253,13 +269,13 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="xaW-CR-ii0" secondAttribute="bottom" constant="1" id="BPX-AY-XuY"/>
-                                            <constraint firstItem="fVu-M1-x1K" firstAttribute="leading" secondItem="eIf-fP-soN" secondAttribute="leadingMargin" id="Flz-Kx-pHW"/>
-                                            <constraint firstItem="fVu-M1-x1K" firstAttribute="top" secondItem="eIf-fP-soN" secondAttribute="topMargin" id="R85-hC-Oni"/>
-                                            <constraint firstAttribute="trailing" secondItem="fVu-M1-x1K" secondAttribute="trailing" constant="8" id="zgh-5K-AwG"/>
+                                            <constraint firstItem="fVu-M1-x1K" firstAttribute="leading" secondItem="eIf-fP-soN" secondAttribute="leadingMargin" constant="-4" id="Flz-Kx-pHW"/>
+                                            <constraint firstItem="fVu-M1-x1K" firstAttribute="top" secondItem="eIf-fP-soN" secondAttribute="topMargin" constant="-3" id="R85-hC-Oni"/>
+                                            <constraint firstAttribute="trailing" secondItem="fVu-M1-x1K" secondAttribute="trailing" constant="4" id="zgh-5K-AwG"/>
                                         </constraints>
                                     </view>
                                     <segmentedControl opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lta-QC-IZK" userLabel="Segment Controll">
-                                        <rect key="frame" x="111.5" y="699" width="191" height="29"/>
+                                        <rect key="frame" x="111.5" y="700" width="191" height="29"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="7Wm-VI-6Iu"/>
@@ -273,7 +289,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Q3S-P2-f91" userLabel="Image Collection View">
-                                        <rect key="frame" x="0.0" y="95" width="414" height="89"/>
+                                        <rect key="frame" x="0.0" y="96" width="414" height="89"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="89" id="MQk-4y-fBo"/>
@@ -316,17 +332,21 @@
                                         </connections>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPB-qD-h0W" userLabel="Map View">
-                                        <rect key="frame" x="0.0" y="184" width="414" height="250"/>
+                                        <rect key="frame" x="0.0" y="185" width="414" height="250"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="CC5-dx-aef">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
                                                 <subviews>
                                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkR-pZ-4YD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
                                                     </mapView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rr4-IF-0HL">
-                                                        <rect key="frame" x="161" y="149" width="92" height="30"/>
+                                                        <rect key="frame" x="156" y="146" width="102" height="33"/>
+                                                        <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                         <state key="normal" title="Otwórz mapę"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                                        </variation>
                                                         <connections>
                                                             <segue destination="0rc-AV-Cuy" kind="show" identifier="showAccommodationMap" id="R4f-Ul-BS0"/>
                                                         </connections>
@@ -354,27 +374,29 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUC-j0-iJF" userLabel="Description View">
-                                        <rect key="frame" x="0.0" y="434" width="414" height="250"/>
+                                        <rect key="frame" x="0.0" y="435" width="414" height="250"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Yp2-kT-rZw">
-                                                <rect key="frame" x="10" y="0.0" width="393" height="250"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <rect key="frame" x="4" y="8" width="406" height="242"/>
+                                                <color key="backgroundColor" white="1" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="19"/>
+                                                </variation>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="0pB-Qw-32g"/>
                                             <constraint firstAttribute="bottom" secondItem="Yp2-kT-rZw" secondAttribute="bottom" id="Ryd-B5-UNy"/>
-                                            <constraint firstItem="Yp2-kT-rZw" firstAttribute="top" secondItem="HUC-j0-iJF" secondAttribute="top" id="dbS-qO-M1p"/>
-                                            <constraint firstAttribute="trailing" secondItem="Yp2-kT-rZw" secondAttribute="trailing" constant="11" id="ijP-Ah-K0H"/>
-                                            <constraint firstItem="Yp2-kT-rZw" firstAttribute="leading" secondItem="HUC-j0-iJF" secondAttribute="leading" constant="10" id="tqW-ZO-IXk"/>
+                                            <constraint firstItem="Yp2-kT-rZw" firstAttribute="top" secondItem="HUC-j0-iJF" secondAttribute="top" constant="8" id="dbS-qO-M1p"/>
+                                            <constraint firstAttribute="trailing" secondItem="Yp2-kT-rZw" secondAttribute="trailing" constant="4" id="ijP-Ah-K0H"/>
+                                            <constraint firstItem="Yp2-kT-rZw" firstAttribute="leading" secondItem="HUC-j0-iJF" secondAttribute="leading" constant="4" id="tqW-ZO-IXk"/>
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="j1Y-iV-SCa" userLabel="Features Collection View">
-                                        <rect key="frame" x="8" y="745" width="398" height="50"/>
+                                        <rect key="frame" x="8" y="746" width="398" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="LYz-TC-5Rj"/>
