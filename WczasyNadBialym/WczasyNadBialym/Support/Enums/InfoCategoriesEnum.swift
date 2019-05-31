@@ -7,5 +7,5 @@
 //
 
 enum InfoCategoriesEnum{
-    case lake, essentials
+    case lake, essentials, contact
 }

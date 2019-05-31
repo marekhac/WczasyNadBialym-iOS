@@ -13,8 +13,10 @@ struct Info {
         
         static let about = "../mobile/lake.html"
         static let essentials = "../mobile/essentials.html"
+        static let contact = "../mobile/contact.html"
     }
     
     static let url : [InfoCategoriesEnum : String] = [.lake : Info.Path.about,
-                                                      .essentials : Info.Path.essentials]
+                                                      .essentials : Info.Path.essentials,
+                                                      .contact : Info.Path.contact]
 }

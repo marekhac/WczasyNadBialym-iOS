@@ -16,7 +16,8 @@ class InfoCategoriesViewController: UITableViewController {
     }
     
     let infoCategories = [InfoCategory(category: .lake, longName: "O Jeziorze Białym"),
-                          InfoCategory(category: .essentials, longName: "Warto wiedzieć")]
+                          InfoCategory(category: .essentials, longName: "Warto wiedzieć"),
+                          InfoCategory(category: .contact, longName: "Kontakt z nami")]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
