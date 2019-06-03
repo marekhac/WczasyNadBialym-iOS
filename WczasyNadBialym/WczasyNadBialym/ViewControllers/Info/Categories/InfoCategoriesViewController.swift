@@ -63,9 +63,15 @@ class InfoCategoriesViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let cell = sender as! InfoCategoriesCell
-        let controller = segue.destination as! InfoDetailsViewController
-        controller.category = cell.selectedCategory
+        if let selectedCell = sender as? InfoCategoriesCell {
+            
+            if segue.identifier == "showInfoDetails" {
+                let controller = (segue.destination as! UINavigationController).topViewController as! InfoDetailsViewController
+                controller.category = selectedCell.selectedCategory
+                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
