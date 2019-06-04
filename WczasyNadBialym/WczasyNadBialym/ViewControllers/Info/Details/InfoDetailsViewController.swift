@@ -10,16 +10,36 @@ import UIKit
 import WebKit
 import SVProgressHUD
 
-class InfoDetailsViewController: UIViewController, WKNavigationDelegate {
+class InfoDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 
     var category : InfoCategoriesEnum = .lake // default
- 
-    @IBOutlet weak var webView: WKWebView!
+    
+    // webView added programmatically to workaround XCode bug:
+    // WKWebView before iOS 11.0 (NSCoding support was broken in previous versions)
+    // https://stackoverflow.com/questions/46221577/xcode-9-gm-wkwebview-nscoding-support-was-broken-in-previous-versions
+    
+    lazy var webView: WKWebView = {
+        let webView = WKWebView()
+        webView.uiDelegate = self
+        webView.navigationDelegate = self
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // setup transparent background
+        
+        webView.backgroundColor = UIColor.clear
+        webView.isOpaque = false
+        return webView
+    }()
     
     override func viewDidLoad() {
          super.viewDidLoad()
         
-        self.webView.navigationDelegate = self
+        self.view.addSubview(self.webView)
+        NSLayoutConstraint.activate([
+            self.webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            self.webView.topAnchor.constraint(equalTo: view.topAnchor),
+            self.webView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            self.webView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +50,10 @@ class InfoDetailsViewController: UIViewController, WKNavigationDelegate {
         self.webView.isHidden = true
 
         // blur background
+        
+        self.view.addBlurSubview(at: 1)
+        
+        // add blured loading view layer
         
         self.view.addBlurSubview(style: .light, tag: .loading)
         
@@ -73,7 +97,6 @@ class InfoDetailsViewController: UIViewController, WKNavigationDelegate {
                 return
             }
         }
-        
         decisionHandler(.allow)
     }
         
