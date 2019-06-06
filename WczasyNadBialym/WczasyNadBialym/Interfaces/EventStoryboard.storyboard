@@ -309,6 +309,7 @@
                         <outlet property="backgroundImageView" destination="mEt-bW-zDL" id="Xwf-nf-WVD"/>
                         <outlet property="backgroundView" destination="2UA-8A-47t" id="FKW-Oe-ibX"/>
                         <outlet property="bannerView" destination="boo-98-1dB" id="v45-Gq-jfC"/>
+                        <outlet property="bannerViewHeightConstraint" destination="RiH-AG-Bgv" id="yu4-fd-8md"/>
                         <outlet property="contentView" destination="S3R-o5-0KT" id="p0M-nu-kHl"/>
                         <outlet property="fillImageView" destination="lHk-fJ-t5q" id="uLt-9n-zEm"/>
                         <outlet property="mainView" destination="e5g-3A-FFA" id="ao4-dK-8LK"/>
@@ -462,6 +463,7 @@
                         <outlet property="backgroundImageView" destination="MxX-z9-KFr" id="PRI-ro-lB5"/>
                         <outlet property="backgroundView" destination="Ijd-ZC-BMF" id="sCE-ca-uww"/>
                         <outlet property="bannerView" destination="8dz-5m-Hrc" id="tEI-hf-GBE"/>
+                        <outlet property="bannerViewHeightConstraint" destination="63U-A1-7zO" id="ugd-7O-vmi"/>
                         <outlet property="contentView" destination="CP8-WE-0ek" id="BgZ-Rl-9dv"/>
                         <outlet property="descriptionTextView" destination="LBA-EY-lkq" id="siR-q1-QEP"/>
                         <outlet property="nameLabel" destination="Z1Q-VA-Jrj" id="YzY-fa-zNp"/>

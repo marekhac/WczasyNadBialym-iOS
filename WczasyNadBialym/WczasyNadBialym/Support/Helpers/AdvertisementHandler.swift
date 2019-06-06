@@ -12,6 +12,11 @@ import GoogleMobileAds
 class AdvertisementHandler : NSObject, GADBannerViewDelegate {
     
     var adView : GADBannerView
+    var adViewHeightConstraint: NSLayoutConstraint?
+    
+    let adBannerHeightNormal: CGFloat = 50.0
+    let adBannerHeightHidden: CGFloat = 0.0
+    
     var adDelegate : AnyObject & GADBannerViewDelegate {
         get {
             return self.adView.delegate!
@@ -54,10 +59,30 @@ class AdvertisementHandler : NSObject, GADBannerViewDelegate {
     
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         LogEventHandler.report(LogEventType.debug, "AdvertisementHandler: AdMob ad loaded successfully")
+        
+        showBannerWithAnimation()
     }
     
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         LogEventHandler.report(LogEventType.debug, "AdvertisementHandler: Failed to receive AdMob ad")
+        
+        hideBannerWithAnimation()
+    }
+   
+    // when adViewHeightConstraint variable is set, we can hide banner when there is no ads to show
+    
+    func hideBannerWithAnimation() {
+        if let adViewHeightConstraint = adViewHeightConstraint {
+            adViewHeightConstraint.constant = adBannerHeightHidden
+            self.adView.rootViewController?.view.updateLayoutWithAnimation(andDuration: 0.5)
+        }
+    }
+    
+    func showBannerWithAnimation() {
+        if let adViewHeightConstraint = adViewHeightConstraint {
+            adViewHeightConstraint.constant = adBannerHeightNormal
+            self.adView.rootViewController?.view.updateLayoutWithAnimation(andDuration: 0.5)
+        }
     }
 }
 

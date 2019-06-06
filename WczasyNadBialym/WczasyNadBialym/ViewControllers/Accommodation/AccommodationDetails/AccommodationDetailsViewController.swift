@@ -14,6 +14,8 @@ import GoogleMobileAds
 class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var bannerViewHeightConstraint: NSLayoutConstraint!
+    
     var adHandler : AdvertisementHandler?
     
     let imagesReuseIdentifier = "imageCell" // also enter this string as the cell identifier in the storyboard
@@ -217,6 +219,7 @@ class AccommodationDetailsViewController: UIViewController, MKMapViewDelegate, U
     func displayAdvertisementBanner() {
         self.adHandler = AdvertisementHandler(bannerAdView: self.bannerView)
         if let adHandler = self.adHandler {
+            adHandler.adViewHeightConstraint = self.bannerViewHeightConstraint
             adHandler.showAd(viewController: self)
         }
     }

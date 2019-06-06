@@ -290,7 +290,7 @@
                                     <constraint firstAttribute="bottom" secondItem="jL2-GF-SIL" secondAttribute="bottom" id="zck-C0-Wei"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="a0D-Mb-HoD">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="a0D-Mb-HoD">
                                 <rect key="frame" x="0.0" y="620" width="414" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
@@ -329,7 +329,6 @@
                             <constraint firstItem="3ip-Sx-9cf" firstAttribute="leading" secondItem="4bL-sP-R6z" secondAttribute="leading" constant="4" id="IP6-DV-zPZ"/>
                             <constraint firstItem="4bL-sP-R6z" firstAttribute="trailing" secondItem="wpA-7f-b90" secondAttribute="trailing" constant="4" id="Idb-GQ-UHX"/>
                             <constraint firstItem="wpA-7f-b90" firstAttribute="top" secondItem="3ip-Sx-9cf" secondAttribute="bottom" constant="8" id="JyE-ah-jMj"/>
-                            <constraint firstItem="a0D-Mb-HoD" firstAttribute="top" secondItem="zrg-eX-wcl" secondAttribute="bottom" constant="28" id="LM8-cs-AeA"/>
                             <constraint firstItem="4bL-sP-R6z" firstAttribute="trailing" secondItem="3Tg-FZ-acr" secondAttribute="trailing" id="LMV-tG-Njz"/>
                             <constraint firstItem="3Tg-FZ-acr" firstAttribute="top" secondItem="Efs-IN-x3E" secondAttribute="top" id="M3e-ge-HdP"/>
                             <constraint firstItem="OuB-Lo-dLc" firstAttribute="leading" secondItem="4bL-sP-R6z" secondAttribute="leading" constant="4" id="MBs-eK-uaS"/>
@@ -368,6 +367,7 @@
                         <outlet property="backgroundImageView" destination="Ya7-SA-S5I" id="g69-JM-4Pt"/>
                         <outlet property="backgroundView" destination="3Tg-FZ-acr" id="0VC-KV-ysp"/>
                         <outlet property="bannerView" destination="2YZ-7t-vZ5" id="N1N-mA-jTG"/>
+                        <outlet property="bannerViewHeightConstraint" destination="ynn-Q9-D3m" id="izv-pM-Uss"/>
                         <outlet property="descriptionTextView" destination="wpA-7f-b90" id="ReJ-JN-1Yv"/>
                         <outlet property="imageView" destination="jL2-GF-SIL" id="TAv-OZ-cUb"/>
                         <outlet property="nameLabel" destination="XAa-Ys-w2p" id="E8e-IT-fqj"/>
@@ -417,6 +417,7 @@
                     </view>
                     <connections>
                         <outlet property="bannerView" destination="Nvi-Er-vKx" id="Fv1-hT-IBN"/>
+                        <outlet property="bannerViewHeightConstraint" destination="h7S-dW-ryc" id="Xvm-LZ-L2B"/>
                         <outlet property="mapView" destination="oaL-cS-mVE" id="Gkf-56-Wo0"/>
                     </connections>
                 </viewController>

@@ -18,6 +18,7 @@ class EventDetailsViewController: UIViewController {
     var adHandler : AdvertisementHandler?
     
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var bannerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -47,6 +48,7 @@ class EventDetailsViewController: UIViewController {
     func displayAdvertisementBanner() {
         self.adHandler = AdvertisementHandler(bannerAdView: self.bannerView)
         if let adHandler = self.adHandler {
+            adHandler.adViewHeightConstraint = self.bannerViewHeightConstraint
             adHandler.showAd(viewController: self)
         }
     }

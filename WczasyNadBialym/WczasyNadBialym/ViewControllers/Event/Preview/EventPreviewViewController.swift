@@ -13,6 +13,8 @@ import GoogleMobileAds
 class EventPreviewViewController: UIViewController {
     
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var bannerViewHeightConstraint: NSLayoutConstraint!
+    
     var adHandler : AdvertisementHandler?
     var backgroundImage : UIImage?
     var descriptionText: String?
@@ -32,7 +34,7 @@ class EventPreviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         // add the recognizer to the view.
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
@@ -107,6 +109,7 @@ class EventPreviewViewController: UIViewController {
     func displayAdvertisementBanner() {
         self.adHandler = AdvertisementHandler(bannerAdView: self.bannerView)
         if let adHandler = self.adHandler {
+            adHandler.adViewHeightConstraint = self.bannerViewHeightConstraint
             adHandler.showAd(viewController: self)
         }
     }

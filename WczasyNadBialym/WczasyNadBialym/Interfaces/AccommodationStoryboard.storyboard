@@ -486,6 +486,7 @@
                     <connections>
                         <outlet property="accommodationPropertiesCollectionViewHeightContraint" destination="LYz-TC-5Rj" id="t6k-qg-nkV"/>
                         <outlet property="bannerView" destination="0Ca-u7-Xb0" id="oL4-AG-47I"/>
+                        <outlet property="bannerViewHeightConstraint" destination="Sdb-2j-aiE" id="CHz-gP-kbo"/>
                         <outlet property="descriptionTextView" destination="Yp2-kT-rZw" id="jrx-v6-wQP"/>
                         <outlet property="featuresCollectionView" destination="j1Y-iV-SCa" id="MHa-eQ-8PR"/>
                         <outlet property="featuresSegmentedControl" destination="Lta-QC-IZK" id="nWU-Fx-fP7"/>
@@ -544,6 +545,7 @@
                     </view>
                     <connections>
                         <outlet property="bannerView" destination="oUN-Zy-NZF" id="mOF-z5-WYV"/>
+                        <outlet property="bannerViewHeightConstraint" destination="nqa-mz-aSm" id="qjU-7H-2es"/>
                         <outlet property="mapView" destination="6OO-sG-hDh" id="Fve-QL-zzG"/>
                     </connections>
                 </viewController>

@@ -129,6 +129,9 @@
                         <viewLayoutGuide key="safeArea" id="nhp-TO-dct"/>
                     </view>
                     <navigationItem key="navigationItem" id="ouy-Le-iMs"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="oak-UN-7YQ" id="f7m-kW-TAP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4g-f0-UFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

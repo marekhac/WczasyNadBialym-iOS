@@ -27,6 +27,7 @@ class ServiceDetailsViewController: UIViewController {
 
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var bannerViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -140,6 +141,10 @@ class ServiceDetailsViewController: UIViewController {
     func displayAdvertisementBanner() {
         self.adHandler = AdvertisementHandler(bannerAdView: self.bannerView)
         if let adHandler = self.adHandler {
+            
+            // adViewHeightConstraint set to hide/show banner if there is/isn't ad to show
+            
+            adHandler.adViewHeightConstraint = self.bannerViewHeightConstraint
             adHandler.showAd(viewController: self)
         }
     }

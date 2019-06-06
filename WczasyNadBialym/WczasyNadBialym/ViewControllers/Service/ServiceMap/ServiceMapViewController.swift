@@ -13,6 +13,8 @@ import GoogleMobileAds
 class ServiceMapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var bannerViewHeightConstraint: NSLayoutConstraint!
+    
     var adHandler : AdvertisementHandler?
     
     var gpsLat: Double = 0.0
@@ -40,6 +42,7 @@ class ServiceMapViewController: UIViewController, MKMapViewDelegate {
     func displayAdvertisementBanner() {
         self.adHandler = AdvertisementHandler(bannerAdView: self.bannerView)
         if let adHandler = self.adHandler {
+            adHandler.adViewHeightConstraint = self.bannerViewHeightConstraint
             adHandler.showAd(viewController: self)
         }
     }
