@@ -14,6 +14,8 @@ class InfoDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDel
 
     var category : InfoCategoriesEnum = .lake // default
     
+    @IBOutlet weak var backgroundView: UIView!
+    
     // webView added programmatically to workaround XCode bug:
     // WKWebView before iOS 11.0 (NSCoding support was broken in previous versions)
     // https://stackoverflow.com/questions/46221577/xcode-9-gm-wkwebview-nscoding-support-was-broken-in-previous-versions
@@ -35,11 +37,12 @@ class InfoDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDel
          super.viewDidLoad()
         
         self.view.addSubview(self.webView)
+                
         NSLayoutConstraint.activate([
-            self.webView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            self.webView.topAnchor.constraint(equalTo: view.topAnchor),
-            self.webView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            self.webView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
+            self.webView.leadingAnchor.constraint(equalTo: self.backgroundView.leadingAnchor),
+            self.webView.topAnchor.constraint(equalTo: self.backgroundView.topAnchor),
+            self.webView.rightAnchor.constraint(equalTo: self.backgroundView.rightAnchor),
+            self.webView.bottomAnchor.constraint(equalTo: self.backgroundView.bottomAnchor)])
     }
     
     override func viewWillAppear(_ animated: Bool) {
