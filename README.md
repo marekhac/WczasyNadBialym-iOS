@@ -1,12 +1,12 @@
 # WczasyNadBialym (iOS App)
 
-This is a development version of the iOS Mobile App for travelers. It will be particulary useful for tourists who wants to visit one of the greatest Lake in Poland (White Lake in Okuninka). 
+This is a development version of the official WczasyNadBialym mobile app for iPhone and iPad. It's particulary useful for tourists who wants to visit one of the greatest Lake in Poland (White Lake in Okuninka). 
 
-This is universal App and it should look "pretty" both on iPad and iPhone.
+This is the universal App and it should look nice on both, iPad and iPhone.
 
 Technologies used: **Swift 4, Auto Layout, Size Classes, Codable Protocol (JSON parsing)**
 
-Checkout WczasyNadBialym website available at [wczasynadbialym.pl](http://wczasynadbialym.pl)
+Checkout WczasyNadBialym website, available at [wczasynadbialym.pl](http://wczasynadbialym.pl)
 
 *For more details scroll down below these lovely screenshots :)*
 
@@ -46,7 +46,9 @@ Request for free `AppID` token to be able to get any responces from WczasyNadBia
 * DebugOn - print a lot of useful debug and error logs
 * DebugOff - hide all debug and error logs
 
+**License**
 
+WczasyNadBialym-iOS source code is available under GPLv3 License. You can use freely any part of this code for your educational or commercial purposes. Be aware that WczasyNadBialymAPI is not open-source project, and it's not permited to release any commercial app that use WczasyNadBialymAPI. Copy or redistribution any data available via WczasyNadBialymAPI is prohibited.
 
 
 
