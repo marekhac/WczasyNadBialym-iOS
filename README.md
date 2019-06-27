@@ -6,7 +6,9 @@ This is the universal App and it should look nice on both, iPad and iPhone.
 
 Technologies used: **Swift 4, Auto Layout, Size Classes, Codable Protocol (JSON parsing)**
 
-Checkout WczasyNadBialym website, available at [wczasynadbialym.pl](http://wczasynadbialym.pl)
+Release version of the app is available at [iTunes](https://itunes.apple.com/us/app/wczasy-nad-bia%C5%82ym/id1466600270?l=pl)
+
+WczasyNadBialym website: [wczasynadbialym.pl](http://wczasynadbialym.pl)
 
 *For more details scroll down below these lovely screenshots :)*
 
