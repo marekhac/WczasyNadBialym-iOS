@@ -1,6 +1,6 @@
 # WczasyNadBialym (iOS App)
 
-This is a development version of the official WczasyNadBialym mobile app for iPhone and iPad. It's particulary useful for tourists who wants to visit one of the greatest Lake in Poland (White Lake in Okuninka). 
+This is a development version of the official WczasyNadBialym mobile app for iPhone and iPad. It's particulary useful for tourists who wants to visit one of the greatest Lake in Poland (White Lake in Okuninka). 
 
 This is the universal App and it should look nice on both, iPad and iPhone.
 
