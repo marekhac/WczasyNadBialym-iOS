@@ -88,7 +88,7 @@ class ServiceListViewController: UITableViewController {
         let imgMiniURL = serviceModel.imgMiniURL
         
         cell.imageMini.image = UIImage(named: categoryNameShort + ".png") // default image
-        cell.imageMini.downloadImageAsyncAndReturnImage(imgMiniURL) { (image, error) in
+        cell.imageMini.downloadImageAsyncAndReturnImage(imgMiniURL) { (image) in
             
             // we use real service image in details view, to setup blured background
             

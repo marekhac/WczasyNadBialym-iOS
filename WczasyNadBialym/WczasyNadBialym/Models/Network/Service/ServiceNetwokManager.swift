@@ -16,12 +16,16 @@ extension NetworkManager {
         let method  = Service.Methods.Categories
         let parameters = [String: String]()
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
-            if let error = error {
-                LogEventHandler.report(LogEventType.error, "Unable to download Serivce Categories", error.localizedDescription)
-            } else {
-                let categories = content?.parseData(using: ServiceCategoryModel.servicesFromResults)
+        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
+            
+            switch result {
+                
+            case .success(let content):
+                let categories = content.parseData(using: ServiceCategoryModel.servicesFromResults)
                 completionHandlerForServices(categories as? [ServiceCategoryModel])
+                
+            case .failure(let error):
+                LogEventHandler.report(LogEventType.error, "Unable to download Serivce Categories", error.localizedDescription)
             }
         }
     }
@@ -33,12 +37,15 @@ extension NetworkManager {
         let parameters = [Service.ParameterKeys.Kind : serviceType]
         // let parameters = [String: String]
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
-            if let error = error {
-                LogEventHandler.report(LogEventType.error, "Unable to download Serivce List", error.localizedDescription, displayWithHUD: true)
-            } else {
-                let list = content?.parseData(using: ServiceModel.servicesFromResults)
+        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
+            
+            switch result {
+            case .success(let content):
+                let list = content.parseData(using: ServiceModel.servicesFromResults)
                 completionHandlerForServices(list as? [ServiceModel])
+                
+            case .failure(let error):
+                LogEventHandler.report(LogEventType.error, "Unable to download Serivce List", error.localizedDescription, displayWithHUD: true)
             }
         }
     }
@@ -49,14 +56,16 @@ extension NetworkManager {
         let method  = Service.Methods.Details
         let parameters = [Service.ParameterKeys.Id : eventId]
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
-            if let error = error {
-                LogEventHandler.report(LogEventType.error, "Unable to download Service Details", error.localizedDescription, displayWithHUD: true)
-            } else {
-                let details = content?.parseData(using: ServiceDetailModel.detailsFromResults)
+        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
+            
+            switch result {
+            case .success(let content):
+                let details = content.parseData(using: ServiceDetailModel.detailsFromResults)
                 completionHandlerForEvents(details as? ServiceDetailModel)
+                
+            case .failure(let error):
+                LogEventHandler.report(LogEventType.error, "Unable to download Service Details", error.localizedDescription, displayWithHUD: true)
             }
         }
     }
-    
 }

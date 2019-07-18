@@ -13,14 +13,19 @@ extension UIImageView {
     
     public func downloadImageAsync(_ url: String, defaultImage image: String? = nil) {
         
-        NetworkManager.sharedInstance().downloadImagesAsync(url) { (imageData, error) in
-    
-            if let downloadedImageData = imageData as Data? {
+        print(url)
+        
+        NetworkManager.sharedInstance().downloadImagesAsync(url) { (result) in
+            
+            switch result {
+            case .success(let imageData):
                 DispatchQueue.main.async() {
-                    self.image = UIImage(data: downloadedImageData)
+                    if let image = UIImage(data: imageData) {
+                        self.image = image
+                    }
                 }
-            }
-            else {
+                
+            case .failure(_):
                 if let defaultImage = image as String? {
                     DispatchQueue.main.async() {
                         self.image = UIImage(named: defaultImage)
@@ -31,17 +36,22 @@ extension UIImageView {
         }
     }
     
-    public func downloadImageAsyncAndReturnImage(_ url: String, _ completionHandlerForImageDownload: @escaping (_ resultImage: UIImage, _ error: NSError?) -> Void) {
+    public func downloadImageAsyncAndReturnImage(_ url: String, _ completionHandlerForImageDownload: @escaping (_ resultImage: UIImage) -> Void) {
         
-        NetworkManager.sharedInstance().downloadImagesAsync(url) { (imageData, error) in
+        NetworkManager.sharedInstance().downloadImagesAsync(url) { (result) in
             
-            if let downloadedImageData = imageData as Data? {
+            switch result {
+            case .success(let imageData):
                 
                 DispatchQueue.main.async() {
-                    self.image = UIImage(data: downloadedImageData)
-                    
-                    completionHandlerForImageDownload(self.image!, nil)
+                    if let image = UIImage(data: imageData) {
+                        self.image = image
+                    }
+                    completionHandlerForImageDownload(self.image!)
                 }
+                
+            case .failure(let error):
+                LogEventHandler.report(LogEventType.debug, "Unable to download na image", error.localizedDescription)
             }
         }
     }

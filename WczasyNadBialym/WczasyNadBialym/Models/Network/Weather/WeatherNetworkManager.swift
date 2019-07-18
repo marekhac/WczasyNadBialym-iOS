@@ -16,12 +16,14 @@ extension NetworkManager {
         let method  = Weather.Methods.CurrentMeasurement
         let parameters = [String: String]()
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
-            if let error = error {
-                LogEventHandler.report(LogEventType.error, "Unable to download Weather Details", error.localizedDescription)
-            } else {
-                let weatherData = content?.parseData(using: WeatherModel.currentMeasurement)
+        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
+            
+            switch result {
+            case .success(let content):
+                let weatherData = content.parseData(using: WeatherModel.currentMeasurement)
                 completionHandlerForWeather(weatherData as? WeatherModel)
+            case .failure(let error):
+                LogEventHandler.report(LogEventType.error, "Unable to download Weather Details", error.localizedDescription)
             }
         }
     }

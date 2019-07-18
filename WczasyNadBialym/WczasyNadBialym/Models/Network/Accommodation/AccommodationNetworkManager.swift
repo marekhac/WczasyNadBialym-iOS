@@ -17,12 +17,15 @@ extension NetworkManager {
         let method  = Accommodation.Methods.ListBasic
         let parameters = [Accommodation.ParameterKeys.Kind : accomodationType]
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
-            if let error = error {
+        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
+            
+            switch result {
+            case .success(let content):
+                let list = content.parseData(using: AccommodationModel.accommodationsFromResults)
+                completionHandlerForAccomodations(list as? [AccommodationModel])
+                
+            case .failure(let error):
                 LogEventHandler.report(LogEventType.error, "Unable to download Accommodation List", error.localizedDescription, displayWithHUD: true)
-            } else {
-                let list = content?.parseData(using: AccommodationModel.accommodationsFromResults)
-                    completionHandlerForAccomodations(list as? [AccommodationModel])
             }
         }
     }
@@ -34,12 +37,14 @@ extension NetworkManager {
         let parameters = [Accommodation.ParameterKeys.Id : accomodationId, Accommodation.ParameterKeys.Kind : accomodationType]
         // let parameters = [String: String]
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
-            if let error = error {
-                LogEventHandler.report(LogEventType.error, "Unable to download Accommodaiton Details", error.localizedDescription, displayWithHUD: true)
-            } else {
-                let details = content?.parseData(using: AccommodationDetailModel.detailsFromResults)
+        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
+            
+            switch result {
+            case .success(let content):
+                let details = content.parseData(using: AccommodationDetailModel.detailsFromResults)
                 completionHandlerForDetails(details as? AccommodationDetailModel)
+            case .failure(let error):
+                LogEventHandler.report(LogEventType.error, "Unable to download Accommodaiton Details", error.localizedDescription, displayWithHUD: true)
             }
         }
     }
@@ -51,12 +56,14 @@ extension NetworkManager {
         let parameters = [Accommodation.ParameterKeys.Id : accomodationId]
         // let parameters = [String: String]
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
-            if let error = error {
+        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
+            
+            switch result {
+            case .success(let content):
+                let properties = content.parseData(using: AccommodationPropertiesModel.propertiesFromResults)
+                completionHandlerForProperties(properties as? AccommodationPropertiesModel)
+            case .failure(let error):
                 LogEventHandler.report(LogEventType.error, "Unable to download Accommodaiton Properties JSON", error.localizedDescription)
-            } else {
-                let properties = content?.parseData(using: AccommodationPropertiesModel.propertiesFromResults)
-                    completionHandlerForProperties(properties as? AccommodationPropertiesModel)
             }
         }
     }
@@ -68,15 +75,18 @@ extension NetworkManager {
         let parameters = [Accommodation.ParameterKeys.Id : accomodationId]
         // let parameters = [String: String]
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
-            if let error = error {
-                LogEventHandler.report(LogEventType.error, "Unable to download Accommodaiton Pictures JSON", error.localizedDescription)
-            } else {
-                let pictures = content?.parseData(using: AccommodationGalleryModel.picturesFromResults)
+        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
+            
+            switch result {
+            case .success(let content):
+                let pictures = content.parseData(using: AccommodationGalleryModel.picturesFromResults)
                 
                 // if pictures is nil, we will handle it in completionHandlerForPictures
                 
                 completionHandlerForPictures(pictures as? AccommodationGalleryModel)
+            case .failure(let error):
+                LogEventHandler.report(LogEventType.error, "Unable to download Accommodaiton Pictures JSON", error.localizedDescription)
+                
             }
         }
     }

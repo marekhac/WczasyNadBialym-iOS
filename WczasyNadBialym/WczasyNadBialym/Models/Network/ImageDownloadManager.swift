@@ -10,20 +10,21 @@ import Foundation
 
 extension NetworkManager {
     
-    func downloadImagesAsync (_ imagePath:String, _ completionHandlerForAsyncImageDownload: @escaping (_ resultData: Data?, _ error: NSError?) -> Void) {
+    func downloadImagesAsync (_ imagePath:String, _ completionHandlerForAsyncImageDownload: @escaping (Result<Data,Error>) -> Void) {
         
         let controller = imagePath
         let method  = ""
         let parameters = [String: String]()
         let datatype = DownloadedDataType.data
         
-        let _ = taskForDownloadContent(controller, method, parameters, datatype) { (data, error) in
+        let _ = taskForDownloadContent(controller, method, parameters, datatype) { (result) in
 
-            if let error = error {
-                LogEventHandler.report(LogEventType.debug, "Unable to download na image", error.localizedDescription)
-                completionHandlerForAsyncImageDownload(nil, error)
-            } else {
-                completionHandlerForAsyncImageDownload(data, nil)
+            switch result {
+            case .success(let data):
+                 completionHandlerForAsyncImageDownload(.success(data))
+            
+            case .failure(let error):
+                completionHandlerForAsyncImageDownload(.failure(error))
             }
         }
     }

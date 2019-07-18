@@ -17,17 +17,16 @@ extension NetworkManager {
         let parameters = [String: String]()
         let datatype = DownloadedDataType.data
         
-        let _ = taskForDownloadContent(controller, method, parameters, datatype) { (data, error) in
+        let _ = taskForDownloadContent(controller, method, parameters, datatype) { (result) in
             
-            if let error = error {
-                LogEventHandler.report(LogEventType.debug, "Unable to download text", error.localizedDescription)
-            } else {
-                if let unwrappedData = data {
-                    
-                    if let result = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue) {
-                        completionHandlerForAsyncTextDownload(result, nil)
-                    }
+            switch result {
+            case .success(let data):
+                if let result = NSString(data: data, encoding: String.Encoding.utf8.rawValue) {
+                    completionHandlerForAsyncTextDownload(result, nil)
                 }
+                
+            case .failure(let error):
+                LogEventHandler.report(LogEventType.debug, "Unable to download text", error.localizedDescription)
             }
         }
     }

@@ -18,23 +18,24 @@ class NetworkManager : NSObject {
         super.init()
     }
     
-    func taskForDownloadContent(_ controller: String, _ method: String, _ parameters: [String:String], _ datatype: DownloadedDataType = .json, completionHandlerForDownloadData: @escaping (_ result: Data?, _ error: NSError?) -> Void) -> URLSessionDataTask {
+    func taskForDownloadContent(_ controller: String, _ method: String, _ parameters: [String:String], _ datatype: DownloadedDataType = .json, completionHandlerForDownloadData: @escaping (Result<Data, Error>) -> ()) -> URLSessionDataTask {
         
         let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters, datatype, withPathExtension: method))
         let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
             
-            func sendError(_ error: String) {
-                LogEventHandler.report(LogEventType.error, error)
-                let userInfo = [NSLocalizedDescriptionKey : error]
-                let errorData : Data? = nil
-                completionHandlerForDownloadData(errorData, NSError(domain: "taskForDownloadContent", code: 1, userInfo: userInfo))
+            func sendError(_ errorString: String) {
+                LogEventHandler.report(LogEventType.error, errorString)
+                let userInfo = [NSLocalizedDescriptionKey : errorString]
+                let error = NSError(domain: "taskForDownloadContent", code: 1, userInfo: userInfo)
+                
+                completionHandlerForDownloadData(.failure(error))
             }
             
             guard (error == nil) else {
                 sendError("There was an error with your request: \(String(describing: error))")
                 return
             }
-
+            
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
                 sendError("Your request returned a status code other than 2xx!")
                 return
@@ -45,7 +46,7 @@ class NetworkManager : NSObject {
                 return
             }
             
-            completionHandlerForDownloadData(data, nil)
+            completionHandlerForDownloadData(.success(data))
         }
         
         task.resume()

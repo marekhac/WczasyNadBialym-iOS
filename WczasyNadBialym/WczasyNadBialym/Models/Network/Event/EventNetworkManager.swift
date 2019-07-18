@@ -16,12 +16,15 @@ extension NetworkManager {
         let method = Event.Methods.List
         let parameters = [String: String]()
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
-            if let error = error {
-                LogEventHandler.report(LogEventType.error, "Unable to download Event Sections", error.localizedDescription, displayWithHUD: true)
-            } else {
-                let sections = content?.parseData(using: EventModel.eventsFromResults)
+        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
+            
+            switch result {
+            case .success(let content):
+                let sections = content.parseData(using: EventModel.eventsFromResults)
                 completionHandlerForEventsList(sections as? [EventModel])
+            
+            case .failure(let error):
+                LogEventHandler.report(LogEventType.error, "Unable to download Event Sections", error.localizedDescription, displayWithHUD: true)
             }
         }
     }
@@ -32,14 +35,16 @@ extension NetworkManager {
         let method  = Event.Methods.Details
         let parameters = [Event.ParameterKeys.Id : eventId]
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (content, error) in
-            if let error = error {
-                LogEventHandler.report(LogEventType.error, "Unable to download Event Details", error.localizedDescription, displayWithHUD: true)
-            } else {
-                let details = content?.parseData(using: EventDetailModel.detailsFromResults)
+        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
+            
+            switch result {
+            case .success(let content):
+                let details = content.parseData(using: EventDetailModel.detailsFromResults)
                 completionHandlerForEvents(details as? EventDetailModel)
+            
+            case .failure(let error):
+                LogEventHandler.report(LogEventType.error, "Unable to download Event Details", error.localizedDescription, displayWithHUD: true)
             }
         }
     }
-    
 }
