@@ -75,6 +75,7 @@
 		F42AED7A1FAC758200B133BC /* MenuTabsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42AED791FAC758200B133BC /* MenuTabsEnum.swift */; };
 		F439C1281EAE2053005EBFB7 /* ServiceContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C1271EAE2053005EBFB7 /* ServiceContants.swift */; };
 		F439C1301EAE2290005EBFB7 /* ServiceNetwokManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F439C12F1EAE2290005EBFB7 /* ServiceNetwokManager.swift */; };
+		F43D87FE22FADB1900FEC2C1 /* InfoDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43D87FD22FADB1900FEC2C1 /* InfoDetailsTests.swift */; };
 		F43F00B5229E6A690027648F /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F00B4229E6A690027648F /* EventDetailsViewController.swift */; };
 		F43F00B8229E6A930027648F /* EventShowPosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F00B7229E6A930027648F /* EventShowPosterViewController.swift */; };
 		F44BF942211AECEE00272E1A /* ServiceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BF941211AECEE00272E1A /* ServiceDetailsViewModel.swift */; };
@@ -122,6 +123,8 @@
 		F44D23131EAF749A00C89BE2 /* AccommodationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D230E1EAF749A00C89BE2 /* AccommodationModel.swift */; };
 		F44D23141EAF749A00C89BE2 /* AccommodationPropertiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D230F1EAF749A00C89BE2 /* AccommodationPropertiesModel.swift */; };
 		F44D23161EAF74FE00C89BE2 /* ServiceCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44D23151EAF74FE00C89BE2 /* ServiceCategoryModel.swift */; };
+		F44E83F82302A26E00184039 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44E83F72302A26E00184039 /* URLSessionProtocol.swift */; };
+		F44E83FA2302A28B00184039 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44E83F92302A28B00184039 /* URLSessionDataTaskProtocol.swift */; };
 		F44F0F021FB5D03D007032DA /* ServiceMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44F0F011FB5D03D007032DA /* ServiceMapViewController.swift */; };
 		F4510FFA2118802900D337B2 /* ServiceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4510FF92118802900D337B2 /* ServiceListViewModel.swift */; };
 		F457A6031FBAFD61000019BF /* String+RemoveHTMLTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = F457A6021FBAFD61000019BF /* String+RemoveHTMLTags.swift */; };
@@ -184,6 +187,7 @@
 		F4EDD9172297BE0F00FF4448 /* EventPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EDD9162297BE0F00FF4448 /* EventPreviewViewController.swift */; };
 		F4EE43F31F2F4DBD00C99367 /* Date+CustomFormats.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EE43F21F2F4DBD00C99367 /* Date+CustomFormats.swift */; };
 		F4F0BF8B1E8BCF2100FB456E /* accommodation_default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4F0BF8A1E8BCF2100FB456E /* accommodation_default.jpg */; };
+		F4F9266222FD6A3200B7943D /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9266122FD6A3200B7943D /* NetworkManagerTests.swift */; };
 		F4F97EEB211477780057BF1F /* ServiceStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F97EEA211477780057BF1F /* ServiceStoryboard.storyboard */; };
 		F4F97EED211489740057BF1F /* AccommodationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F97EEC211489740057BF1F /* AccommodationStoryboard.storyboard */; };
 		F4F97EEF21148CB50057BF1F /* InfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F97EEE21148CB50057BF1F /* InfoStoryboard.storyboard */; };
@@ -301,6 +305,7 @@
 		F42AED791FAC758200B133BC /* MenuTabsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabsEnum.swift; sourceTree = "<group>"; };
 		F439C1271EAE2053005EBFB7 /* ServiceContants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceContants.swift; sourceTree = "<group>"; };
 		F439C12F1EAE2290005EBFB7 /* ServiceNetwokManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceNetwokManager.swift; sourceTree = "<group>"; };
+		F43D87FD22FADB1900FEC2C1 /* InfoDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailsTests.swift; sourceTree = "<group>"; };
 		F43F00B4229E6A690027648F /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		F43F00B7229E6A930027648F /* EventShowPosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventShowPosterViewController.swift; sourceTree = "<group>"; };
 		F44BF941211AECEE00272E1A /* ServiceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -348,6 +353,8 @@
 		F44D230E1EAF749A00C89BE2 /* AccommodationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccommodationModel.swift; sourceTree = "<group>"; };
 		F44D230F1EAF749A00C89BE2 /* AccommodationPropertiesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccommodationPropertiesModel.swift; sourceTree = "<group>"; };
 		F44D23151EAF74FE00C89BE2 /* ServiceCategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCategoryModel.swift; sourceTree = "<group>"; };
+		F44E83F72302A26E00184039 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		F44E83F92302A28B00184039 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
 		F44F0F011FB5D03D007032DA /* ServiceMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMapViewController.swift; sourceTree = "<group>"; };
 		F4510FF92118802900D337B2 /* ServiceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceListViewModel.swift; sourceTree = "<group>"; };
 		F457A6021FBAFD61000019BF /* String+RemoveHTMLTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemoveHTMLTags.swift"; sourceTree = "<group>"; };
@@ -412,6 +419,7 @@
 		F4EDD9162297BE0F00FF4448 /* EventPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPreviewViewController.swift; sourceTree = "<group>"; };
 		F4EE43F21F2F4DBD00C99367 /* Date+CustomFormats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+CustomFormats.swift"; sourceTree = "<group>"; };
 		F4F0BF8A1E8BCF2100FB456E /* accommodation_default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accommodation_default.jpg; sourceTree = "<group>"; };
+		F4F9266122FD6A3200B7943D /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		F4F97EEA211477780057BF1F /* ServiceStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServiceStoryboard.storyboard; sourceTree = "<group>"; };
 		F4F97EEC211489740057BF1F /* AccommodationStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccommodationStoryboard.storyboard; sourceTree = "<group>"; };
 		F4F97EEE21148CB50057BF1F /* InfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoStoryboard.storyboard; sourceTree = "<group>"; };
@@ -513,6 +521,8 @@
 		F400062E1E697B720032033C /* WczasyNadBialymTests */ = {
 			isa = PBXGroup;
 			children = (
+				F43D87FC22FADAE600FEC2C1 /* Controller */,
+				F43D87FB22FADADF00FEC2C1 /* Model */,
 				F400062F1E697B720032033C /* WczasyNadBialymTests.swift */,
 				F40006311E697B720032033C /* Info.plist */,
 			);
@@ -610,13 +620,13 @@
 		F40C91B51E6980A7006124FC /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				F44E83F62302A1FE00184039 /* Protocols */,
 				F416BC131F5FE18A0032EA1E /* Fonts */,
 				F4F9D1ED1E854A7D0064BC24 /* Extensions */,
 				F40C91B61E6980A7006124FC /* Categories */,
 				F40C91B71E6980A7006124FC /* Constants */,
 				F40C91B81E6980A7006124FC /* Enums */,
 				F40C91B91E6980A7006124FC /* Helpers */,
-				F40C91BA1E6980A7006124FC /* Protocols */,
 				F40C91BB1E6980A7006124FC /* Singletons */,
 			);
 			path = Support;
@@ -658,13 +668,6 @@
 				F4A3F37E2254874D0009A256 /* AdvertisementHandler.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		F40C91BA1E6980A7006124FC /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		F40C91BB1E6980A7006124FC /* Singletons */ = {
@@ -873,6 +876,22 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		F43D87FB22FADADF00FEC2C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F4F9266022FD69EA00B7943D /* Network */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F43D87FC22FADAE600FEC2C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F43D87FD22FADB1900FEC2C1 /* InfoDetailsTests.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		F43F00B3229E6A690027648F /* Details */ = {
 			isa = PBXGroup;
 			children = (
@@ -963,6 +982,16 @@
 			);
 			path = Service;
 			sourceTree = "<group>";
+		};
+		F44E83F62302A1FE00184039 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F44E83F72302A26E00184039 /* URLSessionProtocol.swift */,
+				F44E83F92302A28B00184039 /* URLSessionDataTaskProtocol.swift */,
+			);
+			name = Protocols;
+			path = WczasyNadBialym/Support/Protocols;
+			sourceTree = SOURCE_ROOT;
 		};
 		F44F0F001FB5D032007032DA /* ServiceMap */ = {
 			isa = PBXGroup;
@@ -1204,6 +1233,14 @@
 			path = Preview;
 			sourceTree = "<group>";
 		};
+		F4F9266022FD69EA00B7943D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F4F9266122FD6A3200B7943D /* NetworkManagerTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		F4F9D1ED1E854A7D0064BC24 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1297,6 +1334,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1545,6 +1583,7 @@
 				F4DEE2021F8B454A0044981E /* UIView+BlurEffect.swift in Sources */,
 				F4A3F37F2254874D0009A256 /* AdvertisementHandler.swift in Sources */,
 				F481E7BB1EB1D9BC009637A1 /* AccommodationMapViewController.swift in Sources */,
+				F44E83F82302A26E00184039 /* URLSessionProtocol.swift in Sources */,
 				F457A6031FBAFD61000019BF /* String+RemoveHTMLTags.swift in Sources */,
 				F40C91CF1E6980AF006124FC /* MainViewController.swift in Sources */,
 				F4580C3C1ED3113A00944984 /* InfoDetailsViewController.swift in Sources */,
@@ -1569,6 +1608,7 @@
 				F40C91DE1E698343006124FC /* NetworkManager.swift in Sources */,
 				F481E7B51EB1D9BC009637A1 /* FeaturesCell.swift in Sources */,
 				F4B7858B1ED5A8A00060B7C4 /* InfoCategoriesEnum.swift in Sources */,
+				F44E83FA2302A28B00184039 /* URLSessionDataTaskProtocol.swift in Sources */,
 				F4E2437E1EDD8EF2009BBE51 /* EventDetailsModel.swift in Sources */,
 				F4186C491ECB1120006C87D0 /* InfoCategoriesViewController.swift in Sources */,
 				F4E46D811E88FCD400E64EEC /* ImageDownloadManager.swift in Sources */,
@@ -1579,6 +1619,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4F9266222FD6A3200B7943D /* NetworkManagerTests.swift in Sources */,
+				F43D87FE22FADB1900FEC2C1 /* InfoDetailsTests.swift in Sources */,
 				F40006301E697B720032033C /* WczasyNadBialymTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1661,7 +1703,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1717,7 +1759,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1859,7 +1901,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1957,7 +1999,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -2022,7 +2064,7 @@
 				F47CA6FE21DF8971005334E4 /* DebugOff (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "DebugOff (Development)";
+			defaultConfigurationName = "DebugOff (Production)";
 		};
 		F40006341E697B720032033C /* Build configuration list for PBXNativeTarget "WczasyNadBialym" */ = {
 			isa = XCConfigurationList;
@@ -2033,7 +2075,7 @@
 				F47CA6FF21DF8971005334E4 /* DebugOff (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "DebugOff (Development)";
+			defaultConfigurationName = "DebugOff (Production)";
 		};
 		F40006371E697B720032033C /* Build configuration list for PBXNativeTarget "WczasyNadBialymTests" */ = {
 			isa = XCConfigurationList;
@@ -2044,7 +2086,7 @@
 				F47CA70021DF8971005334E4 /* DebugOff (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "DebugOff (Development)";
+			defaultConfigurationName = "DebugOff (Production)";
 		};
 /* End XCConfigurationList section */
 

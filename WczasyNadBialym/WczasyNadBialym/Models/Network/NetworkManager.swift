@@ -5,28 +5,34 @@
 //  Created by Marek Hać on 08.02.2017.
 //  Copyright © 2017 Marek Hać. All rights reserved.
 //
+//  Network Unit Testing patterns inspired by S.T.Huang article:
+//  https://medium.com/flawless-app-stories/the-complete-guide-to-network-unit-testing-in-swift-db8b3ee2c327
 
 import Foundation
-class NetworkManager : NSObject {
-   
-    // shared session
-    var session = URLSession.shared
 
-    // MARK: Initializers
+class NetworkManager : NSObject {
+
+    typealias completeClousure = (Result<Data, Error>) -> Void
+
+    // session should be either URLSession or MockURLSession
     
-    override init() {
-        super.init()
+    private let session: URLSessionProtocol
+    
+    init(session: URLSessionProtocol) {
+        
+        // "session" is injected, and can be a mocked for test purposes
+        
+        self.session = session
     }
     
-    func taskForDownloadContent(_ controller: String, _ method: String, _ parameters: [String:String], _ datatype: DownloadedDataType = .json, completionHandlerForDownloadData: @escaping (Result<Data, Error>) -> ()) -> URLSessionDataTask {
-        
-        let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters, datatype, withPathExtension: method))
-        let task = session.dataTask(with: request as URLRequest) { (data, response, error) in
+    func downloadContent(with request: URLRequest, completionHandlerForDownloadData: @escaping completeClousure) {
+    
+        let task = session.dataTask(with: request) { (data, response, error) in
             
             func sendError(_ errorString: String) {
                 LogEventHandler.report(LogEventType.error, errorString)
                 let userInfo = [NSLocalizedDescriptionKey : errorString]
-                let error = NSError(domain: "taskForDownloadContent", code: 1, userInfo: userInfo)
+                let error = NSError(domain: "downloadContent", code: 1, userInfo: userInfo)
                 
                 completionHandlerForDownloadData(.failure(error))
             }
@@ -50,15 +56,12 @@ class NetworkManager : NSObject {
         }
         
         task.resume()
-        
-        return task
     }
     
     // create a URL from parameters
     
-    private func buildURLFromParameters(_ controller: String, _ method: String, _ parameters: [String:String], _ datatype : DownloadedDataType, withPathExtension: String? = nil) -> URL
+    func buildURLFromParameters(_ controller: String, _ method: String, _ parameters: [String:String], _ datatype : DownloadedDataType = .json) -> URL
     {
-        
         var urlString : String = ""
         
         // create final url
@@ -88,8 +91,22 @@ class NetworkManager : NSObject {
     
     class func sharedInstance() -> NetworkManager {
         struct Singleton {
-            static var sharedInstance = NetworkManager()
+            static var sharedInstance = NetworkManager(session: URLSession.shared)
         }
         return Singleton.sharedInstance
     }
+}
+
+extension URLSession: URLSessionProtocol {
+    
+    // add dataTask method that return URLSessionDataTaskProtocol
+    // no changes in dataTask behavior, just convertion of returning type
+    
+    func dataTask(with request: URLRequest, completionHandler: @escaping URLSessionProtocol.DataTaskResult) -> URLSessionDataTaskProtocol {
+        return dataTask(with: request, completionHandler: completionHandler) as URLSessionDataTask
+    }
+}
+
+extension URLSessionDataTask: URLSessionDataTaskProtocol {
+    // has the exact protocol method, resume(), so nothing happens
 }

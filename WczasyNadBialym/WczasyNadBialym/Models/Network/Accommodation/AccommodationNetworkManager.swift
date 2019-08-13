@@ -16,9 +16,9 @@ extension NetworkManager {
         let controller = Accommodation.Controllers.Accommodation
         let method  = Accommodation.Methods.ListBasic
         let parameters = [Accommodation.ParameterKeys.Kind : accomodationType]
+        let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
-            
+        downloadContent(with: request) { (result) in
             switch result {
             case .success(let content):
                 let list = content.parseData(using: AccommodationModel.accommodationsFromResults)
@@ -35,10 +35,9 @@ extension NetworkManager {
         let controller = Accommodation.Controllers.Accommodation
         let method  = Accommodation.Methods.Details
         let parameters = [Accommodation.ParameterKeys.Id : accomodationId, Accommodation.ParameterKeys.Kind : accomodationType]
-        // let parameters = [String: String]
+        let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
-            
+        downloadContent(with: request) { (result) in
             switch result {
             case .success(let content):
                 let details = content.parseData(using: AccommodationDetailModel.detailsFromResults)
@@ -54,10 +53,9 @@ extension NetworkManager {
         let controller = Accommodation.Controllers.Accommodation
         let method  = Accommodation.Methods.Features
         let parameters = [Accommodation.ParameterKeys.Id : accomodationId]
-        // let parameters = [String: String]
+        let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
-            
+        downloadContent(with: request) { (result) in
             switch result {
             case .success(let content):
                 let properties = content.parseData(using: AccommodationPropertiesModel.propertiesFromResults)
@@ -73,10 +71,9 @@ extension NetworkManager {
         let controller = Accommodation.Controllers.Accommodation
         let method  = Accommodation.Methods.Pictures
         let parameters = [Accommodation.ParameterKeys.Id : accomodationId]
-        // let parameters = [String: String]
+        let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
-            
+        downloadContent(with: request) { (result) in
             switch result {
             case .success(let content):
                 let pictures = content.parseData(using: AccommodationGalleryModel.picturesFromResults)

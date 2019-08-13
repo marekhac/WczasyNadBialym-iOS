@@ -15,9 +15,9 @@ extension NetworkManager {
         let controller = Service.Controllers.Services
         let method  = Service.Methods.Categories
         let parameters = [String: String]()
+        let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
-            
+        downloadContent(with: request) { (result) in
             switch result {
                 
             case .success(let content):
@@ -35,10 +35,10 @@ extension NetworkManager {
         let controller = Service.Controllers.Services
         let method  = Service.Methods.List
         let parameters = [Service.ParameterKeys.Kind : serviceType]
-        // let parameters = [String: String]
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
-            
+        let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
+        
+        downloadContent(with: request) { (result) in
             switch result {
             case .success(let content):
                 let list = content.parseData(using: ServiceModel.servicesFromResults)
@@ -55,9 +55,9 @@ extension NetworkManager {
         let controller = Service.Controllers.Services
         let method  = Service.Methods.Details
         let parameters = [Service.ParameterKeys.Id : eventId]
+        let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
-            
+        downloadContent(with: request) { (result) in
             switch result {
             case .success(let content):
                 let details = content.parseData(using: ServiceDetailModel.detailsFromResults)

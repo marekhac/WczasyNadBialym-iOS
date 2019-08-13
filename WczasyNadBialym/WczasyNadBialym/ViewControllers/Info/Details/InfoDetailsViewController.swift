@@ -72,12 +72,15 @@ class InfoDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDel
         }
         
         NetworkManager.sharedInstance().downloadTextAsync(url) { (dataString, error) in
-            DispatchQueue.main.async() {
-
-                if let resourcePath = Bundle.main.resourcePath {
-                    let url = URL.init(fileURLWithPath: resourcePath)
-                    self.webView.loadHTMLString(dataString as String, baseURL: url)
-                }
+            self.updateWebViewWithContent(dataString as String)
+        }
+    }
+    
+    func updateWebViewWithContent(_ content: String) {
+        DispatchQueue.main.async() {
+            if let resourcePath = Bundle.main.resourcePath {
+                let url = URL.init(fileURLWithPath: resourcePath)
+                self.webView.loadHTMLString(content as String, baseURL: url)
             }
         }
     }

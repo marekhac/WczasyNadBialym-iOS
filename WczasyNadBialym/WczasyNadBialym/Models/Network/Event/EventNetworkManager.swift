@@ -15,9 +15,9 @@ extension NetworkManager {
         let controller = Event.Controllers.Events
         let method = Event.Methods.List
         let parameters = [String: String]()
+        let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
-            
+        downloadContent(with: request) { (result) in
             switch result {
             case .success(let content):
                 let sections = content.parseData(using: EventModel.eventsFromResults)
@@ -34,8 +34,9 @@ extension NetworkManager {
         let controller = Event.Controllers.Events
         let method  = Event.Methods.Details
         let parameters = [Event.ParameterKeys.Id : eventId]
-        
-        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
+     
+        let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
+        downloadContent(with: request) { (result) in
             
             switch result {
             case .success(let content):

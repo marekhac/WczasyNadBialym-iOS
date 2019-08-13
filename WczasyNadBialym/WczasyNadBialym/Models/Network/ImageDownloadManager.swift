@@ -17,12 +17,13 @@ extension NetworkManager {
         let parameters = [String: String]()
         let datatype = DownloadedDataType.data
         
-        let _ = taskForDownloadContent(controller, method, parameters, datatype) { (result) in
-
+        let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters, datatype)) as URLRequest
+        
+        downloadContent(with: request) { (result) in
             switch result {
             case .success(let data):
-                 completionHandlerForAsyncImageDownload(.success(data))
-            
+                completionHandlerForAsyncImageDownload(.success(data))
+                
             case .failure(let error):
                 completionHandlerForAsyncImageDownload(.failure(error))
             }

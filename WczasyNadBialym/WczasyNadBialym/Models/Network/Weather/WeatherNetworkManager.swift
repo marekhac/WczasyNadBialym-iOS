@@ -15,9 +15,9 @@ extension NetworkManager {
         let controller = Weather.Controllers.Weather
         let method  = Weather.Methods.CurrentMeasurement
         let parameters = [String: String]()
+        let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
-        let _ = taskForDownloadContent(controller, method, parameters) { (result) in
-            
+        downloadContent(with: request) { (result) in
             switch result {
             case .success(let content):
                 let weatherData = content.parseData(using: WeatherModel.currentMeasurement)
