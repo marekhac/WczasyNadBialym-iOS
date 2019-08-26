@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import WczasyNadBialym
+
 class NetworkManagerTests: XCTestCase {
 
     var networkManager: NetworkManager!
@@ -23,7 +24,6 @@ class NetworkManagerTests: XCTestCase {
         // instead URLSession.shared
         
         networkManager = NetworkManager(session: session)
-
     }
 
     override func tearDown() {
@@ -47,7 +47,13 @@ class NetworkManagerTests: XCTestCase {
     
     func test_Weather_GetAndVerifyJSON() {
         
-        let jsonData = "{\"temp\":26.18,\"humidity\":61,\"pressure\":1014}".data(using: .utf8)
+        let jsonData = #"""
+            {
+                "temp": 22.71,
+                "humidity": 68,
+                "pressure": 1030
+            }
+            """#.data(using: .utf8)
         
         session.nextData = jsonData
         networkManager.getCurrentMeasurement() { (weather) in
@@ -57,6 +63,77 @@ class NetworkManagerTests: XCTestCase {
                 return
             }
         }
+    }
+    
+    func test_EventList_GetAndVerifyJSON() {
+        let jsonData = #"""
+            [
+                {
+                    "id": 78,
+                    "name": "Sacrum w Architekturze Wlodawy i okolic",
+                    "date": "30.08.2019 12:00",
+                    "place": "Wlodawa"
+                },
+                {
+                    "id": 71,
+                    "name": "XRS Poland Wlodawa Procircuit race vol. 2",
+                    "date": "31.08.2019 13:00",
+                    "place": "Wlodawa, ul. Chelmska 94"
+                }
+            ]
+            """#.data(using: .utf8)
+        
+        session.nextData = jsonData
+        networkManager.getEventsList() { (eventsDict) in
+            
+            if let eventsDict = eventsDict {
+                if (eventsDict.isEmpty) {
+                    XCTFail("cannot parse event list JSON")
+                    return
+                }
+            }
+        }
+    }
+    
+    func test_EventDetails_GetAndVerifyJSON() {
+        let jsonData = #"""
+            {
+                "id": "78",
+                "name": "Sacrum w Architekturze Włodawy i okolic",
+                "place": "Włodawa",
+                "date": "30.08.2019 12:00",
+                "imgMedURL": "../img/kalendarz_imprez/2019/78/main/78_main_med.jpg",
+                "imgFullURL": "../img/kalendarz_imprez/2019/78/main/78_main.jpg",
+                "description": "Serdecznie zapraszamy zainteresowanych na plenerowe chwile z artystami."
+            }
+            """#.data(using: .utf8)
+
+        session.nextData = jsonData
+        networkManager.getEventDetails("1") { (eventDetails) in
+            
+            guard eventDetails != nil else {
+                XCTFail("cannot parse event details JSON")
+                return
+            }
+        }
+    }
+    
+    func test_downloadImageAsync_GetAndVerify() {
+        
+        let sampleImage = #imageLiteral(resourceName: "wczasy_logo")
+        let sampleImageData = sampleImage.pngData()
+        
+        session.nextData = sampleImageData
+        networkManager.downloadImagesAsync("testurl") { (result) in
+
+            switch result {
+            
+            case .success(let imageData):
+                 XCTAssertEqual(imageData, sampleImageData, "downloaded image data and sample image data should be the same")               
+            case .failure(_):
+                XCTFail("cannot download")
+            }
+         }
     }
 }
 
