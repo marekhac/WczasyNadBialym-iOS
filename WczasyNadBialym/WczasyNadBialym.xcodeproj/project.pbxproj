@@ -131,6 +131,7 @@
 		F4580C3C1ED3113A00944984 /* InfoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4580C3B1ED3113A00944984 /* InfoDetailsViewController.swift */; };
 		F474253B21E3463200EF6709 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F474253A21E3463200EF6709 /* Environment.swift */; };
 		F474253F21E3718600EF6709 /* LogEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F474253E21E3718600EF6709 /* LogEventType.swift */; };
+		F47469B02313EEB600408477 /* EventListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47469AF2313EEB600408477 /* EventListViewTests.swift */; };
 		F475D9901F90F6C10054FFE8 /* UITableView+BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475D98F1F90F6C10054FFE8 /* UITableView+BlurEffect.swift */; };
 		F475D9921F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F475D9911F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift */; };
 		F47605D01FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47605CF1FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift */; };
@@ -363,6 +364,7 @@
 		F474253A21E3463200EF6709 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		F474253C21E3634300EF6709 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F474253E21E3718600EF6709 /* LogEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEventType.swift; sourceTree = "<group>"; };
+		F47469AF2313EEB600408477 /* EventListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewTests.swift; sourceTree = "<group>"; };
 		F475D98F1F90F6C10054FFE8 /* UITableView+BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+BlurEffect.swift"; sourceTree = "<group>"; };
 		F475D9911F90F8CF0054FFE8 /* UITableViewCell+BackgroundColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+BackgroundColors.swift"; sourceTree = "<group>"; };
 		F47605CF1FBC2BFF003E1749 /* ImageCollectionViewHeightEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewHeightEnum.swift; sourceTree = "<group>"; };
@@ -887,6 +889,7 @@
 		F43D87FC22FADAE600FEC2C1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F47469AF2313EEB600408477 /* EventListViewTests.swift */,
 				F43D87FD22FADB1900FEC2C1 /* InfoDetailsTests.swift */,
 			);
 			path = Controller;
@@ -1622,6 +1625,7 @@
 				F4F9266222FD6A3200B7943D /* NetworkManagerTests.swift in Sources */,
 				F43D87FE22FADB1900FEC2C1 /* InfoDetailsTests.swift in Sources */,
 				F40006301E697B720032033C /* WczasyNadBialymTests.swift in Sources */,
+				F47469B02313EEB600408477 /* EventListViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
