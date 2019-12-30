@@ -6,9 +6,9 @@
 //  Copyright © 2019 Marek Hać. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class EventsListViewModel {
+class EventsListViewModel: NSObject {
     
     var reloadTableViewClosure: (()->())?
     
@@ -22,10 +22,6 @@ class EventsListViewModel {
         return events.count // is a private property, and not visibile in view controller
     }
     
-    func getEventModel(at indexPath: IndexPath) -> EventModel {
-        return events[indexPath.row]
-    }
-    
     func fetchEvents() {
         
         NetworkManager.sharedInstance().getEventsList() { (eventsDict) in
@@ -33,5 +29,43 @@ class EventsListViewModel {
                 self.events = eventsDict
             }
         }
+    }
+}
+
+extension EventsListViewModel: UITableViewDataSource, UITableViewDelegate {
+    // MARK: - Table view data source
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+       return events.count
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        cell.selectedBackgroundColor(UIColor(white: 1, alpha: 0.5))
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cellIdentifier = "eventsListCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! EventListCell
+        
+        let eventModel = events[indexPath.row]
+        
+        cell.name?.text = eventModel.name
+        cell.eventId =  eventModel.id
+        cell.date.text = eventModel.date.getDate() + ", godz. " + eventModel.date.getHourAndMinutes()
+        
+        NetworkManager.sharedInstance().getEventDetails(String(eventModel.id)) { (details) in
+            if let details = details {
+                cell.imageMini.downloadImageAsync(details.imgMedURL)
+            }
+        }
+        return cell
     }
 }
