@@ -29,11 +29,12 @@ class ServiceListViewController: UITableViewController {
         // initialize callback closures
         // used [weak self] to avoid retain cycle
         
+        viewModel.categoryNameShort = self.categoryNameShort
+        
         viewModel.reloadTableViewClosure = { [weak self] () in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
                 SVProgressHUD.dismiss()
-                
             }
         }
     
@@ -47,6 +48,10 @@ class ServiceListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.dataSource = viewModel
+        self.tableView.delegate = viewModel
+            
         self.navigationItem.title = self.categoryNameLong
         
         SVProgressHUD.show()
@@ -57,45 +62,6 @@ class ServiceListViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfCells
-    }
-    
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = UIColor(white: 1, alpha: 0.5)
-        cell.selectedBackgroundColor(UIColor(white: 1, alpha: 0.5))
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cellIdentifier = "serviceListCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ServiceListCell
-        
-        let serviceModel = viewModel.getServiceModel(at: indexPath)
-        
-        // Configure the cell...
-        cell.name?.text = serviceModel.name
-        cell.serviceId = serviceModel.id
-        
-        let imgMiniURL = serviceModel.imgMiniURL
-        
-        cell.imageMini.image = UIImage(named: categoryNameShort + ".png") // default image
-        cell.imageMini.downloadImageAsyncAndReturnImage(imgMiniURL) { (image) in
-            
-            // we use real service image in details view, to setup blured background
-            
-            cell.realServiceImage = image
-        }
-        
-        return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
