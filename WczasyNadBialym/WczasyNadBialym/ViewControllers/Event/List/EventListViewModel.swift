@@ -12,7 +12,7 @@ class EventsListViewModel: NSObject {
     
     var reloadTableViewClosure: (()->())?
     
-    private var events = [EventModel]() {
+    var events = [EventModel]() {
         didSet {
             self.reloadTableViewClosure?()
         }
