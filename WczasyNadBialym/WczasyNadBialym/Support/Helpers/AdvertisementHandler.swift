@@ -17,6 +17,8 @@ class AdvertisementHandler : NSObject, GADBannerViewDelegate {
     let adBannerHeightNormal: CGFloat = 50.0
     let adBannerHeightHidden: CGFloat = 0.0
     
+    let adTestDeviceId = "2077ef9a63d2b398840261c8221a0c9b"
+    
     var adDelegate : AnyObject & GADBannerViewDelegate {
         get {
             return self.adView.delegate!
@@ -48,10 +50,11 @@ class AdvertisementHandler : NSObject, GADBannerViewDelegate {
         
         let request = GADRequest()
         
-        // Remove the following line before the app upload
-       
-        request.testDevices = [ kGADSimulatorID ];
-
+        // Remove the following line before uploading the app to appstore
+        
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers =
+        [ adTestDeviceId ] // Sample device ID
+        
         self.adView.load(request)
     }
     
