@@ -49,12 +49,14 @@ class AdvertisementHandler : NSObject, GADBannerViewDelegate {
         self.adView.rootViewController = viewController
         
         let request = GADRequest()
+        let debugMode = Bool(Environment().config(PlistKey.DebugMode)) ?? false
         
-        // Remove the following line before uploading the app to appstore
-        
-        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers =
-        [ adTestDeviceId ] // Sample device ID
-        
+        if (debugMode) {
+            
+            // this should not go to appstore
+            
+            GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ adTestDeviceId ] // Sample device ID
+        }
         self.adView.load(request)
     }
     
