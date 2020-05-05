@@ -1,0 +1,1686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F168669E-AAD9-4F84-8410-2CEB4A29737C"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7AC0614A-6091-4416-AF2E-36533A380A57"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/TextDownloadManager.swift"
+            timestampString = "587383887.215771"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "7AC0614A-6091-4416-AF2E-36533A380A57 - 6ad464822f3f0060"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in WczasyNadBialym.NetworkManager.downloadTextAsync(Swift.String, (__C.NSString, Swift.Optional&lt;__C.NSError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/Models/Network/TextDownloadManager.swift"
+                  timestampString = "586961362.5032361"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "245">
+               </Location>
+               <Location
+                  uuid = "7AC0614A-6091-4416-AF2E-36533A380A57 - 6ad464822f3f0060"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in WczasyNadBialym.NetworkManager.downloadTextAsync(Swift.String, (__C.NSString, Swift.Optional&lt;__C.NSError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/Models/Network/TextDownloadManager.swift"
+                  timestampString = "586961362.508086"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "259">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A72EEDF-DCF7-484E-B167-1B092BEE0561"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/Accommodation/AccommodationNetworkManager.swift"
+            timestampString = "587383887.216251"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getAccommodationListBasic(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF864BF5-1A69-4699-B764-B4AE3068A51D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/Accommodation/AccommodationNetworkManager.swift"
+            timestampString = "587383887.216295"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "getAccommodationPictures(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE6F3F36-B0F5-4861-ABF5-25EFD65222A8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Support/Extensions/UIImageView+ImageFromServerURL.swift"
+            timestampString = "588498911.263664"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "downloadImageAsync(_:defaultImage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B66F178-53EA-4233-8839-8F7C8D327B94"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Support/Extensions/UIImageView+ImageFromServerURL.swift"
+            timestampString = "588498911.264105"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "downloadImageAsync(_:defaultImage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C2232CF-76D3-4CD0-8E40-0FA105D420CD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/ImageDownloadManager.swift"
+            timestampString = "588509323.020617"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "downloadImagesAsync(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6C2232CF-76D3-4CD0-8E40-0FA105D420CD - 77efa8ba7ed96e6d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WczasyNadBialym.NetworkManager.downloadImagesAsync(Swift.String, (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/Models/Network/ImageDownloadManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "723">
+               </Location>
+               <Location
+                  uuid = "6C2232CF-76D3-4CD0-8E40-0FA105D420CD - ead632f38be363c7"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in WczasyNadBialym.NetworkManager.downloadImagesAsync(Swift.String, (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/Models/Network/ImageDownloadManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "197">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34C117A7-D439-491D-A991-1D5766A0AF4E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/ImageDownloadManager.swift"
+            timestampString = "588509323.0207"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "downloadImagesAsync(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D5CA3AD-0F85-4640-BCCB-3BB8EAC58EEF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/ImageDownloadManager.swift"
+            timestampString = "588509323.020763"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "downloadImagesAsync(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4BF634E-3D1B-443B-8277-742A7CBF6DB3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Info/Details/InfoDetailsViewController.swift"
+            timestampString = "587383887.216534"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "updateWebViewWithContent(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C841982C-B9AC-4EF3-8010-F07B05B1AADE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Info/Details/InfoDetailsViewController.swift"
+            timestampString = "587383887.2165819"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "703F27B7-D864-4513-AC36-7F13088633CF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Info/Details/InfoDetailsViewController.swift"
+            timestampString = "587383887.2166179"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D54ABEE1-2FAA-4FF7-8258-7CBB70721F0C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Info/Details/InfoDetailsViewController.swift"
+            timestampString = "587383887.216664"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "474D5CE9-0487-4737-8C83-069FC9AB9B32"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Info/Details/InfoDetailsViewController.swift"
+            timestampString = "587383887.2166981"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "474D5CE9-0487-4737-8C83-069FC9AB9B32 - 52f0a81f17121541"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WczasyNadBialym.InfoDetailsViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/Info/Details/InfoDetailsViewController.swift"
+                  timestampString = "587028805.167927"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "1968">
+               </Location>
+               <Location
+                  uuid = "474D5CE9-0487-4737-8C83-069FC9AB9B32 - 4516c65c079bfd5"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSString, Swift.Optional&lt;__C.NSError&gt;) -&gt; () in WczasyNadBialym.InfoDetailsViewController.viewWillAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/Info/Details/InfoDetailsViewController.swift"
+                  timestampString = "587028805.170276"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9E01680-8FBE-4534-9C5B-A662D76874DF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/Weather/WeatherNetworkManager.swift"
+            timestampString = "587383887.2167341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getCurrentMeasurement(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D9E01680-8FBE-4534-9C5B-A662D76874DF - f1e4fae3b582cbc3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WczasyNadBialym.NetworkManager.getCurrentMeasurement((Swift.Optional&lt;WczasyNadBialym.WeatherModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/Models/Network/Weather/WeatherNetworkManager.swift"
+                  timestampString = "587291918.4646209"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "D9E01680-8FBE-4534-9C5B-A662D76874DF - 38b7266611fd0d2c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in WczasyNadBialym.NetworkManager.getCurrentMeasurement((Swift.Optional&lt;WczasyNadBialym.WeatherModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/Models/Network/Weather/WeatherNetworkManager.swift"
+                  timestampString = "587291918.466929"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "258">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FACC8A16-9118-4EAE-8162-B946E7740046"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/Weather/WeatherNetworkManager.swift"
+            timestampString = "587383887.216774"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getCurrentMeasurement(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FACC8A16-9118-4EAE-8162-B946E7740046 - 38b7266611fd0d2c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in WczasyNadBialym.NetworkManager.getCurrentMeasurement((Swift.Optional&lt;WczasyNadBialym.WeatherModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/Models/Network/Weather/WeatherNetworkManager.swift"
+                  timestampString = "587035995.865667"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "258">
+               </Location>
+               <Location
+                  uuid = "FACC8A16-9118-4EAE-8162-B946E7740046 - 38b7266611fd0d2c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in WczasyNadBialym.NetworkManager.getCurrentMeasurement((Swift.Optional&lt;WczasyNadBialym.WeatherModel&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/Models/Network/Weather/WeatherNetworkManager.swift"
+                  timestampString = "587035995.867229"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "272">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F6655F5-ACF3-42D9-AA3F-4CD7EEA237A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/NetworkManager.swift"
+            timestampString = "588504197.296809"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "NetworkManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76C2AF26-413D-4897-BA5A-558AF64BB1BE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/NetworkManager.swift"
+            timestampString = "588504197.296864"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "NetworkManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD3FA11A-6C36-4904-8BFE-31C8E42A622D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/NetworkManager.swift"
+            timestampString = "588504197.296913"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "NetworkManager"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00C95026-2019-4A02-91FB-422839E7314C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/NetworkManager.swift"
+            timestampString = "588504197.29696"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8780C701-43B3-4688-8B57-05053316D04F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/NetworkManager.swift"
+            timestampString = "588504197.297006"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55104562-6438-40E4-A0A2-52364555CDB4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/NetworkManager.swift"
+            timestampString = "588504197.297052"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06FB01CC-C217-4EFF-A90E-2A104F01BF14"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialymTests/Model/Network/NetworkManagerTests.swift"
+            timestampString = "596817262.932096"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "MockURLSessionDataTask"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "87C73E3C-0522-4E31-960B-09A5AB3BDCC2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialymTests/Model/Network/NetworkManagerTests.swift"
+            timestampString = "596817262.934803"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "dataTask(with:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D6EFE3A-8F39-4A86-9DCC-07A21B2DDB92"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialymTests/Model/Network/NetworkManagerTests.swift"
+            timestampString = "596817262.935113"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "NetworkManagerTests"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43F7FDD9-9AF9-41BA-8DD6-FFB5C74BBB4A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialymTests/Model/Network/NetworkManagerTests.swift"
+            timestampString = "596817262.935346"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "test_Weather_GetAndVerifyJSON()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03924CE1-39C6-43EF-B9E8-1267DC44061D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/MainMenu/MainViewController.swift"
+            timestampString = "589896690.291108"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "setupCurrentTemperature()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96B31B87-49DA-44FA-BD0E-441B15246200"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/MainMenu/MainViewController.swift"
+            timestampString = "589896690.2912509"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "didReceiveMemoryWarning()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4008A497-1B5F-4698-B889-1236DFF17DDA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/MainMenu/MainViewController.swift"
+            timestampString = "589896690.291343"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "setupCurrentTemperature()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "726B6B72-0876-4BC4-92A5-D904C37F7522"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialymTests/Model/Network/NetworkManagerTests.swift"
+            timestampString = "596817262.935662"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "test_EventList_GetAndVerifyJSON()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "726B6B72-0876-4BC4-92A5-D904C37F7522 - 9f43046d71daf34d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WczasyNadBialymTests.NetworkManagerTests.test_EventList_GetAndVerifyJSON() -&gt; ()"
+                  moduleName = "WczasyNadBialymTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialymTests/Model/Network/NetworkManagerTests.swift"
+                  timestampString = "588155551.671465"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "365">
+               </Location>
+               <Location
+                  uuid = "726B6B72-0876-4BC4-92A5-D904C37F7522 - d264940a210143f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;WczasyNadBialym.EventModel&gt;&gt;) -&gt; () in WczasyNadBialymTests.NetworkManagerTests.test_EventList_GetAndVerifyJSON() -&gt; ()"
+                  moduleName = "WczasyNadBialymTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialymTests/Model/Network/NetworkManagerTests.swift"
+                  timestampString = "588155551.674742"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "69">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7766D48-C1AE-434B-9C7F-7E3EEB0A840B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialymTests/Model/Network/NetworkManagerTests.swift"
+            timestampString = "596817262.935923"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "test_EventDetails_GetAndVerifyJSON()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F10995A-34AD-4CC2-B2E8-96339169B57C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/ImageDownloadManager.swift"
+            timestampString = "588509323.023644"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "downloadImagesAsync(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5F10995A-34AD-4CC2-B2E8-96339169B57C - ead632f38be363c7"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in WczasyNadBialym.NetworkManager.downloadImagesAsync(Swift.String, (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/Models/Network/ImageDownloadManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "197">
+               </Location>
+               <Location
+                  uuid = "5F10995A-34AD-4CC2-B2E8-96339169B57C - ead632f38be363c7"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in WczasyNadBialym.NetworkManager.downloadImagesAsync(Swift.String, (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/Models/Network/ImageDownloadManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "229">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5680616A-0696-4E72-B83A-3195B321C5DA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialymTests/Model/Network/NetworkManagerTests.swift"
+            timestampString = "596817262.936166"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "test_DownloadImageAsync_GetAndVerify()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B96723C-F0BE-44BC-BCB3-68A993D5839D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Event/List/EventListViewModel.swift"
+            timestampString = "596817262.936386"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "fetchEvents()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3B96723C-F0BE-44BC-BCB3-68A993D5839D - f625835dc49c5128"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WczasyNadBialym.EventsListViewModel.fetchEvents() -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/Event/List/EventListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  uuid = "3B96723C-F0BE-44BC-BCB3-68A993D5839D - 27c90bc4a8693319"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;WczasyNadBialym.EventModel&gt;&gt;) -&gt; () in WczasyNadBialym.EventsListViewModel.fetchEvents() -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/Event/List/EventListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "103">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1F68ACF-DD14-4ADA-AE54-B2D45C2C5930"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Event/List/EventListViewModel.swift"
+            timestampString = "596817262.93665"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "fetchEvents()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B869C421-D53B-4A9E-89F8-8290743A6D2D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialymTests/Controller/EventListTests.swift"
+            timestampString = "588504223.948384"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "test_EventList_GetAndVerifyJSON()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "22088AFD-A4AD-4948-A4B0-2B55A158049D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/Event/EventNetworkManager.swift"
+            timestampString = "588507401.357226"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "getEventsList(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F72F4F5-7A24-4E54-B962-AFA5A89DC49D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/Event/EventNetworkManager.swift"
+            timestampString = "588507401.3573"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getEventsList(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5F72F4F5-7A24-4E54-B962-AFA5A89DC49D - 51138e8e3123ff34"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in WczasyNadBialym.NetworkManager.getEventsList((Swift.Optional&lt;Swift.Array&lt;WczasyNadBialym.EventModel&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/Models/Network/Event/EventNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "245">
+               </Location>
+               <Location
+                  uuid = "5F72F4F5-7A24-4E54-B962-AFA5A89DC49D - 51138e8e3123ff34"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in WczasyNadBialym.NetworkManager.getEventsList((Swift.Optional&lt;Swift.Array&lt;WczasyNadBialym.EventModel&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/Models/Network/Event/EventNetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "284">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5FD0408-A5B9-4AAC-BCFF-B2B14DDFFBCB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/Event/EventNetworkManager.swift"
+            timestampString = "588507401.357373"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getEventsList(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B58B33A-EDD7-43B1-8181-1E03F60191BE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialymTests/Controller/EventListTests.swift"
+            timestampString = "588504223.9485641"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "test_second()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB6CE713-A66A-448B-9800-C41DBEEDB4E0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Event/List/EventListViewController.swift"
+            timestampString = "588509323.025175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "initViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AB6CE713-A66A-448B-9800-C41DBEEDB4E0 - fc8dae7bf3873827"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WczasyNadBialym.EventListViewController.initViewModel() -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/Event/List/EventListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "AB6CE713-A66A-448B-9800-C41DBEEDB4E0 - 5c29fb4ae8c3fcd3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in WczasyNadBialym.EventListViewController.initViewModel() -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/Event/List/EventListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "150">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63CF6A9D-1785-450E-B132-5091907449C9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/MainMenu/MainViewController.swift"
+            timestampString = "589896690.294048"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "setupCurrentTemperature()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "63CF6A9D-1785-450E-B132-5091907449C9 - ea54d5028d2181b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WczasyNadBialym.MainViewController.setupCurrentTemperature() -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/MainMenu/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  uuid = "63CF6A9D-1785-450E-B132-5091907449C9 - 5de15d3c95e136c9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;WczasyNadBialym.WeatherModel&gt;) -&gt; () in WczasyNadBialym.MainViewController.setupCurrentTemperature() -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/MainMenu/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "323">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4746066A-7504-4F80-9C0B-4628B59D3FA3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Models/Network/Weather/WeatherNetworkManager.swift"
+            timestampString = "589896742.1493191"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getCurrentMeasurement(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A018421F-EBDC-4C24-A5B3-A46639248258"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Event/List/EventListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "events"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C691686D-969C-48CE-A243-8DACD2A24CEB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Event/List/EventListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "viewModel"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8900A86C-E546-46C1-8413-BAA26FD0166A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Event/List/EventListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "initViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4053D0C5-4B03-498F-B395-7373A605D554"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceDetails/ServiceDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "fetchServiceDetails(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7CFAEEB2-5938-4974-A66F-22F4623DA4DB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceDetails/ServiceDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getServiceDetailsModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B200ED07-A0B0-4DAD-A8F5-6B4E35D55BCD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceDetails/ServiceDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "serviceDetails"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3EA2D57-877E-4519-8809-7D7EAFED0E72"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceDetails/ServiceDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "fetchServiceDetails(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E3EA2D57-877E-4519-8809-7D7EAFED0E72 - 251595033ad738ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WczasyNadBialym.ServiceDetailsViewModel.fetchServiceDetails(for: Swift.String) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/Service/ServiceDetails/ServiceDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "45">
+               </Location>
+               <Location
+                  uuid = "E3EA2D57-877E-4519-8809-7D7EAFED0E72 - c1046e622cb530e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;WczasyNadBialym.ServiceDetailModel&gt;) -&gt; () in WczasyNadBialym.ServiceDetailsViewModel.fetchServiceDetails(for: Swift.String) -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/Service/ServiceDetails/ServiceDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6AA40B64-A11D-45CD-A0AF-959784EB2380"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceDetails/ServiceDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "initViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6AA40B64-A11D-45CD-A0AF-959784EB2380 - 4495bc21e8521e06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WczasyNadBialym.ServiceDetailsViewController.initViewModel() -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/Service/ServiceDetails/ServiceDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "6AA40B64-A11D-45CD-A0AF-959784EB2380 - 2d786d25ee7b5f46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in WczasyNadBialym.ServiceDetailsViewController.initViewModel() -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/Service/ServiceDetails/ServiceDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97D563EE-3AB6-4AF8-A50F-C1D583A6C1D9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceDetails/ServiceDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "viewModel"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92EE58C9-4D8A-4565-A923-45C4A3303D98"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceDetails/ServiceDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "initViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "456D31D6-A270-4D24-AF7F-77A3CC239A24"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceDetails/ServiceDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "initViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00A87B74-F91D-4B42-805B-340AB8DFD93F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceDetails/ServiceDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A52F5930-29F4-4D07-B385-816CDE4471CF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceList/ServiceListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "numberOfSections(in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "675D11A5-5B86-4CCB-A4A7-7251A007257B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceList/ServiceListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF6D6251-0A51-4223-B037-12C87DECF38C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceList/ServiceListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "tableView(_:willDisplay:forRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59C127B2-0250-430C-87C0-E48129A6564F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceList/ServiceListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "609F42DA-F954-461D-B386-4234B34AD272"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceList/ServiceListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4FB56C7-EF70-4E5B-904F-D4C594745EE5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Service/ServiceList/ServiceListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD58A5D1-5E80-4B80-A9B1-F36E0E2FDCF6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialymTests/Controller/EventListViewTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "test_Cell_hasValidDate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B8A70C88-2763-416F-8E43-2EF335223F32"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Event/List/EventListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "initViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FEC1C38-4013-4F84-849A-F1EDFEF27667"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Event/List/EventListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "initViewModel()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9FEC1C38-4013-4F84-849A-F1EDFEF27667 - 5c29fb4ae8c3fcd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in WczasyNadBialym.EventListViewController.initViewModel() -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/Event/List/EventListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "749">
+               </Location>
+               <Location
+                  uuid = "9FEC1C38-4013-4F84-849A-F1EDFEF27667 - 32c0e86dc4d5271b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in WczasyNadBialym.EventListViewController.initViewModel() -&gt; ()"
+                  moduleName = "WczasyNadBialym"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marekhac/Development/WczasyNadBialym-iOS/WczasyNadBialym/WczasyNadBialym/ViewControllers/Event/List/EventListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "402DC446-10AD-477C-9858-EB7E0211FF28"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Event/List/EventListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "initViewModel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A01ADA0-CC7A-43C6-BB94-28D190E040ED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Support/Extensions/UIImageView+ImageFromServerURL.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "downloadImageAsync(_:defaultImage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B8B7C7E-0A8C-4AE1-A93E-4DCD0C529119"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Support/Extensions/UIImageView+ImageFromServerURL.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "downloadImageAsync(_:defaultImage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F0FB1D3-D064-42B5-83BB-F915FBEDD374"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Support/Helpers/AdvertisementHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "showAd(viewController:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D673873-7C4E-4683-A215-DE285FCA2CD5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/Support/Helpers/AdvertisementHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "showAd(viewController:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F0CDF86-CF17-4CDC-8BDA-B6A05C62984E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Event/Details/EventDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "displayAdvertisementBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A1894DC-B34C-4879-8E33-86FDDF8BB363"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Accommodation/AccommodationDetails/AccommodationDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D1717054-F3C5-48C0-B519-E46611CCA133"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Accommodation/AccommodationDetails/AccommodationDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "displayAdvertisementBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18144F83-798E-4E9C-B80D-EA9FB71A47A2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Accommodation/AccommodationDetails/AccommodationDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "displayAdvertisementBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C4A1093E-5889-4437-B630-D4D79FFC8544"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Accommodation/AccommodationDetails/AccommodationDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "displayAdvertisementBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "941415E7-F2BB-481B-981D-990EA7ABE928"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WczasyNadBialym/ViewControllers/Accommodation/AccommodationDetails/AccommodationDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "displayAdvertisementBanner()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
