@@ -18,11 +18,7 @@ class ServiceListViewModel: NSObject {
             self.reloadTableViewClosure?()
         }
     }
-       
-    func getServiceModel(at indexPath: IndexPath) -> ServiceModel {
-        return services[indexPath.row]
-    }
-    
+
     func fetchServices(for serviceTypeName: String) {
         
         NetworkManager.sharedInstance().getServiceList (serviceTypeName) { (servicesDict) in
