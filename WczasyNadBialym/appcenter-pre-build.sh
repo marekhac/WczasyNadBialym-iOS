@@ -9,10 +9,10 @@ SCRIPT_ERROR=0
 INFO_PLIST_FILE=${APPCENTER_SOURCE_DIRECTORY}/WczasyNadBialym/WczasyNadBialym/Info.plist
 
 echo "##[warning][Pre-Build Action] - Checking if all files and environment variables are available..."
-echo "##[warning][Pre-Build Action] - APPCENTER_SOURCE_DIRECTORY: $APPCENTER_SOURCE_DIRECTORY "
+echo "##[warning][Pre-Build Action] - APPCENTER_SOURCE_DIRECTORY: $APPCENTER_SOURCE_DIRECTORY"
 
 
-if [ -z "${APP_ID}}" ]
+if [ -z "${APP_ID}" ]
 then
     echo "##[error][Pre-Build Action] - APP_ID variable needs to be defined in App Center!!!"
     let "SCRIPT_ERROR += 1"
