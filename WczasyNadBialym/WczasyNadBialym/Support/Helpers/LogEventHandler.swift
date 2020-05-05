@@ -13,10 +13,10 @@ struct LogEventHandler {
     
     static func report(_ logEventType: LogEventType = .info, _ message: String, _ description: String = "", displayWithHUD hud: Bool = false)
     {
-        let debugLog = Bool(Environment().config(PlistKey.DebugLog)) ?? false
+        let debugMode = Bool(Environment().config(PlistKey.DebugMode)) ?? false
         let logEvent = logEventType.rawValue
         
-        if (debugLog || (logEventType == .info)) {
+        if (debugMode || (logEventType == .info)) {
             if (description != "") {
                 print ("\(logEvent) \(message) --> \(description)")
             } else {

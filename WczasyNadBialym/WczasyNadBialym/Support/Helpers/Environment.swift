@@ -15,7 +15,7 @@ public enum PlistKey {
     case ApiScheme
     case ApiHost
     case ApiPath
-    case DebugLog
+    case DebugMode
     case AdUnitId
     case AppCenterId
     
@@ -29,7 +29,7 @@ public enum PlistKey {
             return "api_host"
         case .ApiPath:
             return "api_path"
-        case .DebugLog:
+        case .DebugMode:
             return "debug_log"
         case .AdUnitId:
             return "ad_unit_id"
@@ -59,8 +59,8 @@ public struct Environment {
             return infoDict[PlistKey.ApiHost.value()] as! String
         case .ApiPath:
             return infoDict[PlistKey.ApiPath.value()] as! String
-        case .DebugLog:
-            return infoDict[PlistKey.DebugLog.value()] as! String
+        case .DebugMode:
+            return infoDict[PlistKey.DebugMode.value()] as! String
         case .AdUnitId:
             return infoDict[PlistKey.AdUnitId.value()] as! String
         case .AppCenterId:
