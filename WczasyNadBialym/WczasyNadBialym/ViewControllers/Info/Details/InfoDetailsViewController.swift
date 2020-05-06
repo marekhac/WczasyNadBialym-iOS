@@ -9,7 +9,6 @@
 import UIKit
 import WebKit
 import SVProgressHUD
-import AppCenterCrashes
 
 class InfoDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 
@@ -75,8 +74,6 @@ class InfoDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDel
         NetworkManager.sharedInstance().downloadTextAsync(url) { (dataString, error) in
             self.updateWebViewWithContent(dataString as String)
         }
-        
-        MSCrashes.generateTestCrash()
     }
     
     func updateWebViewWithContent(_ content: String) {
