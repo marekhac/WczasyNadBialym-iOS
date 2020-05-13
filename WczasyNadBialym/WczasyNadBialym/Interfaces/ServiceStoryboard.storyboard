@@ -128,7 +128,7 @@
         <!--Master-->
         <scene sceneID="2Vv-7F-JW0">
             <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="Q0d-Gd-kh6" customClass="ServiceListViewController" customModule="WczasyNadBialym" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ServiceListViewController" title="Master" clearsSelectionOnViewWillAppear="NO" id="Q0d-Gd-kh6" customClass="ServiceListViewController" customModule="WczasyNadBialym" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="niI-5F-fHN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,7 +201,7 @@
         <!--Service Details View Controller-->
         <scene sceneID="fcg-f4-itg">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="l2R-x1-Wjd" customClass="ServiceDetailsViewController" customModule="WczasyNadBialym" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ServiceDetails" automaticallyAdjustsScrollViewInsets="NO" id="l2R-x1-Wjd" customClass="ServiceDetailsViewController" customModule="WczasyNadBialym" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CjH-eD-srK"/>
                         <viewControllerLayoutGuide type="bottom" id="OeO-IX-UyJ"/>
