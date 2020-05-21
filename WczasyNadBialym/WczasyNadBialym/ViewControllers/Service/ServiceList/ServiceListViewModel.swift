@@ -10,6 +10,7 @@ import UIKit
 
 class ServiceListViewModel: NSObject {
     
+    private lazy var networkController = NetworkController(session: URLSession.shared)
     var reloadTableViewClosure: (()->())?
     var categoryNameShort: String = ""
         
@@ -21,7 +22,7 @@ class ServiceListViewModel: NSObject {
 
     func fetchServices(for serviceTypeName: String) {
         
-        NetworkManager.sharedInstance().getServiceList (serviceTypeName) { (servicesDict) in
+        networkController.getServiceList(serviceTypeName) { (servicesDict) in
             
             if let servicesDict = servicesDict {
                 self.services = servicesDict

@@ -1,14 +1,14 @@
 //
-//  TextDownloadManager.swift
+//  NetworkController+TextDownload.swift
 //  WczasyNadBialym
 //
-//  Created by Marek Hać on 24.10.2017.
-//  Copyright © 2017 Marek Hać. All rights reserved.
+//  Created by Marek Hać on 20/05/2020.
+//  Copyright © 2020 Marek Hać. All rights reserved.
 //
 
 import Foundation
 
-extension NetworkManager {
+extension NetworkController {
     
     @objc func downloadTextAsync (_ textPath: String, _ completionHandlerForAsyncTextDownload: @escaping (_ resultData: NSString, _ error: NSError?) -> Void) {
         

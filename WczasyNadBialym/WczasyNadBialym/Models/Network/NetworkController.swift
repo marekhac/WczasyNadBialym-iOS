@@ -1,19 +1,17 @@
 //
-//  NetworkManager.swift
+//  NetworkController.swift
 //  WczasyNadBialym
 //
-//  Created by Marek Hać on 08.02.2017.
-//  Copyright © 2017 Marek Hać. All rights reserved.
+//  Created by Marek Hać on 20/05/2020.
+//  Copyright © 2020 Marek Hać. All rights reserved.
 //
 //  Network Unit Testing patterns inspired by S.T.Huang article:
 //  https://medium.com/flawless-app-stories/the-complete-guide-to-network-unit-testing-in-swift-db8b3ee2c327
 
 import Foundation
 
-class NetworkManager : NSObject {
-
-    typealias completeClousure = (Result<Data, Error>) -> Void
-
+final class NetworkController: NetworkProtocol {
+    
     // session should be either URLSession or MockURLSession
     
     private let session: URLSessionProtocol
@@ -24,7 +22,7 @@ class NetworkManager : NSObject {
         
         self.session = session
     }
-    
+        
     func downloadContent(with request: URLRequest, completionHandlerForDownloadData: @escaping completeClousure) {
     
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -66,15 +64,12 @@ class NetworkManager : NSObject {
         
         // create final url
         
-        urlString = NetworkManager.Constants.ApiScheme +
-              NetworkManager.Constants.ApiHost +
-              NetworkManager.Constants.ApiPath +
-              controller + method
-
+        urlString = API.Scheme + API.Host + API.Path + controller + method
+        
         if (datatype == .json) {
             
             var parametersWithAppId = parameters;
-            parametersWithAppId["appid"] = NetworkManager.Constants.AppId;
+            parametersWithAppId["appid"] = API.AppId;
             
             for (key, value) in parametersWithAppId {
                 urlString.append("/\(key)/\(value)")
@@ -83,30 +78,6 @@ class NetworkManager : NSObject {
         
         LogEventHandler.report(LogEventType.debug, "DOWNLOAD FILE FROM: \(urlString)")
         
-        
         return NSURL(string: urlString)! as URL
     }
-    
-    // MARK: Shared Instance
-    
-    class func sharedInstance() -> NetworkManager {
-        struct Singleton {
-            static var sharedInstance = NetworkManager(session: URLSession.shared)
-        }
-        return Singleton.sharedInstance
-    }
-}
-
-extension URLSession: URLSessionProtocol {
-    
-    // add dataTask method that return URLSessionDataTaskProtocol
-    // no changes in dataTask behavior, just convertion of returning type
-    
-    func dataTask(with request: URLRequest, completionHandler: @escaping URLSessionProtocol.DataTaskResult) -> URLSessionDataTaskProtocol {
-        return dataTask(with: request, completionHandler: completionHandler) as URLSessionDataTask
-    }
-}
-
-extension URLSessionDataTask: URLSessionDataTaskProtocol {
-    // has the exact protocol method, resume(), so nothing happens
 }

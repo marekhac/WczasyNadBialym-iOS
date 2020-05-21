@@ -10,7 +10,9 @@ import UIKit
 import SVProgressHUD
 
 class AccommodationListViewController: UITableViewController {
-
+    
+    private lazy var networkController = NetworkController(session: URLSession.shared)
+    
     var accommodation = [AccommodationModel]()
     var accommodationType: AccommodationType?
     
@@ -50,7 +52,7 @@ class AccommodationListViewController: UITableViewController {
         self.navigationItem.title = self.accommodationType!.longName
     
         SVProgressHUD.show()
-        NetworkManager.sharedInstance().getAccommodationListBasic(accommodationType!.shortName) { (accommodationDict) in
+        networkController.getAccommodationListBasic(accommodationType!.shortName) { (accommodationDict) in
             
             if let accommodationDict = accommodationDict {
                 self.accommodation = accommodationDict
