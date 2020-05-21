@@ -1,19 +1,19 @@
 //
-//  ServiceWebManager.swift
+//  NetworkController+Service.swift
 //  WczasyNadBialym
 //
-//  Created by Marek Hać on 24.04.2017.
-//  Copyright © 2017 Marek Hać. All rights reserved.
+//  Created by Marek Hać on 20/05/2020.
+//  Copyright © 2020 Marek Hać. All rights reserved.
 //
 
 import Foundation
 
-extension NetworkManager {
+extension NetworkController {
     
     func getServiceCategories (_ completionHandlerForServices: @escaping (_ result: [ServiceCategoryModel]?) -> Void) {
         
-        let controller = Service.Controllers.Services
-        let method  = Service.Methods.Categories
+        let controller = API.Service.Controller.Services
+        let method  = API.Service.Method.Categories
         let parameters = [String: String]()
         let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
@@ -32,9 +32,9 @@ extension NetworkManager {
     
     func getServiceList (_ serviceType : String, _ completionHandlerForServices: @escaping (_ result: [ServiceModel]?) -> Void) {
         
-        let controller = Service.Controllers.Services
-        let method  = Service.Methods.List
-        let parameters = [Service.ParameterKeys.Kind : serviceType]
+        let controller = API.Service.Controller.Services
+        let method  = API.Service.Method.List
+        let parameters = [API.Service.ParameterKey.Kind : serviceType]
         
         let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
@@ -52,9 +52,9 @@ extension NetworkManager {
     
     func getServiceDetails (_ eventId : String, _ completionHandlerForEvents: @escaping (_ result: ServiceDetailModel?) -> Void) {
         
-        let controller = Service.Controllers.Services
-        let method  = Service.Methods.Details
-        let parameters = [Service.ParameterKeys.Id : eventId]
+        let controller = API.Service.Controller.Services
+        let method  = API.Service.Method.Details
+        let parameters = [API.Service.ParameterKey.Id : eventId]
         let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
         downloadContent(with: request) { (result) in

@@ -1,21 +1,21 @@
 //
-//  AccommodationNetworkManager.swift
+//  NetworkController+Accommodation.swift
 //  WczasyNadBialym
 //
-//  Created by Marek Hać on 09.02.2017.
-//  Copyright © 2017 Marek Hać. All rights reserved.
+//  Created by Marek Hać on 20/05/2020.
+//  Copyright © 2020 Marek Hać. All rights reserved.
 //
 
 import Foundation
 import SVProgressHUD
 
-extension NetworkManager {
+extension NetworkController {
     
     func getAccommodationListBasic (_ accomodationType : String, _ completionHandlerForAccomodations: @escaping (_ result: [AccommodationModel]?) -> Void) {
         
-        let controller = Accommodation.Controllers.Accommodation
-        let method  = Accommodation.Methods.ListBasic
-        let parameters = [Accommodation.ParameterKeys.Kind : accomodationType]
+        let controller = API.Accommodation.Controller.Accommodation
+        let method  = API.Accommodation.Method.ListBasic
+        let parameters = [API.Accommodation.ParameterKey.Kind : accomodationType]
         let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
         downloadContent(with: request) { (result) in
@@ -32,9 +32,9 @@ extension NetworkManager {
     
     func getAccommodationDetails (_ accomodationId : String, _ accomodationType : String, _ completionHandlerForDetails: @escaping (_ result: AccommodationDetailModel?) -> Void) {
         
-        let controller = Accommodation.Controllers.Accommodation
-        let method  = Accommodation.Methods.Details
-        let parameters = [Accommodation.ParameterKeys.Id : accomodationId, Accommodation.ParameterKeys.Kind : accomodationType]
+        let controller = API.Accommodation.Controller.Accommodation
+        let method  = API.Accommodation.Method.Details
+        let parameters = [API.Accommodation.ParameterKey.Id : accomodationId, API.Accommodation.ParameterKey.Kind : accomodationType]
         let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
         downloadContent(with: request) { (result) in
@@ -50,9 +50,9 @@ extension NetworkManager {
     
     func getAccommodationProperties (_ accomodationId : String, _ completionHandlerForProperties: @escaping (_ result: AccommodationPropertiesModel?) -> Void) {
         
-        let controller = Accommodation.Controllers.Accommodation
-        let method  = Accommodation.Methods.Features
-        let parameters = [Accommodation.ParameterKeys.Id : accomodationId]
+        let controller = API.Accommodation.Controller.Accommodation
+        let method  = API.Accommodation.Method.Features
+        let parameters = [API.Accommodation.ParameterKey.Id : accomodationId]
         let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
         downloadContent(with: request) { (result) in
@@ -68,9 +68,9 @@ extension NetworkManager {
     
     func getAccommodationPictures (_ accomodationId : String, _ completionHandlerForPictures: @escaping (_ result: AccommodationGalleryModel?) -> Void) {
         
-        let controller = Accommodation.Controllers.Accommodation
-        let method  = Accommodation.Methods.Pictures
-        let parameters = [Accommodation.ParameterKeys.Id : accomodationId]
+        let controller = API.Accommodation.Controller.Accommodation
+        let method  = API.Accommodation.Method.Pictures
+        let parameters = [API.Accommodation.ParameterKey.Id : accomodationId]
         let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
         downloadContent(with: request) { (result) in
@@ -88,3 +88,4 @@ extension NetworkManager {
         }
     }
 }
+

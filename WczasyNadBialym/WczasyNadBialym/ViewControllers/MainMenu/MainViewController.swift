@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    private lazy var networkController = NetworkController(session: URLSession.shared)
+    
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -22,7 +24,7 @@ class MainViewController: UIViewController {
     }
     
     func setupCurrentTemperature() {
-        NetworkManager.sharedInstance().getCurrentMeasurement() { (weather) in
+        networkController.getCurrentMeasurement() { (weather) in
             
             if let weather = weather {
                 

@@ -13,6 +13,7 @@ import SVProgressHUD
 class InfoDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
 
     var category : InfoCategoriesEnum = .lake // default
+    private lazy var networkController = NetworkController(session: URLSession.shared)
     
     @IBOutlet weak var backgroundView: UIView!
     
@@ -60,7 +61,7 @@ class InfoDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDel
         
         self.view.addBlurSubview(style: .light, tag: .loading)
         
-        let url = Info.url[category]!
+        let url = API.Info.url[category]!
         
         switch category {
         case .lake:
@@ -71,7 +72,7 @@ class InfoDetailsViewController: UIViewController, WKNavigationDelegate, WKUIDel
             self.navigationItem.title = "Kontakt z nami"
         }
         
-        NetworkManager.sharedInstance().downloadTextAsync(url) { (dataString, error) in
+        networkController.downloadTextAsync(url) {  (dataString, error) in
             self.updateWebViewWithContent(dataString as String)
         }
     }

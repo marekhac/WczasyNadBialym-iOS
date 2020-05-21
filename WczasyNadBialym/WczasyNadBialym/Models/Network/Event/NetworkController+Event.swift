@@ -1,19 +1,19 @@
 //
-//  EventNetworkManager.swift
+//  NetworkController+Event.swift
 //  WczasyNadBialym
 //
-//  Created by Marek Hać on 09.05.2017.
-//  Copyright © 2017 Marek Hać. All rights reserved.
+//  Created by Marek Hać on 20/05/2020.
+//  Copyright © 2020 Marek Hać. All rights reserved.
 //
 
 import Foundation
 
-extension NetworkManager {
+extension NetworkController {
     
     func getEventsList(_ completionHandlerForEventsList: @escaping (_ result: [EventModel]?) -> Void) {
         
-        let controller = Event.Controllers.Events
-        let method = Event.Methods.List
+        let controller = API.Event.Controller.Events
+        let method = API.Event.Method.List
         let parameters = [String: String]()
         let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         
@@ -31,9 +31,9 @@ extension NetworkManager {
     
     func getEventDetails (_ eventId : String, _ completionHandlerForEvents: @escaping (_ result: EventDetailModel?) -> Void) {
         
-        let controller = Event.Controllers.Events
-        let method  = Event.Methods.Details
-        let parameters = [Event.ParameterKeys.Id : eventId]
+        let controller = API.Event.Controller.Events
+        let method  = API.Event.Method.Details
+        let parameters = [API.Event.ParameterKey.Id : eventId]
      
         let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         downloadContent(with: request) { (result) in
@@ -49,3 +49,4 @@ extension NetworkManager {
         }
     }
 }
+

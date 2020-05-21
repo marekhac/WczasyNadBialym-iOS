@@ -15,6 +15,7 @@ class EventPreviewViewController: UIViewController {
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var bannerViewHeightConstraint: NSLayoutConstraint!
     
+    private lazy var networkController = NetworkController(session: URLSession.shared)
     var adHandler : AdvertisementHandler?
     var backgroundImage : UIImage?
     var descriptionText: String?
@@ -53,7 +54,7 @@ class EventPreviewViewController: UIViewController {
             self.view.addBlurSubview(below: contentView)
         }
         
-        NetworkManager.sharedInstance().getEventDetails(selectedEventId) { (details) in
+        networkController.getEventDetails(selectedEventId) { (details) in
             
             if let details = details {
                
@@ -80,8 +81,9 @@ class EventPreviewViewController: UIViewController {
             SVProgressHUD.dismiss()
             
             // remove blured loading view
-            
-            self.view.removeBlurSubviewForTag(.loading);
+            DispatchQueue.main.async {
+                self.view.removeBlurSubviewForTag(.loading);
+            }
         }
     }
     

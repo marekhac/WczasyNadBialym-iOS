@@ -10,6 +10,7 @@ import UIKit
 
 class EventsListViewModel: NSObject {
     
+    private lazy var networkController = NetworkController(session: URLSession.shared)
     var reloadTableViewClosure: (()->())?
     
     var events = [EventModel]() {
@@ -23,8 +24,7 @@ class EventsListViewModel: NSObject {
     }
     
     func fetchEvents() {
-        
-        NetworkManager.sharedInstance().getEventsList() { (eventsDict) in
+        networkController.getEventsList() { (eventsDict) in
             if let eventsDict = eventsDict {                
                 self.events = eventsDict
             }
@@ -36,12 +36,10 @@ extension EventsListViewModel: UITableViewDataSource, UITableViewDelegate {
     // MARK: - Table view data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
        return events.count
     }
     
@@ -61,7 +59,7 @@ extension EventsListViewModel: UITableViewDataSource, UITableViewDelegate {
         cell.eventId =  eventModel.id
         cell.date.text = eventModel.date.getDate() + ", godz. " + eventModel.date.getHourAndMinutes()
         
-        NetworkManager.sharedInstance().getEventDetails(String(eventModel.id)) { (details) in
+        networkController.getEventDetails(String(eventModel.id)) { (details) in
             if let details = details {
                 cell.imageMini.downloadImageAsync(details.imgMedURL)
             }

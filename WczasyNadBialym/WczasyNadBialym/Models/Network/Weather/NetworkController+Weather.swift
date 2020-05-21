@@ -1,19 +1,20 @@
 //
-//  WeatherNetworkManager.swift
+//  NetworkController+Weather.swift
 //  WczasyNadBialym
 //
-//  Created by Marek Hać on 14.12.2017.
-//  Copyright © 2017 Marek Hać. All rights reserved.
+//  Created by Marek Hać on 20/05/2020.
+//  Copyright © 2020 Marek Hać. All rights reserved.
 //
 
 import Foundation
 
-extension NetworkManager {
+extension NetworkController {
 
     func getCurrentMeasurement (_ completionHandlerForWeather: @escaping (_ result: WeatherModel?) -> Void) {
         
-        let controller = Weather.Controllers.Weather
-        let method  = Weather.Methods.CurrentMeasurement
+        let controller = API.Weather.Controller.Weather
+        let method = API.Weather.Method.CurrentMeasurement
+
         let parameters = [String: String]()
         let request = NSMutableURLRequest(url: buildURLFromParameters(controller, method, parameters)) as URLRequest
         

@@ -1,14 +1,14 @@
 //
-//  ImageDownloadManager.swift
+//  NetworkController+ImageDownload.swift
 //  WczasyNadBialym
 //
-//  Created by Marek Hać on 27.03.2017.
-//  Copyright © 2017 Marek Hać. All rights reserved.
+//  Created by Marek Hać on 20/05/2020.
+//  Copyright © 2020 Marek Hać. All rights reserved.
 //
 
 import Foundation
 
-extension NetworkManager {
+extension NetworkController {
     
     func downloadImagesAsync (_ imagePath:String, _ completionHandlerForAsyncImageDownload: @escaping (Result<Data,Error>) -> Void) {
         

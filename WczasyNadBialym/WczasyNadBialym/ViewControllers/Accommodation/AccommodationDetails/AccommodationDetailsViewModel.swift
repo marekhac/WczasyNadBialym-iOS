@@ -10,6 +10,8 @@ import Foundation
 
 class AccommodationDetailsViewModel {
     
+    private lazy var networkController = NetworkController(session: URLSession.shared)
+    
     var updateDetailViewClosure: (()->())?
     var updateGalleryViewClosure: (()->())?
     var updatePropertiesViewClosure: (()->())?
@@ -51,19 +53,19 @@ class AccommodationDetailsViewModel {
     // MARK: fetch methods
     
     func fetchAccommodationDetails(for accommodationId: String, accommodationType: String) {
-        NetworkManager.sharedInstance().getAccommodationDetails(accommodationId, accommodationType) { (details) in
+        networkController.getAccommodationDetails(accommodationId, accommodationType) { (details) in
             self.accommodationDetails = details
         }
     }
     
     func fetchAccommodationGallery(for accommodationId: String) {
-         NetworkManager.sharedInstance().getAccommodationPictures(accommodationId) { (pictures) in
+         networkController.getAccommodationPictures(accommodationId) { (pictures) in
             self.accommodationGallery = pictures 
         }
     }
 
     func fetchAccommodationProperties(for accommodationId: String) {
-        NetworkManager.sharedInstance().getAccommodationProperties(accommodationId) { (properties) in
+        networkController.getAccommodationProperties(accommodationId) { (properties) in
             self.accommodationProperties = properties
         }
     }

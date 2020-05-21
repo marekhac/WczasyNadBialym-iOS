@@ -6,6 +6,6 @@
 //  Copyright © 2017 Marek Hać. All rights reserved.
 //
 
-enum DownloadedDataType {
+public enum DownloadedDataType {
     case json, data
 }

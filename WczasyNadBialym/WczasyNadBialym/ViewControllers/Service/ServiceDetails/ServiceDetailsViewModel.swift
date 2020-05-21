@@ -10,6 +10,7 @@ import Foundation
 
 class ServiceDetailsViewModel {
     
+    private lazy var networkController = NetworkController(session: URLSession.shared)
     var updateViewClosure: (()->())?
     
     private var serviceDetails: ServiceDetailModel? {
@@ -23,7 +24,7 @@ class ServiceDetailsViewModel {
     }
     
     func fetchServiceDetails(for serviceId: String) {
-        NetworkManager.sharedInstance().getServiceDetails(serviceId) { (service) in
+        networkController.getServiceDetails(serviceId) { (service) in
             
             if let service = service {
                 self.serviceDetails = service 

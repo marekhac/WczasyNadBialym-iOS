@@ -15,7 +15,8 @@ extension UIImageView {
         
         print(url)
         
-        NetworkManager.sharedInstance().downloadImagesAsync(url) { (result) in
+        let networkController = NetworkController(session: URLSession.shared)
+        networkController.downloadImagesAsync(url) { (result) in
             
             switch result {
             case .success(let imageData):
@@ -38,7 +39,8 @@ extension UIImageView {
     
     public func downloadImageAsyncAndReturnImage(_ url: String, _ completionHandlerForImageDownload: @escaping (_ resultImage: UIImage) -> Void) {
         
-        NetworkManager.sharedInstance().downloadImagesAsync(url) { (result) in
+        let networkController = NetworkController(session: URLSession.shared)
+        networkController.downloadImagesAsync(url) { (result) in
             
             switch result {
             case .success(let imageData):
