@@ -11,7 +11,8 @@ import XCTest
 
 class NetworkManagerTests: XCTestCase {
 
-    var networkManager: NetworkManager!
+    //var networkManager: NetworkManager!
+    var networkController: NetworkController!
     
     // mock the session object
     
@@ -23,7 +24,7 @@ class NetworkManagerTests: XCTestCase {
         // inject the mock object to session inside Network Manager
         // instead URLSession.shared
         
-        networkManager = NetworkManager(session: session)
+        networkController = NetworkController(session: session)
     }
 
     override func tearDown() {
@@ -38,7 +39,7 @@ class NetworkManagerTests: XCTestCase {
 
         let request = NSMutableURLRequest(url: url) as URLRequest
         
-        networkManager.downloadContent(with: request) { (result) in
+        networkController.downloadContent(with: request) { (result) in
             // Return data
         }
         
@@ -56,7 +57,7 @@ class NetworkManagerTests: XCTestCase {
             """#.data(using: .utf8)
         
         session.nextData = jsonData
-        networkManager.getCurrentMeasurement() { (weather) in
+        networkController.getCurrentMeasurement() { (weather) in
         
             guard weather != nil else {
                 XCTFail("cannot parse weather JSON")
@@ -84,7 +85,7 @@ class NetworkManagerTests: XCTestCase {
             """#.data(using: .utf8)
         
         session.nextData = jsonData
-        networkManager.getEventsList() { (eventsDict) in
+        networkController.getEventsList() { (eventsDict) in
             
             if let eventsDict = eventsDict {
                 if (eventsDict.isEmpty) {
@@ -109,7 +110,7 @@ class NetworkManagerTests: XCTestCase {
             """#.data(using: .utf8)
 
         session.nextData = jsonData
-        networkManager.getEventDetails("1") { (eventDetails) in
+        networkController.getEventDetails("1") { (eventDetails) in
             
             guard eventDetails != nil else {
                 XCTFail("cannot parse event details JSON")
@@ -124,7 +125,7 @@ class NetworkManagerTests: XCTestCase {
         let sampleImageData = sampleImage.pngData()
         
         session.nextData = sampleImageData
-        networkManager.downloadImagesAsync("testurl") { (result) in
+        networkController.downloadImagesAsync("testurl") { (result) in
 
             switch result {
             

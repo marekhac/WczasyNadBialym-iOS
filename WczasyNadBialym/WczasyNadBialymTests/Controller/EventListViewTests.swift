@@ -85,4 +85,16 @@ class EventListViewTests: XCTestCase {
         XCTAssertEqual(cell.reuseIdentifier, expectedReuseIdentifier)
     }
     
+    func test_TableView_numberOfCells() {
+        XCTAssertEqual(sut.viewModel.numberOfCells, 1)
+    }
+        
+    // MARK: Cells
+    func testCell_RowAtIndex_ReturnsMovieCell() {
+        sut.tableView.reloadData()
+        
+        let cellQueried = sut.tableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        XCTAssertTrue(cellQueried is EventListCell)
+    }
+    
 }

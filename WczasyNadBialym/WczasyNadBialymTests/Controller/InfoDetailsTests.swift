@@ -62,7 +62,7 @@ class InfoDetailsTests: XCTestCase {
        
         sut.category = .lake
         
-        let url = Info.url[sut.category]
+        let url = API.Info.url[sut.category]
         
         XCTAssertEqual(url, "../mobile/lake.html")
     }
@@ -71,7 +71,7 @@ class InfoDetailsTests: XCTestCase {
         
         sut.category = .essentials
         
-        let url = Info.url[sut.category]
+        let url = API.Info.url[sut.category]
         
         XCTAssertEqual(url, "../mobile/essentials.html")
     }
@@ -80,7 +80,7 @@ class InfoDetailsTests: XCTestCase {
         
         sut.category = .contact
         
-        let url = Info.url[sut.category]
+        let url = API.Info.url[sut.category]
         
         XCTAssertEqual(url, "../mobile/contact.html")
     }
